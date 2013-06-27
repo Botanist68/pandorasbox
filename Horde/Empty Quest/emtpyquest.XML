@@ -1,0 +1,31 @@
+<HBProfile>
+  <MinDurability>0.1</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+    
+<QuestOrder>
+<SetGrindArea>
+      <GrindArea>
+        <TargetMinLevel>86</TargetMinLevel>
+        <TargetMaxLevel>87</TargetMaxLevel>
+	<Factions>1752</Factions>
+       <Hotspots>
+    		<Hotspot X="-123.8557" Y="1898.703" Z="81.86751" />
+    		<Hotspot X="-18.38451" Y="1887.266" Z="61.78715" />
+    		<Hotspot X="40.32782" Y="1813.576" Z="51.78552" />
+    		<Hotspot X="131.8624" Y="1726.683" Z="41.2019" />
+    		<Hotspot X="17.2773" Y="1742.563" Z="48.90508" />
+    		<Hotspot X="-102.2472" Y="1808.43" Z="68.51601" />
+    		<Hotspot X="-152.0931" Y="1838.45" Z="83.74955" />
+  	</Hotspots>
+      </GrindArea>
+    </SetGrindArea>
+<GrindTo Level="60" />
+</QuestOrder>
+</HBProfile>

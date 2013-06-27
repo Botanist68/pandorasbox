@@ -1,0 +1,132 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A-GoTo]_botanist_stormwind-to-darnassus-purchase-night-elf-mount</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+	 <Mob Name="Slingtail Fishripper" Entry="55195" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<QuestOrder>
+		
+	    <CustomBehavior File="UserSettings" LootMobs="False" SkinMobs="False" HarvestMinerals="False" HarvestHerbs="False" PullDistance="1"  KillBetweenHotspots="False"  FindVendorsAutomatically="True" UseFlightPaths="True" LootRadius="5" LogoutForInactivity="True" />
+		
+		<While Condition="true" >
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.ZoneId != 1519" >
+						<CustomBehavior File="Message" Text="Moving to Stormwind." LogColor="Lime" />
+							<RunTo X="-10735.47" Y="-1322.338" Z="15.35296" />
+					</If>		
+				
+					<If Condition="Me.ZoneId == 1519" >
+						<CustomBehavior File="Message" Text="Moving to Stormwind docks." LogColor="Lime" />
+							<RunTo X="-8644.193" Y="1327.927" Z="5.536721" />
+						<CustomBehavior File="Message" Text="Waiting for the boat to Darnassus." LogColor="Lime" />
+						<CustomBehavior File="UseTransport" TransportId="176310" 
+									WaitAtX="-8644.193" WaitAtY="1327.927" WaitAtZ="5.536721"								
+									TransportStartX="-8650.719" TransportStartY="1346.051" TransportStartZ="0.012419"								
+									StandOnX="-8644.946" StandOnY="1348.325" StandOnZ="6.110394"
+									TransportEndX="8162.587" TransportEndY="1005.365" TransportEndZ="-0.0382334"	
+									GetOffX="8178.897" GetOffY="1002.434" GetOffZ="6.812055" />								
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="8267.021" Y="986.3497" Z="8.13516" />
+							<RunTo X="8307.141" Y="974.7999" Z="14.69318" />
+							<RunTo X="8381.519" Y="998.9592" Z="29.3478" />
+						<CustomBehavior File="MyCTM" X="9946.25" Y="2612.97" Z="1316.49" />
+						<CustomBehavior File="WaitTimer" WaitTime="5000" />
+							<RunTo X="9947.255" Y="2557.141" Z="1316.219" />
+							<RunTo X="10009.23" Y="2508.163" Z="1318.365" />
+							<RunTo X="10066.54" Y="2517.401" Z="1319.928" />
+							<RunTo X="10126.45" Y="2531.888" Z="1322.936" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+						<CustomBehavior File="InteractWith" MobId="4730" BuyItemId="47100" X="10129.91" Y="2533.245" Z="1323.271" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(47100)" WaitTime="1000" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					</If>
+				</If>
+
+				<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="20" ExpiryAction="InputEnabled_Continue" Text="Press continue to return to Stormwind." Title="WARNING" />
+
+				<If Condition="Me.ZoneId == 1657" >
+					<CustomBehavior File="Message" Text="Moving to the Rut'theran Village portal." LogColor="Lime" />
+						<RunTo X="10084.58" Y="2526.342" Z="1317.558" />
+						<RunTo X="10038.35" Y="2501.54" Z="1318.42" />
+						<RunTo X="9998.493" Y="2512.361" Z="1315.202" />
+						<RunTo X="9946.924" Y="2559.812" Z="1315.856" />
+						<RunTo X="9945.577" Y="2614.178" Z="1316.312" />
+					<CustomBehavior File="MyCTM" X="9945.944" Y="2622.01" Z="1316.691" />	
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />	
+						<RunTo X="8326.553" Y="973.3205" Z="16.70374" />
+						<RunTo X="8265.443" Y="985.6229" Z="7.598188" />
+						<RunTo X="8179.316" Y="1002.142" Z="6.875345" />
+					<CustomBehavior File="Message" Text="Waiting for the boat to Darnassus." LogColor="Lime" />
+					<CustomBehavior File="UseTransport" TransportId="176310" 
+								WaitAtX="8179.316" WaitAtY="1002.142" WaitAtZ="6.875345"
+								TransportStartX="8162.587" TransportStartY="1005.365" TransportStartZ="-0.0382334"								
+								StandOnX="8167.021" StandOnY="1009.898" StandOnZ="6.098088"
+								TransportEndX="-8650.719" TransportEndY="1346.051" TransportEndZ="0.012419"	
+								GetOffX="-8644.193" GetOffY="1327.927" GetOffZ="5.536721" />								
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						
+						<RunTo X="-8596.537" Y="1237.406" Z="5.231914" />
+						<RunTo X="-8575.698" Y="1184.708" Z="12.71798" />
+						<RunTo X="-8581.568" Y="1119.791" Z="17.94577" />
+						<RunTo X="-8566.985" Y="1050.078" Z="49.90028" />
+						<RunTo X="-8464.646" Y="987.1171" Z="79.03723" />
+						<RunTo X="-8577.888" Y="987.3062" Z="97.17141" />
+						<RunTo X="-8683.321" Y="877.4778" Z="97.09258" />
+						<RunTo X="-8718.631" Y="729.0863" Z="98.80812" />
+						<RunTo X="-8770.739" Y="610.1228" Z="97.48631" />
+						<RunTo X="-8817.297" Y="560.9435" Z="94.49454" />
+						<RunTo X="-8848.945" Y="526.7174" Z="105.9904" />
+						<RunTo X="-8854.365" Y="540.631" Z="105.9244" />
+						<RunTo X="-8868.95" Y="530.5308" Z="106.8207" />
+						<RunTo X="-8837.493" Y="487.0235" Z="109.609" />
+						
+					<CustomBehavior File="UserSettings" StopBot="true" />	
+				</If>
+			</While>
+	
+		</QuestOrder>
+
+
+</HBProfile>
+

@@ -1,0 +1,151 @@
+<!--OutLand 57-70 Created by Botanist-->
+<HBProfile>
+  <Name>[A-Grind]_botanist_60-68_outlands</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>3</MinFreeBagSlots>
+
+  <MailWhite>False</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+
+  <MinLevel>58</MinLevel>
+  <MaxLevel>70</MaxLevel>
+
+  
+  <SubProfile>
+    <Name>Honor Hold Beast 58-61</Name>
+    <MinLevel>57</MinLevel>
+    <MaxLevel>61</MaxLevel>
+    <TargetElites>False</TargetElites>
+    <AvoidMobs>
+     <AvoidMob Name="Fel Reaver" Entry="18733" />
+     <AvoidMob Name="Tagar Spinebreaker" Entry="19443" />      
+    </AvoidMobs>
+    <Blackspots>
+     <Blackspot X="-665.9755" Y="2845.908" Z="50.18071" Radius="50" />
+    </Blackspots>
+    <Mailboxes>
+     <Mailbox X="-706.6517" Y="2699.225" Z="94.43571" />
+    </Mailboxes>	
+    <Vendors>
+	 <Vendor Name="Humphry" Entry="16823" Type="Repair" X="-717.3172" Y="2607.582" Z="91.01124" />
+     <Vendor Name="Sid Limbardi" Entry="16826" Type="Food" X="-708.8713" Y="2739.131" Z="94.73379" />
+    </Vendors>	
+    <GrindArea>
+     <TargetMinLevel>58</TargetMinLevel>
+     <TargetMaxLevel>76</TargetMaxLevel>                                                                    
+     <Factions>90 14 954 1662</Factions>
+	 <Hotspots>
+      <Hotspot X="-651.7368" Y="3085.115" Z="3.656869" />
+       <Hotspot X="-727.7582" Y="3044.688" Z="7.972859" />
+       <Hotspot X="-771.3228" Y="2975.09" Z="14.86599" />
+       <Hotspot X="-849.9031" Y="2890.465" Z="9.025499" />
+       <Hotspot X="-971.5974" Y="2738.237" Z="11.19247" />
+     </Hotspots>
+    </GrindArea>
+  </SubProfile>
+
+  <SubProfile>
+    <Name>Zangarmarsh 61-62</Name>
+    <MinLevel>61</MinLevel>
+    <MaxLevel>62</MaxLevel>
+    <TargetElites>False</TargetElites>
+    <AvoidMobs>
+     <AvoidMob Name="Fel Reaver" Entry="18733" />
+    </AvoidMobs>
+    <Mailboxes>
+     <Mailbox X="-197.3626" Y="5505.807" Z="22.53568" />
+    </Mailboxes>  
+    <Vendors>
+     <Vendor Name="Fedryen Swiftspear" Entry="17904" Type="Repair" X="-198.9696" Y="5490.686" Z="21.84616" />
+     <Vendor Name="Innkeeper Coryth Stoktron" Entry="18907" Type="Food" X="-174.478" Y="5529.211" Z="29.40756" />
+    </Vendors>	
+    <Grindarea>
+     <TargetMinLevel>60</TargetMinLevel> 
+     <TargetMaxLevel>65</TargetMaxLevel>
+     <Factions>7 14 1706</Factions>
+     <Hotspots>
+      <Hotspot X="404.4433" Y="5330.78" Z="0.4556239" />
+      <Hotspot X="662.9271" Y="5183.332" Z="5.425503" />
+      <Hotspot X="847.4781" Y="5454.741" Z="3.953869" />
+      <Hotspot X="658.4694" Y="5561.834" Z="9.918097" />
+      <Hotspot X="649.8458" Y="5389.979" Z="-23.56746" />
+     </Hotspots>
+    </Grindarea>	
+  </SubProfile>
+
+  <SubProfile>
+    <Name>Blades Edge Sylvanaar 62-63</Name>
+    <MinLevel>62</MinLevel>
+    <MaxLevel>63</MaxLevel>
+    <TargetElites>False</TargetElites>
+    <AvoidMobs>
+     <AvoidMob Name="Lashh'an Talonite" Entry="19943" />
+     <AvoidMob Name="Lashh'an Kaliri" Entry="20109" />
+    </AvoidMobs>
+    <Mailboxes>
+     <Mailbox X="2082.663" Y="6878.859" Z="180.0762" />
+    </Mailboxes>  
+    <Vendors>
+     <Vendor Name="Cahill" Entry="19499" Type="Repair" X="2100.732" Y="6797.837" Z="175.6132" />
+     <Vendor Name="Innkeeper Shaunessy" Entry="19495" Type="Food" X="2098.176" Y="6903.917" Z="183.2312" />
+    </Vendors>	
+    <Grindarea>
+     <TargetMinLevel>60</TargetMinLevel> 
+     <TargetMaxLevel>68</TargetMaxLevel>
+     <Factions>14 16 1803 1804</Factions>
+     <Hotspots>
+      <Hotspot X="1764.135" Y="5951.948" Z="142.8375" />
+      <Hotspot X="2061.433" Y="6091.45" Z="147.0347" />
+      <Hotspot X="2068.376" Y="6651.968" Z="143.5112" />
+      <Hotspot X="1766.424" Y="6787.698" Z="140.2846" />
+     </Hotspots>
+    </Grindarea>	
+  </SubProfile>
+  
+    <SubProfile>
+    <Name>Blades Edge Ruuan Weald 64-67</Name>
+    <MinLevel>63</MinLevel>
+    <MaxLevel>67</MaxLevel>
+    <TargetElites>False</TargetElites>
+    <AvoidMobs>
+     <AvoidMob Name="Lashh'an Talonite" Entry="19943" />
+     <AvoidMob Name="Lashh'an Kaliri" Entry="20109" />
+	 <AvoidMob Name="Maggoc" Entry="20600"  />
+    </AvoidMobs>
+	<Blackspots>
+     <Blackspot X="2319.513" Y="6042.522" Z="142.4373" Radius="150" />
+	 <Blackspot X="2118.98" Y="5686.578" Z="265.4166" Radius="150" />
+	 <Blackspot X="1742.085" Y="5608.917" Z="265.4141" Radius="150" />
+	 <Blackspot X="2111.521" Y="5918.833" Z="142.3393" Radius="20" />
+    </Blackspots>
+    <Mailboxes>
+     <Mailbox X="3019.121" Y="5451.352" Z="146.6485" />
+    </Mailboxes>  
+    <Vendors>
+     <Vendor Name="Zinyen Swiftstrider" Entry="20917" Type="Repair" X="3023.432" Y="5504.725" Z="145.7475" />
+     <Vendor Name="Xerintha Ravenoak" Entry="20916" Type="Food" X="2949.437" Y="5456.5" Z="146.2314" />
+    </Vendors>	
+    <Grindarea>
+     <TargetMinLevel>60</TargetMinLevel> 
+     <TargetMaxLevel>68</TargetMaxLevel>
+     <Factions>14 16 1803 1827 1804 1780 48 7 1781 1678 1738</Factions>
+     <Hotspots>
+      <Hotspot X="2875.454" Y="5475.035" Z="149.5725" />
+      <Hotspot X="2933.269" Y="5692.661" Z="147.8059" />
+      <Hotspot X="3423.449" Y="5436.535" Z="145.4782" />
+      <Hotspot X="3259.37" Y="5314.759" Z="145.4978" />
+     </Hotspots>
+    </Grindarea>	
+  </SubProfile>
+
+	
+</HBProfile>
+	
+  

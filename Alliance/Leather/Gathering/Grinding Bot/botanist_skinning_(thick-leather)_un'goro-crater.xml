@@ -1,0 +1,52 @@
+<HBProfile>
+  <Name>botanist_skinning_(thick-leather)_un' goro-crater</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>101</MaxLevel>
+  <Factions>48 14 2358</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+  
+	<Vendors>
+      
+	</Vendors>
+	
+	<Mailboxes>
+      <Mailbox X="948.3221" Y="-1462.237" Z="62.36975" />
+	</Mailboxes>
+
+  <Hotspots>
+<Hotspot X="-7208.402" Y="-2209.128" Z="-272.1677" />
+<Hotspot X="-7067.354" Y="-2051.759" Z="-271.0195" />
+<Hotspot X="-7140.76" Y="-1860.356" Z="-270.7954" />
+<Hotspot X="-7392.348" Y="-1747.506" Z="-278.7964" />
+<Hotspot X="-7379.714" Y="-1760.49" Z="-274.8395" />
+<Hotspot X="-7684.224" Y="-1606.531" Z="-272.0458" />
+<Hotspot X="-7898.772" Y="-1785.242" Z="-273.1519" />
+<Hotspot X="-7882.033" Y="-1958.015" Z="-271.7732" />
+<Hotspot X="-7604.118" Y="-1956.863" Z="-270.7391" />
+<Hotspot X="-7463.585" Y="-2134.384" Z="-271.4012" />
+<Hotspot X="-7312.129" Y="-2110.397" Z="-270.0805" />
+  </Hotspots>
+  
+  <Blackspots>
+  
+  </Blackspots>
+  
+    <AvoidMobs>
+
+    </AvoidMobs>
+
+</HBProfile>

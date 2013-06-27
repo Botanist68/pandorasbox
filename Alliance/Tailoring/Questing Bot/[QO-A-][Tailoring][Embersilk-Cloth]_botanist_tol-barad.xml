@@ -1,0 +1,200 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A-][Tailoring][Embersilk-Cloth]_botanist_tol-barad</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Darkwood Lurker" Entry="46508" />
+		<Mob Name="Darkwood Broodmother" Entry="46507" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions>22</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This profile will farm Tol'bard for embersilk cloth. In order to properly run this profile, you need a plugin like elixir or similar that will drink porions/flask. You need plenty of Potion's of Treasure Finding which the plugin should be configured to drink hourly. And your charcter needs to be a minimum of 450 Tailoring skill. You will also need the plugin Tidybags. Make sure that Tidybags is disabled. The profile will enable it when it needs to." Title="WARNING" />
+
+	<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="30" KillBetweenHotspots="True" LogoutForInactivity="False" />
+	
+         <While Condition="true" >
+		
+				<If Condition="Me.MapId == 0" >                 <!--in eastern kingdoms -->
+					<CustomBehavior File="Message" Text="I am in Stormwind, flying to the Stormwind portals." LogColor="Lime" />					
+					<CustomBehavior File="FlyTo" X="-8208.7" Y="450.793" Z="117.667"  DestName="Stormwind Portals" />
+					<CustomBehavior File="Message" Text="Taking the portal to Tol' Barad." LogColor="Lime" />
+					<CustomBehavior File="InteractWith" MobId="206594" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8208.7" Y="450.793" Z="117.667" />				
+					<CustomBehavior File="Message" Text="Waiting for the zone to load." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+				</If>
+				
+				                                  <!-- moving to the farming area if I am not already there-->
+							   
+				<If Condition="Me.MapId == 732">		   
+					<CustomBehavior File="Message" Text="I am in Tol Barad. Moving to the farming area.." LogColor="Lime" />
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<RunTo X="-374.1302" Y="1140.119" Z="22.09119" />
+					<RunTo X="-423.7711" Y="1198.106" Z="2.71508" />
+					<RunTo X="-445.229" Y="1291.55" Z="-2.635329" />
+					<RunTo X="-433.6403" Y="1373.142" Z="0.4549592" />
+					<RunTo X="-384.9343" Y="1412.351" Z="22.05422" />
+					<CustomBehavior File="MyCTM" X="-460.6399" Y="1447.521" Z="22.04979" />
+					<RunTo X="-525.8502" Y="1534.286" Z="22.09475" />
+					<RunTo X="-521.2669" Y="1536.184" Z="22.06568" />
+					<CustomBehavior File="Message" Text="I have reached the farming area." LogColor="Lime" />
+				</If>
+										
+					                                               <!-- farming area -->
+                
+				<If Condition="Me.X &gt; -545.7469 &amp;&amp; Me.X &lt; -483.3393 &amp;&amp; Me.Y &gt; 1464.232 &amp;&amp; Me.Y &lt; 1564.977 " >
+					<CustomBehavior File="Message" Text="Farming until my bags are full or my gear is broke." LogColor="Lime" />
+						<SetGrindArea><GrindArea>
+							<TargetMinLevel>1</TargetMinLevel>
+							<TargetMaxLevel>86</TargetMaxLevel>
+							<Factions>189 14 22</Factions>
+							<MaxDistance>40</MaxDistance>
+								<Hotspots>
+								<Hotspot X="-491.11" Y="1546.41" Z="19.06094" />
+								<Hotspot X="-449.4842" Y="1577.915" Z="24.52687" />
+								<Hotspot X="-418.1969" Y="1592.392" Z="22.94986" />
+								<Hotspot X="-378.2781" Y="1675.85" Z="18.64709" />
+								<Hotspot X="-377.3382" Y="1727.058" Z="22.91491" />
+								<Hotspot X="-332.5232" Y="1684.12" Z="21.25834" />
+								<Hotspot X="-330.8539" Y="1637.225" Z="24.14325" />
+								<Hotspot X="-356.2483" Y="1582.95" Z="22.74309" />
+								<Hotspot X="-410.439" Y="1556.022" Z="22.0483" />
+								<Hotspot X="-483.9972" Y="1495.262" Z="22.04822" />
+							</Hotspots>
+						</GrindArea></SetGrindArea>
+					
+				                         <!-- Grind until bag slots are less than 10 or gear durability less than 30% -->
+													   
+					<GrindTo Condition="(Me.FreeBagSlots &lt; 10) || (Me.LowestDurabilityPercent &lt; 0.3)" GoalText="Farming" />
+		        </If>
+						
+				                                                      <!-- vendor run -->
+			
+		<If Condition="(Me.FreeBagSlots &lt; 10) || (Me.LowestDurabilityPercent &lt; 0.3)" > 
+			<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth,repair and mail." LogColor="Lime" />
+				<RunTo X="-236.4575" Y="1690.822" Z="2.584368" />
+            <If Condition="HasItem(6948)" >
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />
+			</If>
+			<If Condition="HasItem(64488)" >
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />
+			</If>
+				<If Condition="Me.MapId == 0" > 
+					<CustomBehavior File="Message" Text="Successfully hearthed." LogColor="Lime" />			
+					<CustomBehavior File="FlyTo" X="-8424.836" Y="623.9324" Z="95.65045" />
+								
+					<SetVendor>
+						<Vendors>
+							<Vendor Name="Kaita Deepforge" Entry="5512" Type="Repair" X="-8432.998" Y="623.7123" Z="95.39394" />
+						</Vendors>
+					</SetVendor>
+					<CustomBehavior File="Message" Text="Repairing and selling all my grey items." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<RunTo X="-8423.765" Y="626.4225" Z="95.70643" />
+					
+					<CustomBehavior File="Message" Text="Moving to the mailbox near the Inn." LogColor="Lime" />
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="-8362.001" Y="617.8207" Z="95.46107" />
+						</Mailboxes>
+					</SetMailbox>
+					
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+			
+
+					<CustomBehavior File="FlyTo" X="-8208.7" Y="450.793" Z="117.667"  DestName="Stormwind Portals" />
+					<CustomBehavior File="Message" Text="Flying to the Stormwind portals." LogColor="Lime" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="Message" Text="Taking the portal to Tol' Barad." LogColor="Lime" />
+					<CustomBehavior File="InteractWith" MobId="206594" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8208.7" Y="450.793" Z="117.667" /> 
+					<CustomBehavior File="Message" Text="Waiting for the zone to load." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+				</If>
+				
+				<If Condition="Me.MapId == 732" > 
+					<CustomBehavior File="Message" Text="Hearth failed, or on CD." LogColor="Lime" />
+						<RunTo X="-241.2159" Y="1633.843" Z="-2.420792" />
+						<RunTo X="-342.8496" Y="1504.519" Z="-2.495507" />
+						<RunTo X="-421.0304" Y="1450.682" Z="-2.440097" />
+						<RunTo X="-445.1858" Y="1312.059" Z="-2.4667" />
+						<RunTo X="-424.7637" Y="1200.932" Z="1.76595" />
+						<RunTo X="-373.2976" Y="1146.697" Z="22.02147" />
+						<RunTo X="-344.2686" Y="1033.956" Z="22.09477" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="InteractWith" MobId="208227" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-343.93576" Y="1030.1875" Z="22.2819576" />
+					<CustomBehavior File="Message" Text="Waiting for the zone to load." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />					
+					<CustomBehavior File="FlyTo" X="-8424.836" Y="623.9324" Z="95.65045" />
+								
+					<SetVendor>
+						<Vendors>
+							<Vendor Name="Kaita Deepforge" Entry="5512" Type="Repair" X="-8432.998" Y="623.7123" Z="95.39394" />
+						</Vendors>
+					</SetVendor>
+					<CustomBehavior File="Message" Text="Repairing and selling all my grey items." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<RunTo X="-8423.765" Y="626.4225" Z="95.70643" />
+					
+					<CustomBehavior File="Message" Text="Moving to the mailbox near the Inn." LogColor="Lime" />
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="-8362.001" Y="617.8207" Z="95.46107" />
+						</Mailboxes>
+					</SetMailbox>
+					
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+			
+
+					<CustomBehavior File="FlyTo" X="-8208.7" Y="450.793" Z="117.667"  DestName="Stormwind Portals" />
+					<CustomBehavior File="Message" Text="Flying to the Stormwind portals." LogColor="Lime" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="Message" Text="Taking the portal to Tol' Barad." LogColor="Lime" />
+					<CustomBehavior File="InteractWith" MobId="206594" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8208.7" Y="450.793" Z="117.667" /> 
+					<CustomBehavior File="Message" Text="Waiting for the zone to load." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+				</If>
+		</If>
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

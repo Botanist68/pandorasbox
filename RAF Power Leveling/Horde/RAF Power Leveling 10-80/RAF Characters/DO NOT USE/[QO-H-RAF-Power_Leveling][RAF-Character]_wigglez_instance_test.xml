@@ -1,0 +1,62 @@
+﻿<HBProfile creator="Wigglez" version="1.0">
+	<Name>[QO-H-RAF-Power_Leveling][RAF-Character]_wigglez_instance_test</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />	
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" SkinMobs="False" PullDistance="1" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
+							
+			<!-- Run to the entrance point of the dungeon in case we borked -->
+			<RunTo X="2593.68" Y="1111.23" Z="50.9518" />
+			
+			<!-- We are inside Razorfen Downs and waiting to begin -->
+			
+		<!-- Razorfen Downs dungeon script -->
+			<If Condition="Me.MapId == 129">
+			
+			
+				
+					
+			</If>
+	</QuestOrder>
+</HBProfile>
+

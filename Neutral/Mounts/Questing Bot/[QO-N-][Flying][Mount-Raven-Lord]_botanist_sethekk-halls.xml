@@ -1,0 +1,176 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-][Flying][Mount-Raven-Lord]_botanist_sethekk-halls</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" LootMobs="True" PullDistance="25" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+		 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This profile will run Sethikk Halls Heroic for the Raven Lord Mount. It will then hearth and stop the bot. Start the profile in Stormwind or Orgrimmar." Title="WARNING" />
+         <While Condition="true" >
+
+						<If Condition="Me.ZoneId == 1519" > <!-- in stormwind -->
+							<CustomBehavior File="Message" Text="I'm in Stormwind, flying to the Blasted Lands portal." LogColor="Yellow" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="FlyTo" X="-8954.61" Y="824.6583" Z="178.1588"  DestName="Portal to Blasted Lands" />
+							<CustomBehavior File="MyCTM" X="-9000.015" Y="862.5446" Z="129.5162" />
+							<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-9005.761" Y="869.6945" Z="129.6928" />
+							<CustomBehavior File="Message" Text="Taking the portal to Blasted Lands." LogColor="Yellow" />
+                            <CustomBehavior File="InteractWith" MobId="195141" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-9007.58" Y="871.8698" Z="129.692154" />
+							<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="TimeRemaining}" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="Message" Text="Flying to the Dark Portal." LogColor="Yellow" />
+							<CustomBehavior File="FlyTo" X="-11848.14" Y="-3201.233" Z="18.72732" DestName="The Dark Portal" /> <!-- portal to outlands -->
+							<CustomBehavior File="MyCTM" X="-11914.67" Y="-3209.769" Z="-11.53827" />
+							<CustomBehavior File="WaitTimer" WaitTime="10000" />
+							<CustomBehavior File="FlyTo" X="-254.0267" Y="1054.941" Z="153.7757" />
+							<CustomBehavior File="Message" Text="I've reached Hellfire Peninsula." LogColor="Yellow" />
+                        </If>
+
+						<If Condition="Me.ZoneId == 1637" > <!-- in orgrimmar -->
+							<CustomBehavior File="Message" Text="I'm in Orgrimmar, flying to the Blasted Lands portal." LogColor="Yellow" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="FlyTo" X="1656.751" Y="-4097.331" Z="147.09479" DestName="Portal to Blasted Lands" />							
+							<CustomBehavior File="MyCTM" X="1663.213" Y="-4135.561" Z="57.7958" />
+							<CustomBehavior File="ForcedDismount" />
+							<RunTo X="1685.938" Y="-4126.875" Z="66.34236" />
+							<CustomBehavior File="Message" Text="Taking the portal to Blasted Lands." LogColor="Yellow" />
+                            <CustomBehavior File="InteractWith" MobId="195142" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1685.18" Y="-4123.42" Z="66.3376" />
+							<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="TimeRemaining}" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="Message" Text="Flying to the Dark Portal." LogColor="Yellow" />
+							<CustomBehavior File="FlyTo" X="-11848.14" Y="-3201.233" Z="18.72732" DestName="The Dark Portal" /> <!-- portal to outlands -->
+							<CustomBehavior File="MyCTM" X="-11914.67" Y="-3209.769" Z="-11.53827" />
+							<CustomBehavior File="WaitTimer" WaitTime="10000" />
+							<CustomBehavior File="FlyTo" X="-254.0267" Y="1054.941" Z="153.7757" />
+							<CustomBehavior File="Message" Text="I've reached Hellfire Peninsula." LogColor="Yellow" />
+                        </If>
+									  
+						<If Condition="Me.ZoneId == 3483" >
+							<CustomBehavior File="Message" Text="Flying to Sethekk Halls in Auchindoun." LogColor="Yellow" />
+							<CustomBehavior File="MyCTM" X="-791.6874" Y="1797.672" Z="281.6248" />
+							<CustomBehavior File="MyCTM" X="-1596.818" Y="3689.547" Z="252.225" />
+							<CustomBehavior File="MyCTM" X="-2604.228" Y="4528.897" Z="252.3398" />
+							<CustomBehavior File="MyCTM" X="-3351.008" Y="4983.919" Z="45.76845" />
+							<CustomBehavior File="MyCTM" X="-3360.078" Y="4809.307" Z="-80.45869" />
+							<CustomBehavior File="MyCTM" X="-3362.503" Y="4751.446" Z="-101.3959" />
+							<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />						
+						</If>
+					
+											                                     <!-- enters the dungeon -->
+																				 
+	                    <If Condition="Me.Y &gt; 4656.26 &amp;&amp; Me.Y &lt; 4745.877 &amp;&amp; Me.X &lt; -3338.677 &amp;&amp; Me.X &gt; -3383.088" >
+									
+										<CustomBehavior File="Message" Text="I am setting Setheek Halls to Heroic Difficulty." LogColor="Yellow" />
+										<CustomBehavior File="WaitTimer" WaitTime="5000" />				
+									<!--	<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />     -->
+										<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(2)" /> <!-- Changes the instance to to "heroic" -->
+										<CustomBehavior File="Message" Text="I have set Sethekk Halls to Heroic Difficulty." LogColor="Yellow" />
+										<RunTo X="-3362.1" Y="4668.9" Z="-101.048" />
+										<CustomBehavior File="MyCTM" X="-3361.638" Y="4653.265" Z="-101.0491" /> 
+										<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Yellow" />
+										<CustomBehavior File="WaitTimer" WaitTime="10000" />
+										
+									</If>	
+
+                                                       <!-- sethekk halls dungeon script -->
+													   
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="34.72822" Y="-1.416426" Z="0.006616023" />
+						<Hotspot X="42.41161" Y="11.28443" Z="0.007340825" />
+						<Hotspot X="43.71944" Y="55.4397" Z="0.007340825" />
+					</CustomBehavior>
+										
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="42.79205" Y="67.88047" Z="0.008075798" />
+						<Hotspot X="-10.34636" Y="101.506" Z="0.008493744" />
+					</CustomBehavior>
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-52.71833" Y="100.3354" Z="0.008493744" />
+						<Hotspot X="-70.86055" Y="129.827" Z="0.006575733" />
+						<Hotspot X="-70.56087" Y="173.5229" Z="0.007627112" />
+						<Hotspot X="-102.9077" Y="173.3601" Z="0.009259692" />
+					</CustomBehavior>
+					
+					<CustomBehavior File="MyCTM" X="-110.9246" Y="174.0888" Z="0.009336201" />
+					<CustomBehavior File="MyCTM" X="-131.8119" Y="155.0558" Z="3.890174" />
+					<CustomBehavior File="MyCTM" X="-153.5467" Y="152.8533" Z="0.009368844" />
+					<CustomBehavior File="MyCTM" X="-166.9837" Y="173.1493" Z="0.009368844" />
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-210.8132" Y="173.1684" Z="0.0119535" />
+						<Hotspot X="-237.8949" Y="168.5101" Z="-0.1558761" />
+						<Hotspot X="-271.192" Y="177.8696" Z="0.03483536" />
+						<Hotspot X="-271.1587" Y="142.6938" Z="13.56783" />
+						<Hotspot X="-212.1229" Y="142.9354" Z="26.75973" />
+						<Hotspot X="-212.8459" Y="201.816" Z="26.72281" />
+						<Hotspot X="-241.6233" Y="209.7567" Z="26.84569" />
+					</CustomBehavior>
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+					<Hotspot X="-241.1727" Y="293.5423" Z="27.1136" />
+					<Hotspot X="-228.4926" Y="317.3309" Z="26.77848" />
+					<Hotspot X="-208.5552" Y="330.1017" Z="26.66461" />
+					<Hotspot X="-189.1508" Y="307.6768" Z="26.7305" />
+					<Hotspot X="-140.2654" Y="286.4016" Z="26.7318" />
+					</CustomBehavior>
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-90.49403" Y="287.9894" Z="26.4833" />
+					</CustomBehavior>
+					
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
+					
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

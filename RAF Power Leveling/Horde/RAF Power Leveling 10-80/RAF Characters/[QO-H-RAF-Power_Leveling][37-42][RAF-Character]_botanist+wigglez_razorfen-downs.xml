@@ -1,0 +1,318 @@
+﻿<HBProfile creator="Botanist and Wigglez" version="1.0">
+	<Name>[QO-H-RAF-Power_Leveling][37-42][RAF-Character]_botanist+wigglez_razorfen-downs</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />	
+	</AvoidMobs>
+	
+	<Blackspots>
+		<!-- bone -->
+		<Blackspot X="2581.913" Y="1026.938" Z="50.94383" Radius="1" />
+		<!-- thorn -->
+		<Blackspot X="2571.802" Y="1021.42" Z="51.28505" Radius="1.393644" />
+		<!-- Gong room -->
+		<Blackspot X="2542.679" Y="856.7137" Z="50.90178" Radius="1.729485" />
+		<Blackspot X="2548.168" Y="860.8541" Z="51.29408" Radius="1.049623" />
+		<Blackspot X="2537.883" Y="856.9494" Z="50.76789" Radius="1.528436" />
+		<Blackspot X="2531.415" Y="858.7027" Z="49.56959" Radius="1.118679" />
+		<!-- Last boss bones -->
+		<Blackspot X="2394.321" Y="978.2196" Z="55.20959" Radius="5.656103" />
+		<Blackspot X="2387.089" Y="974.6604" Z="55.62838" Radius="4.983395" />
+		<!-- Fires -->
+		<Blackspot X="-4622.852" Y="-2264.846" Z="87.61284" Radius="1" />
+		<Blackspot X="-4488.864" Y="-2056.789" Z="80.13129" Radius="1" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<CustomBehavior File="UserSettings" 
+						UseMount="True" 
+						LootMobs="False" 
+						SkinMobs="False" 
+						HarvestHerbs="False" 
+						HarvestMinerals="False" 
+						PullDistance="45" 
+						KillBetweenHotspots="False" 
+						FindVendorsAutomatically="False" />
+		<If Condition="Me.MapId == 1">
+			<If Condition="Me.X &gt; -4487.559 &amp;&amp; Me.X &lt; -4456.213 &amp;&amp; Me.Y &lt; -1659.222 &amp;&amp; Me.Y &gt; -1684.165" >
+				<CustomBehavior File="Message" Text="I am outside the RFK portal, moving to Razorfen Downs." LogColor="Cyan" />
+				<CustomBehavior File="UserSettings" UseMount="False" />
+				
+				<RunTo X="-4467.721" Y="-1672.593" Z="81.83099" />
+				
+				<CustomBehavior File="Message" Text="Waiting 60 seconds for the Booster to clear a path." LogColor="Cyan" />	
+				<CustomBehavior File="WaitTimer" WaitTime="60000" />
+				
+				<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+					<Hotspot X="-4480.512" Y="-1716.913" Z="86.31829" />
+					<Hotspot X="-4483.787" Y="-1760.208" Z="86.10979" />
+					<Hotspot X="-4476.93" Y="-1811.237" Z="86.42976" />
+					<Hotspot X="-4477.361" Y="-1854.272" Z="86.2253" />
+					<Hotspot X="-4462.123" Y="-1868.262" Z="85.99934" />
+					<Hotspot X="-4428.218" Y="-1875.081" Z="86.07804" />
+					<Hotspot X="-4400.749" Y="-1886.37" Z="86.4381" />
+					<Hotspot X="-4384" Y="-1900.651" Z="86.69883" />
+					<Hotspot X="-4390.081" Y="-1927.972" Z="86.3273" />
+					<Hotspot X="-4408.464" Y="-1920.733" Z="88.13195" />
+					<Hotspot X="-4431.479" Y="-1919.449" Z="107.1228" />
+					<Hotspot X="-4438.96" Y="-1922.365" Z="111.3707" />
+					<Hotspot X="-4470.064" Y="-1943.868" Z="118.3732" />
+					<Hotspot X="-4467.201" Y="-1958.038" Z="110.5741" />
+					<Hotspot X="-4459.414" Y="-1968.857" Z="116.8864" />
+					<Hotspot X="-4447.057" Y="-1974.393" Z="107.0061" />
+					<Hotspot X="-4442.853" Y="-1986.486" Z="105.6165" />
+				</CustomBehavior>	
+						
+				<CustomBehavior File="UserDialog" 
+								AllowBotStop="False" 
+								SoundCue="Exclamation" 
+								SoundCueInterval="15" 
+								ExpiryAction="InputEnabled_Continue" 
+								Text="RAF Character - Wait until all your characters have reached this location, then press continue on the level 90 first, then press continue on this window. The Booster will attempt to clear a path into Razorfen Downs." 
+								Title="WARNING" />
+						
+				<CustomBehavior File="Message" Text="Waiting 80 seconds for the Booster to clear a path." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="80000" />
+				<CustomBehavior File="MyCTM" X="-4499.696" Y="-2023.434" Z="83.55048" />
+				
+				<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+					<Hotspot X="-4504.419" Y="-2015.987" Z="84.48018" />
+					<Hotspot X="-4536.773" Y="-2083.285" Z="85.65292" />
+					<Hotspot X="-4582.11" Y="-2107.229" Z="89.01717" />
+					<Hotspot X="-4602.482" Y="-2130.597" Z="86.685" />
+					<Hotspot X="-4658.016" Y="-2164.841" Z="89.86844" />
+					<Hotspot X="-4659.952" Y="-2231.721" Z="88.4982" />
+					<Hotspot X="-4670.338" Y="-2281.325" Z="89.00804" />
+					<Hotspot X="-4712.338" Y="-2299.025" Z="84.12761" />
+					<Hotspot X="-4729.985" Y="-2312.126" Z="84.50535" />
+					<Hotspot X="-4733.428" Y="-2331.422" Z="85.94094" />
+					<Hotspot X="-4722.677" Y="-2342.039" Z="85.64737" />
+					<Hotspot X="-4684.734" Y="-2366.267" Z="87.48664" />
+					<Hotspot X="-4643.892" Y="-2381.468" Z="86.0158" />
+				</CustomBehavior>
+				
+				<CustomBehavior File="Message" Text="Waiting 60 seconds for the Booster to clear a path." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="60000" />
+				
+				<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+					<Hotspot X="-4628.369" Y="-2405.101" Z="86.22894" />
+					<Hotspot X="-4641.169" Y="-2420.865" Z="85.9403" />
+					<Hotspot X="-4668.708" Y="-2413.385" Z="85.68805" />
+					<Hotspot X="-4684.806" Y="-2425.667" Z="85.85558" />
+					<Hotspot X="-4683.305" Y="-2442.905" Z="86.01178" />
+					<Hotspot X="-4662.646" Y="-2460.721" Z="85.59547" />
+					<Hotspot X="-4656.361" Y="-2470.957" Z="84.87613" />
+					<Hotspot X="-4644.707" Y="-2495.303" Z="82.91087" />
+					<Hotspot X="-4650.273" Y="-2507.573" Z="81.32278" />
+					<Hotspot X="-4659.44" Y="-2527.94" Z="81.6564" />
+				</CustomBehavior>
+				
+				<RunTo X="-4659.44" Y="-2527.94" Z="81.6564" />
+				
+				<CustomBehavior File="Message" Text="I have reached the portal to Razorfen Downs." LogColor="Cyan" />	
+			</If>
+		</If>	
+					
+		<If Condition="Me.MapId == 1">	
+			<If Condition="Me.X &lt; -4487.559 || Me.X &gt; -4456.213 || Me.Y &gt; -1659.222 || Me.Y &lt; -1684.165" >
+				<If Condition="Me.X &lt; -4662.61 || Me.X &gt; -4645.506 || Me.Y &gt; -2507.382 || Me.Y &lt; -2531.69" >
+					<CustomBehavior File="UserSettings" UseMount="False" />
+					
+					<RunTo X="-4437.09" Y="-1919.939" Z="110.8109" />
+					<RunTo X="-4471.189" Y="-1945.458" Z="118.2539" />
+					<RunTo X="-4458.157" Y="-1967.363" Z="115.9925" />
+					<RunTo X="-4441.409" Y="-1985.838" Z="106.0258" />
+					
+					<CustomBehavior File="UserDialog" 
+									AllowBotStop="False" 
+									SoundCue="Exclamation" 
+									SoundCueInterval="15" 
+									ExpiryAction="InputEnabled_Continue" 
+									Text="RAF Character - Wait until all your characters have reached this location, then press continue on the level 90 first, then press continue on this window. The Booster will attempt to clear a path into Razorfen Downs." 
+									Title="WARNING" />
+						
+					<CustomBehavior File="Message" Text="Waiting 80 seconds for the Booster to clear a path." LogColor="Cyan" />
+					<CustomBehavior File="WaitTimer" WaitTime="80000" />
+					
+					<CustomBehavior File="MyCTM" X="-4499.696" Y="-2023.434" Z="83.55048" />
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-4504.419" Y="-2015.987" Z="84.48018" />
+						<Hotspot X="-4536.773" Y="-2083.285" Z="85.65292" />
+						<Hotspot X="-4582.11" Y="-2107.229" Z="89.01717" />
+						<Hotspot X="-4602.482" Y="-2130.597" Z="86.685" />
+						<Hotspot X="-4658.016" Y="-2164.841" Z="89.86844" />
+						<Hotspot X="-4659.952" Y="-2231.721" Z="88.4982" />
+						<Hotspot X="-4670.338" Y="-2281.325" Z="89.00804" />
+						<Hotspot X="-4712.338" Y="-2299.025" Z="84.12761" />
+						<Hotspot X="-4729.985" Y="-2312.126" Z="84.50535" />
+						<Hotspot X="-4733.428" Y="-2331.422" Z="85.94094" />
+						<Hotspot X="-4722.677" Y="-2342.039" Z="85.64737" />
+						<Hotspot X="-4684.734" Y="-2366.267" Z="87.48664" />
+						<Hotspot X="-4643.892" Y="-2381.468" Z="86.0158" />
+					</CustomBehavior>
+					
+					<CustomBehavior File="Message" Text="Waiting 60 seconds for the Booster to clear a path." LogColor="Cyan" />
+					<CustomBehavior File="WaitTimer" WaitTime="60000" />
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-4628.369" Y="-2405.101" Z="86.22894" />
+						<Hotspot X="-4641.169" Y="-2420.865" Z="85.9403" />
+						<Hotspot X="-4668.708" Y="-2413.385" Z="85.68805" />
+						<Hotspot X="-4684.806" Y="-2425.667" Z="85.85558" />
+						<Hotspot X="-4683.305" Y="-2442.905" Z="86.01178" />
+						<Hotspot X="-4662.646" Y="-2460.721" Z="85.59547" />
+						<Hotspot X="-4656.361" Y="-2470.957" Z="84.87613" />
+						<Hotspot X="-4644.707" Y="-2495.303" Z="82.91087" />
+						<Hotspot X="-4650.273" Y="-2507.573" Z="81.32278" />
+						<Hotspot X="-4659.44" Y="-2527.94" Z="81.6564" />
+					</CustomBehavior>
+					
+					<RunTo X="-4659.44" Y="-2527.94" Z="81.6564" />
+					
+					<CustomBehavior File="Message" Text="I have reached the portal to Razorfen Downs." LogColor="Cyan" />	
+				</If>	
+			</If>
+		</If>
+		
+		<If Condition="Me.MapId == 129">
+			<CustomBehavior File="Message" Text="You started the bot with me inside Razorfen Downs. Running out to reset the dungeon." LogColor="Cyan" />
+			
+			<RunTo X="2593.68" Y="1111.23" Z="50.9518" />
+			<CustomBehavior File="MyCTM" X="2592.638" Y="1116.691" Z="50.39219" />
+			
+			<CustomBehavior File="WaitTimer" WaitTime="15000" />
+				
+			<RunTo X="-4659.44" Y="-2527.94" Z="81.6564" />	
+		</If>
+				
+		<While Condition="true" >
+			<If Condition="Me.X &gt; -4662.61 &amp;&amp; Me.X &lt; -4645.506 &amp;&amp; Me.Y &lt; -2507.382 &amp;&amp; Me.Y &gt; -2531.69" >
+				<CustomBehavior File="UserSettings" PullDistance="1"  />				
+				
+				<RunTo X="-4659.44" Y="-2527.94" Z="81.6564" />
+				
+				<If Condition="Me.Level &gt;= 42" >
+					<CustomBehavior File="UserDialog" 
+									AllowBotStop="False" 
+									SoundCue="Exclamation" 
+									SoundCueInterval="15" 
+									ExpiryAction="InputEnabled_Continue" 
+									Text="**********RAF Character - This character has reached the appropriate level to run Blackrock Depths. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" 
+									Title="WARNING" />
+				</If>
+				
+				<CustomBehavior File="WaitTimer" WaitTime="10000" />
+				
+				<CustomBehavior File="MyCTM" X="-4661.966" Y="-2531.649" Z="82.09726" />
+				
+				<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="15000" />
+			</If>
+			
+			<If Condition="Me.ZoneId == 722">
+				<RunTo X="2593.68" Y="1111.23" Z="50.9518" />
+				<CustomBehavior File="UserDialog" 
+								AllowBotStop="False" 
+								SoundCue="Exclamation" 
+								SoundCueInterval="15" 
+								ExpiryAction="InputEnabled_Continue" 
+								Text="RAF Character - Press continue on the level 90 first, then press continue on this window." 
+								Title="WARNING" />
+			</If>		
+			
+			<!-- Razorfen Downs dungeon script -->
+			<If Condition="Me.MapId == 129">
+				<CustomBehavior File="Message" Text="We are at the entrance." LogColor="Cyan" />
+				<CustomBehavior File="Message" Text="Waiting for 80 seconds. 1 of 6." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="80000" />
+				<CustomBehavior File="Message" Text="Moving closer to the right fork clear." LogColor="Cyan" />
+				<RunTo X="2592.539" Y="1078.718" Z="55.19761" />
+				<RunTo X="2566.987" Y="1076.467" Z="53.29106" />
+				<RunTo X="2563.642" Y="1054.736" Z="52.54329" />
+				<RunTo X="2539.15" Y="1042.857" Z="46.68586" />
+				<RunTo X="2504.298" Y="1054.472" Z="47.52206" />
+				
+				<CustomBehavior File="Message" Text="Waiting for right fork to be cleared." LogColor="Cyan" />
+				<CustomBehavior File="Message" Text="Waiting for 120 seconds. 2 of 6." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="120000" />
+				
+				<CustomBehavior File="Message" Text="Moving to sit at ledge." LogColor="Cyan" />
+				<RunTo X="2479.77" Y="1065.873" Z="47.606" />
+				<RunTo X="2468.955" Y="1054.715" Z="48.25833" />
+			
+				<CustomBehavior File="Message" Text="Avoiding instance lock at this point, DO NOT TOUCH." LogColor="red" />
+				<CustomBehavior File="Message" Text="Waiting for 120 seconds. 3 of 6." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="120000" />
+				
+				<CustomBehavior File="Message" Text="Waiting for 120 seconds. 4 of 6." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="120000" />
+				
+				<CustomBehavior File="Message" Text="The main has begun the final pack pull, moving to prepare for it." LogColor="Cyan" />
+				<RunTo X="2482.521" Y="1062.923" Z="47.53696" />
+				<RunTo X="2516.922" Y="1048.721" Z="46.99355" />
+				<RunTo X="2547.351" Y="1044.285" Z="48.81944" />
+				
+				<CustomBehavior File="Message" Text="Waiting for 120 seconds. 5 of 6." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="120000" />
+				
+				<CustomBehavior File="Message" Text="Waiting for 120 seconds. 6 of 6." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="120000" />
+				
+				<CustomBehavior File="Message" Text="We have sat around long enough for 12 minutes to accrue." LogColor="Cyan" />
+				
+				<CustomBehavior File="Message" Text="Moving back to the entrance." LogColor="Cyan" />
+				
+				<RunTo X="2563.788" Y="1057.905" Z="52.79597" />
+				<RunTo X="2572.287" Y="1076.014" Z="53.52202" />
+				<RunTo X="2594.468" Y="1083.311" Z="54.51912" />
+				
+				<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Cyan" />
+				
+				<RunTo X="2593.68" Y="1111.23" Z="50.9518" />
+					
+				<CustomBehavior File="MyCTM" X="2592.638" Y="1116.691" Z="50.39219" />
+				<CustomBehavior File="WaitTimer" WaitTime="15000" />
+				
+				<RunTo X="-4659.44" Y="-2527.94" Z="81.6564" />	
+				
+				<CustomBehavior File="Message" Text="We have made it back to the entrance." LogColor="Cyan" />
+			</If>
+		</While>	
+	</QuestOrder>
+</HBProfile>
+

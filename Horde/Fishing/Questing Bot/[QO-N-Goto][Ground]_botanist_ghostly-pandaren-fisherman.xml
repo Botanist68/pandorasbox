@@ -1,0 +1,183 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-Goto][Ground]_botanist_ghostly-pandaren-fisherman</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Pengsong" Entry="66587" />
+		<Mob Name="Amberscale Basilisk" Entry="66188" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<QuestOrder>
+		
+	    
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This profile will farm the Ghostly Pandaren Fisherman for Pandaren Fishing Charm. The profile does not set your hearth, mail, vendor or repair. This profile will run indefinitely. The profile will go to the Fisherman's spawn point, search for him, wait 30 seconds, search for him again, then go explore a little if it didn't find him. If it does find him, it will interact with him, receive the Pandaren Fishing Charm. It will then hearth and stop the bot ." Title="WARNING" />
+						
+			
+			
+				<CustomBehavior File="Message" Text="Position check #1" LogColor="Lime" />
+				<If Condition="Me.MapId == 870" >				 
+					<If Condition="Me.ZoneId != 5805" >
+						<CustomBehavior File="Message" Text="I am in Pandaria, but not in Valley of the Four Winds, flying to Halfhill." LogColor="Lime" />						
+						<RunTo X="-235.2961" Y="568.2637" Z="167.8411" />							
+						<CustomBehavior File="Message" Text="I have reached Klaxxie'vess. " LogColor="Lime" />
+					</If>						
+				</If>
+				
+				
+				<CustomBehavior File="Message" Text="Position check #2" LogColor="Lime" />
+				<CustomBehavior File="Message" Text="I am in Valley of the Four Winds, going in search of the Ghostly Pandaren Fisherman." LogColor="Lime" />
+				<If Condition="Me.ZoneId == 5805" >
+					<RunTo X="455.9621" Y="842.5572" Z="145.3767" />					
+				</If>
+				
+			<While Condition="true" >		
+										
+				<CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+					
+                                             <!-- valley of the four winds  -->
+											 											 
+				<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+				<CustomBehavior File="Message" Text="Searching for the Ghostly Pandaren Fisherman." LogColor="Lime" />
+				<CustomBehavior File="RunMacro" Macro="/target Ghostly Pandaren Fisherman" NumOfTimes="1" WaitTime="0"/>
+					<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 64004">
+						<CustomBehavior File="Message" Text="Found the Ghostly Pandaren Fisherman. I'm going to talk to him." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="64004" NumOfTimes="1" CollectionDistance="10" ObjectType="Npc" X="455.9621" Y="842.5572" Z="145.3767" /> 
+						<CustomBehavior File="RunMacro" Macro="/script SelectGossipOption(1)\n/script CloseGossip()" NumOfTimes="1" WaitTime="2000" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<CustomBehavior File="Message" Text="I have talked to the Ghostly Pandaren Fisherman. I should have the Ancient Pandaren Fishing Charm in my bags" LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="3000" />
+						<CustomBehavior File="Message" Text="Using my hearthstone." LogColor="Lime" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					    <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+						<CustomBehavior File="Message" Text="I have hearthed back to my current home. Stopping the bot" LogColor="Lime" />
+						<CustomBehavior File="UserSettings" StopBot="true" />
+					</If>
+						
+				<CustomBehavior File="Message" Text="I didn't find the Ghostly Pandaren Fisherman. Waiting 30 seconds to search again" LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="30000" />
+						
+				<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+				<CustomBehavior File="Message" Text="Searching for the Ghostly Pandaren Fisherman." LogColor="Lime" />
+				<CustomBehavior File="RunMacro" Macro="/target Ghostly Pandaren Fisherman" NumOfTimes="1" WaitTime="0"/>
+					<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 64004">
+						<CustomBehavior File="Message" Text="Found the Ghostly Pandaren Fisherman. I'm going to talk to him." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="64004" NumOfTimes="1" CollectionDistance="10" ObjectType="Npc" X="455.9621" Y="842.5572" Z="145.3767" /> 
+						<CustomBehavior File="RunMacro" Macro="/script SelectGossipOption(1)\n/script CloseGossip()" NumOfTimes="1" WaitTime="2000" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<CustomBehavior File="Message" Text="I have talked to the Ghostly Pandaren Fisherman. I should have the Ancient Pandaren Fishing Charm in my bags" LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="3000" />
+						<CustomBehavior File="Message" Text="Using my hearthstone." LogColor="Lime" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					    <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+						<CustomBehavior File="Message" Text="I have hearthed back to my current home. Stopping the bot" LogColor="Lime" />
+					</If>
+					
+				<CustomBehavior File="Message" Text="I still didn't find the Ghostly Pandaren Fisherman. I'm going to explore for a few minutes and then check back again." LogColor="Lime" />
+				
+					<RunTo X="384.8883" Y="769.0359" Z="146.2581" />
+					<RunTo X="365.5127" Y="752.1819" Z="159.9711" />
+					<RunTo X="362.4287" Y="668.6843" Z="161.331" />
+					<RunTo X="283.2384" Y="671.4291" Z="160.5013" />
+					<RunTo X="260.0751" Y="740.2496" Z="160.4991" />
+					<RunTo X="305.6536" Y="807.9567" Z="158.65" />
+					<RunTo X="362.2758" Y="756.6038" Z="160.1773" />
+					<RunTo X="455.9621" Y="842.5572" Z="145.3767" />
+						
+				<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+				<CustomBehavior File="Message" Text="Searching for the Ghostly Pandaren Fisherman." LogColor="Lime" />
+				<CustomBehavior File="RunMacro" Macro="/target Ghostly Pandaren Fisherman" NumOfTimes="1" WaitTime="0"/>
+					<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 64004">
+						<CustomBehavior File="Message" Text="Found the Ghostly Pandaren Fisherman. I'm going to talk to him." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="64004" NumOfTimes="1" CollectionDistance="10" ObjectType="Npc" X="455.9621" Y="842.5572" Z="145.3767" /> 
+						<CustomBehavior File="RunMacro" Macro="/script SelectGossipOption(1)\n/script CloseGossip()" NumOfTimes="1" WaitTime="2000" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<CustomBehavior File="Message" Text="I have talked to the Ghostly Pandaren Fisherman. I should have the Ancient Pandaren Fishing Charm in my bags" LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="3000" />
+						<CustomBehavior File="Message" Text="Using my hearthstone." LogColor="Lime" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					    <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+						<CustomBehavior File="Message" Text="I have hearthed back to my current home. Stopping the bot" LogColor="Lime" />
+						<CustomBehavior File="UserSettings" StopBot="true" />
+					</If>
+											 
+				<CustomBehavior File="Message" Text="I didn't find the Ghostly Pandaren Fisherman. Waiting 30 seconds to search again" LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="30000" />							 
+											 
+				<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+				<CustomBehavior File="Message" Text="Searching for the Ghostly Pandaren Fisherman." LogColor="Lime" />
+				<CustomBehavior File="RunMacro" Macro="/target Ghostly Pandaren Fisherman" NumOfTimes="1" WaitTime="0"/>
+					<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 64004">
+						<CustomBehavior File="Message" Text="Found the Ghostly Pandaren Fisherman. I'm going to talk to him." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="64004" NumOfTimes="1" CollectionDistance="10" ObjectType="Npc" X="455.9621" Y="842.5572" Z="145.3767" /> 
+						<CustomBehavior File="RunMacro" Macro="/script SelectGossipOption(1)\n/script CloseGossip()" NumOfTimes="1" WaitTime="2000" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<CustomBehavior File="Message" Text="I have talked to the Ghostly Pandaren Fisherman. I should have the Ancient Pandaren Fishing Charm in my bags" LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="3000" />
+						<CustomBehavior File="Message" Text="Using my hearthstone." LogColor="Lime" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					    <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+						<CustomBehavior File="Message" Text="I have hearthed back to my current home. Stopping the bot" LogColor="Lime" />
+					</If>							 
+											 
+											 
+				<CustomBehavior File="Message" Text="I still didn't find the Ghostly Pandaren Fisherman. I'm going to explore for a few minutes and then check back again." LogColor="Lime" />	
+
+					<RunTo X="360.4904" Y="756.9028" Z="160.3568" />
+					<RunTo X="307.8766" Y="803.5252" Z="159.1338" />
+					<RunTo X="259.067" Y="874.5557" Z="160.499" />
+					<RunTo X="159.5365" Y="835.6774" Z="157.8279" />
+					<RunTo X="140.0871" Y="784.8412" Z="159.458" />
+					<RunTo X="164.5599" Y="696.4343" Z="148.9331" />
+					<RunTo X="249.2202" Y="687.3819" Z="159.2401" />
+					<RunTo X="313.085" Y="798.0926" Z="160.0381" />
+					<RunTo X="364.47" Y="754.6749" Z="159.8796" />
+					<RunTo X="386.4289" Y="770.8008" Z="145.6553" />
+					<RunTo X="455.9621" Y="842.5572" Z="145.3767" />
+					
+			</While>				
+											 
+
+	
+		</QuestOrder>
+
+
+</HBProfile>
+

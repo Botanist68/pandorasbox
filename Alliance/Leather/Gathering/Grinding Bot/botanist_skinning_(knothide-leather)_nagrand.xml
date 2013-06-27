@@ -1,0 +1,48 @@
+<HBProfile>
+  <Name>botanist_skinning_(knothide-leather)_nagrand</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+   <MinLevel>1</MinLevel>
+   <MaxLevel>101</MaxLevel>
+  <Factions>7 14</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+  
+	<Vendors>
+      
+	</Vendors>
+	
+	<Mailboxes>
+     
+	</Mailboxes>
+
+  <Hotspots>
+<Hotspot X="-943.6112" Y="7942.755" Z="30.49523" />
+<Hotspot X="-941.1652" Y="7802.483" Z="36.3814" />
+<Hotspot X="-1132.026" Y="7722.632" Z="18.55701" />
+<Hotspot X="-1061.716" Y="7552.814" Z="29.78885" />
+<Hotspot X="-1048.262" Y="7372.493" Z="33.97583" />
+<Hotspot X="-811.224" Y="7273.275" Z="38.12819" />
+<Hotspot X="-753.2112" Y="7092.679" Z="34.84029" />
+  </Hotspots>
+  
+  <Blackspots>
+  
+  </Blackspots>
+  
+    <AvoidMobs>
+
+    </AvoidMobs>
+
+</HBProfile>

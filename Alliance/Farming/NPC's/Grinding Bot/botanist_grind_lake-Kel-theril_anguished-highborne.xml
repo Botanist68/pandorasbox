@@ -1,0 +1,44 @@
+<HBProfile>
+  <Name>botanist_grind_lake-Kel-theril_anguished-highborne</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>21</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+      <Vendor Name="Wixxrak" Entry="11184" Type="Repair" X="6733.39" Y="-4699.038" Z="721.3698" />
+	</Vendors>
+	
+	<Mailboxes>
+    <Mailbox X="6709.076" Y="-4667.268" Z="721.1526" />
+	</Mailboxes>
+	
+	 <AvoidMobs>
+	  <AvoidMob Name="Betrayed Ranger" Entry="48670"   />
+     </AvoidMobs>
+
+  <Hotspots>
+   <Hotspot X="6589.505" Y="-4118.161" Z="658.309" />
+   <Hotspot X="6542.048" Y="-4004.672" Z="658.7646" />
+   <Hotspot X="6611.455" Y="-3970.994" Z="670.0916" />
+   <Hotspot X="6676.163" Y="-4123.891" Z="663.9725" />
+  </Hotspots>
+  
+  <Blackspots>
+  </Blackspots>
+  
+</HBProfile>

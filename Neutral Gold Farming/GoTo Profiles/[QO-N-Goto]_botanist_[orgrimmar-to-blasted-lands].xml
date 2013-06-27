@@ -1,0 +1,91 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-Goto]_botanist_[orgrimmar-to-blasted-lands]</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.0</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>	
+	</ProtectedItems>
+	
+
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<QuestOrder>
+		
+	    <CustomBehavior File="UserSettings" LootMobs="False" SkinMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This is a goto profile. It will take your character from Kalimdor to the Blasted Lands in Eastern Kingdoms. This profile is used to move your farmers from one continent to another while using Arelog." Title="WARNING" />
+						
+			<While Condition="true" >
+			
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.IsHorde" >
+						<If Condition="Me.X &lt; 1895.627 &amp;&amp; Me.X &gt; 1713.31 &amp;&amp; Me.Y &gt; -4440.429 &amp;&amp; Me.Y &lt; -4283.688 &amp;&amp; Me.Z &lt; 35" >
+							<CustomBehavior File="Message" Text="I am in the Cleft of Shadow in Orgrimmar, moving to the Blastedlands portal." LogColor="Lime" />
+								<RunTo X="1771.456" Y="-4326.629" Z="-8.225829" />
+							<CustomBehavior File="Message" Text="Taking the portal to Blastedlands." LogColor="Lime" />
+							<CustomBehavior File="InteractWith" MobId="195142" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1768.45" Y="-4325.86" Z="-8.3711" />
+							<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+							<CustomBehavior File="UserSettings" UseMount="True" />
+							<CustomBehavior File="FlyTo" X="-11777.51" Y="-3184.844" Z="85.53618" />
+							<CustomBehavior File="UserSettings" StopBot="true" />
+						</If>
+					</If>		
+				</If>
+				
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.IsHorde" >
+							<CustomBehavior File="Message" Text="I'm in Orgrimmar, moving to the Blastedlands portal." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="1859.277" Y="-4249.897" Z="38.38978" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserSettings" UseMount="False" />
+							<RunTo X="1771.456" Y="-4326.629" Z="-8.225829" />
+						<CustomBehavior File="Message" Text="Taking the portal to Blastedlands." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="195142" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="1768.45" Y="-4325.86" Z="-8.3711" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+						<CustomBehavior File="UserSettings" UseMount="True" />
+						<CustomBehavior File="FlyTo" X="-11777.51" Y="-3184.844" Z="85.53618" />
+						<CustomBehavior File="UserSettings" StopBot="true" />
+					</If>	
+				</If>
+				
+			</While>	
+	
+		</QuestOrder>
+
+
+</HBProfile>
+
+				

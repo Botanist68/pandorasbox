@@ -1,0 +1,26 @@
+ <HBProfile> 
+
+  
+   <Name>[Rep-Grinding][Steamwheedle Cartel]botanist_southbreak-shore</Name>
+    <TargetMinLevel>40</TargetMinLevel>
+	<TargetMaxLevel>60</TargetMaxLevel>
+	<MinLevel>40</MinLevel>
+	<MaxLevel>85</MaxLevel>
+	
+	
+	<AvoidMobs>
+		<Mob Name="Captain Dreadbeard" Entry="38749"  />
+		<Mob Name="Basking Cobra" Entry="40657"  />
+    </AvoidMobs>
+	
+	<Grindarea>
+	<Factions>14,106,2258</Factions>	
+		<Hotspots>
+			<Hotspot X="-8279.089" Y="-5085.909" Z="4.290971" />
+			<Hotspot X="-8424.78" Y="-5157.641" Z="4.804319" />
+			<Hotspot X="-8494.383" Y="-5060.327" Z="5.868277" />
+			<Hotspot X="-8442.803" Y="-4938.166" Z="2.941316" />
+	   </Hotspots>	
+  </Grindarea>
+
+ </HBProfile>  

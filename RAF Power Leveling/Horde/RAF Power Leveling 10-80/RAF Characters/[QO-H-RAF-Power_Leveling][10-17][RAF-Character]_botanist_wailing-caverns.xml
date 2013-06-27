@@ -1,0 +1,212 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-H-RAF-Power_Leveling][10-17][RAF-Character]_botanist _ wailing-caverns</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />	
+	</AvoidMobs>
+	
+	<Blackspots>
+
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+	
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" SkinMobs="False" PullDistance="15" KillBetweenHotspots="True" FindVendorsAutomatically="False" />
+						
+
+				
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.X &lt; -742.2633 || Me.X &gt; -712.625 || Me.Y &gt; -2203.933 || Me.Y &lt; -2232.507" >
+							<RunTo X="-441.6225" Y="-2598.677" Z="96.06876" />
+							
+						<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
+							<Hotspot X="-440.6112" Y="-2625.528" Z="95.53199" />
+							<Hotspot X="-460.4505" Y="-2648.769" Z="95.61404" />
+							<Hotspot X="-490.7534" Y="-2653.351" Z="95.87863" />
+							<Hotspot X="-521.8911" Y="-2654.076" Z="95.50768" />
+							<Hotspot X="-552.6206" Y="-2653.256" Z="95.57142" />
+							<Hotspot X="-583.3788" Y="-2653.04" Z="95.63214" />
+							<Hotspot X="-613.8792" Y="-2657.026" Z="95.78602" />
+							<Hotspot X="-644.5414" Y="-2657.172" Z="95.78602" />
+							<Hotspot X="-674.968" Y="-2655.943" Z="97.25922" />
+							<Hotspot X="-705.1726" Y="-2655.532" Z="96.00328" />
+							<Hotspot X="-734.9167" Y="-2647.325" Z="91.89103" />
+							<Hotspot X="-752.564" Y="-2622.757" Z="96.64063" />
+							<Hotspot X="-762.2623" Y="-2593.739" Z="94.21961" />
+							<Hotspot X="-765.8273" Y="-2582.326" Z="93.98965" />
+						</CustomBehavior>
+							<RunTo X="-765.8273" Y="-2582.326" Z="93.98965" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="RAF Character - Press continue on Main Character first, then press continue on this window. The booster will clear a path to Wailing Caverns." Title="WARNING" />
+						
+						<CustomBehavior File="WaitTimer" WaitTime="70000" />
+						
+
+							<RunTo X="-770.9797" Y="-2563.808" Z="92.3148" />
+							<RunTo X="-779.6124" Y="-2534.223" Z="94.63272" />
+							<RunTo X="-787.1452" Y="-2504.338" Z="93.08216" />
+							<RunTo X="-792.8789" Y="-2474.113" Z="93.37825" />
+							<RunTo X="-786.6682" Y="-2444.246" Z="93.99794" />
+							<RunTo X="-773.1586" Y="-2416.136" Z="94.53519" />
+							<RunTo X="-768.0849" Y="-2386.145" Z="93.38799" />
+							<RunTo X="-769.0197" Y="-2355.428" Z="92.31635" />
+							<RunTo X="-788.3388" Y="-2332.627" Z="95.50751" />
+							<RunTo X="-783.1426" Y="-2302.967" Z="91.66688" />
+							<RunTo X="-794.3072" Y="-2275.061" Z="93.75053" />
+							<RunTo X="-800.0319" Y="-2245.408" Z="95.46281" />
+							<RunTo X="-823.9022" Y="-2226.209" Z="95.05638" />
+							<RunTo X="-841.7466" Y="-2201.028" Z="93.17169" />
+							<RunTo X="-849.6456" Y="-2171.301" Z="92.37178" />
+							<RunTo X="-842.0036" Y="-2141.435" Z="92.06954" />
+							<RunTo X="-841.8243" Y="-2110.581" Z="91.75837" />
+							<RunTo X="-861.0281" Y="-2086.865" Z="89.45385" />
+							<RunTo X="-872.7277" Y="-2059.918" Z="81.97882" />
+
+							<RunTo X="-872.7277" Y="-2059.918" Z="81.97882" /> <!-- cave entrance -->
+						<CustomBehavior File="WaitTimer" WaitTime="90000" />
+							
+	
+							<RunTo X="-851.0925" Y="-2038.31" Z="81.23316" />
+							<RunTo X="-821.3709" Y="-2030.635" Z="80.67606" />
+							<RunTo X="-791.3283" Y="-2030.905" Z="79.50793" />
+							<RunTo X="-772.8094" Y="-2054.845" Z="75.50139" />
+							<RunTo X="-744.0112" Y="-2062.022" Z="70.71442" />
+							<RunTo X="-717.523" Y="-2048.132" Z="66.75368" />
+							<RunTo X="-687.2938" Y="-2047.215" Z="65.92059" />
+						<CustomBehavior File="WaitTimer" WaitTime="45000" />
+							
+							<RunTo X="-659.9473" Y="-2034.291" Z="66.57027" />
+							<RunTo X="-631.3231" Y="-2024.343" Z="64.44492" />
+							<RunTo X="-602.0392" Y="-2031.401" Z="58.55858" />
+							<RunTo X="-582.0889" Y="-2053.994" Z="56.79629" />
+							<RunTo X="-563.9942" Y="-2075.448" Z="55.07772" />
+						<CustomBehavior File="WaitTimer" WaitTime="45000" />
+						
+							<RunTo X="-564.9672" Y="-2085.798" Z="53.52758" />	<!-- water pool -->
+							
+							<CustomBehavior File="MyCTM" X="-584.1072" Y="-2097.643" Z="50.01271" />
+							<CustomBehavior File="MyCTM" X="-593.1403" Y="-2133.582" Z="50.85524" />
+						
+						<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
+							<Hotspot X="-598.7757" Y="-2137.488" Z="50.57357" />
+							<Hotspot X="-606.7358" Y="-2156.374" Z="51.53152" />
+							<Hotspot X="-604.5543" Y="-2176.42" Z="50.23244" />
+							<Hotspot X="-623.4402" Y="-2182.959" Z="48.84325" />
+							<Hotspot X="-643.5366" Y="-2183.955" Z="45.06553" />
+							<Hotspot X="-662.6419" Y="-2188.626" Z="39.78232" />
+							<Hotspot X="-682.0642" Y="-2190.911" Z="34.5959" />
+							<Hotspot X="-700.9359" Y="-2193.258" Z="27.71533" />
+							<Hotspot X="-717.9656" Y="-2203.122" Z="22.09366" />
+							<Hotspot X="-738.462" Y="-2217.8" Z="16.66946" />
+						</CustomBehavior>	
+							<RunTo X="-738.462" Y="-2217.8" Z="16.66946" />	
+					</If>	
+				</If>
+							
+				<If Condition="Me.ZoneId == 718">
+					<CustomBehavior File="Message" Text="You started the bot with me inside Wailing Caverns. Running out to reset the dungeon." LogColor="Lime" />
+						<RunTo X="-158.441" Y="131.601" Z="-74.2552" />
+					<CustomBehavior File="MyCTM" X="-164.336" Y="134.6021" Z="-73.50945" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+						<RunTo X="-738.462" Y="-2217.8" Z="16.66946" />
+				</If>		
+					
+		<While Condition="true" >									  
+				<If Condition="Me.ZoneId == 17" >														 
+					<If Condition="Me.X &gt; -742.2633 &amp;&amp; Me.X &lt; -712.625 &amp;&amp; Me.Y &lt; -2203.933 &amp;&amp; Me.Y &gt; -2232.507" >
+						<If Condition="Me.Level &gt;= 17" >
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="**********RAF Character - This character has reached the appropriate level to run Blackfathom Deeps. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots, outside of this portal, when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />
+						</If>
+						<CustomBehavior File="Message" Text="Waiting 10 seconds." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<CustomBehavior File="MyCTM" X="-744.4048" Y="-2216.026" Z="15.71743" />
+						<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" />
+						<If Condition="Me.ZoneId == 718">
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+									Text="RAF Character - Press continue on the level 90 first, then press continue on this window." Title="WARNING" />
+						</If>
+					</If>				
+				</If>
+
+                <!-- wailing caverns dungeon script -->
+				<If Condition="Me.ZoneId == 718">
+					<RunTo X="-128.5944" Y="130.6777" Z="-78.58882" />
+					<RunTo X="-111.9876" Y="145.7799" Z="-80.99899" />
+						
+					<CustomBehavior File="Message" Text="Waiting 60 seconds, entrance." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="60000" />
+					
+					<RunTo X="-108.472" Y="176.1373" Z="-79.76105" />
+					<RunTo X="-98.36909" Y="188.1169" Z="-78.13828" />
+
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 1 of 6." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 2 of 6." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 3 of 6." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+					
+					<RunTo X="-101.5838" Y="183.6692" Z="-78.64371" />
+						
+					<CustomBehavior File="Message" Text="Waiting 150 seconds, 4 of 6." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="150000" />
+						
+					<CustomBehavior File="Message" Text="Waiting 150 seconds, 5 of 6." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="150000" />
+					
+					<RunTo X="-98.36909" Y="188.1169" Z="-78.13828" />
+						
+					<CustomBehavior File="Message" Text="Waiting 180 seconds, 6 of 6." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="180000" />
+					
+					<RunTo X="-108.0924" Y="176.4949" Z="-79.66731" />
+					<RunTo X="-117.4995" Y="137.5508" Z="-79.87161" />
+					
+					<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Lime" />
+						<RunTo X="-158.441" Y="131.601" Z="-74.2552" />
+					<CustomBehavior File="MyCTM" X="-164.336" Y="134.6021" Z="-73.50945" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+						<RunTo X="-738.462" Y="-2217.8" Z="16.66946" />
+				</If>
+		</While>	
+	</QuestOrder>
+</HBProfile>
+

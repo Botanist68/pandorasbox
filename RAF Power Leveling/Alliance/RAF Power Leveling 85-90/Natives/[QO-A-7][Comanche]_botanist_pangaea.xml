@@ -1,0 +1,161 @@
+<HBProfile>
+  <Name>[QO-A-7][Comanche]_botanist_pangaea</Name>
+
+  <MinDurability>0.1</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+  
+  <Blackspots>
+		<Blackspot X="-675.1985" Y="-1533.633" Z="7.828131" Radius="54.23418" />
+</Blackspots>
+    
+<QuestOrder>
+
+			<CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="False" LootMobs="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="1" LogoutForInactivity="True" />
+				
+				<If Condition="Me.Level &gt;= 86" >
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
+				</If>
+
+				<If Condition="Me.MapId == 870" >
+					<If Condition="Me.Level &gt;= 85" >
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
+					</If>
+				</If> 	
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.Level == 85" >
+						<If Condition="((!HasQuest(29547)) &amp;&amp; (!IsQuestCompleted(29547)))" >
+							<CustomBehavior File="FlyTo" X="-8345.208" Y="639.4958" Z="95.79863" DestName="Stormwind Hero's Call Board" />
+							<CustomBehavior File="WaitTimer" WaitTime="15000" />
+						</If>
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="((!HasQuest(29547)) &amp;&amp; (IsQuestCompleted(29547)))" >
+						<CustomBehavior File="FlyTo" X="-8199.543" Y="530.3414" Z="117.1778" DestName="Portal to Paw' don Village portal" />							
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="Message" Text="Taking the portal to Paw' don Village." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="215457" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8194.47949" Y="528.112854" Z="117.290138" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+						<CustomBehavior File="ForcedMount" MountType="Ground" />
+						<CustomBehavior File="Message" Text="I've reached Paw' don Village." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.ZoneId == 1519" >
+						<If Condition="((!HasQuest(29547))" >						
+							<CustomBehavior File="Message" Text="." LogColor="Lime" />
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="60" ExpiryAction="InputEnabled_Continue" 
+							Text="Apparently, you have completed part of the quest line leading to Pandaria. Please complete the remaining quest until your feet are on the ground in Pandaria. Then restart the profile." Title="WARNING" />
+						</If>
+					</If>
+				</If>
+				
+				
+			
+				<If Condition="Me.Level == 85" >		
+					<If Condition="Me.ZoneId == 1519" > 
+						<If Condition="((HasQuest(29547)) &amp;&amp; (!IsQuestCompleted(29547)))" >
+								<CustomBehavior File="FlyTo" X="-8326.699" Y="283.287" Z="156.8326" DestName="Admiral Jes-Tereth" />
+								<CustomBehavior File="ForcedDismount" />
+									<RunTo X="-8338.451" Y="274.2859" Z="157.3475" />
+								<CustomBehavior File="WaitTimer" WaitTime="5000" GoalText="Closing Cinematic {TimeRemaining}" />
+								<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
+								<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="Closing Cinematic {TimeRemaining}" />
+								<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
+								<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="Closing Cinematic {TimeRemaining}" />
+								<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
+							<TurnIn QuestName="The King's Command" QuestId="29547" TurnInName="Rell Nightwind" TurnInId="55789" X="-8459.021" Y="353.9254" Z="135.539" />
+						</If>
+					</If>				
+					<If Condition="((!HasQuest(29548)) &amp;&amp; (!IsQuestCompleted(29548)))" >
+								<RunTo X="-8456.767" Y="350.3568" Z="135.6791" />
+						<PickUp QuestName="The Mission" QuestId="29548" GiverName="Rell Nightwind" GiverId="55789" X="-8459.021" Y="353.9254" Z="135.539" />
+								<RunTo X="-8452.151" Y="345.9871" Z="135.8915" />
+					</If>
+					<If Condition="((HasQuest(29548)) &amp;&amp; (!IsQuestCompleted(29548)))" >
+							<CustomBehavior File="FlyTo" DestName="Turnin Quest" X="-8439.822" Y="391.2263" Z="202.2393" />
+							<CustomBehavior File="MyCTM" X="-7888.064" Y="1250.71" Z="388.5733" />
+							<CustomBehavior File="MyCTM" X="-7879.78" Y="1277.255" Z="358.4799" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="InteractWith" MobId="66292" NumOfTimes="1" CollectionDistance="30" ObjectType="Npc" X="-7879.8" Y="1279.516" Z="358.4773" />
+							<CustomBehavior File="RunMacro" Macro="/script SelectGossipOption(1)\n/script CloseGossip()" NumOfTimes="1" WaitTime="9000" />
+							<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
+							<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Cancel Cinematic {TimeRemaining}" />
+							<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
+							<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Cancel Cinematic {TimeRemaining}" />
+							<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
+							<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Cancel Cinematic {TimeRemaining}" />
+							<CustomBehavior File="Misc\RunLua" Lua="StopCinematic()" WaitTime="1000" />
+						<TurnIn QuestName="The Mission!" QuestId="29548" TurnInName="Sky Admiral Rogers" TurnInId="66292" X="-667.888" Y="-1482.25" Z="130.1994" />						
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 870" >
+					<CustomBehavior File="Message" Text="Jumping off the boat." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="MyCTM" X="-704.4305" Y="-1483.257" Z="130.4549" />
+						<CustomBehavior File="MyCTM" X="-732.1873" Y="-1490.647" Z="134.7712" />
+						<CustomBehavior File="MyCTM" X="-737.4378" Y="-1502.903" Z="134.7697" />
+						<CustomBehavior File="MyCTM" X="-741.1252" Y="-1495.995" Z="134.7728" />
+						<CustomBehavior File="MyCTM" X="-731.811" Y="-1457.887" Z="149.8249" />
+						<CustomBehavior File="MyCTM" X="-745.9075" Y="-1463.394" Z="149.827" />
+						<CustomBehavior File="MyCTM" X="-749.3347" Y="-1469.728" Z="151.2215" />
+						<CustomBehavior File="MyCTM" X="-770.1754" Y="-1484.477" Z="-4.839229" />
+						
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="ForcedMount" MountType="Ground" />						
+						<CustomBehavior File="MyCTM"  X="-751.1638" Y="-1516.037" Z="-2.13389" />
+						<CustomBehavior File="MyCTM"  X="-738.486" Y="-1505.18" Z="0.0001795292" />
+						<CustomBehavior File="MyCTM"  X="-718.4119" Y="-1488.527" Z="0.0001795292" />
+						<CustomBehavior File="MyCTM"  X="-700.4313" Y="-1468.834" Z="0.0001795292" />
+						<CustomBehavior File="MyCTM"  X="-674.5909" Y="-1462.322" Z="0.0001795292" />
+						<CustomBehavior File="MyCTM"  X="-647.2186" Y="-1461.102" Z="0.0001795292" />
+						<CustomBehavior File="MyCTM"  X="-620.9637" Y="-1455.523" Z="0.0001795292" />
+						<CustomBehavior File="MyCTM"  X="-596.4706" Y="-1444.585" Z="0.0001795292" />
+						<CustomBehavior File="MyCTM"  X ="-577.1156" Y="-1425.949" Z="0.0001795292" />
+						<CustomBehavior File="MyCTM"  X="-558.2622" Y="-1406.847" Z="0.0001795292" />
+						<CustomBehavior File="MyCTM"  X="-536.9556" Y="-1390.77" Z="0.0001795292" />
+							
+						<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">	
+							<Hotspot X="-512.3511" Y="-1388.939" Z="2.448366" />
+							<Hotspot X="-498.4853" Y="-1411.822" Z="2.696816" />
+							<Hotspot X="-493.4282" Y="-1437.553" Z="5.991698" />
+							<Hotspot X="-499.7771" Y="-1463.753" Z="16.70458" />
+							<Hotspot X="-488.7972" Y="-1484.071" Z="21.87344" />
+							<Hotspot X="-462.1161" Y="-1480.318" Z="20.307" />
+							<Hotspot X="-441.8749" Y="-1495.414" Z="26.32943" />
+							<Hotspot X="-435.6795" Y="-1521.679" Z="25.99349" />
+							<Hotspot X="-429.5047" Y="-1547.778" Z="28.68335" />
+							<Hotspot X="-414.7086" Y="-1570.505" Z="29.68498" />
+							<Hotspot X="-398.8368" Y="-1592.449" Z="32.54468" />
+							<Hotspot X="-384.2267" Y="-1615.121" Z="33.32047" />
+							<Hotspot X="-375.0436" Y="-1640.494" Z="39.06274" />
+							<Hotspot X="-367.799" Y="-1666.2" Z="43.52046" />
+							<Hotspot X="-348.9099" Y="-1684.644" Z="46.29996" />
+							<Hotspot X="-343.341" Y="-1689.179" Z="46.30373" />
+							<Hotspot X="-341.2914" Y="-1697.783" Z="46.16869" />
+							<Hotspot X="-331.3097" Y="-1721.825" Z="46.15316" />
+							<Hotspot X="-312.8262" Y="-1741.064" Z="54.41762" />
+							<Hotspot X="-306.4393" Y="-1749.502" Z="60.48131" />
+						</CustomBehavior>
+				</If>
+				
+				<If Condition="Me.MapId == 870" >
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-8][Apache]_botanist_pangaea" />
+				</If>	
+
+</QuestOrder>
+
+</HBProfile>

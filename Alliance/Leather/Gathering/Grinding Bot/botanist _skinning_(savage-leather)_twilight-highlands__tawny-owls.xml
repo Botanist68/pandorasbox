@@ -1,0 +1,79 @@
+<HBProfile>
+   <!--Created By Botanist-->
+   <Name>botanist _skinning_(savage-leather)_twilight-highlands__tawny-owls</Name>   
+   <MinDurability>0.4</MinDurability>
+   <MinFreeBagSlots>3</MinFreeBagSlots>   
+   <SellGrey>True</SellGrey>
+   <SellWhite>False</SellWhite>
+   <SellGreen>False</SellGreen>
+   <SellBlue>False</SellBlue>
+   <SellPurple>False</SellPurple>  
+   <MailGrey>False</MailGrey>
+   <MailWhite>True</MailWhite>
+   <MailGreen>True</MailGreen>
+   <MailBlue>True</MailBlue>
+   <MailPurple>True</MailPurple>
+   
+
+    <Name>Kirthaven</Name>
+    <MinLevel>1</MinLevel>
+    <MaxLevel>101</MaxLevel>
+ 	<TargetElites>False</TargetElites>
+
+	<!--Thundermar Mailbox-->
+    <Mailboxes>
+	 <Mailbox X="-3205.928" Y="-5045.746" Z="120.3349" />
+    </Mailboxes>
+	<!--Kirthaven Vendors-->
+    <Vendors>
+     <Vendor Name="Cecily Stormbrow" Entry="49581" Type="Food" X="-2758.917" Y="-5356.455" Z="175.7845" />
+     <Vendor Name="Carrick Irongrin" Entry="49575" Type="Repair" X="-2804.078" Y="-5347.113" Z="177.1037" />
+    </Vendors>
+   
+    <GrindArea>
+    <Factions>2358 15 2358 15</Factions>
+    <TargetMinLevel>75</TargetMinLevel>
+    <TargetMaxLevel>86</TargetMaxLevel>
+    <Hotspots>
+     <Hotspot X="-2820.958" Y="-5180.885" Z="181.4137" />
+     <Hotspot X="-2583.248" Y="-5254.211" Z="159.9018" />
+     <Hotspot X="-2431.402" Y="-5065.64" Z="118.5177" />
+     <Hotspot X="-2411.636" Y="-5259.639" Z="118.5637" />
+     <Hotspot X="-2434.517" Y="-5422.458" Z="146.2594" />
+     <Hotspot X="-2577.33" Y="-5296.226" Z="166.7987" />
+     <Hotspot X="-2584.688" Y="-5528.185" Z="158.7258" />
+     <Hotspot X="-2500.761" Y="-5696.198" Z="109.1647" />
+     <Hotspot X="-2591.281" Y="-5827.84" Z="100.2048" />
+     <Hotspot X="-2864.047" Y="-5919.198" Z="97.2825" />
+     <Hotspot X="-2923.298" Y="-6063.378" Z="91.06325" />
+     <Hotspot X="-2894.719" Y="-6135.072" Z="92.33193" />
+     <Hotspot X="-3045.435" Y="-6127.572" Z="91.21613" />
+     <Hotspot X="-3276.578" Y="-6188.239" Z="96.19856" />
+     <Hotspot X="-3262.178" Y="-6096.3" Z="101.4781" />
+     <Hotspot X="-3220.512" Y="-6076.225" Z="97.67503" />
+     <Hotspot X="-3158.33" Y="-5859.033" Z="106.2978" />
+     <Hotspot X="-3214.161" Y="-5798.34" Z="115.5101" />
+     <Hotspot X="-2965.396" Y="-5809.178" Z="143.84" />
+     <Hotspot X="-2957.378" Y="-5657.631" Z="170.6926" />
+     <Hotspot X="-2882.703" Y="-5551.657" Z="170.6664" />
+     <Hotspot X="-2939.61" Y="-5443.796" Z="156.7877" />
+     <Hotspot X="-2721.113" Y="-5416.013" Z="188.7304" />
+    </Hotspots>
+	
+    <AvoidMobs>
+	 <AvoidMob Name="Apexar" Entry="46258" />
+    </AvoidMobs>
+	<Blackspots>
+	 <Blackspot X="-4973.855" Y="-4455.5" Z="334.6986" Radius="100" />
+	 <Blackspot X="-4935.966" Y="-4593.08" Z="325.0277" Radius="25" />
+	 <Blackspot X="-3314.119" Y="-4863.538" Z="110.6354" Radius="100" />
+	 <Blackspot X="-3466.124" Y="-4868.553" Z="88.67686" Radius="100" />
+	 <Blackspot X="-3589.214" Y="-4845.209" Z="86.85037" Radius="100" />
+	 <Blackspot X="-3671.173" Y="-4815.083" Z="80.95471" Radius="100" />
+	 <Blackspot X="-4030.25" Y="-4838.122" Z="98.6027" Radius="30" />
+	 <Blackspot X="-4059.887" Y="-4803.676" Z="106.2977" Radius="30" />
+	 <Blackspot X="-4118.116" Y="-4779.83" Z="111.987" Radius="30" />
+    </Blackspots>
+    </GrindArea>
+   
+</HBProfile>

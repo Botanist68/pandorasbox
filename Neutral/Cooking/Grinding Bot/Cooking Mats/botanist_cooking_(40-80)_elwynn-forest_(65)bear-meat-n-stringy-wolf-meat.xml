@@ -1,0 +1,43 @@
+<HBProfile>
+  <Name>botanist_cooking_(40-80)_elwynn-forest_(65)bear-meat-n-stringy-wolf-meat</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>38 44</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+      <Vendor Name="Andrew Krighton" Entry="2046" Type="Repair" X="-9464.06" Y="88.934" Z="58.34372" />
+	</Vendors>
+	
+	<Mailboxes>
+      <Mailbox X="-9457.582" Y="51.67315" Z="56.45724" />
+	</Mailboxes>
+
+  <Hotspots>
+    <Hotspot X="-9515.479" Y="-634.2499" Z="64.89314" />
+	<Hotspot X="-9395.896" Y="-580.188" Z="66.72163" />
+	<Hotspot X="-9364.736" Y="-176.6831" Z="63.04337" />
+	<Hotspot X="-9353.855" Y="-1389.169" Z="62.84364" />
+    <Hotspot X="-9308.796" Y="-1222.44" Z="69.20761" />
+    <Hotspot X="-9405.37" Y="-1160.908" Z="59.16493" />
+  </Hotspots>
+  
+  <Blackspots>
+  
+  </Blackspots>
+  
+</HBProfile>

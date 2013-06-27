@@ -1,0 +1,342 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-Rep][Hydraxian-Waterlords]_botanist_molten-core</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>	 
+		<Mob Name="Bellows Slave" Entry="40084" />
+		<Mob Name="Twilight Zealot" Entry="50284" />
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+		<Mob Name="Conflagration" Entry="39994" />
+		<Mob Name="Karsh Steelbender" Entry="39698" />
+		<Mob Name="Shadow of Obsidius" Entry="40817" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+		<Item name="Berto's Staff" entry="55789" />
+		<Item name="Acanthia's Lost Pendant" entry="55791" />
+		<Item name="Snub-Nosed Pistol" entry="66953" />
+		<Item name="Toxidunk Dagger" entry="55790" />
+		
+	</ProtectedItems>
+
+	<Factions></Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+		<CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" PullDistance="1" KillBetweenHotspots="False" LogoutForInactivity="True" />
+		
+		
+				<If Condition="Me.MapId == 0" >
+					<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.5)" > 
+						<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Moving to vendor and repair in Iron Summit." LogColor="Lime" />
+						 <CustomBehavior File="FlyTo" X="-7093.68" Y="-1268.31" Z="270.4857" />     
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Fergus Gravelsmash" Entry="47937" Type="Repair" X="-7093.68" Y="-1268.31" Z="270.4857" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="-7112.374" Y="-1200.006" Z="306.9484" />
+							</Mailboxes>
+						</SetMailbox>
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.X &lt; 1109.144 || Me.X &gt; 1141.548 || Me.Y &gt; -448.9593 || Me.Y &lt; -476.1658" >
+						 <If Condition="((!HasQuest(7848)) &amp;&amp; (IsQuestCompleted(7848)))" >
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="Make sure that you are in a party and have converted you party into a raid. Then press continue on this popup." Title="WARNING" />
+							<CustomBehavior File="WaitTimer" WaitTime="2000" />
+							<CustomBehavior File="Message" Text="I am attuned to Molten Core, flying to Blackrock Mountain." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-7055.345" Y="-1169.117" Z="367.7985" />
+							<CustomBehavior File="MyCTM" X="-7250.553" Y="-1082.543" Z="327.7298" />
+							<CustomBehavior File="MyCTM" X="-7362.484" Y="-1101.394" Z="291.3846" />
+							<CustomBehavior File="MyCTM" X="-7378.989" Y="-1095.77" Z="291.633" />
+							<CustomBehavior File="MyCTM" X="-7409.676" Y="-1100.668" Z="289.8604" />
+							<CustomBehavior File="MyCTM" X="-7418.046" Y="-1068.09" Z="284.8479" />
+							<CustomBehavior File="MyCTM" X="-7434.496" Y="-1059.474" Z="281.5124" />
+							<CustomBehavior File="MyCTM" X="-7483.129" Y="-1071.903" Z="266.0364" />
+							<CustomBehavior File="MyCTM" X="-7544.171" Y="-1095.415" Z="273.5811" />
+							<CustomBehavior File="MyCTM" X="-7568.178" Y="-1055.278" Z="207.2832" />
+							<CustomBehavior File="MyCTM" X="-7521.016" Y="-1049.576" Z="180.9109" />
+							<CustomBehavior File="ForcedDismount" />	
+								<RunTo X="-7510.874" Y="-1040.787" Z="180.9114" />
+						    <CustomBehavior File="InteractWith" MobId="14387" GossipOptions="1" NumOfTimes="1" X="-7508.632" Y="-1039.495" Z="180.9122" />
+							<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						</If>	
+					</If>
+				</If>
+		
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.X &lt; 1109.144 || Me.X &gt; 1141.548 || Me.Y &gt; -448.9593 || Me.Y &lt; -476.1658" >
+						<If Condition="((!HasQuest(7848)) &amp;&amp; (!IsQuestCompleted(7848)))" >
+							<CustomBehavior File="Message" Text="I am not attuned to Molten Core, flying to Iron Summit to set my hearth so I can port out after getting the Core Fragment for attunement." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-7055.345" Y="-1169.117" Z="367.7985" />
+							<CustomBehavior File="MyCTM" X="-7082.817" Y="-1200.897" Z="324.3429" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="SetHearthstone" MobId="47942" X="-7085.53" Y="-1202.19" Z="323.9875" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="Message" Text="Flying to Blackrock Mountain." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-7055.345" Y="-1169.117" Z="367.7985" />
+							<CustomBehavior File="MyCTM" X="-7250.553" Y="-1082.543" Z="327.7298" />
+							<CustomBehavior File="MyCTM" X="-7362.484" Y="-1101.394" Z="291.3846" />
+							<CustomBehavior File="MyCTM" X="-7378.989" Y="-1095.77" Z="291.633" />
+							<CustomBehavior File="MyCTM" X="-7409.676" Y="-1100.668" Z="289.8604" />
+							<CustomBehavior File="MyCTM" X="-7418.046" Y="-1068.09" Z="284.8479" />
+							<CustomBehavior File="MyCTM" X="-7434.496" Y="-1059.474" Z="281.5124" />
+							<CustomBehavior File="MyCTM" X="-7483.129" Y="-1071.903" Z="266.0364" />
+							<CustomBehavior File="MyCTM" X="-7544.171" Y="-1095.415" Z="273.5811" />
+							<CustomBehavior File="MyCTM" X="-7568.178" Y="-1055.278" Z="207.2832" />
+							<CustomBehavior File="MyCTM" X="-7521.016" Y="-1049.576" Z="180.9109" />
+							<CustomBehavior File="ForcedDismount" />	
+								<RunTo X="-7510.874" Y="-1040.787" Z="180.9114" />
+							<PickUp QuestName="Attunement to the Core" QuestId="7848" GiverName="Lothos Riftwaker" GiverId="14387" X="-7508.632" Y="-1039.495" Z="180.9122" />
+							
+							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+								<HotSpot X="-7486.237" Y="-1038.915" Z="177.6211" />
+								<HotSpot X="-7394.78" Y="-954.5326" Z="170.4878" />
+								<HotSpot X="-7377.797" Y="-932.2723" Z="167.7054" />
+								<HotSpot X="-7197.889" Y="-902.2018" Z="165.4883" />
+								<HotSpot X="-7179.976" Y="-922.5797" Z="166.1513" />
+							</CustomBehavior>	
+								<RunTo X="-7179.976" Y="-922.5797" Z="166.1513" />
+								
+							<CustomBehavior File="MyCTM" X="-7177.479" Y="-927.4006" Z="166.9428" />	
+							<CustomBehavior File="WaitTimer" WaitTime="12000" />
+								<RunTo X="449.5046" Y="22.69775" Z="-70.67482" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+							<CustomBehavior File="InteractWith" MobId="207401" GossipOptions="1" NumOfTimes="1"  X="444.794922" Y="21.6984711" Z="-70.6062241" />
+							<CustomBehavior File="WaitTimer" WaitTime="3000" />
+								
+							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+								<Hotspot X="935.7797" Y="-276.1522" Z="-49.93658" />
+								<Hotspot X="931.8284" Y="-237.8246" Z="-50.34036" />
+								<Hotspot X="933.578" Y="-236.205" Z="-50.09829" />
+								<Hotspot X="961.5899" Y="-209.4469" Z="-61.78753" />
+								<Hotspot X="967.3167" Y="-204.4156" Z="-61.78753" />
+								<Hotspot X="981.7831" Y="-210.568" Z="-61.78894" />
+								<Hotspot X="997.7917" Y="-227.6564" Z="-61.88845" />
+								<Hotspot X="1010.103" Y="-239.7049" Z="-61.38707" />
+								<Hotspot X="1036.613" Y="-216.5853" Z="-61.78924" />
+								<Hotspot X="1065.488" Y="-188.6571" Z="-63.71173" />
+								<Hotspot X="1092.324" Y="-158.6841" Z="-65.30797" />
+								<Hotspot X="1112.926" Y="-137.1416" Z="-74.35884" />
+								<Hotspot X="1122.581" Y="-133.2355" Z="-74.35884" />
+								<Hotspot X="1162.093" Y="-136.4499" Z="-74.36449" />
+								<Hotspot X="1162.597" Y="-136.6805" Z="-74.36449" />
+								<Hotspot X="1191.856" Y="-165.0033" Z="-74.35854" />
+								<Hotspot X="1209.8" Y="-184.5768" Z="-74.46062" />
+								<Hotspot X="1219.093" Y="-193.5893" Z="-82.9398" />
+								<Hotspot X="1231.167" Y="-205.9801" Z="-85.6746" />   <!-- summoners tomb entrance -->
+							</CustomBehavior>
+							
+								<RunTo X="1254.239" Y="-237.7136" Z="-85.212" />
+								<RunTo X="1278.568" Y="-278.2466" Z="-78.21857" />
+							<CustomBehavior File="InteractWith" MobId="9039" GossipOptions="1" NumOfTimes="1" X="1281.137" Y="-282.1509" Z="-78.21918" />
+								<RunTo X="1271.229" Y="-255.0623" Z="-78.21922" />
+							<CustomBehavior File="Message" Text="Waiting 130 seconds to kill all the spawning mobs." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="130000" />
+								<RunTo X="1260.915" Y="-291.7549" Z="-78.21922" />
+								<RunTo X="1271.217" Y="-308.1876" Z="-78.1384" />
+								<RunTo X="1240.478" Y="-340.309" Z="-92.89175" />
+								<RunTo X="1202.944" Y="-373.5999" Z="-91.95705" />
+								<RunTo X="1135.369" Y="-441.5115" Z="-103.7447" />
+								<RunTo X="1127.469" Y="-469.3117" Z="-104.8318" />
+							<CustomBehavior File="InteractWith" MobId="179553" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="1128.0094" Y="-471.763458" Z="-104.032013" />
+							<CustomBehavior File="WaitTimer" WaitTime="3000" />
+							<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+							<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+							<CustomBehavior File="Message" Text="Flying to Blackrock Mountain." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-7055.345" Y="-1169.117" Z="367.7985" />
+							<CustomBehavior File="MyCTM" X="-7250.553" Y="-1082.543" Z="327.7298" />
+							<CustomBehavior File="MyCTM" X="-7362.484" Y="-1101.394" Z="291.3846" />
+							<CustomBehavior File="MyCTM" X="-7378.989" Y="-1095.77" Z="291.633" />
+							<CustomBehavior File="MyCTM" X="-7409.676" Y="-1100.668" Z="289.8604" />
+							<CustomBehavior File="MyCTM" X="-7418.046" Y="-1068.09" Z="284.8479" />
+							<CustomBehavior File="MyCTM" X="-7434.496" Y="-1059.474" Z="281.5124" />
+							<CustomBehavior File="MyCTM" X="-7483.129" Y="-1071.903" Z="266.0364" />
+							<CustomBehavior File="MyCTM" X="-7544.171" Y="-1095.415" Z="273.5811" />
+							<CustomBehavior File="MyCTM" X="-7568.178" Y="-1055.278" Z="207.2832" />
+							<CustomBehavior File="MyCTM" X="-7521.016" Y="-1049.576" Z="180.9109" />
+							<CustomBehavior File="ForcedDismount" />	
+								<RunTo X="-7510.874" Y="-1040.787" Z="180.9114" />
+							<TurnIn QuestName="Attunement to the Core" QuestId="7848" TurnInName="Lothos Riftwaker" TurnInId="14387" />
+								<RunTo X="-7521.016" Y="-1049.576" Z="180.9109" />
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="Make sure that you are in a party and have converted you party into a raid. Then press continue on this popup." Title="WARNING" />
+							<CustomBehavior File="WaitTimer" WaitTime="2000" />	
+								<RunTo X="-7510.874" Y="-1040.787" Z="180.9114" />
+							<CustomBehavior File="InteractWith" MobId="14387" GossipOptions="1" NumOfTimes="1" X="-7508.632" Y="-1039.495" Z="180.9122" />
+							<CustomBehavior File="WaitTimer" WaitTime="10000" />	
+						</If>	
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.X &lt; 1109.144 || Me.X &gt; 1141.548 || Me.Y &gt; -448.9593 || Me.Y &lt; -476.1658" >
+						<If Condition="((HasQuest(7848)) &amp;&amp; (!IsQuestCompleted(7848)))" >
+							<CustomBehavior File="Message" Text="I am not attuned to Molten Core, flying to Iron Summit to set my hearth so I can port out after getting the Core Fragment for attunement." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-7055.345" Y="-1169.117" Z="367.7985" />
+							<CustomBehavior File="MyCTM" X="-7082.817" Y="-1200.897" Z="324.3429" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="SetHearthstone" MobId="47942" X="-7085.53" Y="-1202.19" Z="323.9875" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="Message" Text="Flying to Blackrock Mountain." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-7055.345" Y="-1169.117" Z="367.7985" />
+							<CustomBehavior File="MyCTM" X="-7250.553" Y="-1082.543" Z="327.7298" />
+							<CustomBehavior File="MyCTM" X="-7362.484" Y="-1101.394" Z="291.3846" />
+							<CustomBehavior File="MyCTM" X="-7378.989" Y="-1095.77" Z="291.633" />
+							<CustomBehavior File="MyCTM" X="-7409.676" Y="-1100.668" Z="289.8604" />
+							<CustomBehavior File="MyCTM" X="-7418.046" Y="-1068.09" Z="284.8479" />
+							<CustomBehavior File="MyCTM" X="-7434.496" Y="-1059.474" Z="281.5124" />
+							<CustomBehavior File="MyCTM" X="-7483.129" Y="-1071.903" Z="266.0364" />
+							<CustomBehavior File="MyCTM" X="-7544.171" Y="-1095.415" Z="273.5811" />
+							<CustomBehavior File="MyCTM" X="-7568.178" Y="-1055.278" Z="207.2832" />
+							<CustomBehavior File="MyCTM" X="-7521.016" Y="-1049.576" Z="180.9109" />
+							<CustomBehavior File="ForcedDismount" />	
+								<RunTo X="-7510.874" Y="-1040.787" Z="180.9114" />
+							<PickUp QuestName="Attunement to the Core" QuestId="7848" GiverName="Lothos Riftwaker" GiverId="14387" X="-7508.632" Y="-1039.495" Z="180.9122" />
+							
+							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+								<HotSpot X="-7486.237" Y="-1038.915" Z="177.6211" />
+								<HotSpot X="-7394.78" Y="-954.5326" Z="170.4878" />
+								<HotSpot X="-7377.797" Y="-932.2723" Z="167.7054" />
+								<HotSpot X="-7197.889" Y="-902.2018" Z="165.4883" />
+								<HotSpot X="-7179.976" Y="-922.5797" Z="166.1513" />
+							</CustomBehavior>	
+								<RunTo X="-7179.976" Y="-922.5797" Z="166.1513" />
+								
+							<CustomBehavior File="MyCTM" X="-7177.479" Y="-927.4006" Z="166.9428" />	
+							<CustomBehavior File="WaitTimer" WaitTime="12000" />
+								<RunTo X="449.5046" Y="22.69775" Z="-70.67482" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+							<CustomBehavior File="InteractWith" MobId="207401" GossipOptions="1" NumOfTimes="1"  X="444.794922" Y="21.6984711" Z="-70.6062241" />
+							<CustomBehavior File="WaitTimer" WaitTime="12000" />
+								
+								<RunTo X="929.8218" Y="-239.4274" Z="-50.20366" />
+							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+								<HotSpot X="929.8218" Y="-239.4274" Z="-50.20366" />
+								<HotSpot X="937.659" Y="-230.6469" Z="-50.1658" />
+								<HotSpot X="963.2678" Y="-207.0732" Z="-61.78765" />
+								<HotSpot X="965.9742" Y="-204.4085" Z="-61.78765" />
+								<HotSpot X="983.4805" Y="-210.8779" Z="-61.78907" />
+								<HotSpot X="999.0402" Y="-227.9546" Z="-61.95435" />
+								<HotSpot X="1010.15" Y="-239.368" Z="-61.38848" />
+								<HotSpot X="1037.835" Y="-216.648" Z="-61.78922" />
+								<HotSpot X="1066.486" Y="-187.6409" Z="-63.8174" />
+								<HotSpot X="1093.392" Y="-157.6507" Z="-65.30786" />
+								<HotSpot X="1122.43" Y="-131.6125" Z="-74.35945" />
+								<HotSpot X="1162.487" Y="-136.6626" Z="-74.36521" />
+								<HotSpot X="1192.681" Y="-163.8134" Z="-74.35946" />
+								<HotSpot X="1219.322" Y="-193.5448" Z="-83.02494" />
+								<HotSpot X="1227.14" Y="-201.275" Z="-85.6752" /> <!-- summoners tomb entrance -->
+							</CustomBehavior>
+							
+								<RunTo X="1254.239" Y="-237.7136" Z="-85.212" />
+								<RunTo X="1278.568" Y="-278.2466" Z="-78.21857" />
+							<CustomBehavior File="InteractWith" MobId="9039" GossipOptions="1" NumOfTimes="1" X="1281.137" Y="-282.1509" Z="-78.21918" />
+								<RunTo X="1271.229" Y="-255.0623" Z="-78.21922" />
+							<CustomBehavior File="Message" Text="Waiting 120 seconds to kill all the spawning mobs." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="120000" />
+								<RunTo X="1260.915" Y="-291.7549" Z="-78.21922" />
+								<RunTo X="1271.217" Y="-308.1876" Z="-78.1384" />
+								<RunTo X="1240.478" Y="-340.309" Z="-92.89175" />
+								<RunTo X="1202.944" Y="-373.5999" Z="-91.95705" />
+								<RunTo X="1135.369" Y="-441.5115" Z="-103.7447" />
+								<RunTo X="1127.469" Y="-469.3117" Z="-104.8318" />
+							<CustomBehavior File="InteractWith" MobId="179553" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="1128.0094" Y="-471.763458" Z="-104.032013" />
+							<CustomBehavior File="WaitTimer" WaitTime="3000" />
+							<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+							<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+							<CustomBehavior File="Message" Text="Flying to Blackrock Mountain." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-7055.345" Y="-1169.117" Z="367.7985" />
+							<CustomBehavior File="MyCTM" X="-7250.553" Y="-1082.543" Z="327.7298" />
+							<CustomBehavior File="MyCTM" X="-7362.484" Y="-1101.394" Z="291.3846" />
+							<CustomBehavior File="MyCTM" X="-7378.989" Y="-1095.77" Z="291.633" />
+							<CustomBehavior File="MyCTM" X="-7409.676" Y="-1100.668" Z="289.8604" />
+							<CustomBehavior File="MyCTM" X="-7418.046" Y="-1068.09" Z="284.8479" />
+							<CustomBehavior File="MyCTM" X="-7434.496" Y="-1059.474" Z="281.5124" />
+							<CustomBehavior File="MyCTM" X="-7483.129" Y="-1071.903" Z="266.0364" />
+							<CustomBehavior File="MyCTM" X="-7544.171" Y="-1095.415" Z="273.5811" />
+							<CustomBehavior File="MyCTM" X="-7568.178" Y="-1055.278" Z="207.2832" />
+							<CustomBehavior File="MyCTM" X="-7521.016" Y="-1049.576" Z="180.9109" />
+							<CustomBehavior File="ForcedDismount" />	
+								<RunTo X="-7510.874" Y="-1040.787" Z="180.9114" />
+							<TurnIn QuestName="Attunement to the Core" QuestId="7848" TurnInName="Lothos Riftwaker" TurnInId="14387" />
+								<RunTo X="-7521.016" Y="-1049.576" Z="180.9109" />
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="Make sure that you are in a party and have converted you party into a raid. Then press continue on this popup." Title="WARNING" />
+							<CustomBehavior File="WaitTimer" WaitTime="2000" />	
+								<RunTo X="-7510.874" Y="-1040.787" Z="180.9114" />
+							<CustomBehavior File="InteractWith" MobId="14387" GossipOptions="1" NumOfTimes="1" X="-7508.632" Y="-1039.495" Z="180.9122" />
+							<CustomBehavior File="WaitTimer" WaitTime="10000" />	
+						</If>	
+					</If>
+				</If>
+		 
+				<If Condition="Me.MapId == 409" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside Molten Core. I'm leaving the dungeon." LogColor="Lime" />
+						<RunTo X="1091.89" Y="-466.985" Z="-105.084" />
+					<CustomBehavior File="MyCTM" X="1098.88" Y="-465.5144" Z="-104.6203" />					
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="{TimeRemaining}" />						
+					<CustomBehavior File="Message" Text="I have exited Molten Core." LogColor="Lime" />
+						<RunTo X="-7514.63" Y="-1044.887" Z="182.3005" />
+						<RunTo X="-7510.874" Y="-1040.787" Z="180.9114" />
+					<CustomBehavior File="InteractWith" MobId="14387" GossipOptions="1" NumOfTimes="1" X="-7508.632" Y="-1039.495" Z="180.9122" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+				</If>
+				
+
+		
+		<While Condition="true" > 
+
+			
+							<!--	molten core dungeon script  -->
+
+				<If Condition="Me.MapId == 409" >
+					<CustomBehavior File="Message" Text="Stopping the bot. The dungeon script for Molten Core isn't complete." LogColor="Lime" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
+				</If>
+
+	 	</While> 
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

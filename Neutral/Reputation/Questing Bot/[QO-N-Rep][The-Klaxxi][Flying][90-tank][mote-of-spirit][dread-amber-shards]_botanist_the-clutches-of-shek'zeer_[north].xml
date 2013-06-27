@@ -1,0 +1,161 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-Rep][The-Klaxxi][Flying][90-tank][mote-of-spirit][dread-amber-shards]_botanist_the-clutches-of-shek'zeer_[north]</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<AvoidMob Name="Pengsong" Entry="66587" />
+		<AvoidMob Name="Amberscale Basilisk" Entry="66188" />
+		<AvoidMob Name="Kyparite Pulverizer" Entry="65432" />
+        <AvoidMob Name="King Spineclaw" Entry="66472" />
+		<AvoidMob Name="Captain Ripflesh" Entry="60767" />
+		<AvoidMob Name="Slingtail Fishripper" Entry="55195" />
+		<AvoidMob Name="Longfang Howler" Entry="56524" />
+		<AvoidMob Name="Mutated Silkmoth" Entry="57422" />
+        <AvoidMob Name="Wildscale Hunter" Entry="58900" />
+		<AvoidMob Name="Softshell Snapling" Entry="63060" />
+		<AvoidMob Name="Wildscale Poacher" Entry="58899" />
+		<AvoidMob Name="Twitchheel Hoarder" Entry="56538" />
+		<AvoidMob Name="Mushan Nomad" Entry="56523" />
+		<AvoidMob Name="Glade Hunter" Entry="57299" />
+		<AvoidMob Name="Mushan Nomad" Entry="56523"  />
+        <AvoidMob  Name="Frenzyhop" Entry="56514" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<QuestOrder>
+		
+	    
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This profile is meant for a level 90 Tank class. This profile will farm the Clutches of Shek'zeer in Dread Wastes for Motes of Spirit. The profile includes setting your hearth, mailing, vendor and repair. This profile will run indefinitely, be sure to set an alt to mail to in the settings and tools tab of Honorbuddy. Start the profile anywhere in Pandaria. Please send Paypal donations to botanist1968@gmail.com" Title="WARNING" />
+						
+			
+			
+				<CustomBehavior File="Message" Text="Position check #1" LogColor="Lime" />
+				<If Condition="Me.MapId == 870" >				 
+					<If Condition="Me.ZoneId != 6138" >
+						<CustomBehavior File="Message" Text="I am in Pandaria, but not in Dread Wastes flying to Klaxxi'vess." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="262.4349" Y="3149.81" Z="214.5022" DestName="Klaxxi'vess" />	
+						<CustomBehavior File="Message" Text="I have reached Klaxxie'vess. " LogColor="Lime" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="2000" />
+						<CustomBehavior File="SetHearthstone" MobId="65220"  X="263.1545" Y="3146.569" Z="214.501" />
+					</If>						
+				</If>
+				
+				
+				<CustomBehavior File="Message" Text="Position check #2" LogColor="Lime" />		
+				<If Condition="Me.ZoneId == 6138" >
+					<If Condition="Me.X &lt; 75 || Me.X &gt; 310 || Me.Y &lt; 3095.547 || Me.Y &gt; 3349.551" >
+						<CustomBehavior File="Message" Text="I am in Dread Wastes, flying to Klaxxi'vess" LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="262.4349" Y="3149.81" Z="214.5022" DestName="Klaxxi'vess" />	
+						<CustomBehavior File="Message" Text="I have reached Klaxxie'vess. " LogColor="Lime" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="2000" />
+						<CustomBehavior File="SetHearthstone" MobId="65220"  X="263.1545" Y="3146.569" Z="214.501" />
+					</If>
+				</If>
+				
+		<While Condition="true" >		
+										
+				<CustomBehavior File="UserSettings" LootMobs="True"  PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+				<CustomBehavior File="Message" Text="Position check #3" LogColor="Lime" />			  
+			    <If Condition="Me.ZoneId == 6138" >
+					<If Condition="Me.X &gt; 75 &amp;&amp; Me.X &lt; 310 &amp;&amp; Me.Y &gt; 3095.547 &amp;&amp; Me.Y &lt; 3349.551" >
+					<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="FlyTo" X="621.0068" Y="3449.331" Z="210.1795" />						
+					<CustomBehavior File="ForcedDismount" />
+					</If>
+				</If>	
+
+				<CustomBehavior File="Message" Text="Position check #4" LogColor="Lime" />				
+				<If Condition="Me.ZoneId == 6138" >
+					<If Condition="Me.X &lt; 750 &amp;&amp; Me.X &gt; 500 &amp;&amp; Me.Y &gt; 3200 &amp;&amp; Me.Y &lt; 3600" >
+						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
+						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
+						<CustomBehavior File="RunMacro" Macro="/sort bags" />
+							<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >	
+								<SetGrindArea><GrindArea>
+								<Factions>2557,2550</Factions>
+									<Hotspots>
+										<Hotspot X="568.5087" Y="3451.193" Z="209.0435" />
+										<Hotspot X="534.1282" Y="3522.849" Z="208.534" />
+										<Hotspot X="535.5749" Y="3570.843" Z="208.4995" />
+										<Hotspot X="533.2756" Y="3609.481" Z="208.5385" />
+										<Hotspot X="518.5419" Y="3646.042" Z="210.1368" />
+										<Hotspot X="485.7479" Y="3712.695" Z="214.7043" />
+										<Hotspot X="457.4903" Y="3793.671" Z="218.0164" />										
+									</Hotspots>
+								</GrindArea></SetGrindArea>					
+								<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30)" GoalText="Farming" />
+							</If>
+					</If>
+				</If>
+								
+				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		        <If Condition="(Me.FreeBagSlots &lt; 10) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+					<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />
+					<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor, then mailing." LogColor="Lime" />						
+						
+					<SetVendor>
+						<Vendors>
+							<Vendor Name="Ambersmith Zikk" Entry="64599" Type="Repair" X="147.875" Y="3194.917" Z="214.7608" />
+						</Vendors>
+					</SetVendor>
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="267.4819" Y="3152.835" Z="214.5012" />
+						</Mailboxes>
+					</SetMailbox>
+			
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+				</If>
+				<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
+				<CustomBehavior File="RunMacro" Macro="/sort bags" />						
+				
+			</While>
+	
+		</QuestOrder>
+
+
+</HBProfile>
+

@@ -1,0 +1,48 @@
+<HBProfile>
+  <Name>botanist_skinning_(325-425)_borean-tundra_mammoths</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>101</MaxLevel>
+  <Factions>190 1990</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+  
+	<Vendors>
+      <Vendor Name="Willis Wobblewheel" Entry="26599" Type="Repair" X="4135.004" Y="5281.168" Z="25.0889" />
+	</Vendors>
+	
+	<Mailboxes>
+      <Mailbox X="4162.348" Y="5284.85" Z="26.36634" />
+	</Mailboxes>
+
+  <Hotspots>
+    <Hotspot X="3333.965" Y="5277" Z="35.94839" />
+    <Hotspot X="3528.973" Y="5193.541" Z="28.45168" />
+    <Hotspot X="3713.615" Y="5375.014" Z="36.60248" />
+    <Hotspot X="3794.638" Y="5528.025" Z="43.49531" />
+  </Hotspots>
+  
+  <Blackspots>
+  <Blackspot X="3556.123" Y="5426.293" Z="40.05876" Radius="50" />
+  <Blackspot X="3718.541" Y="5505.682" Z="43.71566" Radius="50" />
+  </Blackspots>
+  
+    <AvoidMobs>
+	  <Mob id="41293" name="Harbor Shredfin" />
+	  <Mob id="25850" name="Trapped Mammoth Calf" />
+	  <Mob id="25355" name="Beryl Hound" />
+    </AvoidMobs>
+
+</HBProfile>

@@ -1,0 +1,111 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A-Goto]_botanist_[stormwind-to-pandria-level-88-green-vendor-vendor]</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Pengsong" Entry="66587" />
+		<Mob Name="Amberscale Basilisk" Entry="66188" />
+		<Mob Name="Kyparite Pulverizer" Entry="65432" />
+        <Mob Name="King Spineclaw" Entry="66472" />
+		<Mob Name="Captain Ripflesh" Entry="60767" />
+		<Mob Name="Slingtail Fishripper" Entry="55195" />
+		<Mob Name="Longfang Howler" Entry="56524" />
+		<Mob Name="Mutated Silkmoth" Entry="57422" />
+        <Mob Name="Wildscale Hunter" Entry="58900" />
+		<Mob Name="Softshell Snapling" Entry="63060" />
+		<Mob Name="Wildscale Poacher" Entry="58899" />
+		<Mob Name="Twitchheel Hoarder" Entry="56538" />
+		<Mob Name="Mushan Nomad" Entry="56523" />
+		<Mob Name="Glade Hunter" Entry="57299" />
+		<Mob Name="Mushan Nomad" Entry="56523"  />
+        <Mob  Name="Frenzyhop" Entry="56514" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<QuestOrder>
+		
+	    <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" PullDistance="25" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This is a goto profile. It will take you from Stormwind or Pandaria to the PVP vendor located at Serpent's Spine Wall." Title="WARNING" />
+						
+			<While Condition="true" >
+			
+				<CustomBehavior File="Message" Text="Position check #1. Am I in Stormwind?" LogColor="Lime" />
+				<If Condition="Me.ZoneId == 1519" > 
+					<CustomBehavior File="Message" Text="I'm in Stormwind, flying to the Paw' don Village portal." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="-8705.718" Y="413.7811" Z="190.9178" />
+					<CustomBehavior File="FlyTo" X="-8199.543" Y="530.3414" Z="117.1778" />							
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="Message" Text="Taking the portal to Paw' don Village." LogColor="Lime" />
+                    <CustomBehavior File="InteractWith" MobId="215457" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8194.47949" Y="528.112854" Z="117.290138" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />					
+					<CustomBehavior File="Message" Text="I've reached Paw' don Village." LogColor="Lime" />
+				</If>
+				
+				<If Condition="Me.MapId == 870" >				 
+					<CustomBehavior File="Message" Text="I am in Pandaria. I am flying to the PVP vendor located at Serpent's Spine Wall." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="174.795" Y="2211.829" Z="271.1507" />
+						<RunTo X="200.5269" Y="2203.073" Z="272.5627" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="ForcedDismount" />						
+					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="20" ExpiryTime="3000" ExpiryAction="InputEnabled_Continue" 
+						Text="Do not stop the profile. Get your items from the PVP vendor, then press continue to return to Stormwind." Title="WARNING" />				
+				</If>
+				
+						<RunTo X="174.795" Y="2211.829" Z="271.1507" />
+					<CustomBehavior File="FlyTo" X="-307.7693" Y="-1773.909" Z="62.36852" />							
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="Message" Text="Taking the portal to Stormwind." LogColor="Lime" />
+                    <CustomBehavior File="InteractWith" MobId="210805" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-311.6545" Y="-1776.63025" Z="62.6705055" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />					
+					<CustomBehavior File="Message" Text="I've returned to Stormwind." LogColor="Lime" />
+						<RunTo X="-8198.377" Y="536.7742" Z="117.6677" />
+					<CustomBehavior File="FlyTo" X="-8752.483" Y="390.6921" Z="101.0562" />
+					<CustomBehavior File="ForcedDismount" />
+						<RunTo X="-8773.386" Y="416.4447" Z="103.9495" />
+					<CustomBehavior File="Message" Text="I have returned to the Stormwind." LogColor="Lime" />
+					<CustomBehavior File="UserSettings" StopBot="true" />						
+			</While>	
+	
+		</QuestOrder>
+
+
+</HBProfile>
+

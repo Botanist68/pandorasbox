@@ -1,0 +1,43 @@
+<HBProfile>
+  <Name>botanist_grind_twilight-highlands_volatile-air</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>2296</Factions>
+  <AvoidMobs>
+  <Mob id="25227" name="Crypt Crawler" />
+  </AvoidMobs>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+     <Vendor Name="Caelyb Coppercrag" Entry="49592" Type="Repair" X="-3177.95" Y="-5021.481" Z="121.2319" />
+	</Vendors>
+	
+	<Mailboxes>
+     <Mailbox X="-3205.609" Y="-5045.3" Z="120.3172" />
+	</Mailboxes>
+
+  <Hotspots>
+   <Hotspot X="-3819.937" Y="-4411.084" Z="199.0223" />
+   <Hotspot X="-3756.822" Y="-4470.379" Z="189.4517" />
+   <Hotspot X="-3687.688" Y="-4586.722" Z="153.1506" />
+   <Hotspot X="-3804.581" Y="-4635.248" Z="150.7549" />
+   <Hotspot X="-3921.818" Y="-4596.55" Z="147.8289" />
+   <Hotspot X="-3850.516" Y="-4518.422" Z="178.2838" />
+  </Hotspots>
+  <Blackspots>
+  </Blackspots>
+</HBProfile>

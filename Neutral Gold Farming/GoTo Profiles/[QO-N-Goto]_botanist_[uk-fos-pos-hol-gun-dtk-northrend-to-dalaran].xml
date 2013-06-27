@@ -1,0 +1,152 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-Goto]_botanist_[uk-fos-pos-hol-gun-dtk-northrend-to-dalaran]</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>151</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey></MailGrey>
+	<MailWhite></MailWhite>
+	<MailGreen></MailGreen>
+	<MailBlue></MailBlue>
+	<MailPurple></MailPurple>
+   
+	<SellGrey></SellGrey>
+	<SellWhite></SellWhite>
+	<SellGreen></SellGreen>
+	<SellBlue></SellBlue>
+	<SellPurple></SellPurple>
+   
+	<TargetElites></TargetElites>
+	
+	<AvoidMobs></AvoidMobs>
+	
+	<Blackspots></Blackspots>
+
+	<Mailboxes></Mailboxes>
+ 
+	<Vendors></Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems></ProtectedItems>
+	
+
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<QuestOrder>
+		
+	    <CustomBehavior File="UserSettings" LootMobs="False" SkinMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This is a goto profile. It will take your character from inside/outside Utgarde keep, Forge of Souls, Pit of Saron, Drak'Tharon Keep, Gundrak, Halls of Lightning, or anywhere else outside of instances in Northrend to Dalaran. This profile is used to move your farmers from one continent to another while using Arelog.." Title="WARNING" />
+						
+			<While Condition="true" >
+			
+				 <If Condition="Me.ZoneId == 206" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside the Utgarde Keep. Running out." LogColor="Yellow" />
+						<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
+					<CustomBehavior File="MyCTM" X="144.7174" Y="-88.65063" Z="12.55168" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+					<CustomBehavior File="Message" Text="I have exited Utgard Keep." LogColor="Yellow" />
+						<RunTo X="1100.065" Y="-4903.753" Z="41.24797" />
+					<CustomBehavior File="FlyTo" X="818.8842" Y="-4719.595" Z="399.6199" />
+					<CustomBehavior File="MyCTM" X="2773.168" Y="-2820.956" Z="486.3375" />
+					<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />		<!-- dalaran split  -->
+				</If>
+				
+				<If Condition="Me.ZoneId == 4809" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside the Forge of Souls. Running out." LogColor="Yellow" />
+						<RunTo X="4916.663" Y="2186.1" Z="638.733" />
+					<CustomBehavior File="MyCTM" X="4921.312" Y="2168.66" Z="638.733" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+					<CustomBehavior File="Message" Text="I have exited Forge of Souls." LogColor="Yellow" />
+						<RunTo  X="5692.927" Y="2159.419" Z="798.1265" />
+					<CustomBehavior File="FlyTo" X="5739.474" Y="2226.147" Z="869.8992" />
+					<CustomBehavior File="MyCTM" X="6041.727" Y="1772.317" Z="875.8958" />
+					<CustomBehavior File="MyCTM" X="5886.037" Y="844.0146" Z="924.4833" />
+					<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />
+				</If>
+				
+				<If Condition="Me.ZoneId == 4813" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside the The Pit of Saron. Running out." LogColor="Yellow" />
+						<RunTo X="507.479" Y="230.5516" Z="528.7092" />
+					<CustomBehavior File="MyCTM" X="424.0134" Y="211.5736" Z="529.9064" />	
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+					<CustomBehavior File="Message" Text="I have exited Forge of Souls." LogColor="Yellow" />
+						<RunTo  X="5692.927" Y="2159.419" Z="798.1265" />
+					<CustomBehavior File="FlyTo" X="5739.474" Y="2226.147" Z="869.8992" />
+					<CustomBehavior File="MyCTM" X="6041.727" Y="1772.317" Z="875.8958" />
+					<CustomBehavior File="MyCTM" X="5886.037" Y="844.0146" Z="924.4833" />
+					<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />
+				</If>
+				
+				<If Condition="Me.ZoneId == 4196" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside Drak'Tharon Keep. Running out." LogColor="Lime" />
+						<RunTo X="-517.15" Y="-489.201" Z="11.01775" />
+					<CustomBehavior File="MyCTM" X="-518.2795" Y="-481.8023" Z="10.98073" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="Message" Text="I have exited Drak'Tharon Keep." LogColor="Lime" />
+						<RunTo X="4887.523" Y="-2047.255" Z="250.0505" />
+					<CustomBehavior File="FlyTo" X="5007.083" Y="-1974.464" Z="693.4725" />
+					<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />
+				</If>
+				
+				<If Condition="Me.ZoneId == 4416" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside Gundrak. Running out." LogColor="Lime" />
+						<RunTo X="1891.823" Y="649.8093" Z="176.6732" />
+					<CustomBehavior File="MyCTM" X="1897.433" Y="657.5444" Z="176.6386" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="Message" Text="I have exited Gundrak." LogColor="Lime" />
+						<RunTo X="6948.716" Y="-4423.442" Z="450.9999" />
+					<CustomBehavior File="FlyTo" X="6786.107" Y="-4431.66" Z="651.6688" />
+					<CustomBehavior File="MyCTM" X="5007.083" Y="-1974.464" Z="693.4725" />
+					<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />
+				</If>
+				
+				<If Condition="Me.ZoneId == 4272" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside the Halls of Lightning. Running out." LogColor="Lime" />
+						<RunTo X="1331.41" Y="241.904" Z="52.5046" />
+					<CustomBehavior File="MyCTM" X="1333.524" Y="275.7161" Z="52.81057" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="Message" Text="I have exited Halls of lightening." LogColor="Lime" />
+						<RunTo X="9175.68" Y="-1378.8" Z="1103.57" />
+					<CustomBehavior File="FlyTo" X="9023.235" Y="-1265.74" Z="1292.891" />
+					<CustomBehavior File="MyCTM" X="7579.332" Y="-218.9893" Z="1395.662" />
+					<CustomBehavior File="MyCTM" X="6189.162" Y="287.3433" Z="1012.564" />
+					<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />	
+				</If>
+				
+				<If Condition="Me.MapId == 571" >
+					<If Condition="Me.X &lt; 5571.772 || Me.X &gt; 6014.294 || Me.Y &lt; 344.5054 || Me.Y &gt; 980.1671" >
+						<CustomBehavior File="FlyTo" X="6304.646" Y="470.2616" Z="614.2431" />
+						<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />
+					</If>	
+				</If>
+				
+				<If Condition="Me.MapId == 571" >
+					<If Condition="Me.X &gt; 5571.772 &amp;&amp; Me.X &lt; 6014.294 &amp;&amp; Me.Y &gt; 344.5054 &amp;&amp; Me.Y &lt; 980.1671 &amp;&amp; Me.Z &lt; 546.6583" >
+						<CustomBehavior File="FlyTo" X="6304.646" Y="470.2616" Z="614.2431" />
+						<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />
+					</If>	
+				</If>
+				
+				 <If Condition="Me.MapId == 571" >
+					<If Condition="Me.X &gt; 5571.772 &amp;&amp; Me.X &lt; 6014.294 &amp;&amp; Me.Y &gt; 344.5054 &amp;&amp; Me.Y &lt; 980.1671 &amp;&amp; Me.Z &gt; 546.6583" >
+						<CustomBehavior File="FlyTo" X="5812.89" Y="452.0196" Z="834.9374" />
+					</If>	
+				</If>
+				
+				
+				<If Condition="Me.X &gt; 5802 &amp;&amp; Me.X &lt; 5822 &amp;&amp; Me.Y &gt; 442 &amp;&amp; Me.Y &lt; 462 &amp;&amp; Me.Z &gt; 824 &amp;&amp; Me.Z &lt; 844" >
+					<CustomBehavior File="UserSettings" StopBot="true" />
+				</If>	
+				
+			</While>	
+	
+		</QuestOrder>
+
+</HBProfile>
+

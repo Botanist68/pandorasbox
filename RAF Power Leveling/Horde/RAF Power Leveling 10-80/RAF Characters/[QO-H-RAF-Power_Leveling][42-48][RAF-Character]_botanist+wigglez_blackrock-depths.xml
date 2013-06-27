@@ -1,0 +1,503 @@
+﻿<HBProfile creator="Botanist and Wigglez" version="1.0">
+	<Name>QO-H-RAF-Power_Leveling][42-48][RAF-Character]_botanist+wigglez_blackrock-depths</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>	
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="-12836.75" Y="-430.2023" Z="13.23236" Radius="30" />
+		<Blackspot X="-12748.25" Y="-391.0207" Z="13.8386" Radius="1" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+
+	<Factions>
+	</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+		<CustomBehavior File="UserSettings" UseMount="True" LootMobs="False" MountDistance="5" PullDistance="1" KillBetweenHotspots="False" LogoutForInactivity="True" />
+		
+				
+		
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.IsHorde" >
+						<!-- in the rfd box -->
+						<If Condition="Me.X &gt; -4662.61 &amp;&amp; Me.X &lt; -4645.506 &amp;&amp; Me.Y &lt; -2507.382 &amp;&amp; Me.Y &gt; -2531.69" >
+							<CustomBehavior File="Message" Text="I am outside the RFD portal. Moving to Desolation Hold." LogColor="Lime" />
+							<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+								<Hotspot X="-4653.385" Y="-2515.733" Z="81.06604" />
+								<Hotspot X="-4646.364" Y="-2487.385" Z="83.6185" />
+								<Hotspot X="-4656.868" Y="-2469.719" Z="85.04243" />
+								<Hotspot X="-4685.262" Y="-2419.652" Z="86.51073" />
+								<Hotspot X="-4677.786" Y="-2418.402" Z="85.78697" />
+								<Hotspot X="-4732.447" Y="-2332.872" Z="85.92126" />
+							</CustomBehavior>
+								<RunTo X="-4732.447" Y="-2332.872" Z="85.92126" />
+							<CustomBehavior File="ForcedMount" MountType="Ground" />
+							
+							<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+								<Hotspot X="-4664.789" Y="-2257.876" Z="88.92407" />
+								<Hotspot X="-4656.681" Y="-2157.917" Z="87.95802" />
+								<Hotspot X="-4572.156" Y="-2104.313" Z="90.2732" />
+								<Hotspot X="-4534.986" Y="-2078.636" Z="84.89609" />
+								<Hotspot X="-4505.59" Y="-2026.157" Z="83.4381" />
+							</CustomBehavior>
+								<RunTo X="-4505.59" Y="-2026.157" Z="83.4381" />
+							<CustomBehavior File="ForcedMount" MountType="Ground" />	
+						
+							<CustomBehavior File="MyCTM" X="-4481.218" Y="-1999.257" Z="96.40293" />
+							<CustomBehavior File="MyCTM" X="-4461.282" Y="-1989.716" Z="103.394" />
+							
+							<CustomBehavior File="MyCTM" X="-4440.125" Y="-1983.415" Z="106.5938" />
+							
+							<CustomBehavior File="MyCTM" X="-4416.532" Y="-1954.187" Z="86.10857" />
+							<CustomBehavior File="MyCTM" X="-4404.873" Y="-1940.278" Z="85.69531" />
+								<RunTo X="-4404.873" Y="-1940.278" Z="85.69531" />
+							<CustomBehavior File="ForcedMount" MountType="Ground" />
+						
+	
+								<RunTo X="-4407.011" Y="-1940.857" Z="85.6304" />
+								<RunTo X="-4386.386" Y="-1923.331" Z="87.00093" />
+								<RunTo X="-4378.623" Y="-1888.413" Z="87.44859" />
+								<RunTo X="-4351.091" Y="-1886.198" Z="89.78285" />
+								<RunTo X="-4338.947" Y="-1890.188" Z="90.57182" />
+								<RunTo X="-4324.874" Y="-1883.965" Z="91.2093" />
+								<RunTo X="-4323.497" Y="-1883.376" Z="91.35072" />
+								<RunTo X="-4287.601" Y="-1883.057" Z="91.83415" />
+								<RunTo X="-4250.398" Y="-1890.404" Z="91.83702" />
+								<RunTo X="-4224.886" Y="-1898.221" Z="91.72659" />
+								<RunTo X="-4203.283" Y="-1904.441" Z="91.93088" />
+								<RunTo X="-4153.426" Y="-1953.042" Z="92.0856" />
+								<RunTo X="-4146.643" Y="-1961.325" Z="92.49912" />
+								<RunTo X="-4075.631" Y="-2033.614" Z="91.66797" />
+								<RunTo X="-4057.13" Y="-2047.529" Z="91.66797" />
+	
+								<RunTo X="-3295.316" Y="-1700.699" Z="122.5969" /> <!-- desolation hold fp -->
+							<CustomBehavior File="ForcedDismount" />	
+							<CustomBehavior File="UserSettings" UseMount="False" UseFlightPaths="True" LootMobs="False" PullDistance="1" KillBetweenHotspots="False" LogoutForInactivity="True" />	
+							<CustomBehavior File="Message" Text="Taking the flight path to Cross Roads." LogColor="Lime" />	
+								<RunTo X="-441.8" Y="-2596.08" Z="96.06119" /> <!-- cr fp -->
+						</If>		
+					</If>		
+				</If>
+				
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.IsHorde" >
+						<CustomBehavior File="UserSettings" UseMount="False" UseFlightPaths="True" LootMobs="False" PullDistance="1" KillBetweenHotspots="False" LogoutForInactivity="True" />
+							<RunTo X="-441.8" Y="-2596.08" Z="96.06119" /> <!-- cr fp -->
+						<CustomBehavior File="Message" Text="Moving to Ratchet." LogColor="Lime" />	
+							<RunTo X="-895.722" Y="-3772.184" Z="11.50632" /> <!-- ratchet fp -->
+						<CustomBehavior File="Message" Text="Moving to the docks." LogColor="Lime" />	
+							<RunTo X="-994.0004" Y="-3827.987" Z="5.634368" /> <!-- dock -->
+						<CustomBehavior File="Message" Text="Waiting for the boat." LogColor="Lime" />	
+						<CustomBehavior File="UseTransport"
+							TransportId="20808"
+							WaitAtX="-994.0004" WaitAtY="-3827.987" WaitAtZ="5.634368" 
+							TransportStartX="-1005.61346" TransportStartY="-3841.648" TransportStartZ="-0.0262415316"
+							TransportEndX="-14277.7451" TransportEndY="582.86615" TransportEndZ="-0.048539947"
+							StandOnX="-999.8182" StandOnY="-3833.799" StandOnZ="6.034274" 
+							GetOffX="-14280.22" GetOffY="567.6113" GetOffZ="6.696649" />
+								<RunTo X="-14280.22" Y="567.6113" Z="6.696649" />
+								<RunTo X="-14288.75" Y="549.5802" Z="8.690898" /> <!-- bb dock -->	
+					</If>		
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.IsHorde" >
+						<If Condition="Me.ZoneId == 5287" >
+							<CustomBehavior File="UserSettings" UseMount="True" UseFlightPaths="True" LootMobs="False" PullDistance="1" KillBetweenHotspots="False" LogoutForInactivity="True" />
+							<CustomBehavior File="ForcedMount" MountType="Ground" />
+								<RunTo X="-14288.75" Y="549.5802" Z="8.690898" /> <!-- bb dock -->
+							<CustomBehavior File="Message" Text="I am in Booty Bay, moving to Duskwood." LogColor="Lime" />
+								<RunTo X="-11401.94" Y="-285.4633" Z="57.25846" />	<!-- dusk wood entrance -->
+								<RunTo X="-11085.73" Y="-374.8375" Z="44.56648" /> <!-- dueskwood guards at the intersection -->
+							<CustomBehavior File="Message" Text="Avoiding the sentinels at the intersection." LogColor="Lime" />		
+								<RunTo X="-11063.12" Y="-430.0138" Z="28.13007" />
+								<RunTo X="-11017.48" Y="-431.7258" Z="31.22406" />
+								<RunTo X="-10975.64" Y="-449.66" Z="32.03844" />
+								<RunTo X="-10909.55" Y="-494.6697" Z="50.60587" />
+								<RunTo X="-10855.47" Y="-479.6808" Z="42.15091" />
+								<RunTo X="-10706.68" Y="-804.9671" Z="59.75779" />
+								<RunTo X="-10133.32" Y="-1080.524" Z="31.76678" />
+								<RunTo X="-10080.3" Y="-1475.022" Z="28.22062" />
+								<RunTo X="-9923.337" Y="-1697.91" Z="22.82899" />
+								
+							<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">	
+								<Hotspot X="-9865.442" Y="-1727.008" Z="23.25467" />	<!-- entering red ridge -->
+								<Hotspot X="-9584.481" Y="-2039.409" Z="65.60387" />
+								<Hotspot X="-9549.708" Y="-2209.083" Z="92.73228" />	<!-- road past the tower -->
+								<Hotspot X="-9468.574" Y="-2326.108" Z="68.06623" />
+								<Hotspot X="-9413.372" Y="-2348.02" Z="60.64516" /> <!-- bank of the lake -->
+							</CustomBehavior>	
+							 	
+							<CustomBehavior File="Message" Text="Swimming across the lake." LogColor="Lime" />
+							<CustomBehavior File="MyCTM" X="-9342.577" Y="-2388.076" Z="54.57803" />
+							<CustomBehavior File="MyCTM" X="-9295.076" Y="-2374.663" Z="56.64822" />
+							<CustomBehavior File="MyCTM" X="-9265.14" Y="-2336.521" Z="71.7114" />
+								<RunTo X="-8559.915" Y="-2562.604" Z="133.1494" />	<!-- burning stepps entrance -->
+							<CustomBehavior File="Message" Text="I have reached Burning Stepps. Moving to Blackrock Mountain." LogColor="Lime" />	
+							<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+								<Hotspot X="-8515.101" Y="-2558.372" Z="133.3224" />
+								<Hotspot X="-8488.596" Y="-2553.271" Z="133.3238" />
+								<Hotspot X="-8461.213" Y="-2546.249" Z="133.2662" />
+								<Hotspot X="-8440.453" Y="-2551.918" Z="133.1663" />
+								<Hotspot X="-8411.329" Y="-2540.545" Z="134.679" />
+								<Hotspot X="-8390.473" Y="-2535.461" Z="135.133" />
+								<Hotspot X="-8300.915" Y="-2542.389" Z="133.1497" />
+								<Hotspot X="-8250.03" Y="-2593.39" Z="133.1497" />
+								<Hotspot X="-8205.026" Y="-2593.51" Z="133.1707" />
+								<Hotspot X="-8161.106" Y="-2547.612" Z="138.7795" />
+								<Hotspot X="-8130.256" Y="-2551.863" Z="139.2994" />
+								<Hotspot X="-8089.525" Y="-2538.088" Z="133.9977" />
+								<Hotspot X="-8071.542" Y="-2492.155" Z="134.6209" />
+								<Hotspot X="-8048.242" Y="-2457.035" Z="130.7552" />
+								<Hotspot X="-8026.17" Y="-2335.009" Z="129.9908" />
+								<Hotspot X="-7983.793" Y="-2263.603" Z="131.1844" />
+								<Hotspot X="-7983.28" Y="-2238.057" Z="130.9401" />
+								<Hotspot X="-7993.953" Y="-2175.503" Z="127.938" />
+								<Hotspot X="-7973.35" Y="-2147.939" Z="125.6828" />
+								<Hotspot X="-7975.797" Y="-2115.202" Z="127.4125" />
+								<Hotspot X="-8002.372" Y="-2076.952" Z="131.4097" />
+								<Hotspot X="-8032.519" Y="-2050.927" Z="132.3052" />
+								<Hotspot X="-8067.452" Y="-1948.945" Z="131.8492" />
+								<Hotspot X="-7967.611" Y="-1757.804" Z="132.2165" />
+								<Hotspot X="-7969.251" Y="-1650.149" Z="133.5667" />
+								<Hotspot X="-7992.878" Y="-1568.037" Z="132.8716" />
+								<Hotspot X="-8029.49" Y="-1450.647" Z="140.3678" />
+								<Hotspot X="-8024.947" Y="-1225.311" Z="136.8163" />
+								<Hotspot X="-7982.853" Y="-1133.025" Z="166.8194" />
+								<Hotspot X="-7909.278" Y="-1124.29" Z="191.0434" />
+								<Hotspot X="-7821.39" Y="-1138.276" Z="212.6581" />
+								<Hotspot X="-7785.67" Y="-1125.843" Z="214.8474" />
+								<Hotspot X="-7746.894" Y="-1123.104" Z="215.0839" />
+								<Hotspot X="-7745.785" Y="-1096.55" Z="216.1152" />
+								<Hotspot X="-7727.726" Y="-1084.078" Z="217.1765" />
+								<Hotspot X="-7697.158" Y="-1090.232" Z="217.5882" />
+								<Hotspot X="-7663.06" Y="-1037.952" Z="225.9546" />
+								<Hotspot X="-7608.508" Y="-1014.392" Z="240.8857" />
+								<Hotspot X="-7557.254" Y="-1014.972" Z="252.9411" />
+								<Hotspot X="-7512.101" Y="-1052.448" Z="262.3856" />
+								<Hotspot X="-7492.059" Y="-1096.829" Z="265.7839" />
+								<Hotspot X="-7496.43" Y="-1141.053" Z="265.6814" />
+							</CustomBehavior>
+							<CustomBehavior File="Message" Text="Making my way to Lothos." LogColor="Lime" />
+								<RunTo X="-7502.786" Y="-1155.311" Z="269.6797" />	<!-- top of chain -->
+								<RunTo X="-7565.787" Y="-1126.723" Z="260.7023" />	<!-- bottom of chain -->
+								<RunTo X="-7515.245" Y="-1046.501" Z="182.2998" />	<!-- door at lothos -->
+							<CustomBehavior File="Message" Text="I have reached Lothos." LogColor="Lime" />
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="RAF Character - Wait for all your characters to reach this location, then press continue on the level 90 first, then press continue on this window. The Booster will attempt to clear a path into BRD." Title="WARNING" />	
+								<CustomBehavior File="Message" Text="Waiting 80 seconds for the booster to clear the path." LogColor="Lime" />
+								<CustomBehavior File="WaitTimer" WaitTime="80000" />
+								
+								<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
+									<Hotspot X="-7482.492" Y="-1035.922" Z="177.6218" />
+									<Hotspot X="-7399.461" Y="-961.0383" Z="169.9763" />
+									<Hotspot X="-7381.289" Y="-935.2847" Z="168.4028" />
+									<Hotspot X="-7313.745" Y="-913.7289" Z="166.0338" />
+									<Hotspot X="-7256.717" Y="-908.1658" Z="165.3763" />
+									<Hotspot X="-7196.079" Y="-904.0046" Z="165.4892" />
+									<Hotspot X="-7184.503" Y="-914.6645" Z="165.4892" />
+									<Hotspot X="-7178.41" Y="-922.152" Z="166.092" />
+								</CustomBehavior>
+									<RunTo X="-7178.41" Y="-922.152" Z="166.092" />
+							<CustomBehavior File="Message" Text="I have reached BRD." LogColor="Lime" />	
+						</If>	
+					</If>		
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.IsAlliance" >
+						<If Condition="Me.X &gt; -6166 &amp;&amp; Me.X &lt; -5966 &amp;&amp; Me.Y &lt; -2854 &amp;&amp; Me.Y &gt; -3054" > <!-- in uldaman box -->
+							<CustomBehavior File="UserSettings" UseMount="True" UseFlightPaths="True" LootMobs="False" MountDistance="5" PullDistance="1" KillBetweenHotspots="False" LogoutForInactivity="True" />
+							<CustomBehavior File="Message" Text="I outside the Uldaman portal, moving to Lakeshire. Then I will run to BRD." LogColor="Lime" />	
+								<RunTo X="-5423.521" Y="-2927.495" Z="347.251" /> <!-- thelsamar fp -->
+								<RunTo X="-9429.1" Y="-2231.4" Z="68.65" /> <!-- lakeshire fp -->
+								<RunTo X="-9208.854" Y="-2337.139" Z="84.49514" /> <!-- road out of lakeshire -->
+								<RunTo X="-8559.915" Y="-2562.604" Z="133.1494" />	<!-- burning stepps entrance -->
+							<CustomBehavior File="Message" Text="I have reached Burning Stepps. Moving to Blackrock Mountain." LogColor="Lime" />	
+							<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+								<Hotspot X="-8515.101" Y="-2558.372" Z="133.3224" />
+								<Hotspot X="-8488.596" Y="-2553.271" Z="133.3238" />
+								<Hotspot X="-8461.213" Y="-2546.249" Z="133.2662" />
+								<Hotspot X="-8440.453" Y="-2551.918" Z="133.1663" />
+								<Hotspot X="-8411.329" Y="-2540.545" Z="134.679" />
+								<Hotspot X="-8390.473" Y="-2535.461" Z="135.133" />
+								<Hotspot X="-8300.915" Y="-2542.389" Z="133.1497" />
+								<Hotspot X="-8250.03" Y="-2593.39" Z="133.1497" />
+								<Hotspot X="-8205.026" Y="-2593.51" Z="133.1707" />
+								<Hotspot X="-8161.106" Y="-2547.612" Z="138.7795" />
+								<Hotspot X="-8130.256" Y="-2551.863" Z="139.2994" />
+								<Hotspot X="-8089.525" Y="-2538.088" Z="133.9977" />
+								<Hotspot X="-8071.542" Y="-2492.155" Z="134.6209" />
+								<Hotspot X="-8048.242" Y="-2457.035" Z="130.7552" />
+								<Hotspot X="-8026.17" Y="-2335.009" Z="129.9908" />
+								<Hotspot X="-7983.793" Y="-2263.603" Z="131.1844" />
+								<Hotspot X="-7983.28" Y="-2238.057" Z="130.9401" />
+								<Hotspot X="-7993.953" Y="-2175.503" Z="127.938" />
+								<Hotspot X="-7973.35" Y="-2147.939" Z="125.6828" />
+								<Hotspot X="-7975.797" Y="-2115.202" Z="127.4125" />
+								<Hotspot X="-8002.372" Y="-2076.952" Z="131.4097" />
+								<Hotspot X="-8032.519" Y="-2050.927" Z="132.3052" />
+								<Hotspot X="-8067.452" Y="-1948.945" Z="131.8492" />
+								<Hotspot X="-7967.611" Y="-1757.804" Z="132.2165" />
+								<Hotspot X="-7969.251" Y="-1650.149" Z="133.5667" />
+								<Hotspot X="-7992.878" Y="-1568.037" Z="132.8716" />
+								<Hotspot X="-8029.49" Y="-1450.647" Z="140.3678" />
+								<Hotspot X="-8024.947" Y="-1225.311" Z="136.8163" />
+								<Hotspot X="-7982.853" Y="-1133.025" Z="166.8194" />
+								<Hotspot X="-7909.278" Y="-1124.29" Z="191.0434" />
+								<Hotspot X="-7821.39" Y="-1138.276" Z="212.6581" />
+								<Hotspot X="-7785.67" Y="-1125.843" Z="214.8474" />
+								<Hotspot X="-7746.894" Y="-1123.104" Z="215.0839" />
+								<Hotspot X="-7745.785" Y="-1096.55" Z="216.1152" />
+								<Hotspot X="-7727.726" Y="-1084.078" Z="217.1765" />
+								<Hotspot X="-7697.158" Y="-1090.232" Z="217.5882" />
+								<Hotspot X="-7663.06" Y="-1037.952" Z="225.9546" />
+								<Hotspot X="-7608.508" Y="-1014.392" Z="240.8857" />
+								<Hotspot X="-7557.254" Y="-1014.972" Z="252.9411" />
+								<Hotspot X="-7512.101" Y="-1052.448" Z="262.3856" />
+								<Hotspot X="-7492.059" Y="-1096.829" Z="265.7839" />
+								<Hotspot X="-7496.43" Y="-1141.053" Z="265.6814" />
+							</CustomBehavior>
+							<CustomBehavior File="Message" Text="Making my way to Lothos." LogColor="Lime" />
+								<RunTo X="-7502.786" Y="-1155.311" Z="269.6797" />	<!-- top of chain -->
+								<RunTo X="-7565.787" Y="-1126.723" Z="260.7023" />	<!-- bottom of chain -->
+								<RunTo X="-7515.245" Y="-1046.501" Z="182.2998" />	<!-- door at lothos -->
+							<CustomBehavior File="Message" Text="I have reached Lothos." LogColor="Lime" />
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="RAF Character - Wait for all your characters to reach this location, then press continue on the level 90 first, then press continue on this window. The Booster will attempt to clear a path into BRD." Title="WARNING" />	
+								<CustomBehavior File="Message" Text="Waiting 80 seconds for the booster to clear the path." LogColor="Lime" />
+								<CustomBehavior File="WaitTimer" WaitTime="80000" />
+								
+								<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
+									<Hotspot X="-7482.492" Y="-1035.922" Z="177.6218" />
+									<Hotspot X="-7399.461" Y="-961.0383" Z="169.9763" />
+									<Hotspot X="-7381.289" Y="-935.2847" Z="168.4028" />
+									<Hotspot X="-7313.745" Y="-913.7289" Z="166.0338" />
+									<Hotspot X="-7256.717" Y="-908.1658" Z="165.3763" />
+									<Hotspot X="-7196.079" Y="-904.0046" Z="165.4892" />
+									<Hotspot X="-7184.503" Y="-914.6645" Z="165.4892" />
+									<Hotspot X="-7178.41" Y="-922.152" Z="166.092" />
+								</CustomBehavior>
+									<RunTo X="-7178.41" Y="-922.152" Z="166.092" />
+							<CustomBehavior File="Message" Text="I have reached BRD." LogColor="Lime" />
+						</If>
+					</If>	
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.IsAlliance" >
+						<If Condition="Me.X &lt; -7191.958 || Me.X &gt; -7174.033 || Me.Y &gt; -911.2476 || Me.Y &lt; -924.7545" > <!-- brd box -->
+							<CustomBehavior File="UserSettings" UseMount="True" UseFlightPaths="True" LootMobs="False" MountDistance="5" PullDistance="1" KillBetweenHotspots="False" LogoutForInactivity="True" />
+							<CustomBehavior File="Message" Text="I'm not where I should be, moving to Lakeshire. Then I will run to BRD." LogColor="Lime" />	
+								<RunTo X="-9429.1" Y="-2231.4" Z="68.65" /> <!-- lakeshire fp -->
+								<RunTo X="-9208.854" Y="-2337.139" Z="84.49514" /> <!-- road out of lakeshire -->
+								<RunTo X="-8559.915" Y="-2562.604" Z="133.1494" />	<!-- burning stepps entrance -->
+							<CustomBehavior File="Message" Text="I have reached Burning Stepps. Moving to Blackrock Mountain." LogColor="Lime" />	
+							<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+								<Hotspot X="-8515.101" Y="-2558.372" Z="133.3224" />
+								<Hotspot X="-8488.596" Y="-2553.271" Z="133.3238" />
+								<Hotspot X="-8461.213" Y="-2546.249" Z="133.2662" />
+								<Hotspot X="-8440.453" Y="-2551.918" Z="133.1663" />
+								<Hotspot X="-8411.329" Y="-2540.545" Z="134.679" />
+								<Hotspot X="-8390.473" Y="-2535.461" Z="135.133" />
+								<Hotspot X="-8300.915" Y="-2542.389" Z="133.1497" />
+								<Hotspot X="-8250.03" Y="-2593.39" Z="133.1497" />
+								<Hotspot X="-8205.026" Y="-2593.51" Z="133.1707" />
+								<Hotspot X="-8161.106" Y="-2547.612" Z="138.7795" />
+								<Hotspot X="-8130.256" Y="-2551.863" Z="139.2994" />
+								<Hotspot X="-8089.525" Y="-2538.088" Z="133.9977" />
+								<Hotspot X="-8071.542" Y="-2492.155" Z="134.6209" />
+								<Hotspot X="-8048.242" Y="-2457.035" Z="130.7552" />
+								<Hotspot X="-8026.17" Y="-2335.009" Z="129.9908" />
+								<Hotspot X="-7983.793" Y="-2263.603" Z="131.1844" />
+								<Hotspot X="-7983.28" Y="-2238.057" Z="130.9401" />
+								<Hotspot X="-7993.953" Y="-2175.503" Z="127.938" />
+								<Hotspot X="-7973.35" Y="-2147.939" Z="125.6828" />
+								<Hotspot X="-7975.797" Y="-2115.202" Z="127.4125" />
+								<Hotspot X="-8002.372" Y="-2076.952" Z="131.4097" />
+								<Hotspot X="-8032.519" Y="-2050.927" Z="132.3052" />
+								<Hotspot X="-8067.452" Y="-1948.945" Z="131.8492" />
+								<Hotspot X="-7967.611" Y="-1757.804" Z="132.2165" />
+								<Hotspot X="-7969.251" Y="-1650.149" Z="133.5667" />
+								<Hotspot X="-7992.878" Y="-1568.037" Z="132.8716" />
+								<Hotspot X="-8029.49" Y="-1450.647" Z="140.3678" />
+								<Hotspot X="-8024.947" Y="-1225.311" Z="136.8163" />
+								<Hotspot X="-7982.853" Y="-1133.025" Z="166.8194" />
+								<Hotspot X="-7909.278" Y="-1124.29" Z="191.0434" />
+								<Hotspot X="-7821.39" Y="-1138.276" Z="212.6581" />
+								<Hotspot X="-7785.67" Y="-1125.843" Z="214.8474" />
+								<Hotspot X="-7746.894" Y="-1123.104" Z="215.0839" />
+								<Hotspot X="-7745.785" Y="-1096.55" Z="216.1152" />
+								<Hotspot X="-7727.726" Y="-1084.078" Z="217.1765" />
+								<Hotspot X="-7697.158" Y="-1090.232" Z="217.5882" />
+								<Hotspot X="-7663.06" Y="-1037.952" Z="225.9546" />
+								<Hotspot X="-7608.508" Y="-1014.392" Z="240.8857" />
+								<Hotspot X="-7557.254" Y="-1014.972" Z="252.9411" />
+								<Hotspot X="-7512.101" Y="-1052.448" Z="262.3856" />
+								<Hotspot X="-7492.059" Y="-1096.829" Z="265.7839" />
+								<Hotspot X="-7496.43" Y="-1141.053" Z="265.6814" />
+							</CustomBehavior>
+							<CustomBehavior File="Message" Text="Making my way to Lothos." LogColor="Lime" />
+								<RunTo X="-7502.786" Y="-1155.311" Z="269.6797" />	<!-- top of chain -->
+								<RunTo X="-7565.787" Y="-1126.723" Z="260.7023" />	<!-- bottom of chain -->
+								<RunTo X="-7515.245" Y="-1046.501" Z="182.2998" />	<!-- door at lothos -->
+							<CustomBehavior File="Message" Text="I have reached Lothos." LogColor="Lime" />
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="RAF Character - Wait for all your characters to reach this location, then press continue on the level 90 first, then press continue on this window. The Booster will attempt to clear a path into BRD." Title="WARNING" />	
+							<CustomBehavior File="Message" Text="Waiting 80 seconds for the booster to clear the path." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="80000" />
+							
+							<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
+								<Hotspot X="-7482.492" Y="-1035.922" Z="177.6218" />
+								<Hotspot X="-7399.461" Y="-961.0383" Z="169.9763" />
+								<Hotspot X="-7381.289" Y="-935.2847" Z="168.4028" />
+								<Hotspot X="-7313.745" Y="-913.7289" Z="166.0338" />
+								<Hotspot X="-7256.717" Y="-908.1658" Z="165.3763" />
+								<Hotspot X="-7196.079" Y="-904.0046" Z="165.4892" />
+								<Hotspot X="-7184.503" Y="-914.6645" Z="165.4892" />
+								<Hotspot X="-7178.41" Y="-922.152" Z="166.092" />
+							</CustomBehavior>
+								<RunTo X="-7178.41" Y="-922.152" Z="166.092" />
+							<CustomBehavior File="Message" Text="I have reached BRD." LogColor="Lime" />
+						</If>	
+					</If>
+				</If>
+				
+				<If Condition="Me.ZoneId == 1584" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside BRD. I'm leaving the dungeon to reset." LogColor="Lime" />
+						<RunTo X="456.929" Y="34.0923" Z="-69.56168" />
+					<CustomBehavior File="MyCTM" X="454.8344" Y="38.78323" Z="-68.91302" />					
+					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="{TimeRemaining}" />			
+					<CustomBehavior File="Message" Text="I have exited BRD." LogColor="Lime" />
+						<RunTo X="-7178.41" Y="-922.152" Z="166.092" />	
+				</If>
+		
+		<While Condition="true" >	
+		
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.X &gt; -7191.958 &amp;&amp; Me.X &lt; -7174.033 &amp;&amp; Me.Y &lt; -911.2476 &amp;&amp; Me.Y &gt; -924.7545 &amp;&amp; Me.Z &lt; 188" > <!-- brd box -->
+						<If Condition="Me.Level &gt;= 48" >
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="**********RAF Character - This character has reached the appropriate level to run Upper Blackrock Spire. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />
+						</If>
+						<CustomBehavior File="WaitTimer" WaitTime="10000"  />
+						<CustomBehavior File="MyCTM" X="-7177.727" Y="-927.1953" Z="166.9945" />
+						<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<If Condition="Me.MapId == 230">
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="RAF Character - Press continue when you are ready to begin." Title="WARNING" />
+						</If>
+					</If>				
+				</If>
+							
+				<!--	brd dungeon script  -->
+				<If Condition="Me.MapId == 230">
+				
+					<!-- Inside portal entrance dropoff -->
+					<RunTo X="456.929" Y="34.0923" Z="-69.5617" />
+					
+					<CustomBehavior File="Message" Text="We are at the entrance." LogColor="Cyan" />
+					
+					<CustomBehavior File="Message" Text="Avoiding instance lock at this point, DO NOT TOUCH." LogColor="red" />
+					
+					<!-- Five minute timer -->
+					<CustomBehavior File="Message" Text="Waiting for 140 seconds. 1 of 2." LogColor="Cyan" />
+					<CustomBehavior File="WaitTimer" WaitTime="140000" />
+					
+					<CustomBehavior File="Message" Text="Waiting for 160 seconds. 2 of 2." LogColor="Cyan" />
+					<CustomBehavior File="WaitTimer" WaitTime="160000" />
+					
+					<!-- Move to East Garrison Door -->
+					
+					<RunTo X="495.046" Y="13.75256" Z="-70.13718" />
+					<RunTo X="553.8895" Y="6.869266" Z="-69.80652" />
+					<RunTo X="567.4558" Y="-8.999594" Z="-70.13717" />
+					<RunTo X="559.067" Y="-51.33261" Z="-60.30301" />
+					<RunTo X="579.4373" Y="-62.65163" Z="-59.60902" />
+					<RunTo X="595.6426" Y="-85.76916" Z="-45.45698" />
+					<RunTo X="626.3034" Y="-104.5298" Z="-46.10309" />
+					<RunTo X="635.469" Y="-123.7456" Z="-46.23371" />
+					<RunTo X="682.9497" Y="-144.9574" Z="-46.23371" />
+					<RunTo X="693.8126" Y="-132.9901" Z="-46.23371" />
+					
+					<!-- Five minute timer -->
+					<CustomBehavior File="Message" Text="At this point, the booster will gather all the mobs and kill them below." LogColor="Cyan" />
+					<CustomBehavior File="Message" Text="Waiting for 120 seconds. 1 of 6." LogColor="Cyan" />
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+					
+					<RunTo X="693.8193" Y="-137.2636" Z="-46.23371" />
+					<CustomBehavior File="Message" Text="Waiting for 40 seconds. 2 of 6." LogColor="Cyan" />
+					<CustomBehavior File="WaitTimer" WaitTime="40000" />
+					
+					<RunTo X="697.0891" Y="-140.9016" Z="-45.98882" />
+					<CustomBehavior File="Message" Text="Waiting for 80 seconds. 3 of 6." LogColor="Cyan" />
+					<CustomBehavior File="WaitTimer" WaitTime="80000" />
+					
+					<RunTo X="697.6262" Y="-140.5843" Z="-45.97456" />
+					<CustomBehavior File="Message" Text="Waiting for 80 seconds. 4 of 6." LogColor="Cyan" />
+					<CustomBehavior File="WaitTimer" WaitTime="80000" />
+					
+					<RunTo X="689.4752" Y="-131.3719" Z="-46.30088" />
+					<CustomBehavior File="Message" Text="Waiting for 120 seconds. 5 of 6." LogColor="Cyan" />
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+					
+					<RunTo X="689.4752" Y="-130.3719" Z="-46.30088" />
+					<CustomBehavior File="Message" Text="Waiting for 60 seconds. 6 of 6." LogColor="Cyan" />
+					<CustomBehavior File="WaitTimer" WaitTime="60000" />
+					
+					
+					<CustomBehavior File="Message" Text="Fourteen minutes have passed. All the mobs should be dead." LogColor="Cyan" />
+				<!--	<CustomBehavior File="WaitTimer" WaitTime="120000" />	-->
+				
+					<CustomBehavior File="Message" Text="Moving back to the entrance." LogColor="Cyan" />
+
+					
+						<RunTo X="561.549" Y="-52.38595" Z="-60.0258" />
+						<RunTo X="567.1044" Y="-9.368342" Z="-70.13717" />
+						<RunTo X="550.7156" Y="8.287306" Z="-69.97084" />
+						<RunTo X="495.8539" Y="13.79999" Z="-70.13716" />
+						<RunTo X="456.929" Y="34.0923" Z="-69.56168" />
+					<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Cyan" />	
+					<CustomBehavior File="MyCTM" X="454.8344" Y="38.78323" Z="-68.91302" />					
+					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="{TimeRemaining}" />			
+					<CustomBehavior File="Message" Text="I have exited BRD." LogColor="Lime" />
+						<RunTo X="-7178.41" Y="-922.152" Z="166.092" />
+				</If>	
+	 	</While> 
+	</QuestOrder>
+</HBProfile>
+

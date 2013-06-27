@@ -1,0 +1,26 @@
+
+		Horde
+
+Portal to Tol Barad - ID:206595 Loc:<2031.22, -4330.87, 95.471>		<RunTo  X="2032.933" Y="-4334.695" Z="95.47184" />
+Portal to Moonglade - ID:206110 Loc:<1897.63, -4196.58, 37.2524>	<RunTo X="1901.796" Y="-4199.553" Z="37.29237" />
+Portal to Twilight Highlands - ID:207686 Loc:<2029.233, -4379.827, 97.9757>		<RunTo X="2031.94" Y="-4379.559" Z="98.04592" />
+Portal to Uldum - ID:207687 Loc:<2039.67, -4356.288, 98.00434>		<RunTo X="2041.266" Y="-4358.682" Z="98.05732" />
+Portal to Hyjal - ID:207688 Loc:<2042.752, -4395.662, 97.93639>		<RunTo X="2043.809" Y="-4391.551" Z="98.42939" />
+Portal to Deepholm - ID:207689 Loc:<2065.653, -4390.647, 98.04689>		<RunTo X="2062.65" Y="-4388.267" Z="98.05376" />
+Portal to Vashj'ir - ID:207690 Loc:<2063.337, -4362.29, 98.11018>		<RunTo X="2062.047" Y="-4364.611" Z="98.64956" />
+Portal to Blasted Lands - ID:195142 Loc:<1685.18, -4123.42, 66.3376>	<FlyTo X="-8994.284" Y="860.5435" Z="127.6233" />	then   <RunTo X="1686.217" Y="-4126.586" Z="66.34129" />
+
+
+
+		Ally
+
+Portal to Blasted Lands - ID:195141 Loc:<-9007.58, 871.8698, 129.6922>  <FlyTo X="-8994.284" Y="860.5435" Z="127.6233" />	then    <RunTo X="-9005.403" Y="869.1169" Z="129.6929" />
+
+Portal to Tol Barad - ID:206594 Loc:<-8208.7, 450.793, 117.667>		<RunTo
+Portal to Twilight Highlands - ID:207694 Loc:<-8186.149, 413.7292, 116.7497>		<RunTo
+Portal to Uldum - ID:207695 Loc:<-8233.281, 415.5955, 117.4477>		<RunTo
+Portal to Hyjal - ID:207692 Loc:<-8212.33, 399.0208, 117.273>		<RunTo
+Portal to Deepholm - ID:207693 Loc:<-8223.319, 451.1823, 117.4883>		<RunTo
+
+Portal to Vashj'ir - ID:207690 Loc:<2063.337, -4362.29, 98.11018>		<RunTo X="2062.047" Y="-4364.611" Z="98.64956" />
+Portal to Moonglade - ID:206110 Loc:<1897.63, -4196.58, 37.2524>	<RunTo X="1901.796" Y="-4199.553" Z="37.29237" />

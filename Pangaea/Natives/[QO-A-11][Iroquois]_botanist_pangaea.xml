@@ -1,0 +1,188 @@
+<HBProfile>
+	<Name>[QO-A-11][Iroquois]_botanist_pangaea</Name>
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+  
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+  
+	<MailGrey>False</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+  
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+  
+	<TargetElites>False</TargetElites>
+
+  
+	<AvoidMobs>
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+	
+	<Mailboxes>
+	</Mailboxes>
+	
+	<Vendors>
+	</Vendors>
+	
+
+			
+		<SetVendor>
+			<Vendors>
+			</Vendors>
+		</SetVendor>
+		
+		
+	
+	<QuestOrder>
+	
+
+			
+				<If Condition="Me.MapId == 870" >
+					<CustomBehavior File="UserSettings" MountDistance="60" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="75" LogoutForInactivity="True" />
+						
+					
+					<If Condition="((!HasQuest(31394)) &amp;&amp; (!IsQuestCompleted(31394)))" >
+						<CustomBehavior File="Message" Text="Moving to Temple of the White Tiger to complete 'A Celestial Experience'." LogColor="Lime" />
+							<RunTo X="3691.744" Y="545.4194" Z="639.6908" />
+						<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+							<Hotspot X="3815.916" Y="535.1093" Z="639.0081" />
+						</CustomBehavior>
+						<PickUp QuestName="A Celestial Experience" QuestId="31394" GiverName="Anduin Wrynn" GiverId="64540" X="3819.135" Y="535.2518" Z="639.0074" />
+					</If>
+					
+					<If Condition="((HasQuest(31394)) &amp;&amp; (!IsQuestCompleted(31394)))" >
+							<RunTo X="3828.369" Y="529.9269" Z="639.4708" />
+						<CustomBehavior File="GetOutOfGroundEffectAndAuras" StartNpcId="64528" QuestId="31394"
+							EventX="3791.613" EventY="534.3569" EventZ="639.0074"
+							MoveOutOfGroundEffectAuraId1="126625"
+							MoveBehindMobCastingSpellId1="126631"
+							MoveAwayFromMobCastingSpellId1="126633"
+							MoveAwayFromMobWithAuraId1="23719"
+							MoveAwayFromMobWithAuraId2="126633">
+							<Safespots> <!-- safe spots in the room are the gold circles that comprise the big circle -->
+								<Hotspot X="3777.682" Y="549.4387" Z="639.0074" />
+								<Hotspot X="3798.857" Y="558.9065" Z="639.0074" />
+								<Hotspot X="3818.901" Y="545.8683" Z="639.2289" />
+								<Hotspot X="3815.414" Y="516.5005" Z="639.0848" />
+								<Hotspot X="3793.716" Y="507.7243" Z="639.0076" />
+								<Hotspot X="3773.379" Y="520.7094" Z="639.125" />
+							</Safespots>
+						</CustomBehavior>
+							<RunTo X="3819.135" Y="535.2518" Z="639.0074" />
+						<TurnIn QuestName="A Celestial Experience" QuestId="31394" TurnInName="Anduin Wrynn" TurnInId="64540" X="3819.135" Y="535.2518" Z="639.0074" />	
+					</If>
+					
+					<If Condition="((!HasQuest(31512)) &amp;&amp; (!IsQuestCompleted(31512)))" >
+						<PickUp QuestName="A Witness to History" QuestId="31512" GiverName="Anduin Wrynn" GiverId="64540" X="3819.135" Y="535.2518" Z="639.0074" />
+						<CustomBehavior File="MyCTM" X="3699.918" Y="545.7637" Z="639.6893" />
+						<CustomBehavior File="UserSettings" LootMobs="True" UseMount="False" UseFlightPaths="True" PullDistance="25" />
+							<RunTo X="3668.67" Y="539.3801" Z="639.6936" />
+							<RunTo X="3604.916" Y="544.9504" Z="614.8521" />
+							<RunTo X="3627.708" Y="500.9166" Z="631.7834" />
+							<RunTo X="3663.452" Y="466.1414" Z="635.1683" />
+							<RunTo X="3667.508" Y="434.8673" Z="620.9752" />
+							<RunTo X="3657.995" Y="416.9966" Z="607.8278" />
+							<RunTo X="3687.351" Y="378.0444" Z="596.545" />
+							<RunTo X="3662.7" Y="366.1254" Z="596.1027" />
+							<RunTo X="3520.178" Y="412.8131" Z="586.9307" />
+						<CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" UseFlightPaths="True" PullDistance="25" />
+						<CustomBehavior File="ForcedMount" MountType="Ground" />
+						<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+							<Hotspot X="3448.82" Y="441.6139" Z="586.563" />
+							<Hotspot X="3428.556" Y="464.6693" Z="579.084" />
+							<Hotspot X="3378.741" Y="500.6255" Z="579.0842" />
+							<Hotspot X="3306.321" Y="580.706" Z="554.9688" />
+							<Hotspot X="3270.124" Y="553.1481" Z="544.4771" />
+							<Hotspot X="3251.133" Y="548.7061" Z="545.6697" />
+							<Hotspot X="3238.38" Y="574.1768" Z="543.5531" />
+							<Hotspot X="3247.64" Y="636.6661" Z="536.2216" />
+							<Hotspot X="3226.435" Y="647.3892" Z="530.1912" />
+							<Hotspot X="3184.759" Y="652.4087" Z="512.1282" />
+							<Hotspot X="3138.509" Y="655.7282" Z="501.7749" />
+							<Hotspot X="3041.069" Y="659.9684" Z="517.8069" />
+							<Hotspot X="2817.712" Y="703.4827" Z="543.183" />
+							<Hotspot X="2581.525" Y="766.9259" Z="521.3643" />
+							<Hotspot X="2508.241" Y="833.0292" Z="515.7151" />
+							<Hotspot X="2384.378" Y="1074.502" Z="506.8922" />
+							<Hotspot X="2263.437" Y="1151.121" Z="494.4339" />
+							<Hotspot X="2166.593" Y="1219.634" Z="488.5822" />
+							<Hotspot X="1973.575" Y="1347.788" Z="468.8426" />
+							<Hotspot X="1858.273" Y="1378.057" Z="464.523" />
+							<Hotspot X="1803.215" Y="1377.337" Z="468.8545" />
+							<Hotspot X="1791.361" Y="1386.564" Z="468.8545" />
+						</CustomBehavior>
+							
+							<RunTo X="1791.361" Y="1386.564" Z="468.8545" />
+						<CustomBehavior File="InteractWith" MobId="64848" GossipOptions="1" NumOfTimes="1" X="1790.512" Y="1390.957" Z="468.854" />
+						<CustomBehavior File="WaitTimer" WaitTime="100000" />
+					</If>
+					
+					<If Condition="((HasQuest(31512)) &amp;&amp; (!IsQuestCompleted(31512)))" >
+						<CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" UseFlightPaths="True" PullDistance="1" />
+							<RunTo X="1791.361" Y="1386.564" Z="468.8545" />
+						<CustomBehavior File="InteractWith" MobId="64848" GossipOptions="1" NumOfTimes="1" X="1790.512" Y="1390.957" Z="468.854" />
+						<CustomBehavior File="WaitTimer" WaitTime="100000" />
+					</If>
+					
+					<If Condition="Me.IsAlliance" >
+							<RunTo X="1760.241" Y="1362.869" Z="468.8548" />
+							<RunTo X="1661.003" Y="1365.792" Z="453.6066" />
+							<RunTo X="1398.547" Y="1278.859" Z="401.8181" />
+							<RunTo X="1279.29" Y="1257.812" Z="381.6919" />
+							<RunTo X="1221.075" Y="1062.523" Z="425.9672" />
+							<RunTo X="1218.668" Y="1027.106" Z="425.9672" />
+							<RunTo X="1219.434" Y="953.7667" Z="407.5988" />
+							<RunTo X="1144.354" Y="797.7713" Z="386.4244" />
+							<RunTo X="1052.051" Y="719.5231" Z="389.0949" />
+							<RunTo X="1042.836" Y="678.4745" Z="389.8649" />
+							<RunTo X="1055.462" Y="560.1208" Z="397.8468" />
+							<RunTo X="991.6543" Y="406.4271" Z="421.344" />
+							<RunTo X="961.856" Y="314.5293" Z="457.437" />
+							<RunTo X="936.1135" Y="257.0541" Z="502.4698" />
+							<RunTo X="902.855" Y="241.7156" Z="503.1086" />
+							<RunTo X="876.0497" Y="309.8843" Z="503.0419" />
+							<RunTo X="908.4436" Y="343.5705" Z="506.0943" />
+									
+						<CustomBehavior File="Message" Text="I have reached the level 90 flying trainer. I hope this profile was satisfactory for you needs." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I am stopping the bot. Thank you for using my profiles, Botanist" LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="UserSettings" StopBot="true" />
+					</If>
+					<If Condition="Me.IsHorde" >
+						<RunTo X="1760.241" Y="1362.869" Z="468.8548" />
+						<RunTo X="1661.003" Y="1365.792" Z="453.6066" />
+						<RunTo X="1442.438" Y="1288.754" Z="415.4105" />
+						<RunTo X="1494.381" Y="1087.53" Z="434.3279" />
+						<RunTo X="1510.884" Y="908.9213" Z="423.9297" />
+						<RunTo X="1556.497" Y="860.7335" Z="444.7084" />
+						<RunTo X="1622.082" Y="864.3047" Z="470.5881" />
+						<RunTo X="1584.135" Y="896.1171" Z="473.6003" />
+						<RunTo X="1558.515" Y="893.5574" Z="473.6003" />
+													
+					<CustomBehavior File="Message" Text="I have reached the level 90 Flight Trainer. I hope this profile was satisfactory for your needs." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I am stopping the bot. Thank you for using my profiles, Botanist" LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
+				</If>
+					
+				</If>	
+					
+				<If Condition="Me.MapId != 870" >
+					<CustomBehavior File="Message" Text="You need to be in Pandaria to run this profile. I am stopping the bot." LogColor="Lime" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
+				</If>	
+				
+	</QuestOrder>
+
+</HBProfile>	

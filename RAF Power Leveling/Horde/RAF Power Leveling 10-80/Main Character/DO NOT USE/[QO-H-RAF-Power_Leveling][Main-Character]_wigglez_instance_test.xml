@@ -1,0 +1,81 @@
+﻿<HBProfile creator="Wigglez" version="1.0">
+	<Name>[QO-H-RAF-Power_Leveling][Main-Character]_wigglez_instance_test</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />	
+	</AvoidMobs>
+	
+	<Blackspots>
+		<!-- thorn -->
+		<Blackspot X="2571.802" Y="1021.42" Z="51.28505" Radius="1.393644" />
+		<!-- Gong room -->
+		<Blackspot X="2542.679" Y="856.7137" Z="50.90178" Radius="1.729485" />
+		<Blackspot X="2548.168" Y="860.8541" Z="51.29408" Radius="1.049623" />
+		<Blackspot X="2537.883" Y="856.9494" Z="50.76789" Radius="1.528436" />
+		<Blackspot X="2531.415" Y="858.7027" Z="49.56959" Radius="1.118679" />
+		<!-- Last boss bones -->
+		<Blackspot X="2394.321" Y="978.2196" Z="55.20959" Radius="5.656103" />
+		<Blackspot X="2387.089" Y="974.6604" Z="55.62838" Radius="4.983395" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" 
+						UseMount="True" 
+						LootMobs="False" 
+						SkinMobs="False" 
+						PullDistance="15" 
+						KillBetweenHotspots="True" 
+						FindVendorsAutomatically="False" 
+		/>
+		
+		<!-- Razorfen Downs MapID = 129 -->
+		
+			<!-- Razorfen Downs dungeon script -->
+			<If Condition="Me.MapId == 129">
+				<!-- Manually take us to the entrance -->
+				<CustomBehavior File="MyCTM" X="2548.102" Y="977.0217" Z="50.02687" />
+				<CustomBehavior File="MyCTM" X="2585.161" Y="952.5248" Z="52.59469" />
+				<CustomBehavior File="MyCTM" X="2598.614" Y="972.3999" Z="53.01984" />
+				<CustomBehavior File="MyCTM" X="2591.419" Y="991.6505" Z="54.63231" />
+				<CustomBehavior File="MyCTM" X="2568.678" Y="1008.732" Z="52.31929" />
+				<CustomBehavior File="MyCTM" X="2581.836" Y="1030.314" Z="50.71498" />
+				<CustomBehavior File="MyCTM" X="2594.958" Y="1042.061" Z="52.29382" />
+				<CustomBehavior File="MyCTM" X="2595.624" Y="1060.206" Z="54.74689" />
+			</If>
+	</QuestOrder>
+</HBProfile>
+

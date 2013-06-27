@@ -1,0 +1,54 @@
+<HBProfile>
+  <Name>[GB2]botanist_hunter-pet_arcturis</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>99999</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+
+	</Vendors>
+	
+	<Mailboxes>
+
+	</Mailboxes>
+
+  <Hotspots>
+    <Hotspot X="3434.699" Y="-2628.711" Z="119.9469" />
+    <Hotspot X="3467.157" Y="-2650.198" Z="129.1744" />
+    <Hotspot X="3505.862" Y="-2676.641" Z="148.9689" />
+    <Hotspot X="3536.449" Y="-2703.103" Z="181.4642" />
+    <Hotspot X="3567.302" Y="-2743.835" Z="192.1612" />
+    <Hotspot X="3597.276" Y="-2783.093" Z="204.9599" />
+    <Hotspot X="3633.425" Y="-2788.532" Z="242.6343" />
+    <Hotspot X="3672.156" Y="-2767.419" Z="264.6635" />
+    <Hotspot X="3714.786" Y="-2736.013" Z="266.5717" />
+    <Hotspot X="3749.452" Y="-2695.586" Z="266.0057" />
+    <Hotspot X="3757.228" Y="-2644.477" Z="259.4878" />
+    <Hotspot X="3735.655" Y="-2596.749" Z="253.2934" />
+    <Hotspot X="3694.748" Y="-2565.399" Z="250.2081" />
+    <Hotspot X="3644.577" Y="-2573.347" Z="250.9637" />
+    <Hotspot X="3602.474" Y="-2605.179" Z="245.6004" />
+    <Hotspot X="3556.21" Y="-2616.132" Z="222.9579" />
+    <Hotspot X="3514.884" Y="-2603.573" Z="192.4508" />
+    <Hotspot X="3475.747" Y="-2585.949" Z="161.1613" />
+    <Hotspot X="3439.337" Y="-2584.161" Z="122.8128" />
+    <Hotspot X="3414.097" Y="-2596.723" Z="97.65671" />
+  </Hotspots>
+  <Blackspots>
+  </Blackspots>
+</HBProfile>

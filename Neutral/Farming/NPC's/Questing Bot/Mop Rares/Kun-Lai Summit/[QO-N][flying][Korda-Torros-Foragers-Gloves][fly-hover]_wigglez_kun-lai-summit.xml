@@ -1,0 +1,144 @@
+<HBProfile creator="Wigglez" version="1.0">
+	<Name>[QO-N][flying][Korda-Torros-Foragers-Gloves][fly-hover]_wigglez_kun-lai-summit</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.3</MinDurability>
+	<MinFreeBagSlots>4</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites></TargetElites>
+	
+	<AvoidMobs>
+	
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="-10630.92" Y="1118.568" Z="33.69128" Radius="3" />
+	</Blackspots>
+
+	<Mailboxes>
+	
+	</Mailboxes>
+ 
+	<Vendors>
+	
+	</Vendors>
+	
+	<ProtectedItems>
+		<Item name="Forager's Gloves" entry="86566" />
+	</ProtectedItems>
+		
+	<QuestOrder>
+		<!-- Korda Torros ID = 50332 -->
+		<CustomBehavior File="UserSettings" MountDistance="30" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="30" LogoutForInactivity="True" />
+		
+		<!-- Tell the user we can't run the profile unless we're in Pandaria -->
+		<If Condition="Me.MapId != 870" >
+			<CustomBehavior File="Message" Text="You must be level 90, with flying, in Pandaria to run this profile." LogColor="Lime" />
+		</If>
+		
+		<!-- If we are in Pandaria -->
+		<If Condition="Me.MapId == 870" >
+			<While Condition="true" >
+				<!-- Move to the Korda Torros area -->
+				<CustomBehavior File="FlyTo" X="2220.185" Y="1874.546" Z="528.3171" />
+
+				<!-- If we don't have the Forager's Gloves, we have room, and our durability is okay, we can proceed -->
+				<While Condition="!HasItem(86566) &amp;&amp; (Me.FreeBagSlots &gt; 10) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
+					
+					<CustomBehavior File="FlyTo" X="2220.185" Y="1874.546" Z="528.3171" />
+				
+					<!-- Clear target -->
+					<!-- 
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/> 
+					-->
+				
+					<!-- 
+					<CustomBehavior File="RunMacro" Macro="/target Korda Torros" NumOfTimes="1" WaitTime="0"/> 
+					-->
+					
+					<!-- If he isn't present, or the target isn't him, we wait -->
+					<If Condition="Me.CurrentTarget == null || Me.CurrentTarget.Entry != 50332">
+						<!--
+						<CustomBehavior File="Message" Text="Waiting 2 seconds to check again." LogColor="Lime" />
+						-->
+						<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					</If>
+					
+					<!-- If he is present and our target is him -->
+					<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 50332">
+						<!-- We've found him, let's go get him -->
+						<CustomBehavior File="Message" Text="Korda Torros is here, flying down to engage him." LogColor="Cyan" />
+						
+						<!-- Target him and move to him only if he is above 95% health -->
+						<CustomBehavior File="TargetAndMoveToMob" MobId="50332" MoveWithinMaxRangeOfMob="40" TargetOnlyIfHealthPercentAbove="95" WaitForNpcs ="false"/>
+						
+						<!-- Engage and avoid ground effects -->
+						<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+										EventCompleteWhen="SpecificMobsDead" 
+										EventCompleteDeadMobId="50332"
+										EventX="2224.18" EventY="1877.908" EventZ="492.0089"
+										MoveOutOfGroundEffectAuraId1="124289"
+										MoveAwayFromMobCastingSpellId1="124289"
+										MoveAwayFromMobWithAuraId1="124289">
+							<Safespots>
+								<Hotspot X="2230.146" Y="1873.01" Z="496.0437" />
+								<Hotspot X="2224.186" Y="1868.699" Z="493.8662" />
+								<Hotspot X="2220.119" Y="1874.771" Z="490.3144" />
+								<Hotspot X="2226.918" Y="1878.516" Z="493.4781" />
+								<Hotspot X="2230.949" Y="1870.265" Z="496.6234" />
+							</Safespots>
+						</CustomBehavior>
+
+						<!-- Make sure we loot him -->
+						<CustomBehavior File="UserSettings" LootMobs="True"  />
+						
+						<!-- If we have the Forager's Gloves, we can stop here -->
+						<If Condition="HasItem(86566)" >
+							<CustomBehavior File="FlyTo" X="2209.165" Y="1794.111" Z="621.4176" />
+							<CustomBehavior File="Message" Text="Stopping the bot." LogColor="Lime" />
+							<CustomBehavior File="UserSettings" StopBot="true" />
+						</If>
+					</If>
+				</While>
+			
+				<!-- If we did not get the Forager's Gloves, we are going to check our gear for durability issues and try again -->
+				<CustomBehavior File="Message" Text="Checking my gears durability and free bag slots." LogColor="Lime" />
+				<!-- If we don't have 10 bag slots or our durability is low, we are selling/repairing -->
+				<If Condition="(Me.FreeBagSlots &lt; 10) || (Me.LowestDurabilityPercent &lt; 0.3)" >
+					<CustomBehavior File="Message" Text="Checking my gears durability and free bag slots." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I have detected that my gear is about to break or my bags are nearly full. I'm going to hearth, and repair. Then I'll return to the farming location" LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="3048.986" Y="1248.262" Z="655.574" />
+
+					<SetVendor>
+						<Vendors>
+							<Vendor Name="Ironshaper Shou" Entry="59827" Type="Repair" X="3042.047" Y="1245.347" Z="654.3094" />
+						</Vendors>
+					</SetVendor>	
+					
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="3105.984" Y="1235.366" Z="654.0722" />
+						</Mailboxes>
+					</SetMailbox>	
+					
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+				</If>
+			</While>	
+		</If>
+	</QuestOrder >			
+ </HBProfile>

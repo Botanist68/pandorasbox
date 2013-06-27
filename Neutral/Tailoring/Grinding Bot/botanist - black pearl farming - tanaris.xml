@@ -1,0 +1,45 @@
+<HBProfile>
+  <Name>botanist - black pearl farming - tanaris</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>778 15</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+     <Vendor Name="Krinkle Goodsteel" Entry="5411" Type="Repair" X="-7232.01" Y="-3751.71" Z="9.093312" />
+	</Vendors>
+	
+	<Mailboxes>
+     <Mailbox X="-7086.298" Y="-3851.729" Z="9.54647" />
+	</Mailboxes>
+
+  <Hotspots>
+   <Hotspot X="-7521.78" Y="-3880.117" Z="-1.125221" />
+   <Hotspot X="-7676.408" Y="-3932.285" Z="0.4663074" />
+   <Hotspot X="-7838.293" Y="-4037.729" Z="-1.682333" />
+   <Hotspot X="-7921.563" Y="-4164.413" Z="-1.56635" />
+   <Hotspot X="-7841.725" Y="-4266.449" Z="-0.01831131" />
+   <Hotspot X="-7720.126" Y="-4125.415" Z="-0.2900778" />
+   <Hotspot X="-7680.225" Y="-4028.362" Z="1.890823" />
+   <Hotspot X="-7546.75" Y="-4092.104" Z="0.7716158" />
+   <Hotspot X="-7462.213" Y="-3994.97" Z="-1.729883" />
+  </Hotspots> 
+  
+  
+  <Blackspots>
+  </Blackspots>
+</HBProfile>

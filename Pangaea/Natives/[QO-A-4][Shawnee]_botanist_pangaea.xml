@@ -1,0 +1,59 @@
+<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A-4][Shawnee]_botanist_pangaea</Name>
+	<MinLevel>58</MinLevel>
+	<MaxLevel>101</MaxLevel>
+	
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>True</MailGreen>
+	
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+
+	<QuestOrder>
+	
+				<If Condition="Me.Level &gt;= 68" >
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-5][Choctaw]_botanist_pangaea" />
+				</If>
+	
+		<CustomBehavior File="UserSettings" UseFlightPaths="False" />
+		
+		
+				
+				<If Condition="Me.MapId == 0" >
+					<CustomBehavior File="Message" Text="I need to take the boat to Northrend." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="Moving to the Stormwind docks." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="FlyTo" X="-8300.08" Y="1405.158" Z="4.422395" />
+					<CustomBehavior File="ForcedDismount" />
+				</If>
+				
+		<While Condition="Me.MapId == 0" >
+					<RunTo X="-8300.08" Y="1405.158" Z="4.422395" />
+				<CustomBehavior File="Message" Text="Waiting for the boat." LogColor="Lime" />
+				<If Condition="Me.MapId == 0" >
+				<!-- SW dock to Valiance Keep -->
+				<CustomBehavior File="UseTransport" TransportId="190536" 
+								WaitAtX="-8300.08" WaitAtY="1405.158" WaitAtZ="4.422395"
+								TransportStartX="-8288.816" TransportStartY="1424.703" TransportStartZ="0.04"
+								StandOnX="-8294.842" StandOnY="1421.358" StandOnZ="9.488697"
+								TransportEndX="2218.391" TransportEndY="5119.589" TransportEndZ="0.04"	
+								GetOffX="2234.375" GetOffY="5132.568" GetOffZ="5.343217" />								
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</If>
+		</While>				
+									
+				<If Condition="Me.MapId == 571" >
+						<CustomBehavior File="FlyTo" X="2255.703" Y="5200.517" Z="11.31931" />
+					<CustomBehavior File="LoadProfile" ProfileName="[QO-A-5][Choctaw]_botanist_pangaea" /> 			
+				</If>
+				
+	</QuestOrder>
+</HBProfile>

@@ -1,0 +1,217 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-H} Botanist Blackrock Caverns (Blood DK Only)</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>86</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+		<Mob Name="Conflagration" Entry="39994" />
+		<Mob Name="Karsh Steelbender" Entry="39698" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+		<Item name="Berto's Staff" entry="55789" />
+		<Item name="Acanthia's Lost Pendant" entry="55791" />
+		<Item name="Snub-Nosed Pistol" entry="66953" />
+		<Item name="Toxidunk Dagger" entry="55790" />
+		
+	</ProtectedItems>
+
+	<Factions></Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+		<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="25" TrainNewSkills="False" LearnFlightPaths="False" KillBetweenHotspots="True" LogoutForInactivity="False" />
+	
+         <While Condition="true" >
+		 
+		 		<If Condition="Me.ZoneId == 8" > <!--if i am in stonard -->
+						<CustomBehavior File="ForcedMount" MountType="Flying" />
+					    <CustomBehavior File="Message" Text="I'm in Stonard, flying to Burning Steppes, just outside Blackrock Mountain" LogColor="Yellow" />
+						<CustomBehavior File="FlyTo" X="-7803.673" Y="-1131.662" Z="214.8472"  DestName="Blackrock Mountain" /> <!-- entrance to blackrock mountain -->
+					    <CustomBehavior File="ForcedDismount" />
+					    <CustomBehavior File="ForcedMount" MountType="Ground" />
+						<RunTo X="-7572.08" Y="-1316.603" Z="245.5367" />  <!-- outside the blackrock caverns portal -->
+				</If>
+		 
+		                  <!-- if i am in blackrock caverns, leave the dungeon -->
+		 
+				<If Condition="Me.ZoneId == 4926" > <!-- in blackrock caverns -->
+				        <CustomBehavior File="Message" Text="You started the bot with me inside the dungeon. I'm leaving the dungeon so I can reset it." LogColor="Yellow" />
+						<RunTo X="210.0881" Y="1117.478" Z="206.6087" />
+						<RunTo X="215.7276" Y="1140.736" Z="206.7795" />					
+						<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="{TimeRemaining}" />						
+						<CustomBehavior File="Message" Text="I found my way out." LogColor="Yellow" />
+						<RunTo X="-7572.808" Y="-1312.219" Z="245.5344" />
+				</If>
+				
+				  <!-- if i'm not in blackrock cavern, nor close to the portal, fly to blackrock mountain -->
+		
+					<If Condition="Me.Y &gt; -1328 &amp;&amp; Me.Y &lt; -1290" >
+						<CustomBehavior File="Message" Text="I am outside Blackrock Caverns." LogColor="Yellow" />
+						<CustomBehavior File="Message" Text="I am resetting the dungeon." LogColor="Yellow" />
+						<CustomBehavior File="Message" Text="Waiting 10 seconds to reset the dungeon." LogColor="Yellow" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />					
+						<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" /> 
+						<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> <!-- changes the instanceto to "normal" , if it was on "heroic" for the first run -->
+                        <CustomBehavior File="Message" Text="Blackrock Caverns has been reset." LogColor="Yellow" />						
+						<RunTo X="-7570.299" Y="-1329.83459" Z="246.733337" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="{TimeRemaining}" />
+						<CustomBehavior File="Message" Text="I am waiting for the dungeon to load." LogColor="Yellow" />
+                    </If>
+		 
+		                                <!-- blackrock caverns dungeon script -->
+											
+					<CustomBehavior File="MyCTM" X="209.9805" Y="1076.183" Z="205.7515" />
+					<RunTo X="214.5711" Y="987.2893" Z="192.2645" />
+					<CustomBehavior File="MyCTM" X="245.3077" Y="991.1682" Z="191.034" />
+					<CustomBehavior File="MyCTM" X="181.577" Y="969.8492" Z="190.7391" />
+					<RunTo X="179.6337" Y="953.0971" Z="190.7544" />
+					<CustomBehavior File="MyCTM" X="179.6275" Y="932.9762" Z="192.8197" />
+					<RunTo X="194.1605" Y="902.497" Z="191.4434" />
+					<CustomBehavior File="MyCTM" X="211.8419" Y="922.4757" Z="190.9719" />
+					<RunTo X="213.3246" Y="949.8034" Z="191.0824" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="MyCTM" X="213.8354" Y="908.919" Z="190.9395" />
+					<CustomBehavior File="MyCTM" X="261.8087" Y="912.9965" Z="191.0793" />
+					<CustomBehavior File="MyCTM" X="298.4121" Y="950.0253" Z="191.1656" />
+					<CustomBehavior File="MyCTM" X="447.4012" Y="950.5046" Z="195.9154" />
+					<RunTo X="482.3857" Y="936.476" Z="183.2669" />
+					<RunTo X="503.4949" Y="905.4529" Z="180.6198" />
+					<RunTo X="548.6294" Y="907.0694" Z="169.5619" />
+					<RunTo X="550.229" Y="861.7855" Z="175.5455" />
+					<RunTo X="560.1021" Y="858.3414" Z="175.5455" />					
+					<RunTo X="599.5189" Y="861.5287" Z="175.5455" />
+					<CustomBehavior File="MyCTM" X="599.1398" Y="928.7325" Z="166.6628" />
+					<CustomBehavior File="MyCTM" X="573.2124" Y="931.8838" Z="155.3575" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />					
+					<RunTo X="572.7844" Y="916.3917" Z="155.3736" />
+					<RunTo X="573.1641" Y="886.4756" Z="155.385" />					
+					<RunTo X="584.3939" Y="863.7324" Z="155.4963" />
+					<RunTo  X="480.9601" Y="865.2673" Z="125.9638" />					
+					<RunTo X="481.2117" Y="810.9219" Z="113.9988" />
+					<RunTo X="425.1939" Y="817.8373" Z="105.0866" />
+					<CustomBehavior File="Message" Text="Waiting 3 minutes for IBF and AMS to reset, or else we're probably going to die...(first pull of Evolved Twilight Zealots)." LogColor="Yellow" />
+					<CustomBehavior File="WaitTimer" WaitTime="180000" /> 					
+					<RunTo X="404.7097" Y="816.9329" Z="102.4801" />
+                    <RunTo X="416.0606" Y="816.7463" Z="103.6098" />
+                    <RunTo X="393.6197" Y="816.6216" Z="103.0355" />					
+					<CustomBehavior File="Message" Text="Waiting 3 minutes for IBF and AMS to reset, or else we're probably going to die...(second pull of Evolved Twilight Zealots) ." LogColor="Yellow" />
+					<CustomBehavior File="WaitTimer" WaitTime="180000" />
+					<RunTo X="369.6974" Y="815.7858" Z="105.4693" />
+					<RunTo X="377.9131" Y="816.4031" Z="104.6306" />
+					<RunTo X="364.3674" Y="816.9836" Z="105.5356" />
+					<CustomBehavior File="Message" Text="Waiting 3 minutes for IBF and AMS to reset, or else we're probably going to die...(last pull of Evolved Twilight Zealots)" LogColor="Yellow" />
+					<CustomBehavior File="WaitTimer" WaitTime="180000" />
+					<RunTo X="350.0075" Y="815.72" Z="104.5446" />					
+					<RunTo X="290.9169" Y="822.0571" Z="102.7864" />
+					<CustomBehavior File="MyCTM" X="275.0129" Y="837.6325" Z="95.91351" />
+					<RunTo X="257.222" Y="838.2762" Z="95.89513" />
+					<RunTo X="221.7876" Y="837.6974" Z="95.86824" />
+					<RunTo X="200.2244" Y="814.3775" Z="95.94889" />
+					<RunTo X="191.3973" Y="789.1094" Z="95.95033" />
+					<RunTo X="191.3973" Y="789.1094" Z="95.95033" />
+					<RunTo X="192.8504" Y="769.6588" Z="95.95033" />
+					<RunTo X="199.0632" Y="755.8091" Z="95.95033" />					
+					<CustomBehavior File="MyCTM" X="215.8906" Y="736.4723" Z="99.44498" />
+					<RunTo X="222.9005" Y="721.3812" Z="106.6833" />
+					<RunTo X="197.5865" Y="708.2206" Z="108.33" />
+					<RunTo X="210.1484" Y="671.4868" Z="94.70088" />
+					<CustomBehavior File="Message" Text="Waiting on patrols." LogColor="Yellow" />
+		             <CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<RunTo X="206.3939" Y="642.8069" Z="85.41979" />
+					<RunTo X="197.6291" Y="581.472" Z="76.02744" />
+                    <RunTo  X="141.4047" Y="582.7348" Z="76.36595" />					
+					<CustomBehavior File="Message" Text="Waiting a few seconds to kill the adds." LogColor="Yellow" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<RunTo  X="117.5979" Y="580.6339" Z="76.44927" />
+					<RunTo X="197.6291" Y="581.472" Z="76.02744" />
+					<RunTo X="221.8671" Y="551.7706" Z="75.63184" />
+					<CustomBehavior File="Message" Text="Waiting on patrols." LogColor="Yellow" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+					<RunTo X="235.5111" Y="574.9211" Z="74.27774" />
+					<RunTo X="259.5715" Y="550.7631" Z="71.92206" />
+					<RunTo X="275.3482" Y="551.678" Z="69.71382" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="Message" Text="Waiting for Runes to reset." LogColor="Yellow" />
+					<CustomBehavior File="Message" Text="Casting Army of the dead." LogColor="Yellow" />
+					<CustomBehavior File="RunMacro" Macro="/cast Army of the Dead" />
+                    <CustomBehavior File="WaitTimer" WaitTime="6000" />	
+					<RunTo X="326.6286" Y="551.9714" Z="66.02273" />									
+					<RunTo X="334.4815" Y="574.4614" Z="66.00656" />
+					<RunTo X="358.8991" Y="560.2802" Z="66.00656" />
+					<RunTo X="333.9228" Y="536.3896" Z="66.00656" />
+					<CustomBehavior File="Message" Text="My work here is complete. Running out to reset this shit." LogColor="Yellow" />
+					<RunTo X="216.8766" Y="726.4752" Z="103.5607" />
+					<CustomBehavior File="MyCTM" X="192.5987" Y="780.0176" Z="95.95033" />
+					<CustomBehavior File="MyCTM" X="201.9456" Y="816.4019" Z="95.94938" />
+					<CustomBehavior File="MyCTM" X="219.0883" Y="835.6089" Z="95.87703" />
+					<CustomBehavior File="MyCTM" X="270.1423" Y="835.7579" Z="95.91417" />
+					<CustomBehavior File="MyCTM" X="277.4544" Y="816.4665" Z="96.43855" />
+					<RunTo X="210.0881" Y="1117.478" Z="206.6087" />
+					<RunTo X="215.7276" Y="1140.736" Z="206.7795" />
+					
+		<If Condition="(Me.FreeBagSlots &lt; 10) || (Me.LowestDurabilityPercent &lt; 0.5)" > <!-- Will go vendor/repair if needed -->
+			<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth,repair and mail." LogColor="Yellow" />
+
+            <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+            <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+            <CustomBehavior File="Message" Text="Succesfully hearthed, moving to repair vendor." LogColor="Yellow" />			
+			
+			<CustomBehavior File="FlyTo" X="-10408.5" Y="-3267.102" Z="20.38218" />
+						
+			<SetVendor>
+				<Vendors>
+					<Vendor Name="Gharash" Entry="8176" Type="Repair" X="-10406.97" Y="-3265.748" Z="21.892" />
+				</Vendors>
+			</SetVendor>
+			
+			<RunTo X="-10438.8" Y="-3259.101" Z="20.17867" />			
+			<CustomBehavior File="Message" Text="Moving to the mailbox near the Inn." LogColor="Yellow" />
+			
+			<SetMailbox>
+				<Mailboxes>
+					<Mailbox X="-10461.58" Y="-3265.349" Z="20.17867" />
+				</Mailboxes>
+			</SetMailbox>
+			
+			<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+			
+        </If>			
+
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

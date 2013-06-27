@@ -1,0 +1,135 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-H-RAF-Power_Leveling][75-80][RAF-Character]_botanist _halls-of-lightning</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+		<Item name="Book of Glyph Mastery" entry="45912" />
+		<Item name="Frostweave Cloth" entry="33470" />		
+	</ProtectedItems>
+
+	<Factions>16</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+	<CustomBehavior File="UserSettings" LootMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+	
+	
+	
+         
+		 
+				<If Condition="Me.MapId == 571" > 
+					<If Condition="Me.ZoneId != 4272" >
+						<If Condition="Me.X &gt; 9193.091 || Me.X &lt; 9145.627 || Me.Y &gt; -1200 || Me.Y &lt; -1450" >
+							<CustomBehavior File="FlyTo" X="8950.789" Y="-1247.149" Z="1275.291" />
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="RAF Character - Press continue after the level 90 has entered the instance." Title="WARNING" />
+							<CustomBehavior File="FlyTo" X="9175.68" Y="-1378.8" Z="1103.57" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="Message" Text="I've reached Halls of Lightening." LogColor="Lime" />
+						</If>	
+					</If>							
+				</If>
+									  
+				<If Condition="Me.ZoneId == 4272" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside the Halls of Lightening. Running out to reset the dungeon." LogColor="Lime" />
+						<RunTo X="1331.41" Y="241.904" Z="52.5046" />
+					<CustomBehavior File="MyCTM" X="1333.524" Y="275.7161" Z="52.81057" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+					<CustomBehavior File="Message" Text="I have exited Halls of lightening." LogColor="Lime" />
+						<RunTo X="9175.68" Y="-1378.8" Z="1103.57" />
+				</If>
+				
+		<While Condition="true" >
+		
+				<If Condition="Me.X &lt; 9200 &amp;&amp; Me.X &gt; 9100 &amp;&amp; Me.Y &lt; -1200 &amp;&amp; Me.Y &gt; -1450" >
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="MyCTM" X="9186.854" Y="-1388.016" Z="1110.216" />
+					<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="RAF Character - Press continue on the level 90 first, then press continue on this window." Title="WARNING" />
+				</If>
+				
+				
+				<If Condition="Me.ZoneId == 4272" >
+				
+						<RunTo X="1330.272" Y="230.1728" Z="52.50474" />
+					<CustomBehavior File="Message" Text="Waiting 100 seconds, entrance." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="100000" />
+					
+						<RunTo X="1332.338" Y="117.8875" Z="40.18036" />							
+					<CustomBehavior File="Message" Text="Waiting 225 seconds, beginning of platform." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="225000" />
+
+						<RunTo X="1253.232" Y="-35.50834" Z="33.50567" />	
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 1 of 6." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+					
+						<RunTo X="1251.034" Y="-23.5519" Z="33.50598" />
+					<CustomBehavior File="Message" Text="Waiting 155 seconds, 2 of 6" LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="155000" />
+					
+						<RunTo X="1178.115" Y="-162.87" Z="51.85965" />	
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 3 of 6." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+					
+						<RunTo  X="1171.137" Y="-150.7305" Z="52.36514" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 4 of 6" LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+					
+						<RunTo X="1178.115" Y="-162.87" Z="51.85965" />	
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 5 of 6." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+					
+						<RunTo X="1171.137" Y="-150.7305" Z="52.36514" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, 6 of 6" LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+					
+					<CustomBehavior File="Message" Text="Running out to reset.." LogColor="Lime" />
+						<RunTo X="1331.41" Y="241.904" Z="52.5046" />
+					<CustomBehavior File="MyCTM" X="1333.524" Y="275.7161" Z="52.81057" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+					<CustomBehavior File="Message" Text="I have exited Halls of lightening." LogColor="Lime" />
+						<RunTo X="9175.68" Y="-1378.8" Z="1103.57" />
+				</If>
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

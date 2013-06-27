@@ -1,0 +1,143 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A-][Tailoring][Embersilk-Cloth]_botanist_deepholm_stonehearth_</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Darkwood Lurker" Entry="46508" />
+		<Mob Name="Darkwood Broodmother" Entry="46507" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions>22</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This profile will farm Deepholm for embersilk cloth. In order to properly run this profile, you need a plugin like elixir or similar that will drink porions/flask. You need plenty of Potion's of Treasure Finding which the plugin should be configured to drink hourly. And your charcter needs to be a minimum of 450 Tailoring skill. You will also need the plugin Tidybags." Title="WARNING" />
+
+	<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="60" KillBetweenHotspots="True" LogoutForInactivity="False" />
+	
+         <While Condition="true" >
+		
+				<If Condition="Me.MapId == 0" >                 <!--in eastern kingdoms -->
+					<CustomBehavior File="Message" Text="I am in Eastern Kingdoms, flying to the Deepholme portal." LogColor="Lime" />					
+					<CustomBehavior File="FlyTo" X="-8219.642" Y="447.6481" Z="117.6532" />
+					<CustomBehavior File="Message" Text="Taking the portal to Deepholm." LogColor="Lime" />
+					<CustomBehavior File="InteractWith" MobId="207693" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8223.319" Y="451.182281" Z="117.4883" />				
+					<CustomBehavior File="Message" Text="Waiting for the zone to load." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+				</If>
+							   
+				<If Condition="Me.ZoneId == 5042">
+					<If Condition="Me.X &lt; 465 || Me.X &gt; 865 || Me.Y &lt; 1543 || Me.Y &gt; 1943 " >
+						<CustomBehavior File="Message" Text="I am in Deepholme. Moving to the farming area." LogColor="Lime" />
+							<RunTo X="860.925" Y="496.1222" Z="-63.08309" />
+						<CustomBehavior File="FlyTo" X="635.4349" Y="1757.546" Z="336.3649" />
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="665.8029" Y="1743.674" Z="335.5176" />
+						<CustomBehavior File="Message" Text="I have reached the farming area." LogColor="Lime" />
+					</If>
+				</If>
+										
+					                                               <!-- farming area -->
+                
+				<If Condition="Me.X &gt; 465 &amp;&amp; Me.X &lt; 865 &amp;&amp; Me.Y &gt; 1543 &amp;&amp; Me.Y &lt; 1943 " >
+					<CustomBehavior File="Message" Text="Farming until my bags are full or my gear is broke." LogColor="Lime" />
+						<SetGrindArea><GrindArea>
+							<TargetMinLevel>1</TargetMinLevel>
+							<TargetMaxLevel>101</TargetMaxLevel>
+							<Factions>2102</Factions>
+							<MaxDistance>60</MaxDistance>
+							<Hotspots>
+								<Hotspot X="700.3991" Y="1682.939" Z="325.4193" />
+								<Hotspot X="745.1674" Y="1679.788" Z="316.3764" />
+								<Hotspot X="774.9351" Y="1735.083" Z="316.0624" />
+								<Hotspot X="753.5374" Y="1792.18" Z="326.0595" />
+								<Hotspot X="784.6493" Y="1838.29" Z="330.1829" />
+								<Hotspot X="781.8419" Y="1880.087" Z="329.015" />
+								<Hotspot X="756.2675" Y="1916.054" Z="331.0324" />
+								<Hotspot X="825.2249" Y="1907.16" Z="321.7294" />
+								<Hotspot X="808.765" Y="1950.334" Z="328.6312" />
+								<Hotspot X="863.022" Y="1978.176" Z="324.5291" />
+								<Hotspot X="847.0994" Y="2004.557" Z="323.7408" />
+								<Hotspot X="882.6849" Y="2029.795" Z="322.7438" />
+								<Hotspot X="673.8972" Y="1939.555" Z="334.1733" />
+								<Hotspot X="640.4271" Y="1881.497" Z="340.5054" />
+								<Hotspot X="606.1264" Y="1876.265" Z="342.742" />
+								<Hotspot X="600.2457" Y="1772.719" Z="337.3265" />
+							</Hotspots>
+						</GrindArea></SetGrindArea>					   
+					<GrindTo Condition="(Me.FreeBagSlots &lt; 10) || (Me.LowestDurabilityPercent &lt; 0.3)" GoalText="Farming" />
+		        </If>
+						
+				                                                      <!-- vendor run -->
+			
+		<If Condition="(Me.FreeBagSlots &lt; 10) || (Me.LowestDurabilityPercent &lt; 0.3)" > 
+			<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Moving to a safe location to mount." LogColor="Lime" />
+				<RunTo X="635.6235" Y="1763.29" Z="337.2841" />
+			<If Condition="Me.ZoneId == 5042"> 
+				<CustomBehavior File="Message" Text="Flying to the Temple of the Earth." LogColor="Lime" />			
+				<CustomBehavior File="FlyTo" X="851.4708" Y="489.355" Z="-2.20034" />
+				<CustomBehavior File="MyCTM" X="912.9216" Y="502.7191" Z="-34.50199" />
+				<CustomBehavior File="MyCTM" X="988.211" Y="519.5674" Z="-28.21027" />
+				<CustomBehavior File="MyCTM" X="1005.367" Y="546.9479" Z="-30.62779" />
+				<CustomBehavior File="MyCTM" X="1028.876" Y="564.2094" Z="-31.57774" />
+				<CustomBehavior File="MyCTM" X="1047.31" Y="629.2635" Z="-45.36785" />
+				<CustomBehavior File="ForcedDismount" />
+							
+				<SetVendor>
+					<Vendors>
+						<Vendor Name="Dugsley Deepdelver" Entry="45294" Type="Repair" X="1052.99" Y="636.936" Z="-45.87081" />
+					</Vendors>
+				</SetVendor>
+				<SetMailbox>
+					<Mailboxes>
+						<Mailbox X="1049.368" Y="634.3935" Z="-45.75745" />
+					</Mailboxes>
+				</SetMailbox>
+				
+				<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					<RunTo X="860.925" Y="496.1222" Z="-63.08309" />
+				<CustomBehavior File="FlyTo" X="635.4349" Y="1757.546" Z="336.3649" />
+				<CustomBehavior File="ForcedDismount" />
+					<RunTo X="665.8029" Y="1743.674" Z="335.5176" />
+				<CustomBehavior File="Message" Text="I have returned the farming area." LogColor="Lime" />
+			</If>
+				
+		</If>
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

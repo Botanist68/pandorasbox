@@ -1,0 +1,147 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A][Alt-Power-leveling][83-86]_botanist_deepholm_verlock-stand_top-tier</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Darkwood Lurker" Entry="46508" />
+		<Mob Name="Darkwood Broodmother" Entry="46507" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions>22</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This profile is used to power level your alts. Run this profile on a level 90 Booster. Put your level 83-86 alt in a party with the Booster and fly the alt to a safe location in the air above the Booster. Your alt will gain XP from the mobs the Booster kills." Title="WARNING" />
+
+	<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="60" KillBetweenHotspots="True" LogoutForInactivity="False" />
+	
+         <While Condition="true" >
+		
+				<If Condition="Me.MapId == 0" >                 <!--in eastern kingdoms -->
+					<CustomBehavior File="Message" Text="I am in Eastern Kingdoms, flying to the Deepholme portal." LogColor="Lime" />					
+					<CustomBehavior File="FlyTo" X="-8219.642" Y="447.6481" Z="117.6532" />
+					<CustomBehavior File="Message" Text="Taking the portal to Deepholm." LogColor="Lime" />
+					<CustomBehavior File="InteractWith" MobId="207693" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8223.319" Y="451.182281" Z="117.4883" />				
+					<CustomBehavior File="Message" Text="Waiting for the zone to load." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+				</If>
+							
+				<If Condition="Me.ZoneId == 5042">
+					<If Condition="Me.X &gt; 873 &amp;&amp; Me.X &lt; 1134 &amp;&amp; Me.Y &lt; 649.323 &amp;&amp; Me.Y &gt; 409.1912" >
+						<CustomBehavior File="Message" Text="I am in Temple of the Earth. Moving to the farming area." LogColor="Lime" />
+							<RunTo X="848.1829" Y="493.8047" Z="-63.44753" />
+					</If>
+				</If>
+							
+				<If Condition="Me.ZoneId == 5042">
+					<If Condition="Me.X &lt; 1687 || Me.X &gt; 2087 || Me.Y &lt; -854 || Me.Y &gt; -454 " >
+						<CustomBehavior File="Message" Text="I am in Deepholme. Moving to the farming area." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="1950.688" Y="-475.2744" Z="357.9769" />
+						<CustomBehavior File="MyCTM" X="1982.024" Y="-520.3334" Z="343.4189" />
+						<CustomBehavior File="MyCTM" X="1991.898" Y="-531.4316" Z="327.3275" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="Message" Text="I have reached the farming area." LogColor="Lime" />
+					</If>
+				</If>
+				
+				<If Condition="Me.X &gt; 1687 &amp;&amp; Me.X &lt; 2087 &amp;&amp; Me.Y &gt; -854 &amp;&amp; Me.Y &lt; -454 " >
+					<CustomBehavior File="FlyTo" X="1950.688" Y="-475.2744" Z="357.9769" />
+						<CustomBehavior File="MyCTM" X="1982.024" Y="-520.3334" Z="343.4189" />
+						<CustomBehavior File="MyCTM" X="1991.898" Y="-531.4316" Z="327.3275" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="Message" Text="I have reached the farming area." LogColor="Lime" />
+				</If>
+
+					                                               <!-- farming area -->
+		<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >													   
+                
+				<If Condition="Me.X &gt; 1687 &amp;&amp; Me.X &lt; 2087 &amp;&amp; Me.Y &gt; -854 &amp;&amp; Me.Y &lt; -454 " >
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1982.67" Y="-522.9645" Z="328.3367" />
+						<Hotspot X="1992.02" Y="-534.2813" Z="327.5256" />
+						<Hotspot X="1988.097" Y="-541.4548" Z="327.9709" />
+						<Hotspot X="1955.943" Y="-546.5049" Z="328.5459" />
+					</CustomBehavior>
+					<CustomBehavior File="RunMacro" Macro="/sort bags" />
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1986.042" Y="-545.0833" Z="327.8419" />
+						<Hotspot X="1992.126" Y="-534.1436" Z="327.5197" />
+						<Hotspot X="1982.74" Y="-523.5616" Z="328.7426" />
+						<Hotspot X="1971.646" Y="-510.5338" Z="328.8495" />
+					</CustomBehavior>
+					<CustomBehavior File="RunMacro" Macro="/sort bags" />
+				</If>		
+		</While>				
+				                                                      <!-- vendor run -->
+			
+				<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" > 
+					<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break." LogColor="Lime" />
+					<If Condition="Me.ZoneId == 5042"> 
+						<CustomBehavior File="Message" Text="Flying to the Temple of the Earth." LogColor="Lime" />			
+						<CustomBehavior File="FlyTo" X="851.4708" Y="489.355" Z="-2.20034" />
+						<CustomBehavior File="MyCTM" X="912.9216" Y="502.7191" Z="-34.50199" />
+						<CustomBehavior File="MyCTM" X="988.211" Y="519.5674" Z="-28.21027" />
+						<CustomBehavior File="MyCTM" X="1005.367" Y="546.9479" Z="-30.62779" />
+						<CustomBehavior File="MyCTM" X="1028.876" Y="564.2094" Z="-31.57774" />
+						<CustomBehavior File="MyCTM" X="1047.31" Y="629.2635" Z="-45.36785" />
+						<CustomBehavior File="ForcedDismount" />
+									
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Dugsley Deepdelver" Entry="45294" Type="Repair" X="1052.99" Y="636.936" Z="-45.87081" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="1049.368" Y="634.3935" Z="-45.75745" />
+							</Mailboxes>
+						</SetMailbox>
+						
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+							<RunTo X="860.925" Y="496.1222" Z="-63.08309" />
+						<CustomBehavior File="FlyTo" X="1950.688" Y="-475.2744" Z="357.9769" />
+						<CustomBehavior File="MyCTM" X="1982.024" Y="-520.3334" Z="343.4189" />
+						<CustomBehavior File="MyCTM" X="1991.898" Y="-531.4316" Z="327.3275" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="Message" Text="I have returned the farming area." LogColor="Lime" />
+					</If>
+						
+				</If>
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

@@ -1,0 +1,208 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO} Botanist Forge of Souls</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>True</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+		<Item name="Book of Glyph Mastery" entry="45912" />
+		<Item name="Frostweave Cloth" entry="33470" />		
+	</ProtectedItems>
+
+	<Factions>16</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+	<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="25" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+	
+	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This profile will endlessly farm Forge of Souls. It does vendor Epics. Make sure you have none in your bags that you want to keep. The profile will auto set your hearthstone in Nesingwary Base Camp in Sholozar Basin. Start the profile in Sholozar Basin." Title="WARNING" />
+	
+         <While Condition="true" >
+		 
+		                                            <!-- my use hearth vendor check --> 
+													
+		 					
+
+				<If Condition="Me.MapId == 571" > <!-- not in ice crown -->
+					<If Condition="Me.ZoneId != 4809" >
+						<If Condition="Me.X &gt; 5675.253 || Me.X &lt; 5588.455 || Me.Y &gt; 2074.814 || Me.Y &lt; 1999.677" >
+							<CustomBehavior File="Message" Text="I am flying Nesingwary Base Camp in Sholazar Basin." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="5571.18" Y="5750.717" Z="-75.13001" />
+							<CustomBehavior File="ForcedDismount" />
+								<RunTo X="5569.8" Y="5763.163" Z="-75.2255" />
+							<CustomBehavior File="Message" Text="I've reached Nesingwary Base Camp. Setting my hearthstone with the innkeep." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="SetHearthstone" MobId="28038" X="5566.248" Y="5763.706" Z="-75.22614" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<RunTo X="5571.18" Y="5750.717" Z="-75.13001" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="FlyTo" X="5615.411" Y="5757.188" Z="7.660307"  DestName="Frozen Halls" />
+							<CustomBehavior File="Message" Text="Flying to the Frozen Halls." LogColor="YeLimellow" />
+							<CustomBehavior File="MyCTM" X="5687.889" Y="5370.179" Z="264.1593" />
+							<CustomBehavior File="MyCTM" X="5815.41" Y="3227.248" Z="741.3565" />
+							<CustomBehavior File="MyCTM" X="5615.529" Y="2558.794" Z="914.5122" />
+							<CustomBehavior File="MyCTM" X="5675.367" Y="2312.516" Z="892.6075" />
+							<CustomBehavior File="MyCTM" X="5692.304" Y="2159.46" Z="798.1241" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="Message" Text="I've reached the entrance to Frozen Halls. Now running to the Forge of Souls." LogColor="Lime" />
+								<RunTo X="5669.376" Y="2005.181" Z="798.041" />
+						</If>							
+					</If>
+				</If>
+									  
+				<If Condition="Me.ZoneId == 4809" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside the Forge of Souls. Running out to reset the dungeon." LogColor="Lime" />
+					<RunTo X="4916.663" Y="2186.1" Z="638.733" />
+					<CustomBehavior File="MyCTM" X="4927.833" Y="2169.769" Z="638.733" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="Message" Text="I'm back to the Frozen Halls." LogColor="YeLimellow" />
+					<RunTo X="5669.376" Y="2005.181" Z="798.041" />
+				</If>
+
+				<If Condition="Me.X &lt; 5675.253 &amp;&amp; Me.X &gt; 5588.455 &amp;&amp; Me.Y &lt; 2074.814 &amp;&amp; Me.Y &gt; 1999.677" >
+					<CustomBehavior File="Message" Text="I am resetting the Forge of Souls." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />				
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" /> 
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
+					<CustomBehavior File="Message" Text="I have reset the Forge of Souls." LogColor="Lime" />
+					<RunTo X="5669.279" Y="2005.885" Z="798.0413" />
+					<CustomBehavior File="Message" Text="Opening the gate so I may enter the Forge of Souls." LogColor="Lime" />
+					<CustomBehavior File="InteractWith" MobId="201759" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="5672.1123" Y="2002.12964" Z="797.3859" />
+					<CustomBehavior File="MyCTM" X="5677.698" Y="1996.725" Z="798.0425" /> 
+					<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="Message" Text="Sorting my bags.......making them sexy :D  !!!" LogColor="Lime" />
+					<CustomBehavior File="RunMacro" Macro="/sort bags" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000"/>
+				</If>							
+			
+				<If Condition="Me.ZoneId == 4809" >
+				<CustomBehavior File="DeleteItems" Ids="50316,50317,43297" />
+					<RunTo X="4908.993" Y="2208.056" Z="638.733" />
+					<RunTo X="4970.951" Y="2239.131" Z="638.8701" />
+					<RunTo X="5031.683" Y="2143.483" Z="645.4614" />
+					<RunTo X="5116.162" Y="2115.257" Z="652.0214" />
+					<RunTo X="5214.16" Y="2158.67" Z="652.4524" />
+					<RunTo X="5193.307" Y="2274.385" Z="665.4296" />
+					<RunTo X="5139.122" Y="2305.96" Z="665.4355" />
+					<RunTo X="5132.13" Y="2343.842" Z="668.1617" />
+					<RunTo X="5218.264" Y="2355.453" Z="668.1614" />
+					<RunTo X="5210.375" Y="2397.294" Z="668.1609" />
+					<RunTo X="5248.159" Y="2445.62" Z="672.3281" />
+					<RunTo X="5254.387" Y="2535.63" Z="675.6789" />
+					<RunTo X="5257.224" Y="2502.45" Z="678.652" />
+					<CustomBehavior File="Message" Text="I am pulling the first boss, Bronjahm!............Good Luck!!!" LogColor="Lime" />					
+					<RunTo X="5345.456" Y="2512.904" Z="677.9618" />  			
+					<RunTo X="5328.639" Y="2543.648" Z="675.6854" />
+					<RunTo X="5335.706" Y="2454.324" Z="686.3701" />
+					<RunTo X="5477.315" Y="2504.527" Z="705.9866" />
+					<RunTo X="5617.79" Y="2451.865" Z="705.8521" />
+					<CustomBehavior File="Message" Text="I am waiting 10 seconds for DK's runes to regenerate." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="Message" Text="Casting Army of the Dead, if I am a DK" LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Pulling the second boss, Devourer of Souls.......Good Luck !!!." LogColor="Lime" />
+					<CustomBehavior File="RunMacro" Macro="/cast Army of the Dead" /> 					
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<RunTo  X="5661.546" Y="2507.514" Z="708.8295" />
+					<RunTo  X="5629.248" Y="2466.32" Z="708.4963" />
+					<CustomBehavior File="Message" Text="My work here is done. Running out so I can reset the dungeon." LogColor="Lime" />					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="5630.311" Y="2467.389" Z="708.6964" />
+						<Hotspot X="5590.057" Y="2416.031" Z="705.8527" />
+						<Hotspot X="5479.254" Y="2500.926" Z="705.9847" />
+						<Hotspot X="5422.609" Y="2444.941" Z="701.5214" />
+						<Hotspot X="5344.664" Y="2442.949" Z="686.8965" />
+						<Hotspot X="5341.656" Y="2512.458" Z="677.961" />
+						<Hotspot X="5246.906" Y="2501.005" Z="677.9609" />
+						<Hotspot X="5259.256" Y="2458.674" Z="677.9609" />
+						<Hotspot X="5210.964" Y="2397.396" Z="668.1613" />
+						<Hotspot X="5218.405" Y="2354.67" Z="668.1613" />
+						<Hotspot X="5124.041" Y="2343.251" Z="668.1612" />
+						<Hotspot X="5141.005" Y="2308.521" Z="665.4448" />
+						<Hotspot X="5152.664" Y="2280.175" Z="665.4294" />
+						<Hotspot X="5199.499" Y="2270.24" Z="665.4294" />
+						<Hotspot X="5216.234" Y="2166.326" Z="652.4955" />
+						<Hotspot X="5149.255" Y="2126.252" Z="651.6967" />
+						<Hotspot X="5060.035" Y="2121.481" Z="652.4653" />
+						<Hotspot X="5005.927" Y="2166.708" Z="638.8503" />
+						<Hotspot X="4968.359" Y="2241.644" Z="638.8665" />
+					</CustomBehavior>
+					<RunTo X="4913.471" Y="2207.761" Z="638.7343" />
+					<CustomBehavior File="GoThruPortal" X="4925.383" Y="2170.461" Z="638.733" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<RunTo  X="5667.65" Y="2007.45" Z="798.041" />
+				</If>
+			
+					<CustomBehavior File="Message" Text="Checking my free bag space and my gear's durability." LogColor="Lime" />
+				
+				<If Condition="(Me.FreeBagSlots &lt; 6) || (Me.LowestDurabilityPercent &lt; 0.3)" > 
+				
+					<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+					<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor, then mailing." LogColor="Lime" />						
+					
+					<SetVendor>
+						<Vendors>
+							<Vendor Name="Mardan Thunderhoof" Entry="28040" Type="Repair" X="5552.257" Y="5738.877" Z="-76.21748" />
+						</Vendors>
+					</SetVendor>
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="5563.184" Y="5756.806" Z="-75.43555" />
+						</Mailboxes>
+					</SetMailbox>
+		
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					
+					<CustomBehavior File="FlyTo" X="5615.411" Y="5757.188" Z="7.660307"  DestName="Frozen Halls" />
+					<CustomBehavior File="Message" Text="Flying back to the Frozen Halls." LogColor="YeLimellow" />
+					<CustomBehavior File="MyCTM" X="5687.889" Y="5370.179" Z="264.1593" />
+					<CustomBehavior File="MyCTM" X="5815.41" Y="3227.248" Z="741.3565" />
+					<CustomBehavior File="MyCTM" X="5615.529" Y="2558.794" Z="914.5122" />
+					<CustomBehavior File="MyCTM" X="5675.367" Y="2312.516" Z="892.6075" />
+					<CustomBehavior File="MyCTM" X="5692.304" Y="2159.46" Z="798.1241" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="Message" Text="I've reached the entrance to Frozen Halls. Now running to the Forge of Souls" LogColor="Lime" />
+						<RunTo X="5669.376" Y="2005.181" Z="798.041" />
+			  </If>
+					
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

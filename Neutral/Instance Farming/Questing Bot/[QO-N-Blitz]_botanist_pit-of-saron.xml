@@ -1,0 +1,263 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-Blitz]_botanist_pit-of-saron</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>True</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item name="Book of Glyph Mastery" entry="45912" />
+		<Item name="Frostweave Cloth" entry="33470" />		
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" LootMobs="True" PullDistance="25" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+		 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This profile will endlessly farm Pit of Saron. It will pull multiple packs of mobs at one time. It does vendor Epics. Make sure you have none in your bags that you want to keep. Set your hearth at Nesingwary Base Camp in Sholazar Basin. Start the profile anywhere in Northrend." Title="WARNING" />
+	
+         <While Condition="true" >
+
+					<If Condition="Me.ZoneId != 210" > <!-- not in ice crown -->
+						<If Condition="Me.ZoneId != 4813" > <!-- not inside the pit of saron -->
+							<CustomBehavior File="Message" Text="I am flying to the Pit of Saron inside the Frozen Halls." LogColor="Yellow" />
+							<CustomBehavior File="FlyTo" X="5692.304" Y="2159.46" Z="798.1241" DestName="Forge of Souls" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="ForcedMount" MountType="Ground" />
+							<RunTo X="5593.713" Y="2011.442" Z="798.041" /> <!-- outside pit of saron gate -->
+                        </If>							
+					</If>
+
+                           <!-- need a condition check here if in ice crown but not in frozen halls, fly to frozen halls -->
+						   
+					                              <!-- my new use hearth vendor check -->					
+					<CustomBehavior File="Message" Text="Checking my free bag space and my gear's durability." LogColor="Yellow" />
+					
+					<If Condition="(Me.FreeBagSlots &lt; 6) || (Me.LowestDurabilityPercent &lt; 0.3)" > <!-- Will go vendor/repair if needed -->
+					
+						<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth,repair and mail." LogColor="Yellow" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+						<CustomBehavior File="Message" Text="Succesfully hearthed, moving to repair vendor." LogColor="Yellow" />						
+						
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Mardan Thunderhoof" Entry="28040" Type="Repair" X="5552.257" Y="5738.877" Z="-76.21748" />
+							</Vendors>
+						</SetVendor>						
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="5563.184" Y="5756.806" Z="-75.43555" />
+							</Mailboxes>
+						</SetMailbox>
+			
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						
+			            <CustomBehavior File="FlyTo" X="5615.411" Y="5757.188" Z="7.660307"  DestName="Frozen Halls" />
+						<CustomBehavior File="Message" Text="Flying back to the Frozen Halls." LogColor="Yellow" />
+						<CustomBehavior File="MyCTM" X="5687.889" Y="5370.179" Z="264.1593" />
+						<CustomBehavior File="MyCTM" X="5815.41" Y="3227.248" Z="741.3565" />
+						<CustomBehavior File="MyCTM" X="5615.529" Y="2558.794" Z="914.5122" />
+						<CustomBehavior File="MyCTM" X="5675.367" Y="2312.516" Z="892.6075" />
+						<CustomBehavior File="MyCTM" X="5692.304" Y="2159.46" Z="798.1241" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="Message" Text="I've reached the entrance to Frozen Halls. Now running to the Pit of Saron" LogColor="Yellow" />
+						<RunTo X="5593.713" Y="2011.442" Z="798.041" /> <!-- outside pit of saron gate -->
+				  </If>
+				  
+					<If Condition="Me.ZoneId == 4813" >
+						<CustomBehavior File="Message" Text="You started the bot with me inside the The Pit of Saron. Running out to reset the dungeon." LogColor="Yellow" />
+						<RunTo X="424.2701" Y="212.7614" Z="529.9111" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+					</If>
+					
+											                                     <!-- Opens gate and enters the dungeon -->
+	
+									<If Condition="Me.Y &gt; 2003.025 &amp;&amp; Me.Y &lt; 2076.636" >
+										<CustomBehavior File="Message" Text="I am resetting the Pit of Saron." LogColor="Yellow" />
+										<CustomBehavior File="WaitTimer" WaitTime="5000" />				
+										<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" /> 
+										<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> <!-- Changes the instanceto to "normal" , if it was on "heroic" for the first run -->
+										<CustomBehavior File="Message" Text="I have reset the Pit of Saron." LogColor="Yellow" />
+										<RunTo X="5593.713" Y="2011.442" Z="798.041" />
+										<CustomBehavior File="Message" Text="Opening the gate so I may enter the Pit of Saron." LogColor="Yellow" />
+										<CustomBehavior File="InteractWith" MobId="201761" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="5590.884" Y="2009.19" Z="797.3859" />
+										<CustomBehavior File="MyCTM" X="5586.107" Y="2005.752" Z="799.3646" /> 
+										<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Yellow" />
+										<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+									</If>	
+
+                                                       <!-- Pit of saron dungeon script -->
+													   
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="503.4554" Y="203.2844" Z="528.709" />
+						<Hotspot X="559.2319" Y="145.0777" Z="516.5482" />
+						<Hotspot X="589.9754" Y="159.1806" Z="509.4765" />
+						<Hotspot X="630.8829" Y="183.1609" Z="508.3151" />
+						<Hotspot X="669.0345" Y="128.9099" Z="512.2994" />
+						<Hotspot X="628.7733" Y="111.1573" Z="510.333" />
+						<Hotspot X="559.1216" Y="104.1265" Z="514.5709" />
+					</CustomBehavior>
+					<CustomBehavior File="ForcedDismount" />					
+						<RunTo X="593.1783" Y="127.8408" Z="507.5052" />
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="617.6171" Y="68.66309" Z="512.4402" />
+						<Hotspot X="602.0799" Y="67.04907" Z="508.9325" />
+						<Hotspot X="616.2057" Y="60.32705" Z="512.4366" />
+						<Hotspot X="622.469" Y="11.65567" Z="513.7239" />
+						<Hotspot X="610.4924" Y="-12.76624" Z="512.6058" />
+					</CustomBehavior>
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<RunTo X="627.0261" Y="-1.735426" Z="513.7429" />
+					
+					
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="627.1208" Y="-5.874056" Z="513.7418" />
+						<Hotspot X="680.5383" Y="-108.0323" Z="513.7361" />
+						<Hotspot X="648.453" Y="-111.7313" Z="513.2174" />
+					</CustomBehavior>
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<RunTo X="695.4188" Y="-105.1314" Z="513.7361" />
+
+					<CustomBehavior File="Message" Text="I pulling the first boss, Garfrost!............Good Luck!!!" LogColor="Yellow" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="695.9076" Y="-150.3427" Z="528.0214" />
+						<Hotspot X="658.8224" Y="-177.5329" Z="526.6901" />  <!-- Pulls the first boss Garfrost -->	
+					</CustomBehavior>
+					<CustomBehavior File="ForcedDismount" />
+					<RunTo X="694.9618" Y="-150.9597" Z="528.0614" />
+					<RunTo X="693.9668" Y="-97.26556" Z="513.7347" />
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">						
+						<Hotspot X="737.9656" Y="-112.5828" Z="512.6196" />
+						<Hotspot X="750.7292" Y="-71.69084" Z="511.957" />
+						<Hotspot X="784.257" Y="-26.99825" Z="508.3016" />
+					</CustomBehavior>
+                    <CustomBehavior File="ForcedDismount" />
+					
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<RunTo X="824.4445" Y="1.027147" Z="509.6249" />
+					<CustomBehavior File="ForcedDismount" />
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="843.0904" Y="88.875" Z="510.4061" /> <!-- righthand boxes at krick -->
+						<Hotspot X="817.3217" Y="94.83001" Z="509.1996" />				
+						<Hotspot X="803.3253" Y="113.4803" Z="508.9998" />
+						<Hotspot X="818.5736" Y="133.673" Z="509.3701" />
+					</CustomBehavior>
+					<RunTo X="826.3164" Y="115.3796" Z="509.4308" />					
+					<CustomBehavior File="Message" Text="I am waiting 10 seconds for DK's runes to regenerate." LogColor="Yellow" />
+                    <CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="Message" Text="Casting Army of the Dead, if I am a DK" LogColor="Yellow" />
+                    <CustomBehavior File="RunMacro" Macro="/cast Army of the Dead" />
+                    <CustomBehavior File="Message" Text="I am pulling the second boss, Ick..............Good Luck!!!" LogColor="Yellow" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="849.9138" Y="123.1575" Z="509.8946" />  <!-- Pulls the second boss Ick -->
+					</CustomBehavior>
+						<RunTo X="809.3583" Y="83.37166" Z="509.3477" />
+						<RunTo X="827.1069" Y="43.08263" Z="509.8401" />
+						<RunTo X="842.7077" Y="43.09133" Z="511.0736" />
+										
+					<CustomBehavior File="Message" Text="Waiting on mobs to spawn." LogColor="Yellow" />					
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />  <!-- wait time for mobs to run to their position -->
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="881.5868" Y="54.11338" Z="527.3123" />					
+						<Hotspot X="926.4119" Y="82.64568" Z="560.9056" />
+					</CustomBehavior>					
+                    <RunTo X="946.5239" Y="83.29358" Z="565.8311" />
+					<RunTo X="947.4012" Y="73.53116" Z="565.9088" />
+					
+					<CustomBehavior File="Message" Text="Waiting for next set of mobs to spawn." LogColor="Yellow" />					
+					<CustomBehavior File="WaitTimer" WaitTime="14000" />  <!-- wait time for mobs to run to their position -->
+					
+
+						<RunTo X="945.8357" Y="37.80877" Z="570.7177" />
+						<RunTo X="924.6356" Y="-48.11487" Z="591.1099" />
+					
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1054.089" Y="-92.35343" Z="632.8373" />
+					</CustomBehavior>										
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1059.676" Y="109.0164" Z="629.0717" />
+					</CustomBehavior>
+					
+					<RunTo X="1039.984" Y="150.7973" Z="628.1562" /> <!-- Wait point for Tyrannus -->
+					<CustomBehavior File="Message" Text="Waiting for Tyrannus to dismount." LogColor="Yellow" />					
+					<CustomBehavior File="WaitTimer" WaitTime="33500" />  <!-- wait time for Tyrannus speach -->				
+					<CustomBehavior File="Message" Text="Pulling the third boss,, Tyrannus.............Good Luck !!!" LogColor="Yellow" />					
+						<RunTo X="1025.67" Y="170.243" Z="628.1561" /> <!-- Pulls Tyrannus -->
+					
+						<RunTo X="1064.73" Y="95.54331" Z="631.002" /> <!-- Exit of the tunnel where Jaina summons you -->
+					<CustomBehavior File="Message" Text="Waiting for Jaina to summon me to the entrance of the tunnel." LogColor="Yellow" />					
+					<CustomBehavior File="WaitTimer" WaitTime="22000" />  <!-- wait time for Jaina's speach -->
+					
+					<CustomBehavior File="Message" Text="My work here is done. Leaving the dungeon so I can reset it." LogColor="Yellow" />
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="938.3696" Y="-81.10951" Z="593.1186" />
+						<Hotspot X="936.201" Y="-74.99717" Z="592.4088" />
+					</CustomBehavior>
+					<RunTo X="845.3818" Y="39.10653" Z="511.2395" /> <!--Bottom of path leading to the tunnel -->
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="736.7063" Y="170.6839" Z="512.207" /> <!--Base of the cliff where the bats spawn -->
+						<Hotspot X="672.5227" Y="225.463" Z="510.5709" /> <!--Base of the cliff where the bats spawn closer to the portal-->
+						<Hotspot X="559.9222" Y="225.9592" Z="521.8997" /> <!--Ramp leading to the exit portal-->
+						</CustomBehavior>
+						<CustomBehavior File="ForcedDismount" />
+						<RunTo X="507.479" Y="230.5516" Z="528.7092" /> <!--Last mob near exit portal-->
+					
+					
+					
+					<CustomBehavior File="MyCTM" X="424.0134" Y="211.5736" Z="529.9064" />  <!-- Exit portal -->
+					<CustomBehavior File="WaitTimer" WaitTime="8000" />
+
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

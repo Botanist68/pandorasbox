@@ -1,0 +1,99 @@
+<HBProfile>
+  <Name></Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>101</MaxLevel>
+
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+      <Vendor Name="Mardan Thunderhoof" Entry="28040" Type="Repair" X="5552.257" Y="5738.877" Z="-76.21735" />
+	</Vendors>
+	
+	 
+	<Mailboxes>
+     <Mailbox X="5561.517" Y="5756.622" Z="-75.84887" />
+	</Mailboxes>
+
+  <Hotspots>
+    <Hotspot X="6355.59" Y="5390.21" Z="-7.27" />
+    <Hotspot X="6663.26" Y="5102.25" Z="-0.46" />
+    <Hotspot X="6657.19" Y="4999.97" Z="4.8" />
+    <Hotspot X="6614.67" Y="4839.43" Z="14.68" />
+    <Hotspot X="6547.65" Y="4409.19" Z="29.09" />
+    <Hotspot X="6137.55" Y="4114.87" Z="19.09" />
+    <Hotspot X="5876" Y="3821.16" Z="68.14" />
+    <Hotspot X="5457.54" Y="3735.48" Z="50.43" />
+    <Hotspot X="5096.57" Y="4069.58" Z="47.37" />
+    <Hotspot X="4823.67" Y="4383.38" Z="21.22" />
+    <Hotspot X="4767.5" Y="4853.18" Z="-13.61" />
+    <Hotspot X="4783.9" Y="5314.45" Z="-29.18" />
+    <Hotspot X="4834.15" Y="5632.32" Z="-19.12" />
+    <Hotspot X="5273.14" Y="5949.51" Z="-11.37" />
+    <Hotspot X="5832.67" Y="5901.21" Z="-2.92" />
+    <Hotspot X="6060.39" Y="5526.52" Z="-8.28" />
+    <Hotspot X="5621.48" Y="5813.79" Z="0.36" />
+    <Hotspot X="5024.33" Y="5613.48" Z="-50.49" />
+    <Hotspot X="5004.46" Y="5182.32" Z="-44.7" />
+    <Hotspot X="5061.03" Y="5126.1" Z="-55.95" />
+    <Hotspot X="5041.01" Y="4920.74" Z="-63.29" />
+    <Hotspot X="5021.73" Y="4740.95" Z="-52.98" />
+    <Hotspot X="4871.5" Y="4682.97" Z="-29.11" />
+    <Hotspot X="4846.26" Y="4559.85" Z="-14.41" />
+    <Hotspot X="4986.69" Y="4484.91" Z="-17.32" />
+    <Hotspot X="5171.57" Y="4518.9" Z="-53.46" />
+    <Hotspot X="5405.14" Y="4076.26" Z="-15.26" />
+    <Hotspot X="5530.33" Y="3904.25" Z="-15.72" />
+    <Hotspot X="5723.65" Y="4045.01" Z="-8.95" />
+    <Hotspot X="5581.48" Y="4237.76" Z="-41.95" />
+    <Hotspot X="5316.12" Y="4549.15" Z="-54.66" />
+    <Hotspot X="5223.86" Y="4711.03" Z="-72.49" />
+    <Hotspot X="5156.1" Y="4972.13" Z="-58.9" />
+    <Hotspot X="5271.16" Y="5265.77" Z="-44.56" />
+    <Hotspot X="5286.28" Y="5414.07" Z="-39.41" />
+    <Hotspot X="5835.66" Y="5606.22" Z="-31.08" />
+    <Hotspot X="5975.51" Y="5472.18" Z="-21.79" />
+    <Hotspot X="5908.33" Y="5235.35" Z="-33.37" />
+    <Hotspot X="5756.41" Y="5076.26" Z="-57.24" />
+    <Hotspot X="5740.97" Y="4999.52" Z="-94.84" />
+    <Hotspot X="6106.68" Y="5008.37" Z="-35.36" />
+    <Hotspot X="6327.73" Y="5178.95" Z="-25.16" />
+    <Hotspot X="6291.09" Y="4900.79" Z="-15.25" />
+    <Hotspot X="6047.14" Y="4842.91" Z="-46.38" />
+    <Hotspot X="6179.16" Y="4599.19" Z="-32.54" />
+    <Hotspot X="6338.29" Y="4686.75" Z="-31.73" />
+    <Hotspot X="6464.72" Y="4768.03" Z="-25.21" />
+    <Hotspot X="6365.2" Y="4532.99" Z="2.08" />
+    <Hotspot X="6036.02" Y="4257.6" Z="-26.34" />
+    <Hotspot X="5657.37" Y="4369.33" Z="39.51" />
+    <Hotspot X="5383.56" Y="4801.33" Z="-108.92" />
+    <Hotspot X="5343.65" Y="5154.74" Z="-49.25" />
+    <Hotspot X="5444.49" Y="5342.17" Z="-77.17" />
+    <Hotspot X="5567.9" Y="5419.15" Z="-69.2" />
+    <Hotspot X="5645.91" Y="5287.71" Z="-66.67" />
+    <Hotspot X="5601.63" Y="5112.78" Z="-67.3" />
+    <Hotspot X="5693.13" Y="4837.29" Z="-88.84" />
+    <Hotspot X="5635.4" Y="4596.77" Z="-99.38" />
+    <Hotspot X="5769.99" Y="4628.25" Z="-100.65" />
+    <Hotspot X="5934.55" Y="4890.5" Z="-60.44" />
+    <Hotspot X="6157.61" Y="5346.15" Z="1.46" />
+    <Hotspot X="6199.87" Y="5519.25" Z="22.68" />
+  </Hotspots>
+  <Blackspots>
+  <Blackspot X="6698.234" Y="5149.68" Z="-18.33895" Radius="20" />
+   <Blackspot X="5909.112" Y="5371.918" Z="-106.3095" Radius="150" />
+  </Blackspots>
+</HBProfile>

@@ -1,0 +1,53 @@
+<HBProfile>
+  <Name>botanist_skinning_(150-200)_wetlands_raptors</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>101</MaxLevel>
+  <Factions>48</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+  
+	<Vendors>
+      <Vendor Name="Naela Trance" Entry="1459" Type="Repair" X="-3743.802" Y="-847.4149" Z="0.5812669" />
+	</Vendors>
+	
+	<Mailboxes>
+      <Mailbox X="-3790.584" Y="-838.3785" Z="-0.3931101" />
+	</Mailboxes>
+
+  <Hotspots>
+    <Hotspot X="-3409.833" Y="-1620.946" Z="9.802924" />
+    <Hotspot X="-3427.359" Y="-1478.458" Z="12.28923" />
+    <Hotspot X="-3599.179" Y="-1325.865" Z="9.981641" />
+  </Hotspots>
+  
+  <Blackspots>
+  
+  </Blackspots>
+  
+    <AvoidMobs>
+      <Mob id="285" name="Murloc" />
+	  <Mob id="44184" name="Loch Buzzard" />
+	  <Mob id="1176" name="Tunnel Rat Forager" />
+	  <Mob id="1177" name="Tunnel Rat Surveyor" />
+	  <Mob id="1173" name="Tunnel Rat Scout" />
+	  <Mob id="1172" name="Tunnel Rat Vermin" />
+	  <Mob id="1195" name="Forest Lurker" />
+	  <Mob id="44620" name="Marsh Hornet" />
+	  <Mob id="44116" name="Harbor Crawler" />
+	  <Mob id="41293" name="Harbor Shredfin" />
+    </AvoidMobs>
+
+</HBProfile>

@@ -1,0 +1,48 @@
+<HBProfile creator="Wigglez" version="1.0">
+	<Name>RAF Coord Test</Name>
+
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+   
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+
+	<TargetElites>True</TargetElites>
+   
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />           
+	</AvoidMobs>
+   
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+
+	<Vendors>
+	</Vendors>
+
+	<ProtectedItems>
+	</ProtectedItems>
+   
+			<ClearVendor />
+			<ClearMailbox />
+       
+	<QuestOrder>
+		<RunTo X="169.3422" Y="-202.3585" Z="180.4936" />
+	</QuestOrder>
+ 
+ 
+</HBProfile>

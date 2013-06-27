@@ -1,0 +1,55 @@
+<HBProfile>
+  <Name>botanist_skinning_(medium-leather)_northern-stranglethorn</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>101</MaxLevel>
+  <Factions>14 16 48</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+  
+	<Vendors>
+      <Vendor Name="Leonard Porter" Entry="12942" Type="Repair" X="949.8846" Y="-1435.649" Z="62.59011" />
+	</Vendors>
+	
+	<Mailboxes>
+      <Mailbox X="948.3221" Y="-1462.237" Z="62.36975" />
+	</Mailboxes>
+
+  <Hotspots>
+   <Hotspot X="-11677.21" Y="-322.706" Z="10.88866" />
+   <Hotspot X="-11928.64" Y="-297.6367" Z="11.09641" />
+   <Hotspot X="-12215.24" Y="-363.3479" Z="11.76285" />
+   <Hotspot X="-12470.15" Y="-307.7109" Z="11.65544" />
+   <Hotspot X="-12605.66" Y="-52.98586" Z="18.36769" />
+  </Hotspots>
+  
+  <Blackspots>
+  
+  </Blackspots>
+  
+    <AvoidMobs>
+      <Mob id="285" name="Murloc" />
+	  <Mob id="44184" name="Loch Buzzard" />
+	  <Mob id="1176" name="Tunnel Rat Forager" />
+	  <Mob id="1177" name="Tunnel Rat Surveyor" />
+	  <Mob id="1173" name="Tunnel Rat Scout" />
+	  <Mob id="1172" name="Tunnel Rat Vermin" />
+	  <Mob id="1195" name="Forest Lurker" />
+	  <Mob id="44620" name="Marsh Hornet" />
+	  <Mob id="44116" name="Harbor Crawler" />
+	  <Mob id="41293" name="Harbor Shredfin" />
+    </AvoidMobs>
+
+</HBProfile>

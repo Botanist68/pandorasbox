@@ -1,0 +1,181 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-H] Botanist Blackrock Caverns Trash Farming</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+		<Mob Name="Conflagration" Entry="39994" />
+		<Mob Name="Karsh Steelbender" Entry="39698" />
+		<Mob Name="Shadow of Obsidius" Entry="40817" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+		<Item name="Berto's Staff" entry="55789" />
+		<Item name="Acanthia's Lost Pendant" entry="55791" />
+		<Item name="Snub-Nosed Pistol" entry="66953" />
+		<Item name="Toxidunk Dagger" entry="55790" />		
+	</ProtectedItems>
+
+	<Factions></Factions>
+	
+	<QuestOrder>
+	
+		<ClearVendor />
+		<ClearMailbox />
+
+		<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="25" TrainNewSkills="False" LearnFlightPaths="False" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+		
+		  
+                
+		 <While Condition="true" >
+		 
+		                                             <!-- My vendor/hearth check -->
+		<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth,repair and mail." LogColor="Yellow" />
+			
+         <If Condition="(Me.FreeBagSlots &lt; 10) || (Me.LowestDurabilityPercent &lt; 0.5)" > <!-- Will go vendor/repair if needed -->
+			<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth,repair and mail." LogColor="Yellow" />
+            <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+            <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+            <CustomBehavior File="Message" Text="Succesfully hearthed, moving to repair vendor." LogColor="Yellow" />						
+			<CustomBehavior File="FlyTo" X="-10408.5" Y="-3267.102" Z="20.38218" />						
+			<SetVendor>
+				<Vendors>
+					<Vendor Name="Gharash" Entry="8176" Type="Repair" X="-10406.97" Y="-3265.748" Z="21.892" />
+				</Vendors>
+			</SetVendor>						
+			<SetMailbox>
+				<Mailboxes>
+					<Mailbox X="-10461.58" Y="-3265.349" Z="20.17867" />
+				</Mailboxes>
+			</SetMailbox>
+			
+			<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />			
+        </If>		
+		 
+		 		<If Condition="Me.ZoneId != 4926" > <!--not in Blackrock Caverns -->
+					<If Condition="Me.ZoneId != 25" > <!--not in Blackrock Mountain -->
+					    <CustomBehavior File="Message" Text="I'm not sure where I am, but I'm not in Blackrock Caverns of near the portal. Flying to Burning Steppes, near the entrance to blackrock mountain." LogColor="Yellow" />
+						<CustomBehavior File="FlyTo" X="-7803.673" Y="-1131.662" Z="214.8472"  DestName="Blackrock Mountain" /> <!-- Entrance to Blackrock Mountain -->
+					    <CustomBehavior File="ForcedDismount" />
+					    <CustomBehavior File="ForcedMount" MountType="Ground" />
+						<RunTo X="-7572.08" Y="-1316.603" Z="245.5367" />  <!-- Outside the Blackrock Caverns portal -->
+					</If>
+				</If>
+				
+				<If Condition="Me.ZoneId == 46" > <!-- in burning stepps -->				    						
+					<CustomBehavior File="Message" Text="I am in Burning Stepps. I'm going to fly to Blackrock Mountain." LogColor="Yellow" />
+					<CustomBehavior File="FlyTo" X="-7803.673" Y="-1131.662" Z="214.8472"  DestName="Blackrock Mountain" /> <!-- Entrance to Blackrock Mountain -->
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<RunTo X="-7572.08" Y="-1316.603" Z="245.5367" />												
+				</If>
+				
+				<If Condition="Me.ZoneId == 25" > <!-- in blackrock mountain, not near the portal -->
+					<If Condition="Me.Y &gt; -1295 || Me.Y &lt; -1328" >
+					    <CustomBehavior File="Message" Text="I'm in Blackrock Mountain but, not close to the Blackrock Caverns portal. Moving to the portal." LogColor="Yellow" />
+						<RunTo X="-7572.08" Y="-1316.603" Z="245.5367" />
+					</If>
+				</If>
+				
+		                  <!-- If I am in Blackrock Caverns, leave the dungeon -->		 
+				<If Condition="Me.ZoneId == 4926" > <!-- in blackrock caverns -->
+					<CustomBehavior File="Message" Text="You started the bot with me inside Blackrock Caverns. I'm leaving the dungeon so I can reset it." LogColor="Yellow" />
+					<RunTo X="210.0881" Y="1117.478" Z="206.6087" />
+					<RunTo X="215.7276" Y="1140.736" Z="206.7795" />					
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="{TimeRemaining}" />						
+					<CustomBehavior File="Message" Text="I found my way out." LogColor="Yellow" />
+					<RunTo X="-7572.808" Y="-1312.219" Z="245.5344" />
+				</If>
+				
+
+		
+
+
+				<If Condition="Me.Y &gt; -1328 &amp;&amp; Me.Y &lt; -1295" >
+					<CustomBehavior File="Message" Text="I am outside Blackrock Caverns." LogColor="Yellow" />
+					<CustomBehavior File="Message" Text="I am resetting the dungeon." LogColor="Yellow" />
+					<CustomBehavior File="Message" Text="Waiting 10 seconds to reset the dungeon." LogColor="Yellow" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />					
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" /> 
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> <!-- Changes the instanceto to "normal" , if it was on "heroic" for the first run -->
+                    <CustomBehavior File="Message" Text="Blackrock Caverns has been reset." LogColor="Yellow" />						
+					<RunTo X="-7570.299" Y="-1329.83459" Z="246.733337" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="{TimeRemaining}" />
+					<CustomBehavior File="Message" Text="I am waiting for the dungeon to load." LogColor="Yellow" />
+                 </If>
+
+		 
+		 
+		 
+		 
+		                                <!-- Blackrock Caverns Dungeon Script -->
+				<If Condition="Me.ZoneId == 4926" >						
+					<CustomBehavior File="MyCTM" X="209.9805" Y="1076.183" Z="205.7515" />
+					<RunTo X="214.5711" Y="987.2893" Z="192.2645" />
+					<CustomBehavior File="MyCTM" X="245.3077" Y="991.1682" Z="191.034" />
+					<CustomBehavior File="MyCTM" X="181.577" Y="969.8492" Z="190.7391" />
+					<RunTo X="179.6337" Y="953.0971" Z="190.7544" />
+					<CustomBehavior File="MyCTM" X="179.6275" Y="932.9762" Z="192.8197" />
+					<RunTo X="194.1605" Y="902.497" Z="191.4434" />
+					<CustomBehavior File="MyCTM" X="211.8419" Y="922.4757" Z="190.9719" />
+					<RunTo X="213.3246" Y="949.8034" Z="191.0824" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="MyCTM" X="213.8354" Y="908.919" Z="190.9395" />
+					<CustomBehavior File="MyCTM" X="261.8087" Y="912.9965" Z="191.0793" />
+					<CustomBehavior File="MyCTM" X="298.4121" Y="950.0253" Z="191.1656" />
+					<CustomBehavior File="MyCTM" X="447.4012" Y="950.5046" Z="195.9154" />
+					<RunTo X="482.3857" Y="936.476" Z="183.2669" />
+					<RunTo X="503.4949" Y="905.4529" Z="180.6198" />
+					<RunTo X="548.6294" Y="907.0694" Z="169.5619" />
+					<RunTo X="550.229" Y="861.7855" Z="175.5455" />
+					<RunTo X="560.1021" Y="858.3414" Z="175.5455" />					
+					<RunTo X="599.5189" Y="861.5287" Z="175.5455" />
+					<CustomBehavior File="MyCTM" X="599.1398" Y="928.7325" Z="166.6628" />
+					<CustomBehavior File="MyCTM" X="573.2124" Y="931.8838" Z="155.3575" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />					
+					<RunTo X="572.7844" Y="916.3917" Z="155.3736" />
+					<RunTo X="573.1641" Y="886.4756" Z="155.385" />					
+					<RunTo X="584.3939" Y="863.7324" Z="155.4963" />
+					<RunTo  X="480.9601" Y="865.2673" Z="125.9638" />					
+					<RunTo X="481.2117" Y="810.9219" Z="113.9988" />
+					<RunTo X="425.1939" Y="817.8373" Z="105.0866" />				
+					<CustomBehavior File="Message" Text="My work here is complete. Running out to reset this shit." LogColor="Yellow" />
+					<RunTo X="210.0881" Y="1117.478" Z="206.6087" />
+					<RunTo X="215.7276" Y="1140.736" Z="206.7795" />
+				</If>			
+
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

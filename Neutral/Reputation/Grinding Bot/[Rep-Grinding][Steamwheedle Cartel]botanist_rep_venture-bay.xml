@@ -1,0 +1,29 @@
+ <HBProfile> 
+
+
+   <Name>[Rep-Grinding][Steamwheedle Cartel]botanist_rep_venture-bay</Name>
+
+	<MinLevel>40</MinLevel>
+	<MaxLevel>101</MaxLevel>
+	<TargetMinLevel>40</TargetMinLevel>
+	<TargetMaxLevel>60</TargetMaxLevel>
+	
+	<AvoidMobs>
+		<Mob id="40657" name="Basking Cobra" />
+    </AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="2686.436" Y="-1959.701" Z="5.703851" Radius="4" />
+		<Blackspot X="2671.111" Y="-1949.844" Z="6.17271" Radius="3" />
+    </Blackspots>
+	
+	<Grindarea>
+	<Factions>14</Factions>	
+		<Hotspots>
+			<Hotspot X="2685.933" Y="-1961.08" Z="11.64368" />
+			<Hotspot X="2667.868" Y="-1947.793" Z="5.702713" />
+		</Hotspots>
+  
+  </Grindarea>
+
+ </HBProfile>  

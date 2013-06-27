@@ -1,0 +1,42 @@
+<HBProfile>
+  <Name>botanist_cooking_(130-225)_arathi-highlands_(50-each)raptor-flesh-n-raptor-eggs</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>48</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+      <Vendor Name="Jannos Ironwill" Entry="1471" Type="Repair" X="-1257.819" Y="-2546.45" Z="21.45414" />
+	</Vendors>
+	
+	<Mailboxes>
+      <Mailbox X="290.2306" Y="-2118.913" Z="121.1957" />
+	</Mailboxes>
+
+  <Hotspots>
+    <Hotspot X="-1212.187" Y="-2772.762" Z="55.15606" />
+	<Hotspot X="-1153.885" Y="-3050.004" Z="38.19654" />
+	<Hotspot X="-1012.552" Y="-3332.808" Z="51.80096" />
+	<Hotspot X="-1342.214" Y="-2371.991" Z="65.58298" />
+	<Hotspot X="-1098.721" Y="-2635.202" Z="50.9604" />
+  </Hotspots>
+  
+  <Blackspots>
+  
+  </Blackspots>
+  
+</HBProfile>

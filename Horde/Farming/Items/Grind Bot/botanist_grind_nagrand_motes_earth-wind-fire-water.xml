@@ -1,0 +1,45 @@
+<HBProfile>
+  <Name>botanist_grind_nagrand_motes_earth-wind-fire-water</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>16</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+
+	</Vendors>
+	
+	<Mailboxes>
+
+	</Mailboxes>
+
+  <Hotspots>
+   <Hotspot X="-751.8581" Y="6406.454" Z="171.5525" />
+   <Hotspot X="-921.566" Y="6362.83" Z="199.0171" />
+   <Hotspot X="-612.3478" Y="6569.072" Z="171.9989" />
+   <Hotspot X="-675.6772" Y="6729.85" Z="158.7009" />
+   <Hotspot X="-676.0587" Y="6331.625" Z="172.3518" />
+   <Hotspot X="-929.8901" Y="6705.81" Z="172.8904" />
+   <Hotspot X="-675.6772" Y="6729.85" Z="158.7009" />
+   <Hotspot X="-534.3964" Y="6877.266" Z="163.1554" />
+   <Hotspot X="-519.4787" Y="6985.704" Z="160.3965" />
+  </Hotspots> 
+  
+  
+  <Blackspots>
+  </Blackspots>
+</HBProfile>

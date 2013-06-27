@@ -1,0 +1,66 @@
+<HBProfile>
+  <Name>[pool-fishing]_botanist_firefin-snapper-n-oily-blackmouth_northern-stranglethorn[HB]</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>99999</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+
+	</Vendors>
+	
+	<Mailboxes>
+
+	</Mailboxes>
+
+  <Hotspots>
+    <Hotspot X="-12652.49" Y="-19.79809" Z="16.49036" />
+    <Hotspot X="-12576.09" Y="23.94527" Z="12.43376" />
+    <Hotspot X="-12532.85" Y="125.9888" Z="13.8648" />
+    <Hotspot X="-12474.13" Y="224.8806" Z="13.98139" />
+    <Hotspot X="-12381.22" Y="293.6451" Z="12.44147" />
+    <Hotspot X="-12273.65" Y="334.6863" Z="13.48832" />
+    <Hotspot X="-12159.58" Y="359.66" Z="13.49244" />
+    <Hotspot X="-12079.43" Y="440.0273" Z="11.25216" />
+    <Hotspot X="-12028.75" Y="543.2918" Z="10.19281" />
+    <Hotspot X="-11987.93" Y="649.8925" Z="12.94642" />
+    <Hotspot X="-11995.12" Y="757.6915" Z="13.66676" />
+    <Hotspot X="-11941.46" Y="847.4413" Z="14.72608" />
+    <Hotspot X="-11837.81" Y="896.994" Z="12.0804" />
+    <Hotspot X="-11752.33" Y="974.9243" Z="8.733511" />
+    <Hotspot X="-11674.96" Y="1061.767" Z="7.124117" />
+    <Hotspot X="-11587.28" Y="1139.236" Z="9.090268" />
+    <Hotspot X="-11583.82" Y="1197.993" Z="7.717516" />
+    <Hotspot X="-11665.63" Y="1126.773" Z="5.754099" />
+    <Hotspot X="-11733.93" Y="1035.242" Z="5.63692" />
+    <Hotspot X="-11809.99" Y="947.8776" Z="12.49987" />
+    <Hotspot X="-11898.45" Y="873.725" Z="9.933946" />
+    <Hotspot X="-12002.63" Y="818.4307" Z="8.944906" />
+    <Hotspot X="-11980.93" Y="718.544" Z="8.106242" />
+    <Hotspot X="-12013.02" Y="607.5062" Z="7.22635" />
+    <Hotspot X="-12044.28" Y="500.86" Z="7.298494" />
+    <Hotspot X="-12101.96" Y="399.0011" Z="8.374316" />
+    <Hotspot X="-12205.53" Y="350.3374" Z="5.980481" />
+    <Hotspot X="-12321.49" Y="339.9669" Z="4.646915" />
+    <Hotspot X="-12421.13" Y="278.5387" Z="4.748671" />
+    <Hotspot X="-12488.78" Y="185.5783" Z="5.522035" />
+    <Hotspot X="-12562.93" Y="98.37519" Z="5.617677" />
+    <Hotspot X="-12574.13" Y="7.109538" Z="3.108986" />
+  </Hotspots>
+  <Blackspots>
+  </Blackspots>
+</HBProfile>

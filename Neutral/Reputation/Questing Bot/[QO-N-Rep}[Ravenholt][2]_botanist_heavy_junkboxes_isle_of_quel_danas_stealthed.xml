@@ -1,0 +1,85 @@
+<HBProfile>
+    <Name>[QO-N-Rep}[Ravenholt][2]_botanist_heavy_junkboxes_isle_of_quel_danas_stealthed</Name> 
+
+    <MinLevel>1</MinLevel> 
+    <MaxLevel>86</MaxLevel>
+<MinDurability>0.1</MinDurability>
+	<MinFreeBagSlots>6</MinFreeBagSlots>
+	
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+	
+	<MailWhite>True</MailWhite>
+	<MailGrey>True</MailGrey>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+<Vendors>
+<Vendor Name="Smith Hauthaa" Entry="25046" Type="Repair" X="12664.15" Y="-6984.873" Z="14.54467" />
+</Vendors>
+	
+<Mailboxes>
+<Mailbox X="12791.98" Y="-6965.993" Z="15.4073"/>
+</Mailboxes>
+<QuestOrder>
+
+<If Condition="Me.FreeBagSlots &lt;= 10" >
+<CustomBehavior File="NoCombatMoveTo" X="12562.08" Y="-7259.621" Z="2.971517" />
+<CustomBehavior File="EnablePlugin" Names="EpicJunkbox" />
+<If Condition="Me.HasAura(&quot;Stealth&quot;)">
+    <CustomBehavior File="RunMacro" Macro="/cancelaura stealth" />
+</If>
+            
+<CustomBehavior File="WaitTimer" WaitTime="80000"/>
+
+
+<CustomBehavior File="DisablePlugin" Names="EpicJunkbox" />
+</If>
+
+<While Condition="Me.Level &gt; 1" >	
+<CustomBehavior File="UserSettings" FindVendorsAutomatically="False" UseRandomMount="False" FindMountAutomatically="False" />
+<CustomBehavior File="NoCombatMoveTo" X="12373.44" Y="-7338.747" Z="-0.2688871" />
+<CustomBehavior File="NoCombatMoveTo" X="12379.17" Y="-7341.453" Z="-1.222131" />
+<If Condition="!Me.HasAura(&quot;Stealth&quot;)">
+<CustomBehavior File="RunMacro" Macro="/cast stealth" />
+</If>
+<CustomBehavior File="RunMacro" Macro="/targetenemy\n/cast pick pocket" NumOfTimes="8" />
+<CustomBehavior File="RunMacro" Macro="/cast Fan of Knives" NumOfTimes="3" />
+<CustomBehavior File="RunMacro" Macro="/cast stealth" />
+<CustomBehavior File="NoCombatMoveTo" X="12357.12" Y="-7373.252" Z="2.485739" />
+<CustomBehavior File="NoCombatMoveTo" X="12364.09" Y="-7407.222" Z="-0.0593235" />
+<If Condition="!Me.HasAura(&quot;Stealth&quot;)">
+<CustomBehavior File="RunMacro" Macro="/cast stealth" />					
+</If>
+<CustomBehavior File="RunMacro" Macro="/targetenemy\n/cast pick pocket" NumOfTimes="8" />
+<CustomBehavior File="RunMacro" Macro="/cast Fan of Knives" NumOfTimes="3" />
+<CustomBehavior File="RunMacro" Macro="/cast stealth" />
+<CustomBehavior File="NoCombatMoveTo" X="12319.13" Y="-7372.068" Z="0.5247644" />
+<CustomBehavior File="NoCombatMoveTo" X="12301.37" Y="-7382.037" Z="0.2327531" />
+<If Condition="!Me.HasAura(&quot;Stealth&quot;)">
+<CustomBehavior File="RunMacro" Macro="/cast stealth" />
+</If>
+<CustomBehavior File="RunMacro" Macro="/targetenemy\n/cast pick pocket" NumOfTimes="8" />
+<CustomBehavior File="RunMacro" Macro="/cast Fan of Knives" NumOfTimes="3" />
+<CustomBehavior File="RunMacro" Macro="/cast stealth" />
+<CustomBehavior File="NoCombatMoveTo" X="12305.04" Y="-7378.851" Z="0.5517411" />
+<CustomBehavior File="NoCombatMoveTo" X="12295.5" Y="-7348.843" Z="0.5107219" />
+<CustomBehavior File="NoCombatMoveTo" X="12272.64" Y="-7348.029" Z="-0.05613142" />
+<If Condition="!Me.HasAura(&quot;Stealth&quot;)">
+<CustomBehavior File="RunMacro" Macro="/cast stealth" />
+</If>
+<CustomBehavior File="RunMacro" Macro="/targetenemy\n/cast pick pocket" NumOfTimes="12" />
+<CustomBehavior File="RunMacro" Macro="/cast Fan of Knives" NumOfTimes="3" />
+<CustomBehavior File="RunMacro" Macro="/cast stealth" />
+<CustomBehavior File="NoCombatMoveTo" X="12301.09" Y="-7334.784" Z="2.150212" />
+<If Condition="!Me.HasAura(&quot;Stealth&quot;)">
+<CustomBehavior File="RunMacro" Macro="/cast stealth" />
+</If>
+<CustomBehavior File="RunMacro" Macro="/cast sprint" />
+
+</While>
+</QuestOrder>
+</HBProfile> 

@@ -1,0 +1,83 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-Goto]_botanist_[undercity-to-ogrimmar]</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.0</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<QuestOrder>
+		
+	    <CustomBehavior File="UserSettings" LootMobs="False" SkinMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This is a goto profile. It will take you from Eastern KIngdoms to Orgrimmar. This profile is used to move your farmers from one continent to another while using GatherBuddy and Arelog." Title="WARNING" />
+						
+			<While Condition="true" >
+			
+				<If Condition="Me.MapId == 0" > 
+					<If Condition="Me.IsHorde" >
+						<CustomBehavior File="Message" Text="I am Horde in Eastern Kingdoms, flying the zeppelin near Undercity." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2062.958" Y="277.7719" Z="105.9054" />
+						<CustomBehavior File="FlyTo" X="2066.483" Y="283.9686" Z="97.03152" />						
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="2069.196" Y="290.1878" Z="97.03156" />
+						<CustomBehavior File="Message" Text="Waiting for the zeppelin." LogColor="Lime" />	
+						<CustomBehavior File="UseTransport"
+								TransportId="164871"
+								WaitAtX="2069.196" WaitAtY="290.1878" WaitAtZ="97.03156" 
+								TransportStartX="2062.376" TransportStartY="292.998047" TransportStartZ="114.670547"
+								TransportEndX="1833.509" TransportEndY="-4391.543" TransportEndZ="152.7679"
+								StandOnX="2067.631" StandOnY="293.5163" StandOnZ="97.19795" 
+								GetOffX="1841.82" GetOffY="-4393.583" GetOffZ="135.233" 
+								/>
+							<RunTo X="1841.82" Y="-4393.583" Z="135.233" />
+						<CustomBehavior File="FlyTo" X="2048.695" Y="-4376.715" Z="98.86051" />	
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserSettings" StopBot="true" />		
+					</If>
+				</If>
+												
+			</While>	
+	
+		</QuestOrder>
+
+
+</HBProfile>
+

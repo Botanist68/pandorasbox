@@ -1,0 +1,47 @@
+<HBProfile>
+  <Name>botanist_skinning_(275-325)_hellfire-peninsula_boars</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>101</MaxLevel>
+  <Factions>954</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+  
+	<Vendors>
+      <Vendor Name="Humphry" Entry="16823" Type="Repair" X="-717.3172" Y="2607.582" Z="91.01124" />
+	</Vendors>
+	
+	<Mailboxes>
+      <Mailbox X="-706.6809" Y="2697.699" Z="94.36044" />
+	</Mailboxes>
+
+  <Hotspots>
+   <Hotspot X="-426.6152" Y="2403.618" Z="39.30264" />
+   <Hotspot X="-445.0937" Y="2650.419" Z="58.45483" />
+   <Hotspot X="-527.8488" Y="2814.588" Z="62.25489" />
+   <Hotspot X="-666.7651" Y="3111.484" Z="-1.516831" />
+   <Hotspot X="-946.3063" Y="3157.634" Z="26.6569" />
+   <Hotspot X="-986.2899" Y="2943.096" Z="6.316524" />
+  </Hotspots>
+  
+  <Blackspots>
+  
+  </Blackspots>
+  
+    <AvoidMobs>
+	  <Mob id="41293" name="Harbor Shredfin" />
+    </AvoidMobs>
+
+</HBProfile>

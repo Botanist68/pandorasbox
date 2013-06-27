@@ -1,0 +1,181 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-H][Rep-Honored-Revered][Black-Prince]_botanist_krasarang-cove</Name>
+   
+	<MinLevel>90</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>True</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Riverbed Crocolisk" Entry="45321" />
+		<Mob Name="Ferndweller Wasp" Entry="51712" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="-962.3163" Y="-1050.513" Z="7.322102" Radius="39.2429" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+	
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" MountDistance="200" UseFlightPaths="False" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="15" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+		 
+		 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This profle will farm Krasarang Cove for Black Prince Reputation. The profile will set your hearthstone where needed. Includes mail, vendors and repair. Start the profile anywhere in Pandaria." Title="WARNING" />
+	
+        <While Condition="Me.Level &gt;= 90" >
+		
+				<If Condition="Me.MapId == 870" >
+					<If Condition="Me.ZoneId != 6134" >
+						<CustomBehavior File="Message" Text="I am in Pandaria. I need to set my hearth in Pang's Steed." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="530.172" Y="-617.6993" Z="258.7935" />
+					<CustomBehavior File="Message" Text="I've reached Pang's Steed." LogColor="Lime" />
+					<CustomBehavior File="ForcedDismount" />
+						<RunTo X="560.06" Y="-602.994" Z="263.4986" />
+					<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeep." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="SetHearthstone" MobId="65528" X="567.5018" Y="-608.4028" Z="263.4467" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<RunTo X="530.172" Y="-617.6993" Z="258.7935" />
+					<CustomBehavior File="Message" Text="Moving to the farming area." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="-1003.652" Y="-649.8574" Z="15.44549" />
+					<CustomBehavior File="ForcedDismount" />
+					</If>
+				</If>
+										  
+				<If Condition="Me.MapId == 870" >
+					<If Condition="Me.ZoneId == 6134" >
+						<If Condition="Me.X &lt; -1045.5433 || Me.X &gt; -606.0099 || Me.Y &lt; -1136.279 || Me.Y &gt; -610.9798" >
+							<CustomBehavior File="Message" Text="I am in Krasarang Wilds. I need to set my hearth in Pang's Steed." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="530.172" Y="-617.6993" Z="258.7935" />
+							<CustomBehavior File="Message" Text="I've reached Pang's Steed." LogColor="Lime" />
+							<CustomBehavior File="ForcedDismount" />
+								<RunTo X="560.06" Y="-602.994" Z="263.4986" />
+							<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeep." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="SetHearthstone" MobId="65528" X="567.5018" Y="-608.4028" Z="263.4467" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<RunTo X="530.172" Y="-617.6993" Z="258.7935" />
+							<CustomBehavior File="Message" Text="Moving to the farming area." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-1003.652" Y="-649.8574" Z="15.44549" />
+							<CustomBehavior File="ForcedDismount" />
+						</If>
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 870" >
+					<If Condition="Me.ZoneId == 6134" >
+						<If Condition="Me.X &gt; -1045.5433 &amp;&amp; Me.X &lt; -606.0099 &amp;&amp; Me.Y &gt; -1136.279 &amp;&amp; Me.Y &lt; -610.9798" >
+							<CustomBehavior File="Message" Text="You started the bot with me in the farming area, moving to the beginning of the route." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-1003.652" Y="-649.8574" Z="15.44549" />
+							<CustomBehavior File="ForcedDismount" />
+						</If>
+					</If>
+				</If>
+
+
+				<If Condition="Me.MapId == 870" >
+					<If Condition="Me.ZoneId == 6134" >	
+						<If Condition="Me.X &gt; -1045.5433 &amp;&amp; Me.X &lt; -606.0099 &amp;&amp; Me.Y &gt; -1136.279 &amp;&amp; Me.Y &lt; -610.9798" >
+							<CustomBehavior File="Message" Text="Checking my coordinates." LogColor="Lime" />	
+							<CustomBehavior File="Message" Text="I am in the farming area. I'll farm until you stop me." LogColor="Lime" />
+								<SetGrindArea><GrindArea>
+								<Factions>2201</Factions>
+									<Hotspots>
+										<Hotspot X="-948.7391" Y="-661.3151" Z="15.85118" />
+										<Hotspot X="-933.3516" Y="-712.771" Z="11.93895" />
+										<Hotspot X="-855.3022" Y="-646.1014" Z="12.61926" />
+										<Hotspot X="-825.1907" Y="-712.5138" Z="20.64089" />
+										<Hotspot X="-854.4451" Y="-747.7871" Z="13.73425" />
+									</Hotspots>
+								</GrindArea></SetGrindArea>												
+							<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= .3) || (Me.Level == 101)" GoalText="Farming" />
+						</If>
+					</If>
+				</If>
+						
+						
+							
+				<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Moving to a safe place to hearth." LogColor="Lime" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="FlyTo" X="-633.3334" Y="-952.3153" Z="74.7951" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />
+					<If Condition="Me.ZoneId == 5805" >
+						<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor, then mailing." LogColor="Lime" />
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Claretta" Entry="61215" Type="Repair" X="528.3212" Y="-652.0018" Z="257.0843" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="536.4704" Y="-615.9492" Z="258.7247" />
+							</Mailboxes>
+						</SetMailbox>
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						
+						<CustomBehavior File="Message" Text="Moving to the farming area." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-742.5573" Y="-814.8779" Z="4.481361" />
+						<CustomBehavior File="ForcedDismount" />
+					</If>
+					<If Condition="Me.ZoneId == 6134" >
+						<CustomBehavior File="Message" Text="My hearth didn't work for some reason, flying to the repair vendor, then mailing." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="530.4162" Y="-647.4335" Z="256.9087" />
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Claretta" Entry="61215" Type="Repair" X="528.3212" Y="-652.0018" Z="257.0843" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="536.4704" Y="-615.9492" Z="258.7247" />
+							</Mailboxes>
+						</SetMailbox>
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						
+						<CustomBehavior File="Message" Text="Moving to the farming area." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-742.5573" Y="-814.8779" Z="4.481361" />
+						<CustomBehavior File="ForcedDismount" />
+					</If>
+				</If>
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

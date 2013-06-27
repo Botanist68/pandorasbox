@@ -1,0 +1,505 @@
+﻿<HBProfile creator="Botanist" version="1.3">
+	<Name>[QO-N][Gold-Farming]_botanist_botanica</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+		<Item name="Book of Glyph Mastery" entry="45912" />
+		<Item name="Frostweave Cloth" entry="33470" />		
+	</ProtectedItems>
+
+	<Factions>16</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+	<CustomBehavior File="UserSettings" MountDistance="10"  UseMount="True" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="30" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="2" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" Text="This profile will endlessly farm Botanica. It will set your hearthstone to Area52 in Netherstorm. For best results, start the profile in Netherstorm. Make sure you set an alt to mail to in the settings and tools window of HB. This profile will only venor greys and trash. Feel free to send Paypal donations to botanist1968@gmail.com Donations keep more profiles coming." Title="WARNING" />
+	
+         <While Condition="true" >
+
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.IsAlliance" >
+						<If Condition="Me.ZoneId == 1519" >
+							<CustomBehavior File="Message" Text="I'm Stormwind, moving to the Blastedlands portal." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-8994.284" Y="860.5435" Z="127.6233" />						
+							<CustomBehavior File="ForcedDismount" />
+								<RunTo X="-9005.403" Y="869.1169" Z="129.6929" />
+							<CustomBehavior File="Message" Text="Taking the portal to Blastedlands." LogColor="Lime" />
+							<CustomBehavior File="InteractWith" MobId="195141" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-9007.58" Y="871.8698" Z="129.6922" />
+							<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+							<CustomBehavior File="FlyTo" X="-11851.95" Y="-3196.791" Z="17.13597" />
+							<CustomBehavior File="MyCTM" X="-11913.63" Y="-3206.204" Z="-10.40761" />	<!-- dark portal -->
+							<CustomBehavior File="FlyTo" X="-247.4221" Y="1045.685" Z="143.5872" />
+							<CustomBehavior File="FlyTo" X="-321.0585" Y="1026.309" Z="54.17102" />		<!-- dark portal ally fp -->
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="UserSettings" UseFlightPaths="True" UseMounts="True" />
+							<CustomBehavior File="Message" Text="You must know all the flight paths from here to Stormspire in Netherstorm." LogColor="Lime" />
+								<RunTo X="4152.226" Y="2960.836" Z="351.9702" />	<!-- stormspire fp -->
+						</If>
+					</If>	
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.IsAlliance" >
+						<If Condition="Me.ZoneId != 1519" >
+							<CustomBehavior File="Message" Text="I'm Eastern Kingdoms, moving to the Dark Portal." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-11851.95" Y="-3196.791" Z="17.13597" />
+							<CustomBehavior File="MyCTM" X="-11913.63" Y="-3206.204" Z="-10.40761" />	<!-- dark portal -->
+							<CustomBehavior File="FlyTo" X="-247.4221" Y="1045.685" Z="143.5872" />
+							<CustomBehavior File="FlyTo" X="-321.0585" Y="1026.309" Z="54.17102" />		<!-- dark portal ally fp -->
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="UserSettings" UseFlightPaths="True" UseMounts="True" />
+							<CustomBehavior File="Message" Text="You must know all the flight paths from here to Stormspire in Netherstorm." LogColor="Lime" />
+								<RunTo X="4152.226" Y="2960.836" Z="351.9702" />	<!-- stormspire fp -->
+						</If>
+					</If>	
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.IsHorde" >
+						<CustomBehavior File="Message" Text="I am Horde in Eastern Kingdoms, flying to the zeppelin near Undercity." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2062.958" Y="277.7719" Z="105.9054" />
+						<CustomBehavior File="FlyTo" X="2066.483" Y="283.9686" Z="97.03152" />						
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="2069.196" Y="290.1878" Z="97.03156" />
+						<CustomBehavior File="Message" Text="Waiting for the zeppelin." LogColor="Lime" />	
+						<CustomBehavior File="UseTransport"
+							TransportId="164871"
+							WaitAtX="2069.196" WaitAtY="290.1878" WaitAtZ="97.03156" 
+							TransportStartX="2062.376" TransportStartY="292.998047" TransportStartZ="114.670547"
+							TransportEndX="1833.509" TransportEndY="-4391.543" TransportEndZ="152.7679"
+							StandOnX="2067.631" StandOnY="293.5163" StandOnZ="97.19795" 
+							GetOffX="1841.82" GetOffY="-4393.583" GetOffZ="135.233" />
+							<RunTo X="1841.82" Y="-4393.583" Z="135.233" />
+						<CustomBehavior File="FlyTo" X="1679.82" Y="-4104.333" Z="48.64043" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserSettings" UseMount="False" />
+							<RunTo X="1686.217" Y="-4126.586" Z="66.34129" />
+						<CustomBehavior File="Message" Text="Taking the portal to Blastedlands." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="195142" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1685.18" Y="-4123.42" Z="66.3376" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+						<CustomBehavior File="UserSettings" UseMount="True" />
+						<CustomBehavior File="FlyTo" X="-11851.95" Y="-3196.791" Z="17.13597" />
+						<CustomBehavior File="MyCTM" X="-11913.63" Y="-3206.204" Z="-10.40761" />	<!-- dark portal -->
+						<CustomBehavior File="FlyTo" X="-247.4221" Y="1045.685" Z="143.5872" />
+						<CustomBehavior File="FlyTo" X="-178.9158" Y="1028.188" Z="54.17285" />		<!-- dark portal horde fp -->
+						<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="UserSettings" UseFlightPaths="True" UseMounts="True" />
+							<CustomBehavior File="Message" Text="You must know all the flight paths from here to Stormspire in Netherstorm." LogColor="Lime" />
+								<RunTo X="4152.226" Y="2960.836" Z="351.9702" />	<!-- stormspire fp -->
+					</If>	
+				</If>
+				
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.IsAlliance" >
+						<CustomBehavior File="Message" Text="I am Alliance in Kalimdor, flying to Ratchet." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-996.9926" Y="-3824.178" Z="5.496727" />						
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-996.7842" Y="-3827.834" Z="5.570349" />
+						<CustomBehavior File="Message" Text="Waiting for the boat." LogColor="Lime" />	
+						<CustomBehavior File="UseTransport"
+							TransportId="20808"
+							WaitAtX="-996.7842" WaitAtY="-3827.834" WaitAtZ="5.570349" 
+							TransportStartX="-1005.61346" TransportStartY="-3864.279" TransportStartZ="-0.0262415316"
+							TransportEndX="-14277.7451" TransportEndY="582.86615" TransportEndZ="0.0493392348"
+							StandOnX="-999.8182" StandOnY="-3833.799" StandOnZ="6.034274" 
+							GetOffX="-14280.22" GetOffY="567.6113" GetOffZ="6.696649" />
+							<RunTo X="-14280.22" Y="567.6113" Z="6.696649" />
+						<CustomBehavior File="FlyTo" X="-11851.95" Y="-3196.791" Z="17.13597" />
+						<CustomBehavior File="MyCTM" X="-11913.63" Y="-3206.204" Z="-10.40761" />	<!-- dark portal -->
+						<CustomBehavior File="FlyTo" X="-247.4221" Y="1045.685" Z="143.5872" />
+						<CustomBehavior File="FlyTo" X="-321.0585" Y="1026.309" Z="54.17102" />		<!-- dark portal ally fp -->
+						<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="UserSettings" UseFlightPaths="True" UseMounts="True" />
+							<CustomBehavior File="Message" Text="You must know all the flight paths from here to Stormspire in Netherstorm." LogColor="Lime" />
+								<RunTo X="4152.226" Y="2960.836" Z="351.9702" />	<!-- stormspire fp -->
+					</If>	
+				</If>
+				
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.IsHorde" >
+							<CustomBehavior File="Message" Text="I'm Orgrimmar, moving to the Blastedlands portal." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="1679.82" Y="-4104.333" Z="48.64043" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserSettings" UseMount="False" />
+							<RunTo X="1686.217" Y="-4126.586" Z="66.34129" />
+						<CustomBehavior File="Message" Text="Taking the portal to Blastedlands." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="195142" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="1685.18" Y="-4123.42" Z="66.3376" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+						<CustomBehavior File="UserSettings" UseMount="True" />
+						<CustomBehavior File="FlyTo" X="-11851.95" Y="-3196.791" Z="17.13597" />
+						<CustomBehavior File="MyCTM" X="-11913.63" Y="-3206.204" Z="-10.40761" />	<!-- dark portal -->
+						<CustomBehavior File="FlyTo" X="-247.4221" Y="1045.685" Z="143.5872" />
+						<CustomBehavior File="FlyTo" X="-178.9158" Y="1028.188" Z="54.17285" />		<!-- dark portal horde fp -->
+						<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="UserSettings" UseFlightPaths="True" UseMounts="True" />
+							<CustomBehavior File="Message" Text="You must know all the flight paths from here to Stormspire in Netherstorm." LogColor="Lime" />
+								<RunTo X="4152.226" Y="2960.836" Z="351.9702" />	<!-- stormspire fp -->
+					</If>	
+				</If>
+		
+				<If Condition="Me.ZoneId != 3847" > <!-- not in the botanica -->
+					<If Condition="Me.ZoneId != 3523" > <!-- not in netherstorm -->
+						<CustomBehavior File="Message" Text="I am flying to Netherstorm." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="4123.625" Y="2980.629" Z="386.4873" />
+						<CustomBehavior File="FlyTo" X="4123.497" Y="3039.884" Z="338.1608" />							
+							<RunTo X="4114.351" Y="3062.957" Z="339.4665" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="SetHearthstone" MobId="19531" X="4113.013" Y="3066.117" Z="339.4647" />
+							<RunTo X="4123.497" Y="3039.884" Z="338.1608" />	
+						<If Condition="(Me.FreeBagSlots &lt; 15) || (Me.LowestDurabilityPercent &lt; 0.3)" >					
+							<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. I'm going to repair and vendor." LogColor="Lime" />
+								<RunTo X="4095.914" Y="3032.706" Z="336.72" />									
+							<SetVendor>
+								<Vendors>
+									<Vendor Name="Dealer Jadyan" Entry="19536" Type="Repair" X="4093.681" Y="3032.828" Z="336.7165" />
+								</Vendors>
+							</SetVendor>
+							<SetMailbox>
+								<Mailboxes>
+									<Mailbox X="4121.964" Y="3054.742" Z="339.3138" />
+								</Mailboxes>
+							</SetMailbox>			
+							<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+								<RunTo X="4123.497" Y="3039.884" Z="338.1608" />
+						</If>
+							<CustomBehavior File="Message" Text="Flying to Botanica." LogColor="Lime" />							
+							<CustomBehavior File="FlyTo" X="4093.23" Y="2967.531" Z="405.2794" />
+							<CustomBehavior File="MyCTM" X="4035.896" Y="2924.724" Z="504.3072" />
+							<CustomBehavior File="MyCTM" X="3392.446" Y="1639.349" Z="353.6405" />
+							<CustomBehavior File="MyCTM" X="3409.85" Y="1486.26" Z="182.837" />
+							<CustomBehavior File="ForcedDismount" />							
+					</If>							
+				</If>
+					
+				<If Condition="Me.ZoneId == 3523" > <!-- in netherstorm  -->
+					<If Condition="Me.X &gt; 4049.848 &amp;&amp; Me.X &lt; 4179.203 &amp;&amp; Me.Y &gt; 2919.566 &amp;&amp; Me.Y &lt; 3150.172" >	<!-- in stormspire -->
+						 <CustomBehavior File="Message" Text="I am in Stormspire, moving to the innkeep." LogColor="Lime" />
+						    <RunTo X="4123.497" Y="3039.884" Z="338.1608" />
+						<CustomBehavior File="ForcedDismount" />							
+							<RunTo X="4114.351" Y="3062.957" Z="339.4665" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="SetHearthstone" MobId="19531" X="4113.013" Y="3066.117" Z="339.4647" />
+							<RunTo X="4123.497" Y="3039.884" Z="338.1608" />
+						<If Condition="(Me.FreeBagSlots &lt; 15) || (Me.LowestDurabilityPercent &lt; 0.3)" >					
+							<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. I'm going to repair and vendor." LogColor="Lime" />
+								<RunTo X="4095.914" Y="3032.706" Z="336.72" />									
+							<SetVendor>
+								<Vendors>
+									<Vendor Name="Dealer Jadyan" Entry="19536" Type="Repair" X="4093.681" Y="3032.828" Z="336.7165" />
+								</Vendors>
+							</SetVendor>
+							<SetMailbox>
+								<Mailboxes>
+									<Mailbox X="4121.964" Y="3054.742" Z="339.3138" />
+								</Mailboxes>
+							</SetMailbox>			
+							<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />							
+								<RunTo X="4123.394" Y="2984.207" Z="350.9583" />
+						</If>		
+						<CustomBehavior File="Message" Text="Flying to Botanica." LogColor="Lime" />							
+						<CustomBehavior File="FlyTo" X="4093.23" Y="2967.531" Z="405.2794" />
+						<CustomBehavior File="MyCTM" X="4035.896" Y="2924.724" Z="504.3072" />
+						<CustomBehavior File="MyCTM" X="3392.446" Y="1639.349" Z="353.6405" />
+						<CustomBehavior File="MyCTM" X="3409.85" Y="1486.26" Z="182.837" />
+						<CustomBehavior File="ForcedDismount" />
+						
+					</If>
+				</If>
+				
+				<If Condition="Me.ZoneId == 3523" > <!-- in netherstorm  -->
+					<If Condition="Me.X &lt; 4049.848 || Me.X &gt; 4179.203 || Me.Y &lt; 2919.566 || Me.Y &gt; 3150.172" >	<!-- outside stormspire -->
+						<If Condition="Me.X &lt; 3385 || Me.X &gt; 3425 || Me.Y &lt; 1470 || Me.Y &gt; 1500" >	<!-- outside instance box -->
+							<If Condition="Me.X &lt; 2924.287 || Me.X &gt; 2996.812 || Me.Y &lt; 1750.882 || Me.Y &gt; 1880.111" >	<!-- outside cosmowrench -->
+								<CustomBehavior File="Message" Text="I am in Netherstorm, moving to the innkeep." LogColor="Lime" />
+								<CustomBehavior File="FlyTo" X="4123.625" Y="2980.629" Z="386.4873" />
+								<CustomBehavior File="FlyTo" X="4123.497" Y="3039.884" Z="338.1608" />							
+									<RunTo X="4114.351" Y="3062.957" Z="339.4665" />
+								<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
+								<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<CustomBehavior File="SetHearthstone" MobId="19531" X="4113.013" Y="3066.117" Z="339.4647" />
+									<RunTo X="4123.497" Y="3039.884" Z="338.1608" />	
+								<If Condition="(Me.FreeBagSlots &lt; 15) || (Me.LowestDurabilityPercent &lt; 0.3)" >					
+									<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. I'm going to repair and vendor." LogColor="Lime" />
+										<RunTo X="4095.914" Y="3032.706" Z="336.72" />									
+									<SetVendor>
+										<Vendors>
+											<Vendor Name="Dealer Jadyan" Entry="19536" Type="Repair" X="4093.681" Y="3032.828" Z="336.7165" />
+										</Vendors>
+									</SetVendor>
+									<SetMailbox>
+										<Mailboxes>
+											<Mailbox X="4121.964" Y="3054.742" Z="339.3138" />
+										</Mailboxes>
+									</SetMailbox>			
+									<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+										<RunTo X="4123.497" Y="3039.884" Z="338.1608" />
+								</If>
+										
+									<CustomBehavior File="Message" Text="Flying to Botanica." LogColor="Lime" />							
+									<CustomBehavior File="FlyTo" X="4093.23" Y="2967.531" Z="405.2794" />
+									<CustomBehavior File="MyCTM" X="4035.896" Y="2924.724" Z="504.3072" />
+									<CustomBehavior File="MyCTM" X="3392.446" Y="1639.349" Z="353.6405" />
+									<CustomBehavior File="MyCTM" X="3409.85" Y="1486.26" Z="182.837" />
+									<CustomBehavior File="ForcedDismount" />
+							</If>
+						</If>	
+					</If>							
+				</If>
+				
+				<If Condition="Me.X &gt; 2924.287 &amp;&amp; Me.X &lt; 2996.812 &amp;&amp; Me.Y &gt; 1750.882 &amp;&amp; Me.Y &lt; 1880.111" >	<!-- inside cosmowrench -->
+					<CustomBehavior File="Message" Text="I am in Cosmowrench.." LogColor="Lime" />
+					<If Condition="(Me.FreeBagSlots &lt; 15) || (Me.LowestDurabilityPercent &lt; 0.3)" >					
+						<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. I'm going to repair and vendor." LogColor="Lime" />
+							<RunTo X="2956.408" Y="1799.565" Z="139.1212" />									
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Kerpow Blastwrench" Entry="22491" Type="Repair" X="2955.032" Y="1802.131" Z="139.1213" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+							</Mailboxes>
+						</SetMailbox>			
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />							
+					</If>
+					<CustomBehavior File="Message" Text="Flying to the instance." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="3392.446" Y="1639.349" Z="353.6405" />
+					<CustomBehavior File="MyCTM" X="3409.85" Y="1486.26" Z="182.837" />
+					<CustomBehavior File="ForcedDismount" />
+				</If>
+					                            								  
+				<If Condition="Me.ZoneId == 3847" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside The Botanica. Running out to reset the dungeon." LogColor="Lime" />
+					<RunTo X="18.15054" Y="-6.392148" Z="-1.098385" />						
+					<CustomBehavior File="MyCTM" X="49.12993" Y="-37.6875" Z="-1.098833" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+					<RunTo X="3409.85" Y="1486.26" Z="182.837" />
+				</If>
+				
+
+				<While Condition="true" >
+				
+						<If Condition="Me.X &gt; 3385 &amp;&amp; Me.X &lt; 3425 &amp;&amp; Me.Y &gt; 1470 &amp;&amp; Me.Y &lt; 1500" >	<!-- inside instance box -->
+							<If Condition="(Me.FreeBagSlots &lt; 15) || (Me.LowestDurabilityPercent &lt; 0.3)" >					
+								<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. I'm going to repair and vendor." LogColor="Lime" />
+								<CustomBehavior File="Message" Text="I am outside the instance portal, moving to Cosmowrench." LogColor="Lime" />
+								<CustomBehavior File="FlyTo" X="3324.557" Y="1489.699" Z="237.4476" />
+								<CustomBehavior File="MyCTM" X="2956.165" Y="1791.407" Z="154.2815" />
+								<CustomBehavior File="MyCTM" X="2955.369" Y="1798.901" Z="139.1208" />
+									<SetVendor>
+										<Vendors>
+											<Vendor Name="Kerpow Blastwrench" Entry="22491" Type="Repair" X="2955.032" Y="1802.131" Z="139.1213" />
+										</Vendors>
+									</SetVendor>
+									<SetMailbox>
+										<Mailboxes>
+										</Mailboxes>
+									</SetMailbox>			
+								<CustomBehavior File="ForceSetVendor" DoMail="False" DoRepair="True" DoSell="True" DoTrain="False" />							
+								<CustomBehavior File="Message" Text="Flying back to Botanica." LogColor="Lime" />							
+								<CustomBehavior File="FlyTo" X="3392.446" Y="1639.349" Z="353.6405" />
+								<CustomBehavior File="MyCTM" X="3409.85" Y="1486.26" Z="182.837" />
+								<CustomBehavior File="ForcedDismount" />
+							</If>	
+						</If>
+						
+						<If Condition="Me.X &gt; 3385 &amp;&amp; Me.X &lt; 3425 &amp;&amp; Me.Y &gt; 1470 &amp;&amp; Me.Y &lt; 1500" >
+							<CustomBehavior File="Message" Text="I am resetting Botanica." LogColor="Lime" />		
+							<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" /> 
+							<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" />
+							<CustomBehavior File="Message" Text="I have reset Botanica." LogColor="Lime" />
+							 <RunTo X="3409.85" Y="1486.26" Z="182.837" />
+							<CustomBehavior File="MyCTM" X="3417.463" Y="1479.23" Z="182.837" /> 
+							<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+						</If>							
+						
+										   <!-- the botanica dungeon script -->
+						<If Condition="Me.ZoneId == 3847" >
+							<CustomBehavior File="Message" Text="I have entered The Botanica." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="Message" Text="Deleting the trash from my bags." LogColor="Lime" />
+							<CustomBehavior File="DeleteItems" Ids="32902,32905,29739,22832,22829,30810" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								
+							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+								<Hotspot X="16.24732" Y="-4.107041" Z="-1.089924" />
+								<Hotspot X="-2.343831" Y="36.45498" Z="-5.745726" />
+								<Hotspot X="-1.515966" Y="53.77307" Z="-5.649324" />
+								<Hotspot X="-1.367897" Y="89.96092" Z="-5.658326" />
+								<Hotspot X="-1.113584" Y="160.6371" Z="-5.539668" />
+								<Hotspot X="15.20042" Y="168.7539" Z="-5.539668" />
+								<Hotspot X="15.12086" Y="195.5487" Z="-5.539668" />
+								<Hotspot X="-1.427727" Y="215.6939" Z="-5.539668" />
+								<Hotspot X="-10.86205" Y="198.1372" Z="-5.539668" />
+								<Hotspot X="0.05509111" Y="203.7811" Z="-5.53959" />
+							</CustomBehavior>
+								 <RunTo X="0.05509111" Y="203.7811" Z="-5.53959" />
+								 
+							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+								<Hotspot X="-0.846143" Y="255.9483" Z="-5.48902" />
+								<Hotspot X="-6.98803" Y="246.9247" Z="-5.478932" />
+								<Hotspot X="-31.09414" Y="261.143" Z="-3.318407" />
+								<Hotspot X="-35.80964" Y="287.9785" Z="-1.847709" />
+								<Hotspot X="-19.64332" Y="287.8573" Z="-1.803873" />
+								<Hotspot X="18.31891" Y="288.2271" Z="-1.836625" />
+								<Hotspot X="72.99549" Y="288.3025" Z="-5.562392" />
+								<Hotspot X="106.2369" Y="284.4962" Z="-6.840919" />
+							</CustomBehavior>	
+								 <RunTo X="106.2369" Y="284.4962" Z="-6.840919" />
+								 
+							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+								<Hotspot X="132.7318" Y="278.5255" Z="-5.421901" />
+								<Hotspot X="144.1939" Y="279.1268" Z="-4.534225" />
+								<Hotspot X="163.9794" Y="286.0153" Z="-2.121446" />
+								<Hotspot X="150.6454" Y="296.4382" Z="-4.553794" />
+								<Hotspot X="116.2544" Y="330.2448" Z="-4.730481" />
+								<Hotspot X="154.5567" Y="292.2537" Z="-4.793156" />
+								<Hotspot X="170.4415" Y="297.9354" Z="-3.830079" />
+								<Hotspot X="161.2284" Y="371.8592" Z="-5.387555" />
+								<Hotspot X="172.603" Y="384.8797" Z="-5.387555" />
+								<Hotspot X="195.7678" Y="375.7123" Z="-5.487391" />
+								<Hotspot X="174.5079" Y="398.2168" Z="-5.388019" />
+								<Hotspot X="159.9262" Y="411.09" Z="-5.388019" />
+								<Hotspot X="160.298" Y="452.0914" Z="-5.414019" />
+							</CustomBehavior>
+								 <RunTo X="160.298" Y="452.0914" Z="-5.414019" />
+							
+							<CustomBehavior File="RunLikeHell" UseCTM="True" NumOfTimes="1" AllowCombat="false">
+								<Hotspot X="165.9337" Y="465.5071" Z="-5.417871" />
+								<Hotspot X="174.3138" Y="482.9731" Z="-3.757992" />
+								<Hotspot X="172.1836" Y="496.7969" Z="-2.488877" />
+								<Hotspot X="163.0642" Y="499.7045" Z="-2.089917" />
+								<Hotspot X="163.0695" Y="506.507" Z="-2.478478" />
+								<Hotspot X="151.09" Y="484.1047" Z="-4.554809" />
+								<Hotspot X="150.2316" Y="484.2181" Z="-4.532634" />
+								<Hotspot X="118.8491" Y="453.2331" Z="-4.939645" />
+								<Hotspot X="159.9639" Y="495.1615" Z="-3.765061" />
+								<Hotspot X="146.1976" Y="506.3167" Z="-4.00419" />
+								<Hotspot X="101.7631" Y="487.6187" Z="-6.720849" />
+								<Hotspot X="68.79095" Y="492.837" Z="-5.649783" />
+								<Hotspot X="20.72732" Y="495.1199" Z="-5.649727" />
+								<Hotspot X="-7.865298" Y="483.8836" Z="-5.467762" />
+								<Hotspot X="-17.33446" Y="504.5227" Z="-5.315164" />
+								<Hotspot X="-11.70575" Y="507.7141" Z="-5.292625" />
+							</CustomBehavior>
+								 <RunTo X="-11.70575" Y="507.7141" Z="-5.292625" />
+							
+							<CustomBehavior File="RunLikeHell" UseCTM="True" NumOfTimes="1" AllowCombat="false">	
+								<Hotspot X="-11.2005" Y="510.1716" Z="-5.273922" />
+								<Hotspot X="-6.141842" Y="517.2581" Z="-5.680805" />
+								<Hotspot X="29.34986" Y="531.3168" Z="-14.54175" />
+								<Hotspot X="31.82556" Y="554.8859" Z="-18.26357" />
+								<Hotspot X="13.15739" Y="579.7912" Z="-17.85987" />
+								<Hotspot X="5.032393" Y="597.0418" Z="-15.16358" />
+								<Hotspot X="-4.105614" Y="554.1786" Z="-18.17037" />
+								<Hotspot X="-73.28162" Y="560.6348" Z="-17.77975" />
+								<Hotspot X="-77.14059" Y="550.9477" Z="-17.77892" />
+								<Hotspot X="-127.1301" Y="531.3628" Z="-17.82419" />
+								<Hotspot X="-148.9503" Y="525.0429" Z="-17.82419" />
+								<Hotspot X="-131.5895" Y="510.1998" Z="-17.82419" /> 	<!-- room past thorngrin -->
+							</CustomBehavior>
+								 <RunTo X="-131.5895" Y="510.1998" Z="-17.82419" />  
+								 
+							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+								<Hotspot X="-144.0195" Y="517.0256" Z="-17.82358" />
+								<Hotspot X="-160.4416" Y="500.993" Z="-17.82358" />
+								<Hotspot X="-158.4072" Y="472.0687" Z="-17.82358" />
+								<Hotspot X="-164.5573" Y="448.6069" Z="-17.82358" />
+								<Hotspot X="-174.8405" Y="406.856" Z="-17.69264" />
+								<Hotspot X="-153.3392" Y="401.8535" Z="-17.81252" />
+								<Hotspot X="-176.2189" Y="356.2225" Z="-17.70575" />
+								<Hotspot X="-196.8879" Y="370.9681" Z="-14.97479" />
+								<Hotspot X="-197.6295" Y="388.6897" Z="-14.13181" />
+							</CustomBehavior>
+								<RunTo X="-197.6295" Y="388.6897" Z="-14.13181" />		<!-- laj -->  
+								
+							<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+								<Hotspot X="-195.3233" Y="368.3069" Z="-15.22681" />
+								<Hotspot X="-175.9979" Y="357.7181" Z="-17.70465" />
+								<Hotspot X="-144.852" Y="392.2561" Z="-17.84891" />
+								<Hotspot X="-92.72309" Y="391.7802" Z="-17.91744" />
+								<Hotspot X="-12.46066" Y="392.119" Z="-27.91644" />
+								<Hotspot X="-1.215171" Y="414.9903" Z="-28.62617" />
+								<Hotspot X="15.95677" Y="395.4514" Z="-28.12814" />
+								<Hotspot X="18.32089" Y="364.4091" Z="-26.54786" />
+								<Hotspot X="60.89773" Y="392.5087" Z="-27.97713" />
+							</CustomBehavior>
+								 <RunTo X="60.89773" Y="392.5087" Z="-27.97713" />
+								 
+								<RunTo X="49.85872" Y="392.0407" Z="-27.97714" />
+							<CustomBehavior File="Message" Text="I clear this instance too fast. Waiting 2 minutes to avoid getting an instance lock." LogColor="Lime" />
+							<CustomBehavior File="RunMacro" Macro="/Dance" />
+							<CustomBehavior File="WaitTimer" WaitTime="120000" GoalText="TimeRemaining}" />
+							<CustomBehavior File="Message" Text="Leaving the instance." LogColor="Lime" />
+							<CustomBehavior File="MyCTM" X="161.2187" Y="392.1293" Z="-36.02866" />
+							<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+								<RunTo X="3409.85" Y="1486.26" Z="182.837" />
+							<CustomBehavior File="Message" Text="Checking my free bag space and my gear's durability." LogColor="Lime" />
+						</If>		
+												
+						<If Condition="(Me.FreeBagSlots &lt; 15) || (Me.LowestDurabilityPercent &lt; 0.3)" >					
+							<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. I'm going to repair and vendor." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="3324.557" Y="1489.699" Z="237.4476" />
+							<CustomBehavior File="MyCTM" X="2956.165" Y="1791.407" Z="154.2815" />
+							<CustomBehavior File="MyCTM" X="2955.369" Y="1798.901" Z="139.1208" />
+								<SetVendor>
+									<Vendors>
+										<Vendor Name="Kerpow Blastwrench" Entry="22491" Type="Repair" X="2955.032" Y="1802.131" Z="139.1213" />
+									</Vendors>
+								</SetVendor>
+								<SetMailbox>
+									<Mailboxes>
+									</Mailboxes>
+								</SetMailbox>			
+							<CustomBehavior File="ForceSetVendor" DoMail="False" DoRepair="True" DoSell="True" DoTrain="False" />							
+							<CustomBehavior File="Message" Text="Flying back to Botanica." LogColor="Lime" />							
+							<CustomBehavior File="FlyTo" X="3392.446" Y="1639.349" Z="353.6405" />
+							<CustomBehavior File="MyCTM" X="3409.85" Y="1486.26" Z="182.837" />
+							<CustomBehavior File="ForcedDismount" />	
+						</If>
+								
+				</While>
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

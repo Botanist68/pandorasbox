@@ -1,0 +1,185 @@
+﻿<HBProfile creator="Botanist" version="1.3">
+	<Name>[QO-N-2]_botanist_botanica</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>Falss</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+		<Item name="Book of Glyph Mastery" entry="45912" />
+		<Item name="Frostweave Cloth" entry="33470" />		
+	</ProtectedItems>
+
+	<Factions>16</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+	<CustomBehavior File="UserSettings" MountDistance="10"  UseFlightPaths="False" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="30" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+	
+         <While Condition="true" >
+					   
+				<If Condition="Me.ZoneId == 3523" > 
+					<If Condition="Me.X &lt; 3300 || Me.X &gt; 3500 || Me.Y &lt; 1300 || Me.Y &gt; 1600" >
+						<CustomBehavior File="Message" Text="I am in Netherstorm. Flying to Botanica." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="3011.515" Y="1736.887" Z="271.1169" />
+						<CustomBehavior File="MyCTM" X="3326.577" Y="1487.772" Z="297.6349" />
+						<CustomBehavior File="MyCTM" X="3409.85" Y="1486.26" Z="182.837" />						
+						<CustomBehavior File="Message" Text="I have reached The Botanica. " LogColor="Lime" />
+						<CustomBehavior File="ForcedDismount" />
+					</If>							
+				</If>						   
+					                            								  
+				<If Condition="Me.ZoneId == 3847" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside The Botanica. Running out to reset the dungeon." LogColor="Lime" />
+					<RunTo X="18.15054" Y="-6.392148" Z="-1.098385" />						
+					<CustomBehavior File="MyCTM" X="49.12993" Y="-37.6875" Z="-1.098833" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+					<RunTo X="3409.85" Y="1486.26" Z="182.837" />
+				</If>
+						
+				<If Condition="Me.X &gt; 3300 &amp;&amp; Me.X &lt; 3500 &amp;&amp; Me.Y &gt; 1300 &amp;&amp; Me.Y &lt; 1600" >
+					<CustomBehavior File="Message" Text="I am resetting The Botanica." LogColor="Lime" />		
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" /> 
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" />
+					<CustomBehavior File="Message" Text="I have reset The Botanica." LogColor="Lime" />
+					 <RunTo X="3409.85" Y="1486.26" Z="182.837" />
+					<CustomBehavior File="MyCTM" X="3417.463" Y="1479.23" Z="182.837" /> 
+					<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+				</If>							
+				
+								   <!-- the botanica dungeon script -->
+				<If Condition="Me.ZoneId == 3847" >
+					<CustomBehavior File="Message" Text="I have entered The Botanica." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="Deleting the trash from my bags." LogColor="Lime" />
+					<CustomBehavior File="DeleteItems" Ids="32902,32905,29739" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<RunTo X="0.1744751" Y="6.674797" Z="-1.528998" />
+						<RunTo X="-0.9503338" Y="149.7675" Z="-5.541402" />
+						<RunTo X="-0.8413836" Y="232.37" Z="-5.541402" />
+						<RunTo X="1.057338" Y="251.3286" Z="-5.494447" />
+						<RunTo X="-20.84214" Y="288.0858" Z="-1.847318" />
+						<RunTo X="125.4757" Y="280.319" Z="-5.421388" />
+						<CustomBehavior File="Message" Text="I am pulling the first boss, Commander Sarannis............Good Luck!!!" LogColor="Lime" />	
+						<RunTo X="136.3439" Y="310.0915" Z="-1.584789" />
+						<RunTo X="166.5598" Y="364.468" Z="-5.458046" />
+						<RunTo X="184.7301" Y="374.1895" Z="-5.403209" />
+						<RunTo X="164.2155" Y="398.72" Z="-5.387362" />
+						<RunTo  X="163.4615" Y="460.3665" Z="-5.417482" />
+						<RunTo X="157.1965" Y="491.0366" Z="-4.815247" />
+					<CustomBehavior File="Message" Text="I am pulling the second boss, High Botanist Freywinn............Good Luck!!!" LogColor="Lime" />
+						<RunTo X="127.8433" Y="461.8587" Z="-2.933625" />
+						<RunTo X="159.3723" Y="493.6336" Z="-4.088019" />					
+						<RunTo X="69.146" Y="493.0288" Z="-5.650636" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="23.86395" Y="494.3275" Z="-5.651266" />
+						<Hotspot X="-10.57508" Y="509.7032" Z="-5.278378" />
+						<Hotspot X="-8.485158" Y="491.2845" Z="-5.409425" />
+					</CustomBehavior>	
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-9.879697" Y="517.1437" Z="-5.674018" />
+						<Hotspot X="8.046823" Y="522.2955" Z="-8.359132" />
+						<Hotspot X="27.81099" Y="548.57" Z="-18.34423" />
+					</CustomBehavior>	
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="15.11715" Y="575.2977" Z="-17.9307" />
+                        <Hotspot X="-7.968163" Y="575.5738" Z="-17.90022" />
+					</CustomBehavior>	
+					<CustomBehavior File="Message" Text="I am pulling the third boss, Thorngrin the Tender............Good Luck!!!" LogColor="Lime" />
+					<CustomBehavior File="MyCTM"  X="5.112421" Y="595.7267" Z="-15.15607" />
+					<CustomBehavior File="MyCTM" X="-8.698942" Y="555.3329" Z="-18.16251" />
+                    <CustomBehavior File="MyCTM" X="-46.63314" Y="554.825" Z="-18.15322" />
+					<CustomBehavior File="MyCTM" X="-73.6442" Y="556.5825" Z="-17.77445" />
+					<CustomBehavior File="MyCTM" X="-112.0878" Y="541.1999" Z="-17.82435" />
+						<RunTo X="-149.5676" Y="507.4715" Z="-17.82489" />
+						<RunTo X="-164.2083" Y="451.4589" Z="-17.82489" />
+						<RunTo  X="-167.3076" Y="405.2439" Z="-17.69873" />
+						<RunTo X="-181.8317" Y="424.9039" Z="-17.23555" />
+					<CustomBehavior File="Message" Text="I am pulling the fourth boss, Laj............Good Luck!!!" LogColor="Lime" />
+						<RunTo X="-191.1926" Y="391.1695" Z="-14.13177" />
+						<RunTo X="-179.3431" Y="358.2495" Z="-17.46669" />
+						<RunTo X="-165.6364" Y="375.3352" Z="-17.70075" />
+						<RunTo  X="-141.5447" Y="391.8362" Z="-17.88303" />
+						<RunTo X="22.33521" Y="392.3839" Z="-27.97714" />
+					<CustomBehavior File="Message" Text="I am pulling the fifth boss, Warp Splinter............Good Luck!!!" LogColor="Lime" />
+						<RunTo X="49.85872" Y="392.0407" Z="-27.97714" />
+					<CustomBehavior File="Message" Text="Leaving the instance." LogColor="Lime" />
+					<CustomBehavior File="MyCTM" X="163.6523" Y="391.5363" Z="-36.56514" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+						<RunTo X="3409.85" Y="1486.26" Z="182.837" />
+					<CustomBehavior File="Message" Text="Checking my free bag space and my gear's durability." LogColor="Lime" />
+				</If>		
+					
+										
+				<If Condition="(Me.FreeBagSlots &lt; 35) || (Me.LowestDurabilityPercent &lt; 0.3)" >					
+					<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. I'm going to hearth,repair and mail." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="3355.933" Y="1471.899" Z="254.7669" />
+					<CustomBehavior File="MyCTM" X="3015.129" Y="1790.961" Z="258.1741" />					
+					<CustomBehavior File="FlyTo" X="3008.458" Y="1828.147" Z="139.7812" />			
+					<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="MyCTM" X="2966.964" Y="1788.435" Z="139.1209" />
+						<CustomBehavior File="MyCTM" X="2956.179" Y="1800.297" Z="139.1209" />
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Kerpow Blastwrench" Entry="22491" Type="Repair" X="2955.032" Y="1802.131" Z="139.1212" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+							
+							</Mailboxes>
+						</SetMailbox>			
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />							
+							<CustomBehavior File="MyCTM" X="2966.964" Y="1788.435" Z="139.1209" />
+							<CustomBehavior File="MyCTM" X="3008.458" Y="1828.147" Z="139.7812" />
+						<CustomBehavior File="Message" Text="Flying back to the The Botanica." LogColor="Lime" />							
+						<CustomBehavior File="FlyTo" X="3011.515" Y="1736.887" Z="271.1169" />
+						<CustomBehavior File="MyCTM" X="3326.577" Y="1487.772" Z="297.6349" />
+						<CustomBehavior File="MyCTM" X="3409.85" Y="1486.26" Z="182.837" />
+						<CustomBehavior File="ForcedDismount" />
+				</If>
+					
+				<If Condition="Me.ZoneId == 3847" >
+					<CustomBehavior File="Message" Text="I have detected that my bags have more than 35 empty slots and my gear has greater than 30% durability." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />										
+				</If>
+					
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

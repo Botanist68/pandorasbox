@@ -1,0 +1,40 @@
+<HBProfile>
+  <Name>botanist_cooking_(80-110)_red-ridge_(50)clam-meat</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>18</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+     <Vendor Name="Dorin Songblade" Entry="956" Type="Repair" X="-9250.197" Y="-2244.496" Z="63.93389" />
+	</Vendors>
+	
+	<Mailboxes>
+      <Mailbox X="-9253.613" Y="-2146.699" Z="64.07393" />
+	</Mailboxes>
+
+  <Hotspots>
+    <Hotspot X="-9467.695" Y="-3335.557" Z="7.248197" />
+  </Hotspots>
+  
+  <Blackspots>
+    <Blackspot X="-9488.902" Y="-418.9182" Z="59.94654" Radius="80" />
+	<Blackspot X="-9468.945" Y="-336.2822" Z="57.818" Radius="80" />
+	<Blackspot X="-9487.784" Y="-206.0797" Z="57.77403" Radius="80" />
+  </Blackspots>
+  
+</HBProfile>

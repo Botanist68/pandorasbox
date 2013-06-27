@@ -1,0 +1,153 @@
+<HBProfile>
+   <!--Created By Botanist-->
+   <Name>[QO-A]botanist _skinning_(savage-leather)_twilight-highlands_dragons</Name>   
+   <MinDurability>-1</MinDurability>
+   <MinFreeBagSlots>-1</MinFreeBagSlots>
+
+   
+   <SellGrey>True</SellGrey>
+   <SellWhite>False</SellWhite>
+   <SellGreen>False</SellGreen>
+   <SellBlue>False</SellBlue>
+   <SellPurple>False</SellPurple>  
+   <MailGrey>False</MailGrey>
+   <MailWhite>True</MailWhite>
+   <MailGreen>True</MailGreen>
+   <MailBlue>True</MailBlue>
+   <MailPurple>True</MailPurple>
+   
+
+
+    <MinLevel>1</MinLevel>
+    <MaxLevel>101</MaxLevel>
+ 	<TargetElites>False</TargetElites>
+	
+    <AvoidMobs>
+	 <AvoidMob Name="Apexar" Entry="46258" />
+	 <AvoidMob Name="Obsidian Pyrewing" Entry="46141" />
+	 <AvoidMob Name="Scarderis" Entry="47835" />
+    </AvoidMobs>
+	
+	<Blackspots>
+	 <Blackspot X="-4973.855" Y="-4455.5" Z="334.6986" Radius="100" />
+	 <Blackspot X="-4935.966" Y="-4593.08" Z="325.0277" Radius="25" />
+	 <Blackspot X="-3314.119" Y="-4863.538" Z="110.6354" Radius="100" />
+	 <Blackspot X="-3466.124" Y="-4868.553" Z="88.67686" Radius="100" />
+	 <Blackspot X="-3589.214" Y="-4845.209" Z="86.85037" Radius="100" />
+	 <Blackspot X="-3671.173" Y="-4815.083" Z="80.95471" Radius="100" />
+	 <Blackspot X="-4030.25" Y="-4838.122" Z="98.6027" Radius="30" />
+	 <Blackspot X="-4059.887" Y="-4803.676" Z="106.2977" Radius="30" />
+	 <Blackspot X="-4118.116" Y="-4779.83" Z="111.987" Radius="30" />
+    </Blackspots>
+
+	<QuestOrder>
+   
+		<While Condition="true" >
+
+			<CustomBehavior File="UserSettings" UseMount="true" LootMobs="True" SkinMobs="True" NinjaSkin="true" PullDistance="40" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+		
+				<If Condition="Me.MapId == 0" >  
+					<CustomBehavior File="Message" Text="Moving to the farming area." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="-4501.098" Y="-5832.378" Z="49.2859" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
+				</If>
+   
+				<If Condition="Me.X &gt; -5201.924 &amp;&amp; Me.X &lt; -4457.784 &amp;&amp; Me.Y &lt; -5391.495 &amp;&amp; Me.Y &gt; -6235.48 " >
+					<CustomBehavior File="Message" Text="Farming until my bags are full or my gear is broke." LogColor="Lime" />
+					<SetGrindArea>
+						<GrindArea>
+						<TargetMinLevel>1</TargetMinLevel>
+						<TargetMaxLevel>90</TargetMaxLevel>
+						<Factions>2350</Factions>
+						<MaxDistance>40</MaxDistance>
+							<Hotspots>
+								<Hotspot X="-4560.886" Y="-5724.929" Z="60.21066" />
+								<Hotspot X="-4590.129" Y="-5777.539" Z="49.62763" />
+								<Hotspot X="-4584.347" Y="-5838.003" Z="40.05837" />
+								<Hotspot X="-4590.126" Y="-5898.222" Z="31.06601" />
+								<Hotspot X="-4613.14" Y="-5954.259" Z="26.5497" />
+								<Hotspot X="-4651.657" Y="-6001.081" Z="21.87921" />
+								<Hotspot X="-4693.912" Y="-6044.348" Z="14.22446" />
+								<Hotspot X="-4737.937" Y="-6086.281" Z="12.85088" />
+								<Hotspot X="-4779.512" Y="-6130.158" Z="7.34403" />
+								<Hotspot X="-4830.364" Y="-6162.903" Z="0.8738875" />
+								<Hotspot X="-4885.068" Y="-6137.559" Z="0.9399636" />
+								<Hotspot X="-4939.195" Y="-6110.206" Z="1.275302" />
+								<Hotspot X="-4984.627" Y="-6070.88" Z="0.3965975" />
+								<Hotspot X="-5011.851" Y="-6016.463" Z="0.6112324" />
+								<Hotspot X="-5022.049" Y="-5957.134" Z="8.055289" />
+								<Hotspot X="-5054.824" Y="-5906.093" Z="17.37993" />
+								<Hotspot X="-5089.942" Y="-5856.491" Z="16.27492" />
+								<Hotspot X="-5121.01" Y="-5804.24" Z="13.72098" />
+								<Hotspot X="-5149.873" Y="-5750.777" Z="12.62601" />
+								<Hotspot X="-5176.493" Y="-5696.038" Z="16.47352" />
+								<Hotspot X="-5212.035" Y="-5646.616" Z="13.40604" />
+								<Hotspot X="-5235.761" Y="-5590.798" Z="11.42908" />
+								<Hotspot X="-5247.567" Y="-5531.376" Z="16.76707" />
+								<Hotspot X="-5234.197" Y="-5471.856" Z="15.35007" />
+								<Hotspot X="-5198.397" Y="-5423.681" Z="17.63712" />
+								<Hotspot X="-5141.834" Y="-5399.632" Z="19.51634" />
+								<Hotspot X="-5084.69" Y="-5419.158" Z="24.60664" />
+								<Hotspot X="-5041.633" Y="-5461.602" Z="32.95658" />
+								<Hotspot X="-4990.401" Y="-5494.608" Z="33.3827" />
+								<Hotspot X="-4939.586" Y="-5526.594" Z="37.58089" />
+								<Hotspot X="-4896.437" Y="-5569.036" Z="42.16191" />
+								<Hotspot X="-4844.648" Y="-5598.971" Z="51.14922" />
+								<Hotspot X="-4788.706" Y="-5622.782" Z="59.08874" />
+								<Hotspot X="-4728.636" Y="-5629.662" Z="63.70405" />
+								<Hotspot X="-4697.913" Y="-5682.035" Z="60.17649" />
+								<Hotspot X="-4667.283" Y="-5734.615" Z="51.1785" />
+								<Hotspot X="-4644.395" Y="-5789.96" Z="44.85357" />
+								<Hotspot X="-4647.025" Y="-5850.337" Z="34.70063" />
+								<Hotspot X="-4680.309" Y="-5901.808" Z="29.94039" />
+								<Hotspot X="-4735.955" Y="-5925.858" Z="29.58398" />
+								<Hotspot X="-4779.667" Y="-5968.062" Z="21.99089" />
+								<Hotspot X="-4833.933" Y="-5996.305" Z="21.71367" />
+								<Hotspot X="-4894.428" Y="-6001.583" Z="20.6206" />
+								<Hotspot X="-4937.272" Y="-5958.801" Z="22.4161" />
+								<Hotspot X="-4977.653" Y="-5913.513" Z="28.5311" />
+								<Hotspot X="-5013.009" Y="-5864.574" Z="31.5267" />
+								<Hotspot X="-5048.603" Y="-5815.99" Z="26.29528" />
+								<Hotspot X="-5039.106" Y="-5755.91" Z="28.90825" />
+								<Hotspot X="-5012.433" Y="-5701.563" Z="32.34361" />
+								<Hotspot X="-4957.03" Y="-5677.417" Z="38.2043" />
+								<Hotspot X="-4899.737" Y="-5656.582" Z="44.62767" />
+								<Hotspot X="-4838.96" Y="-5662.067" Z="47.80091" />
+								<Hotspot X="-4783.016" Y="-5685.879" Z="49.8941" />
+								<Hotspot X="-4732.51" Y="-5719.468" Z="52.36391" />
+								<Hotspot X="-4677.394" Y="-5744.402" Z="50.18464" />
+								<Hotspot X="-4617.312" Y="-5754.084" Z="50.5618" />
+								<Hotspot X="-4606.106" Y="-5759.378" Z="50.9885" />
+							<CustomBehavior File="Message" Text="End of the route. Starting over." LogColor="Lime" />	
+							</Hotspots>
+						</GrindArea>
+					</SetGrindArea>
+													   
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" GoalText="Farming" />
+				</If>
+				
+				<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+					<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Moving to mailbox and repair vendor." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="-4845.096" Y="-6606.017" Z="9.418014" /> <!-- repair vendor-->
+					<CustomBehavior File="ForcedDismount" />
+					<SetVendor>
+						<Vendors>	
+							<Vendor Name="Brundall Chiselgut" Entry="50382" Type="Repair" X="-4847.408" Y="-6610.934" Z="9.416437" />
+						</Vendors>
+					</SetVendor>
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="-4860.381" Y="-6672.816" Z="8.392793" />
+						</Mailboxes>
+					</SetMailbox>
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" />
+				</If>
+				
+		</While>  
+      
+	</QuestOrder>
+
+</HBProfile>

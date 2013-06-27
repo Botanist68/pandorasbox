@@ -1,0 +1,189 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-Grind[87-90]_botanist_zouchin-strand_v1.5</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Pengsong" Entry="66587" />
+		<Mob Name="Amberscale Basilisk" Entry="66188" />
+		<Mob Name="Kyparite Pulverizer" Entry="65432" />
+        <Mob Name="King Spineclaw" Entry="66472" />
+		<Mob Name="Captain Ripflesh" Entry="60767" />
+		<Mob Name="Slingtail Fishripper" Entry="55195" />
+		<Mob Name="Longfang Howler" Entry="56524" />
+		<Mob Name="Mutated Silkmoth" Entry="57422" />
+        <Mob Name="Wildscale Hunter" Entry="58900" />
+		<Mob Name="Softshell Snapling" Entry="63060" />
+		<Mob Name="Wildscale Poacher" Entry="58899" />
+		<Mob Name="Twitchheel Hoarder" Entry="56538" />
+		<Mob Name="Mushan Nomad" Entry="56523" />
+		<Mob Name="Glade Hunter" Entry="57299" />
+		<Mob Name="Mushan Nomad" Entry="56523"  />
+        <Mob  Name="Frenzyhop" Entry="56514" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="4714.013" Y="1181.308" Z="3.861263" Radius="60" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+
+		<ClearVendor />
+		<ClearMailbox />
+		
+						
+			<QuestOrder>
+		
+				<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This is a leveling profile. Includes mail and repair. The profile will auto set your hearthstone where it needs to be set. Alliance and Horde can start the profile anywhere Pandaria. Alliance can also start the profile in Stormwnd, if you have opened the portal. The profile will farm the trash north of Zouchin Village. " Title="WARNING" />
+				
+				<CustomBehavior File="Message" Text="Position check #1" LogColor="Lime" />
+				<If Condition="Me.ZoneId == 1519" > 
+					<CustomBehavior File="Message" Text="I'm in Stormwind, flying to the Paw' don Village portal." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="-8199.543" Y="530.3414" Z="117.1778" DestName="Portal to Paw' don Village portal" />							
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="Message" Text="Taking the portal to Paw' don Village." LogColor="Lime" />
+                    <CustomBehavior File="InteractWith" MobId="215457" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8194.47949" Y="528.112854" Z="117.290138" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<CustomBehavior File="Message" Text="I've reached Paw' don Village." LogColor="Lime" />
+					<CustomBehavior File="Message" Text="Moving to Zouchin Village. I hope you know the flight path to Zouchin Village." LogColor="Lime" />					
+				</If>
+		
+				<CustomBehavior File="Message" Text="Position check #2" LogColor="Lime" />
+				<If Condition="Me.MapId == 870" >				 
+					<If Condition="Me.ZoneId != 5841" >
+						<CustomBehavior File="Message" Text="I am in Pandaria, but not in Kun-Lai Summit. I hope you know the flight path to Zouchin Village." LogColor="Lime" />
+							<RunTo X="4373.405" Y="924.1586" Z="108.2937" />
+							<RunTo X="4399.958" Y="937.0449" Z="116.2788" />
+							<RunTo X="4414.427" Y="932.4247" Z="115.9814" />
+						<CustomBehavior File="Message" Text="I have reached Zouchin Village. " LogColor="Lime" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="2000" />
+						<CustomBehavior File="SetHearthstone" MobId="60605" X="4417.924" Y="928.5174" Z="115.9788" />
+					</If>						
+				</If>
+				
+				
+				<CustomBehavior File="Message" Text="Position check #3" LogColor="Lime" />		
+				<If Condition="Me.ZoneId == 5841" >
+					<If Condition="Me.X &lt; 4269.646 || Me.X &gt; 4463.041 || Me.Y &lt; 818.0294 || Me.Y &gt; 995.8533" >
+						<CustomBehavior File="Message" Text="I am in Kun-Lai Summit, running to to Zouchin Village" LogColor="Lime" />
+						<RunTo X="4359.921" Y="919.557" Z="108.9476" />
+						<RunTo X="4307.833" Y="940.3381" Z="116.366" />
+						<RunTo X="4373.405" Y="924.1586" Z="108.2937" />
+						<RunTo X="4399.958" Y="937.0449" Z="116.2788" />
+						<RunTo X="4414.427" Y="932.4247" Z="115.9814" />
+						<CustomBehavior File="Message" Text="I have reached Zouchin Village. " LogColor="Lime" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="2000" />
+						<CustomBehavior File="SetHearthstone" MobId="60605" X="4417.924" Y="928.5174" Z="115.9788" />
+						<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					</If>
+				</If>
+				
+		<While Condition="Me.Level &gt;= 85 &amp;&amp; Me.Level &lt;= 89" >		
+										
+				<CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+					
+                                             <!-- zouchin village  -->
+				<CustomBehavior File="Message" Text="Position check #4" LogColor="Lime" />			  
+			    <If Condition="Me.ZoneId == 5841" >
+					<If Condition="Me.X &gt; 4269.646 &amp;&amp; Me.X &lt; 4463.041 &amp;&amp;Me.Y &gt; 818.0294 &amp;&amp; Me.Y &lt; 995.8533" >
+						<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
+						<CustomBehavior File="ForcedMount" MountType="Ground" />
+							<RunTo X="4402.979" Y="938.4563" Z="116.0141" />
+							<RunTo X="4382.302" Y="927.7399" Z="106.927" />
+							<RunTo X="4359.528" Y="919.9369" Z="108.9676" />
+							<RunTo X="4316.814" Y="967.8369" Z="111.6608" />
+							<RunTo X="4463.387" Y="1016.135" Z="75.58607" />
+							<RunTo X="4577.332" Y="1073.702" Z="23.13422" />					
+						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
+						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
+						<CustomBehavior File="RunMacro" Macro="/sort bags" />
+					</If>
+				</If>
+										
+				<If Condition="Me.ZoneId == 5841" >
+					<If Condition="Me.Y &gt; 1050 &amp;&amp; Me.Y &lt; 1100 &amp;&amp; Me.X &gt; 4550 &amp;&amp; Me.X &lt; 4600" >					
+						<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >	
+							<SetGrindArea><GrindArea>
+							<Factions>14,7,2358,1999,16</Factions>
+								<Hotspots>
+									<Hotspot X="4614.008" Y="1126.762" Z="18.62825" />
+									<Hotspot X="4667.205" Y="1051.485" Z="10.17298" />
+									<Hotspot X="4692.258" Y="998.439" Z="11.75805" />
+									<Hotspot X="4745.002" Y="937.3119" Z="16.254" />
+									<Hotspot X="4718.744" Y="902.3701" Z="16.26866" />
+									<Hotspot X="4736.951" Y="829.2131" Z="16.4683" />
+									<Hotspot X="4691.53" Y="750.3046" Z="21.91287" />
+									<Hotspot X="4630.581" Y="950.8542" Z="-2.354681" />
+								</Hotspots>
+							</GrindArea></SetGrindArea>					
+							<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 90)" GoalText="Farming" />
+						</If>
+					</If>
+				</If>
+								
+				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		        <If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+					<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />
+					<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor, then mailing." LogColor="Lime" />						
+						
+					<SetVendor>
+						<Vendors>
+							<Vendor Name="Steelbender Doshu" Entry="61496" Type="Repair" X="4345.573" Y="872.7913" Z="108.3294" />
+						</Vendors>
+					</SetVendor>
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="4379.845" Y="921.5778" Z="107.3399" />
+						</Mailboxes>
+					</SetMailbox>
+			
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+				</If>
+				<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
+				<CustomBehavior File="RunMacro" Macro="/sort bags" />						
+				
+		</While>
+			
+			<CustomBehavior File="Message" Text="I have reached level 90. I'm stopping the bot" LogColor="Lime" />
+			<CustomBehavior File="UserSettings" StopBot="true" />
+	
+		</QuestOrder>
+
+
+</HBProfile>
+

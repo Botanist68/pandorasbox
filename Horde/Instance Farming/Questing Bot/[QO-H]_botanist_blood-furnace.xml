@@ -1,0 +1,266 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-H]_botanist_blood-furnace</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" LootMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="True" />
+		 
+	<!--	 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This profile will farm Blood Furnace in Hellfire Hellfire Peninsula. It will set the herthstone where needed. Includes vendors, repair and mailing" Title="WARNING" /> -->
+	
+         <While Condition="true" >
+
+	
+				
+									  
+				<If Condition="Me.ZoneId == 3483" >
+					<If Condition="Me.Y &lt; 3127.325 || Me.Y &gt; 3174.571 || Me.X &lt; -334.2414 || Me.X &gt; -273.4398" >	
+						<CustomBehavior File="Message" Text="I am in Hellfire Peninsula. Flying to Falcon Watch to set my hearthstone." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-596.2339" Y="4158.112" Z="65.21535" />
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-571.9483" Y="4150.63" Z="68.11518" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeep." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="SetHearthstone" MobId="18905"  X="-568.9757" Y="4151.488" Z="68.09968" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="-596.2339" Y="4158.112" Z="65.21535" />
+						<CustomBehavior File="ForcedMount" MountType="Flying" />
+						<CustomBehavior File="FlyTo" X="-565.1251" Y="4131.472" Z="132.8009" />
+						<CustomBehavior File="MyCTM" X="-414.8417" Y="3173.668" Z="146.276" />
+						<CustomBehavior File="MyCTM" X="-342.9847" Y="3055.218" Z="72.97162" />
+						<CustomBehavior File="MyCTM" X="-282.0337" Y="3131.084" Z="46.1519" />
+						<CustomBehavior File="MyCTM" X="-302.5596" Y="3162.814" Z="31.72397" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="Message" Text="I've reached Blood Furnace." LogColor="Lime" />
+						<CustomBehavior File="ForcedDismount" />
+					</If>	
+				</If>
+				
+				<If Condition="Me.ZoneId == 3713">
+					<CustomBehavior File="Message" Text="You started the bot with me inside Blood Furnace. hearthing out to reset the dungeon, if my hearth isn't on CD." LogColor="Lime" />					
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />										
+						<If Condition="(Me.FreeBagSlots &lt; 15) || (Me.LowestDurabilityPercent &lt; 0.3)" >					
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="Message" Text="I have detected that I have less than 15 empty bag slots or that my gear is below 30% durability. I'm going to repair, vendor and mail." LogColor="Lime" />
+
+							<SetVendor>
+								<Vendors>
+									<Vendor Name="Fallesh Sunfallow" Entry="18997" Type="Repair" X="-587.4686" Y="4171.818" Z="65.9973" />
+								</Vendors>
+							</SetVendor>						
+							<SetMailbox>
+								<Mailboxes>
+									<Mailbox   X="-598.4332" Y="4152.558" Z="65.41927" />
+								</Mailboxes>
+							</SetMailbox>			
+							<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+								<RunTo X="-596.2339" Y="4158.112" Z="65.21535" />
+						</If>
+							<If Condition="Me.ZoneId == 3713">
+								<CustomBehavior File="Message" Text="My hearthstone is on CD, running out." LogColor="Lime" />
+									<RunTo X="-4.093049" Y="17.00105" Z="-44.78368" />
+								<CustomBehavior File="GoThruPortal" X="-0.2047417" Y="25.62052" Z="-44.80615" />
+							</If>
+							
+				</If>
+																  
+				<If Condition="Me.ZoneId == 3483" >														 
+					<If Condition="Me.Y &gt; 3127.325 &amp;&amp; Me.Y &lt; 3174.571 &amp;&amp; Me.X &gt; -334.2414 &amp;&amp; Me.X &lt; -273.4398" >									
+						<CustomBehavior File="Message" Text="I am resetting the instance." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />				
+				    	<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />  
+						<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
+						<CustomBehavior File="Message" Text="I have reset Blood Furnace." LogColor="Lime" />
+						<CustomBehavior File="GoThruPortal" X="-308.966" Y="3173.198" Z="30.94025" /> 
+					</If>				
+				</If>
+
+                               <!-- blood furnace dungeon script -->
+				<If Condition="Me.ZoneId == 3713">					   
+						<RunTo X="-2.179744" Y="-3.244191" Z="-43.46924" />
+						<RunTo X="1.331934" Y="-56.98011" Z="-41.34067" />
+						<RunTo X="-4.021991" Y="-56.2807" Z="-41.34083" />
+						<RunTo X="-13.00192" Y="-83.42096" Z="-41.33492" />
+						<RunTo X="3.826381" Y="-86.01553" Z="-41.33224" />
+						<RunTo X="27.56129" Y="-84.62891" Z="-41.14178" />
+						<RunTo X="48.3139" Y="-92.1517" Z="-40.26988" />
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="64.87251" Y="-86.79987" Z="-33.79799" />					
+						<Hotspot X="159.8632" Y="-85.37725" Z="9.247056" />
+						<Hotspot X="194.1666" Y="-91.05634" Z="9.613774" />
+					</CustomBehavior>
+						<RunTo X="200.3543" Y="-83.93761" Z="9.597281" />
+						<RunTo X="227.2456" Y="-97.61929" Z="9.616727" />
+						<RunTo X="227.4877" Y="-71.39392" Z="9.616982" />
+						<RunTo X="241.8764" Y="-70.95074" Z="9.615955" />
+						<RunTo X="247.5598" Y="-29.80441" Z="7.018715" />
+						<RunTo X="280.6435" Y="-2.829836" Z="8.189161" />
+						<RunTo X="341.099" Y="3.377507" Z="9.617554" />
+						<RunTo X="315.6714" Y="10.97413" Z="9.617474" />
+						<RunTo X="327.8232" Y="19.29935" Z="9.616335" />
+						<RunTo X="327.6778" Y="30.33249" Z="9.616335" />
+						<RunTo X="327.3823" Y="66.19852" Z="9.613433" />
+						<RunTo X="310.3172" Y="68.30021" Z="9.616644" />
+						<RunTo X="313.8026" Y="93.42382" Z="9.618168" />
+						<RunTo X="346.4865" Y="72.00987" Z="9.618119" />
+						<RunTo X="339.958" Y="98.91324" Z="9.618723" />
+						<RunTo X="327.8705" Y="129.4091" Z="9.615665" />
+
+						<RunTo X="327.3062" Y="141.2242" Z="9.615582" />
+						<RunTo X="325.7527" Y="159.4355" Z="9.540416" />
+						<RunTo X="321.2962" Y="176.6829" Z="9.614299" />
+						<RunTo X="348.243" Y="191.8328" Z="9.605727" />
+						<RunTo X="378.0288" Y="190.4125" Z="9.595288" />
+						<RunTo X="405.68" Y="188.7367" Z="9.593841" />
+						<RunTo X="434.1508" Y="191.9494" Z="9.607065" />
+						<RunTo X="482.404" Y="176.3173" Z="9.619416" />
+						<RunTo X="459.7648" Y="168.7525" Z="9.614033" />
+						<RunTo X="456.3185" Y="141.5934" Z="9.615185" />
+						<RunTo X="453.0286" Y="99.49245" Z="9.614184" />
+						<RunTo X="477.7109" Y="97.7845" Z="9.620564" />
+						<RunTo X="470.2482" Y="52.67743" Z="9.614444" />
+						<RunTo X="441.5181" Y="59.77732" Z="9.61179" />
+						<RunTo X="454.4564" Y="72.66149" Z="9.615803" />
+						<RunTo X="456.0479" Y="63.65571" Z="9.615803" />
+					<CustomBehavior File="Message" Text="Opening the cell doors." LogColor="Lime" />
+					<CustomBehavior File="InteractWith" MobId="181982" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="456.0855" Y="60.3489151" Z="9.47833" />
+						<RunTo X="469.9485" Y="61.0253" Z="9.611367" />						
+					<CustomBehavior File="WaitTimer" WaitTime="30000" />
+					
+						<RunTo X="465.3005" Y="53.92611" Z="9.614746" />
+						<RunTo X="456.3055" Y="40.48009" Z="9.616603" />
+						<RunTo X="454.2039" Y="8.10841" Z="9.548549" />
+						<RunTo X="489.5005" Y="8.320498" Z="9.545714" />
+						<RunTo X="490.7946" Y="-48.84917" Z="9.5621" />
+						<RunTo X="490.2245" Y="-89.76218" Z="9.553125" />
+						<RunTo X="476.6655" Y="-92.95279" Z="9.557697" />
+						<RunTo X="457.7038" Y="-84.50316" Z="9.592672" />
+						<RunTo X="424.9472" Y="-84.20407" Z="9.617252" />
+						<RunTo X="410.755" Y="-110.6079" Z="9.56427" />
+						<RunTo X="402.701" Y="-139.1553" Z="-2.268489" />
+						<RunTo X="385.1446" Y="-158.2426" Z="-12.8521" />
+						<RunTo X="348.1385" Y="-170.5009" Z="-25.51858" />
+						<RunTo X="327.7166" Y="-193.1484" Z="-25.50966" />
+						<RunTo X="317.1263" Y="-173.4173" Z="-25.50964" />
+						<RunTo X="327.4693" Y="-161.8204" Z="-25.51549" />
+						<RunTo X="317.5911" Y="-109.7128" Z="-24.68666" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />	
+					<CustomBehavior File="Message" Text="I have cleared the instance. Checking my empty bag slots and gear durability." LogColor="Lime" />
+				</If>
+				
+				<If Condition="(Me.FreeBagSlots &lt; 15) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+					<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />															
+						<If Condition="Me.ZoneId == 3483" >
+							<SetVendor>
+								<Vendors>
+									<Vendor Name="Fallesh Sunfallow" Entry="18997" Type="Repair" X="-587.4686" Y="4171.818" Z="65.9973" />
+								</Vendors>
+							</SetVendor>						
+							<SetMailbox>
+								<Mailboxes>
+									<Mailbox   X="-598.4332" Y="4152.558" Z="65.41927" />
+								</Mailboxes>
+							</SetMailbox>			
+							<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+							<RunTo X="-596.2339" Y="4158.112" Z="65.21535" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="FlyTo" X="-565.1251" Y="4131.472" Z="132.8009" />
+							<CustomBehavior File="MyCTM" X="-414.8417" Y="3173.668" Z="146.276" />
+							<CustomBehavior File="MyCTM" X="-342.9847" Y="3055.218" Z="72.97162" />
+							<CustomBehavior File="MyCTM" X="-282.0337" Y="3131.084" Z="46.1519" />
+							<CustomBehavior File="MyCTM" X="-302.5596" Y="3162.814" Z="31.72397" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="Message" Text="I've reached Blood Furnace." LogColor="Lime" />
+							<CustomBehavior File="ForcedDismount" />
+						</If>
+							<If Condition="Me.ZoneId == 3713" >
+								<CustomBehavior File="Message" Text="My hearth is on CD. Waiting 5 minutes and trying again." LogColor="Lime" />
+								<CustomBehavior File="WaitTimer" WaitTime="300000" />
+								<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+								<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />															
+								<SetVendor>
+									<Vendors>
+										<Vendor Name="Fallesh Sunfallow" Entry="18997" Type="Repair" X="-587.4686" Y="4171.818" Z="65.9973" />
+									</Vendors>
+								</SetVendor>						
+								<SetMailbox>
+									<Mailboxes>
+										<Mailbox   X="-598.4332" Y="4152.558" Z="65.41927" />
+									</Mailboxes>
+								</SetMailbox>			
+								<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+									<RunTo X="-596.2339" Y="4158.112" Z="65.21535" />
+								<CustomBehavior File="ForcedMount" MountType="Flying" />
+								<CustomBehavior File="FlyTo" X="-565.1251" Y="4131.472" Z="132.8009" />
+								<CustomBehavior File="MyCTM" X="-414.8417" Y="3173.668" Z="146.276" />
+								<CustomBehavior File="MyCTM" X="-342.9847" Y="3055.218" Z="72.97162" />
+								<CustomBehavior File="MyCTM" X="-282.0337" Y="3131.084" Z="46.1519" />
+								<CustomBehavior File="MyCTM" X="-302.5596" Y="3162.814" Z="31.72397" />
+								<CustomBehavior File="ForcedDismount" />
+								<CustomBehavior File="Message" Text="I've reached Blood Furnace." LogColor="Lime" />
+								<CustomBehavior File="ForcedDismount" />
+								
+							</If>
+				</If>
+
+				<If Condition="Me.ZoneId == 3713">
+					<CustomBehavior File="Message" Text="I have detected that I have more than 15 empty bag slots and that my gear is above 30% durability. I am running out to reset the instance." LogColor="Lime" />
+						<RunTo X="263.2381" Y="-127.177" Z="-25.09816" />
+						<RunTo X="114.7807" Y="-145.2465" Z="-57.51817" />
+						<RunTo X="42.97371" Y="-135.8583" Z="-48.22002" />
+						<RunTo X="-2.429394" Y="-118.6331" Z="-42.4519" />
+						<RunTo X="1.384501" Y="-55.34601" Z="-41.34064" />
+						<RunTo X="-4.093049" Y="17.00105" Z="-44.78368" />
+					<CustomBehavior File="GoThruPortal" X="-0.2047417" Y="25.62052" Z="-44.80615" />
+				</If>	
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

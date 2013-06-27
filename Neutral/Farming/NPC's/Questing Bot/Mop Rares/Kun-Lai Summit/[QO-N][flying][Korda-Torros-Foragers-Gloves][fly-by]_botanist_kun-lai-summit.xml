@@ -1,0 +1,731 @@
+<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][flying][Korda-Torros-Foragers-Gloves][fly-by]_botanist_kun-lai-summit</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.3</MinDurability>
+	<MinFreeBagSlots>4</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites></TargetElites>
+	
+	<AvoidMobs>
+			
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="-10630.92" Y="1118.568" Z="33.69128" Radius="3" />
+	</Blackspots>
+
+	<Mailboxes>
+	
+	</Mailboxes>
+ 
+	<Vendors>
+	
+	</Vendors>
+	
+	<ProtectedItems>
+	
+	</ProtectedItems>
+		
+	<QuestOrder>
+	
+				<CustomBehavior File="UserSettings" MountDistance="30" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="30" LogoutForInactivity="True" />
+				
+				<If Condition="Me.MapId != 870" >
+					<CustomBehavior File="Message" Text="You must be level 90, with flying, in Pandaria to run this profile." LogColor="Lime" />
+				</If>
+				
+				<If Condition="Me.MapId == 870" >
+				
+					<While Condition="true" >
+					
+							<CustomBehavior File="FlyTo" X="2232.813" Y="1498.64" Z="578.3303" />
+							
+						<While Condition="!HasItem(86566) &amp;&amp; (Me.FreeBagSlots &gt; 10) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
+							
+									<CustomBehavior File="FlyTo" X="2267.962" Y="1765.068" Z="566.4519" />
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+									<CustomBehavior File="RunMacro" Macro="/target Korda Torros" NumOfTimes="1" WaitTime="0"/>
+									<If Condition="Me.CurrentTarget == null || Me.CurrentTarget.Entry != 50332">
+										<CustomBehavior File="Message" Text="Waiting 15 seconds to check again." LogColor="Lime" />
+										<CustomBehavior File="WaitTimer" WaitTime="15000" />
+									</If>
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+									<CustomBehavior File="RunMacro" Macro="/target Korda Torros" NumOfTimes="1" WaitTime="0"/>
+									
+								<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 50332">
+									<CustomBehavior File="Message" Text="Korda Torros is here, flying down to engage him." LogColor="Lime" />
+									<CustomBehavior File="FlyTo" X="2229.282" Y="1813.889" Z="487.0508" />
+									<CustomBehavior File="ForcedDismount" />
+									<!--	<CustomBehavior File="InteractWith" MobId="34830" MovementBy="ClickToMoveOnly" />	-->
+									<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="50332"
+									EventX="2229.282" EventY="1813.889" EventZ="487.0508"
+									MoveOutOfGroundEffectAuraId1="124289"
+									MoveAwayFromMobCastingSpellId1="124289"
+									MoveAwayFromMobWithAuraId1="124289">
+										<Safespots>
+											<Hotspot X="2257.815" Y="1679.939" Z="495.9726" />
+											<Hotspot X="2253.961" Y="1639.424" Z="500.978" />
+											<Hotspot X="2283.104" Y="1643.916" Z="507.9476" />
+											<Hotspot X="2288.072" Y="1673.083" Z="504.0831" />
+											<Hotspot X="2241.365" Y="1828.295" Z="497.4228" />
+											<Hotspot X="2266.386" Y="1800.738" Z="495.4963" />
+											<Hotspot X="2221.783" Y="1794.3" Z="486.2109" />
+											<Hotspot X="2294.023" Y="1742.215" Z="503.8736" />
+											<Hotspot X="2285.656" Y="1698.62" Z="498.1512" />
+											<Hotspot X="2243.818" Y="1597.109" Z="498.4084" />
+											<Hotspot X="2200.784" Y="1619.424" Z="493.307" />
+										</Safespots>
+									</CustomBehavior>
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="5" WaitTime="2"/>
+									<CustomBehavior File="UserSettings" LootMobs="True"  />
+									<If Condition="HasItem(86566)" >
+										<CustomBehavior File="FlyTo" X="2209.165" Y="1794.111" Z="621.4176" />
+										<CustomBehavior File="Message" Text="Stopping the bot." LogColor="Lime" />
+										<CustomBehavior File="UserSettings" StopBot="true" />
+									</If>
+								</If>
+								
+								<If Condition="Me.CurrentTarget == null || Me.CurrentTarget.Entry != 50332" >
+									<CustomBehavior File="Message" Text="Korda Torros isn't here. I will fly around for a few minutes and then return." LogColor="Lime" />
+									<CustomBehavior File="FlyTo" X="2225.263" Y="1607.111" Z="548.8882" />
+									<CustomBehavior File="FlyTo" X="2209.044" Y="1546.191" Z="546.253" />
+									<CustomBehavior File="FlyTo" X="2204.74" Y="1482.281" Z="547.1085" />
+									<CustomBehavior File="FlyTo" X="2207.389" Y="1418.649" Z="547.2656" />
+									<CustomBehavior File="FlyTo" X="2216.002" Y="1355.346" Z="546.2625" />
+									<CustomBehavior File="FlyTo" X="2232.103" Y="1293.923" Z="541.7584" />
+									<CustomBehavior File="FlyTo" X="2256.357" Y="1234.948" Z="540.3722" />
+									<CustomBehavior File="FlyTo" X="2284.216" Y="1177.303" Z="539.5852" />
+									<CustomBehavior File="FlyTo" X="2312.702" Y="1120.351" Z="539.9102" />
+									<CustomBehavior File="FlyTo" X="2346.267" Y="1066.567" Z="539.1116" />
+									<CustomBehavior File="FlyTo" X="2367.025" Y="1007.256" Z="540.6626" />
+									<CustomBehavior File="FlyTo" X="2358.501" Y="944.1025" Z="541.7362" />
+									<CustomBehavior File="FlyTo" X="2333.645" Y="885.609" Z="538.1501" />
+									<CustomBehavior File="FlyTo" X="2298.144" Y="832.6075" Z="535.0903" />
+									<CustomBehavior File="FlyTo" X="2256.942" Y="783.9381" Z="531.8643" />
+									<CustomBehavior File="FlyTo" X="2206.875" Y="744.9089" Z="530.1768" />
+									<CustomBehavior File="FlyTo" X="2152.279" Y="711.7308" Z="529.5654" />
+									<CustomBehavior File="FlyTo" X="2107.069" Y="667.3216" Z="527.5392" />
+									<CustomBehavior File="FlyTo" X="2074.113" Y="612.4558" Z="525.1916" />
+									<CustomBehavior File="FlyTo" X="2042.236" Y="557.4513" Z="522.8605" />
+									<CustomBehavior File="FlyTo" X="2009.912" Y="502.4918" Z="521.6953" />
+									<CustomBehavior File="FlyTo" X="1971.759" Y="451.5748" Z="525.1239" />
+									<CustomBehavior File="FlyTo" X="1925.786" Y="407.0075" Z="527.2031" />
+									<CustomBehavior File="FlyTo" X="1878.241" Y="364.6365" Z="529.3115" />
+									<CustomBehavior File="FlyTo" X="1819.833" Y="340.1017" Z="531.6331" />
+									<CustomBehavior File="FlyTo" X="1757.563" Y="347.9603" Z="533.9519" />
+									<CustomBehavior File="FlyTo" X="1725.584" Y="401.675" Z="536.4864" />
+									<CustomBehavior File="FlyTo" X="1748.827" Y="460.6438" Z="537.1277" />
+									<CustomBehavior File="FlyTo" X="1784.509" Y="513.3587" Z="533.2254" />
+									<CustomBehavior File="FlyTo" X="1815.456" Y="568.9131" Z="530.3597" />
+									<CustomBehavior File="FlyTo" X="1840.583" Y="627.3845" Z="529.3004" />
+									<CustomBehavior File="FlyTo" X="1858.585" Y="688.7635" Z="529.7634" />
+									<CustomBehavior File="FlyTo" X="1875" Y="750.6475" Z="530.0795" />
+									<CustomBehavior File="FlyTo" X="1889.035" Y="812.8428" Z="529.8481" />
+									<CustomBehavior File="FlyTo" X="1900.506" Y="875.6397" Z="528.6005" />
+									<CustomBehavior File="FlyTo" X="1893.821" Y="938.9059" Z="525.3257" />
+									<CustomBehavior File="FlyTo" X="1872.326" Y="998.8215" Z="523.102" />
+									<CustomBehavior File="FlyTo" X="1843.736" Y="1055.898" Z="519.6505" />
+									<CustomBehavior File="FlyTo" X="1823.541" Y="1116.033" Z="516.5524" />
+									<CustomBehavior File="FlyTo" X="1815.058" Y="1178.944" Z="512.6649" />
+									<CustomBehavior File="FlyTo" X="1810.807" Y="1242.754" Z="509.5486" />
+									<CustomBehavior File="FlyTo" X="1807.561" Y="1306.234" Z="506.2588" />
+									<CustomBehavior File="FlyTo" X="1811.969" Y="1369.795" Z="505.2471" />
+									<CustomBehavior File="FlyTo" X="1835.23" Y="1428.862" Z="504.8529" />
+									<CustomBehavior File="FlyTo" X="1872.655" Y="1480.549" Z="506.278" />
+									<CustomBehavior File="FlyTo" X="1904.682" Y="1535.741" Z="504.1793" />
+									<CustomBehavior File="FlyTo" X="1920.833" Y="1596.926" Z="501.006" />
+									<CustomBehavior File="FlyTo" X="1907.771" Y="1659.015" Z="499.0264" />
+									<CustomBehavior File="FlyTo" X="1901.546" Y="1722.539" Z="496.3642" />
+									<CustomBehavior File="FlyTo" X="1910.509" Y="1785.573" Z="493.3014" />
+									<CustomBehavior File="FlyTo" X="1938.155" Y="1841.385" Z="489.7636" />
+									<CustomBehavior File="FlyTo" X="1987.342" Y="1882.153" Z="490.3647" />
+									<CustomBehavior File="FlyTo" X="2043.159" Y="1912.161" Z="494.7679" />
+									<CustomBehavior File="FlyTo" X="2102.648" Y="1921.436" Z="500.1239" />
+									<CustomBehavior File="FlyTo" X="2160.65" Y="1905.291" Z="509.4527" />
+									<CustomBehavior File="FlyTo" X="2196.897" Y="1886.081" Z="512.533" />
+								</If>
+							
+									<CustomBehavior File="FlyTo" X="2267.962" Y="1765.068" Z="566.4519" />
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+									<CustomBehavior File="RunMacro" Macro="/target Korda Torros" NumOfTimes="1" WaitTime="0"/>
+									<If Condition="Me.CurrentTarget == null || Me.CurrentTarget.Entry != 50332">
+										<CustomBehavior File="Message" Text="Waiting 15 seconds to check again." LogColor="Lime" />
+										<CustomBehavior File="WaitTimer" WaitTime="15000" />
+									</If>
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+									<CustomBehavior File="RunMacro" Macro="/target Korda Torros" NumOfTimes="1" WaitTime="0"/>
+									
+								<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 50332">
+									<CustomBehavior File="Message" Text="Korda Torros is here, flying down to engage him." LogColor="Lime" />
+									<CustomBehavior File="FlyTo" X="2229.282" Y="1813.889" Z="487.0508" />
+									<CustomBehavior File="ForcedDismount" />
+									<!--	<CustomBehavior File="InteractWith" MobId="34830" MovementBy="ClickToMoveOnly" />	-->
+									<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="50332"
+									EventX="2229.282" EventY="1813.889" EventZ="487.0508"
+									MoveOutOfGroundEffectAuraId1="124289"
+									MoveAwayFromMobCastingSpellId1="124289"
+									MoveAwayFromMobWithAuraId1="124289">
+										<Safespots>
+											<Hotspot X="2257.815" Y="1679.939" Z="495.9726" />
+											<Hotspot X="2253.961" Y="1639.424" Z="500.978" />
+											<Hotspot X="2283.104" Y="1643.916" Z="507.9476" />
+											<Hotspot X="2288.072" Y="1673.083" Z="504.0831" />
+											<Hotspot X="2241.365" Y="1828.295" Z="497.4228" />
+											<Hotspot X="2266.386" Y="1800.738" Z="495.4963" />
+											<Hotspot X="2221.783" Y="1794.3" Z="486.2109" />
+											<Hotspot X="2294.023" Y="1742.215" Z="503.8736" />
+											<Hotspot X="2285.656" Y="1698.62" Z="498.1512" />
+											<Hotspot X="2243.818" Y="1597.109" Z="498.4084" />
+											<Hotspot X="2200.784" Y="1619.424" Z="493.307" />
+										</Safespots>
+									</CustomBehavior>
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="5" WaitTime="2"/>
+									<CustomBehavior File="UserSettings" LootMobs="True"  />
+									<If Condition="HasItem(86566)" >
+										<CustomBehavior File="FlyTo" X="2209.165" Y="1794.111" Z="621.4176" />
+										<CustomBehavior File="Message" Text="Stopping the bot." LogColor="Lime" />
+										<CustomBehavior File="UserSettings" StopBot="true" />
+									</If>
+								</If>
+								
+								<If Condition="Me.CurrentTarget == null || Me.CurrentTarget.Entry != 50332" >
+									<CustomBehavior File="Message" Text="Korda Torros isn't here. I will fly around for a few minutes and then return." LogColor="Lime" />
+									<CustomBehavior File="FlyTo" X="2334.962" Y="1726.737" Z="579.7267" />
+									<CustomBehavior File="FlyTo" X="2388.322" Y="1739.194" Z="604.6448" />
+									<CustomBehavior File="FlyTo" X="2444.756" Y="1752.99" Z="631.7969" />
+									<CustomBehavior File="FlyTo" X="2501.079" Y="1766.759" Z="658.5853" />
+									<CustomBehavior File="FlyTo" X="2558.725" Y="1779.612" Z="682.1998" />
+									<CustomBehavior File="FlyTo" X="2621.072" Y="1786.297" Z="685.6826" />
+									<CustomBehavior File="FlyTo" X="2672.2" Y="1750.248" Z="678.1857" />
+									<CustomBehavior File="FlyTo" X="2715.961" Y="1704.034" Z="677.8126" />
+									<CustomBehavior File="FlyTo" X="2762.74" Y="1660.929" Z="678.3495" />
+									<CustomBehavior File="FlyTo" X="2811.997" Y="1620.469" Z="679.0645" />
+									<CustomBehavior File="FlyTo" X="2853.556" Y="1572.24" Z="679.3914" />
+									<CustomBehavior File="FlyTo" X="2889.092" Y="1519.201" Z="679.6804" />
+									<CustomBehavior File="FlyTo" X="2925.205" Y="1466.997" Z="687.0303" />
+									<CustomBehavior File="FlyTo" X="2972.427" Y="1427.807" Z="703.3086" />
+									<CustomBehavior File="FlyTo" X="3025.489" Y="1408.374" Z="731.9017" />
+									<CustomBehavior File="FlyTo" X="3079.251" Y="1411.991" Z="765.7198" />
+									<CustomBehavior File="FlyTo" X="3122.204" Y="1441.038" Z="801.4172" />
+									<CustomBehavior File="FlyTo" X="3136.31" Y="1498.302" Z="822.2403" />
+									<CustomBehavior File="FlyTo" X="3174.615" Y="1540.394" Z="845.282" />
+									<CustomBehavior File="FlyTo" X="3221.882" Y="1572.619" Z="873.7329" />
+									<CustomBehavior File="FlyTo" X="3274.243" Y="1606.747" Z="884.4788" />
+									<CustomBehavior File="FlyTo" X="3327.82" Y="1640.833" Z="880.4882" />
+									<CustomBehavior File="FlyTo" X="3386.645" Y="1665.665" Z="878.0327" />
+									<CustomBehavior File="FlyTo" X="3449.035" Y="1677.821" Z="877.54" />
+									<CustomBehavior File="FlyTo" X="3512.135" Y="1683.045" Z="880.947" />
+									<CustomBehavior File="FlyTo" X="3557.311" Y="1723.45" Z="892.0566" />
+									<CustomBehavior File="FlyTo" X="3576.934" Y="1783.747" Z="898.8948" />
+									<CustomBehavior File="FlyTo" X="3601.028" Y="1842.645" Z="896.9146" />
+									<CustomBehavior File="FlyTo" X="3634.734" Y="1896.482" Z="901.2841" />
+									<CustomBehavior File="FlyTo" X="3671.998" Y="1948.22" Z="904.4583" />
+									<CustomBehavior File="FlyTo" X="3709.415" Y="2000.169" Z="907.5411" />
+									<CustomBehavior File="FlyTo" X="3745.246" Y="2052.755" Z="909.8373" />
+									<CustomBehavior File="FlyTo" X="3751.923" Y="2114.765" Z="904.8221" />
+									<CustomBehavior File="FlyTo" X="3738.514" Y="2176.425" Z="896.1408" />
+									<CustomBehavior File="FlyTo" X="3719.814" Y="2236.665" Z="885.9968" />
+									<CustomBehavior File="FlyTo" X="3683.879" Y="2288.83" Z="877.894" />
+									<CustomBehavior File="FlyTo" X="3643.068" Y="2336.792" Z="867.6398" />
+									<CustomBehavior File="FlyTo" X="3602.265" Y="2384.546" Z="856.4267" />
+									<CustomBehavior File="FlyTo" X="3562.761" Y="2431.079" Z="837.5146" />
+									<CustomBehavior File="FlyTo" X="3533.343" Y="2482.875" Z="815.1411" />
+									<CustomBehavior File="FlyTo" X="3507.038" Y="2538.52" Z="797.4463" />
+									<CustomBehavior File="FlyTo" X="3477.184" Y="2590.438" Z="775.6652" />
+									<CustomBehavior File="FlyTo" X="3438.176" Y="2632.238" Z="749.9807" />
+									<CustomBehavior File="FlyTo" X="3377.447" Y="2630.02" Z="733.1208" />
+									<CustomBehavior File="FlyTo" X="3315.175" Y="2619.856" Z="724.0026" />
+									<CustomBehavior File="FlyTo" X="3252.375" Y="2612.16" Z="715.2572" />
+									<CustomBehavior File="FlyTo" X="3192.447" Y="2600.208" Z="698.0218" />
+									<CustomBehavior File="FlyTo" X="3134.024" Y="2578.38" Z="684.5463" />
+									<CustomBehavior File="FlyTo" X="3076.575" Y="2553.815" Z="671.8136" />
+									<CustomBehavior File="FlyTo" X="3032.103" Y="2508.739" Z="664.4991" />
+									<CustomBehavior File="FlyTo" X="2990.764" Y="2460.472" Z="661.3901" />
+									<CustomBehavior File="FlyTo" X="2947.075" Y="2414.097" Z="653.8319" />
+									<CustomBehavior File="FlyTo" X="2904.361" Y="2368.816" Z="640.6811" />
+									<CustomBehavior File="FlyTo" X="2875.45" Y="2314.469" Z="626.9518" />
+									<CustomBehavior File="FlyTo" X="2872.274" Y="2251.012" Z="628.3091" />
+									<CustomBehavior File="FlyTo" X="2850.455" Y="2191.29" Z="629.8168" />
+									<CustomBehavior File="FlyTo" X="2823.491" Y="2133.237" Z="629.9954" />
+									<CustomBehavior File="FlyTo" X="2781.054" Y="2087.038" Z="626.1412" />
+									<CustomBehavior File="FlyTo" X="2722.048" Y="2066.607" Z="615.0973" />
+									<CustomBehavior File="FlyTo" X="2660.633" Y="2053.159" Z="602.8732" />
+									<CustomBehavior File="FlyTo" X="2598.38" Y="2047.384" Z="589.8107" />
+									<CustomBehavior File="FlyTo" X="2536.114" Y="2042.226" Z="577.6802" />
+									<CustomBehavior File="FlyTo" X="2474.284" Y="2032.655" Z="565.3055" />
+									<CustomBehavior File="FlyTo" X="2412.536" Y="2019.097" Z="554.6459" />
+									<CustomBehavior File="FlyTo" X="2351.573" Y="2002.5" Z="546.0176" />
+									<CustomBehavior File="FlyTo" X="2295.406" Y="1974.105" Z="537.7268" />
+									<CustomBehavior File="FlyTo" X="2254.784" Y="1930.002" Z="540.6474" />
+								</If>	
+									<CustomBehavior File="FlyTo" X="2267.962" Y="1765.068" Z="566.4519" />
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+									<CustomBehavior File="RunMacro" Macro="/target Korda Torros" NumOfTimes="1" WaitTime="0"/>
+									<If Condition="Me.CurrentTarget == null || Me.CurrentTarget.Entry != 50332">
+										<CustomBehavior File="Message" Text="Waiting 15 seconds to check again." LogColor="Lime" />
+										<CustomBehavior File="WaitTimer" WaitTime="15000" />
+									</If>
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+									<CustomBehavior File="RunMacro" Macro="/target Korda Torros" NumOfTimes="1" WaitTime="0"/>
+									
+								<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 50332">
+									<CustomBehavior File="Message" Text="Korda Torros is here, flying down to engage him." LogColor="Lime" />
+									<CustomBehavior File="FlyTo" X="2229.282" Y="1813.889" Z="487.0508" />
+									<CustomBehavior File="ForcedDismount" />
+									<!--	<CustomBehavior File="InteractWith" MobId="34830" MovementBy="ClickToMoveOnly" />	-->
+									<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="50332"
+									EventX="2229.282" EventY="1813.889" EventZ="487.0508"
+									MoveOutOfGroundEffectAuraId1="124289"
+									MoveAwayFromMobCastingSpellId1="124289"
+									MoveAwayFromMobWithAuraId1="124289">
+										<Safespots>
+											<Hotspot X="2257.815" Y="1679.939" Z="495.9726" />
+											<Hotspot X="2253.961" Y="1639.424" Z="500.978" />
+											<Hotspot X="2283.104" Y="1643.916" Z="507.9476" />
+											<Hotspot X="2288.072" Y="1673.083" Z="504.0831" />
+											<Hotspot X="2241.365" Y="1828.295" Z="497.4228" />
+											<Hotspot X="2266.386" Y="1800.738" Z="495.4963" />
+											<Hotspot X="2221.783" Y="1794.3" Z="486.2109" />
+											<Hotspot X="2294.023" Y="1742.215" Z="503.8736" />
+											<Hotspot X="2285.656" Y="1698.62" Z="498.1512" />
+											<Hotspot X="2243.818" Y="1597.109" Z="498.4084" />
+											<Hotspot X="2200.784" Y="1619.424" Z="493.307" />
+										</Safespots>
+									</CustomBehavior>
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="5" WaitTime="2"/>
+									<CustomBehavior File="UserSettings" LootMobs="True"  />
+									<If Condition="HasItem(86566)" >
+										<CustomBehavior File="FlyTo" X="2209.165" Y="1794.111" Z="621.4176" />
+										<CustomBehavior File="Message" Text="Stopping the bot." LogColor="Lime" />
+										<CustomBehavior File="UserSettings" StopBot="true" />
+									</If>
+								</If>
+								
+								<If Condition="Me.CurrentTarget == null || Me.CurrentTarget.Entry != 50332" >
+									<CustomBehavior File="Message" Text="Korda Torros isn't here. I will fly around for a few minutes and then return." LogColor="Lime" />
+									<CustomBehavior File="FlyTo" X="2129.466" Y="1779.989" Z="515.9667" />
+									<CustomBehavior File="FlyTo" X="2034.346" Y="1813.67" Z="518.3525" />
+									<CustomBehavior File="FlyTo" X="1953.279" Y="1874.965" Z="520.9368" />
+									<CustomBehavior File="FlyTo" X="1883.059" Y="1949.776" Z="521.2266" />
+									<CustomBehavior File="FlyTo" X="1812.09" Y="2023.664" Z="517.1643" />
+									<CustomBehavior File="FlyTo" X="1722.145" Y="2068.607" Z="508.2209" />
+									<CustomBehavior File="FlyTo" X="1626.516" Y="2094.261" Z="482.5706" />
+									<CustomBehavior File="FlyTo" X="1534.025" Y="2115.977" Z="444.1432" />
+									<CustomBehavior File="FlyTo" X="1440.224" Y="2152.578" Z="425.4778" />
+									<CustomBehavior File="FlyTo" X="1345.576" Y="2189.407" Z="409.5429" />
+									<CustomBehavior File="FlyTo" X="1248.162" Y="2214.551" Z="391.3926" />
+									<CustomBehavior File="FlyTo" X="1148.746" Y="2198.693" Z="383.2202" />
+									<CustomBehavior File="FlyTo" X="1047.106" Y="2184.904" Z="382.0129" />
+									<CustomBehavior File="FlyTo" X="945.9913" Y="2170.675" Z="379.3814" />
+									<CustomBehavior File="FlyTo" X="861.9963" Y="2112.95" Z="377.3587" />
+									<CustomBehavior File="FlyTo" X="781.3591" Y="2049.627" Z="378.893" />
+									<CustomBehavior File="FlyTo" X="700.9058" Y="1987.218" Z="389.6402" />
+									<CustomBehavior File="FlyTo" X="643.6984" Y="1907.184" Z="408.805" />
+									<CustomBehavior File="FlyTo" X="630.3464" Y="1807.352" Z="425.1043" />
+									<CustomBehavior File="FlyTo" X="644.8424" Y="1706.857" Z="433.1823" />
+									<CustomBehavior File="FlyTo" X="712.3329" Y="1633.455" Z="420.4344" />
+									<CustomBehavior File="FlyTo" X="802.0183" Y="1588.406" Z="399.2137" />
+									<CustomBehavior File="FlyTo" X="899.45" Y="1558.432" Z="390.8885" />
+									<CustomBehavior File="FlyTo" X="998.5416" Y="1532.391" Z="395.7547" />
+									<CustomBehavior File="FlyTo" X="1098.438" Y="1511.553" Z="403.6465" />
+									<CustomBehavior File="FlyTo" X="1199.945" Y="1499.09" Z="413.2517" />
+									<CustomBehavior File="FlyTo" X="1296.624" Y="1470.684" Z="427.3496" />
+									<CustomBehavior File="FlyTo" X="1343.611" Y="1381.664" Z="440.5496" />
+									<CustomBehavior File="FlyTo" X="1313.982" Y="1284.508" Z="453.2419" />
+									<CustomBehavior File="FlyTo" X="1337.833" Y="1185.749" Z="466.2863" />
+									<CustomBehavior File="FlyTo" X="1420.499" Y="1130.678" Z="481.1169" />
+									<CustomBehavior File="FlyTo" X="1508.301" Y="1182.278" Z="494.8327" />
+									<CustomBehavior File="FlyTo" X="1561.082" Y="1268.974" Z="507.2483" />
+									<CustomBehavior File="FlyTo" X="1641.346" Y="1327.192" Z="529.1395" />
+									<CustomBehavior File="FlyTo" X="1736.454" Y="1361.124" Z="544.4517" />
+									<CustomBehavior File="FlyTo" X="1837.93" Y="1372.566" Z="541.1537" />
+									<CustomBehavior File="FlyTo" X="1936.142" Y="1396.549" Z="525.5612" />
+									<CustomBehavior File="FlyTo" X="2027.254" Y="1437.083" Z="514.0253" />
+									<CustomBehavior File="FlyTo" X="2055.031" Y="1536.268" Z="509.0116" />
+									<CustomBehavior File="FlyTo" X="2061.885" Y="1637.522" Z="499.4334" />
+									<CustomBehavior File="FlyTo" X="2080.701" Y="1737.711" Z="492.1245" />
+									<CustomBehavior File="FlyTo" X="2119.655" Y="1831.95" Z="494.424" />
+									<CustomBehavior File="FlyTo" X="2175.331" Y="1870.671" Z="501.6458" />
+								</If>
+								
+									<CustomBehavior File="FlyTo" X="2267.962" Y="1765.068" Z="566.4519" />
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+									<CustomBehavior File="RunMacro" Macro="/target Korda Torros" NumOfTimes="1" WaitTime="0"/>
+									<If Condition="Me.CurrentTarget == null || Me.CurrentTarget.Entry != 50332">
+										<CustomBehavior File="Message" Text="Waiting 15 seconds to check again." LogColor="Lime" />
+										<CustomBehavior File="WaitTimer" WaitTime="15000" />
+									</If>
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+									<CustomBehavior File="RunMacro" Macro="/target Korda Torros" NumOfTimes="1" WaitTime="0"/>
+									
+								<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 50332">
+									<CustomBehavior File="Message" Text="Korda Torros is here, flying down to engage him." LogColor="Lime" />
+									<CustomBehavior File="FlyTo" X="2229.282" Y="1813.889" Z="487.0508" />
+									<CustomBehavior File="ForcedDismount" />
+									<!--	<CustomBehavior File="InteractWith" MobId="34830" MovementBy="ClickToMoveOnly" />	-->
+									<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="50332"
+									EventX="2229.282" EventY="1813.889" EventZ="487.0508"
+									MoveOutOfGroundEffectAuraId1="124289"
+									MoveAwayFromMobCastingSpellId1="124289"
+									MoveAwayFromMobWithAuraId1="124289">
+										<Safespots>
+											<Hotspot X="2257.815" Y="1679.939" Z="495.9726" />
+											<Hotspot X="2253.961" Y="1639.424" Z="500.978" />
+											<Hotspot X="2283.104" Y="1643.916" Z="507.9476" />
+											<Hotspot X="2288.072" Y="1673.083" Z="504.0831" />
+											<Hotspot X="2241.365" Y="1828.295" Z="497.4228" />
+											<Hotspot X="2266.386" Y="1800.738" Z="495.4963" />
+											<Hotspot X="2221.783" Y="1794.3" Z="486.2109" />
+											<Hotspot X="2294.023" Y="1742.215" Z="503.8736" />
+											<Hotspot X="2285.656" Y="1698.62" Z="498.1512" />
+											<Hotspot X="2243.818" Y="1597.109" Z="498.4084" />
+											<Hotspot X="2200.784" Y="1619.424" Z="493.307" />
+										</Safespots>
+									</CustomBehavior>
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="5" WaitTime="2"/>
+									<CustomBehavior File="UserSettings" LootMobs="True"  />
+									<If Condition="HasItem(86566)" >
+										<CustomBehavior File="FlyTo" X="2209.165" Y="1794.111" Z="621.4176" />
+										<CustomBehavior File="Message" Text="Stopping the bot." LogColor="Lime" />
+										<CustomBehavior File="UserSettings" StopBot="true" />
+									</If>
+								</If>
+								
+								<If Condition="Me.CurrentTarget == null || Me.CurrentTarget.Entry != 50332" >
+									<CustomBehavior File="Message" Text="Korda Torros isn't here. I will fly around for a few minutes and then return." LogColor="Lime" />
+									<CustomBehavior File="FlyTo" X="2227.156" Y="1626.725" Z="522.6647" />
+									<CustomBehavior File="FlyTo" X="2152.157" Y="1560.15" Z="531.8796" />
+									<CustomBehavior File="FlyTo" X="2072.743" Y="1497.686" Z="520.9835" />
+									<CustomBehavior File="FlyTo" X="1990.762" Y="1437.632" Z="510.1191" />
+									<CustomBehavior File="FlyTo" X="1912.089" Y="1372.679" Z="514.7367" />
+									<CustomBehavior File="FlyTo" X="1849.424" Y="1291.932" Z="519.0452" />
+									<CustomBehavior File="FlyTo" X="1809.789" Y="1198.007" Z="520.1362" />
+									<CustomBehavior File="FlyTo" X="1808.762" Y="1096.592" Z="527.028" />
+									<CustomBehavior File="FlyTo" X="1822.01" Y="996.2961" Z="543.8668" />
+									<CustomBehavior File="FlyTo" X="1820.466" Y="897.3881" Z="570.9252" />
+									<CustomBehavior File="FlyTo" X="1811.181" Y="798.0128" Z="592.7513" />
+									<CustomBehavior File="FlyTo" X="1801.939" Y="698.1804" Z="614.0104" />
+									<CustomBehavior File="FlyTo" X="1773.192" Y="600.1745" Z="614.5209" />
+									<CustomBehavior File="FlyTo" X="1734.91" Y="505.3127" Z="611.9848" />
+									<CustomBehavior File="FlyTo" X="1682.192" Y="418.5462" Z="615.62" />
+									<CustomBehavior File="FlyTo" X="1651.907" Y="323.6947" Z="634.0054" />
+									<CustomBehavior File="FlyTo" X="1692.651" Y="231.3987" Z="643.5615" />
+									<CustomBehavior File="FlyTo" X="1747.046" Y="144.7489" Z="644.3585" />
+									<CustomBehavior File="FlyTo" X="1787.631" Y="51.96572" Z="643.7914" />
+									<CustomBehavior File="FlyTo" X="1795.041" Y="-44.7541" Z="615.6188" />
+									<CustomBehavior File="FlyTo" X="1804.317" Y="-122.9968" Z="550.442" />
+									<CustomBehavior File="FlyTo" X="1834.483" Y="-195.7762" Z="487.151" />
+									<CustomBehavior File="FlyTo" X="1903.483" Y="-261.201" Z="450.031" />
+									<CustomBehavior File="FlyTo" X="1978.988" Y="-324.0509" Z="421.6217" />
+									<CustomBehavior File="FlyTo" X="2077.725" Y="-341.6308" Z="408.6273" />
+									<CustomBehavior File="FlyTo" X="2177.432" Y="-320.2347" Z="399.157" />
+									<CustomBehavior File="FlyTo" X="2266.739" Y="-271.3559" Z="390.3365" />
+									<CustomBehavior File="FlyTo" X="2347.961" Y="-211.5894" Z="376.5576" />
+									<CustomBehavior File="FlyTo" X="2425.909" Y="-145.9778" Z="384.0654" />
+									<CustomBehavior File="FlyTo" X="2479.981" Y="-67.23022" Z="420.0724" />
+									<CustomBehavior File="FlyTo" X="2545.693" Y="8.131729" Z="442.3878" />
+									<CustomBehavior File="FlyTo" X="2612.558" Y="82.16608" Z="465.5357" />
+									<CustomBehavior File="FlyTo" X="2678.396" Y="157.6822" Z="487.9709" />
+									<CustomBehavior File="FlyTo" X="2732.824" Y="241.8993" Z="507.6397" />
+									<CustomBehavior File="FlyTo" X="2779.102" Y="331.707" Z="526.3644" />
+									<CustomBehavior File="FlyTo" X="2819.993" Y="423.4282" Z="543.9665" />
+									<CustomBehavior File="FlyTo" X="2810.959" Y="524.4048" Z="553.6963" />
+									<CustomBehavior File="FlyTo" X="2766.758" Y="616.6328" Z="556.9627" />
+									<CustomBehavior File="FlyTo" X="2716.45" Y="705.8093" Z="556.7305" />
+									<CustomBehavior File="FlyTo" X="2627.368" Y="749.5129" Z="541.1379" />
+									<CustomBehavior File="FlyTo" X="2543.085" Y="805.3141" Z="532.9379" />
+									<CustomBehavior File="FlyTo" X="2467.119" Y="873.5169" Z="523.3275" />
+									<CustomBehavior File="FlyTo" X="2415.356" Y="960.6008" Z="513.5859" />
+									<CustomBehavior File="FlyTo" X="2363.093" Y="1048.737" Z="508.6543" />
+									<CustomBehavior File="FlyTo" X="2305.065" Y="1133.075" Z="506.7577" />
+									<CustomBehavior File="FlyTo" X="2233.943" Y="1205.384" Z="503.0638" />
+									<CustomBehavior File="FlyTo" X="2156.514" Y="1271.647" Z="498.8354" />
+									<CustomBehavior File="FlyTo" X="2106.242" Y="1360.285" Z="495.3539" />
+									<CustomBehavior File="FlyTo" X="2071.403" Y="1455.833" Z="495.8462" />
+									<CustomBehavior File="FlyTo" X="2114.744" Y="1548.439" Z="499.4036" />
+									<CustomBehavior File="FlyTo" X="2203.127" Y="1599.347" Z="509.7846" />
+									<CustomBehavior File="FlyTo" X="2285.098" Y="1655.621" Z="520.6296" />
+									<CustomBehavior File="FlyTo" X="2334.809" Y="1731.433" Z="565.7376" />
+									<CustomBehavior File="FlyTo" X="2385.081" Y="1805.293" Z="612.0744" />
+									<CustomBehavior File="FlyTo" X="2355.941" Y="1902.629" Z="600.4283" />
+									<CustomBehavior File="FlyTo" X="2269.197" Y="1920.922" Z="554.1421" />
+									<CustomBehavior File="FlyTo" X="2240.664" Y="1897.29" Z="541.0369" />
+								</If>	
+								
+									<CustomBehavior File="FlyTo" X="2267.962" Y="1765.068" Z="566.4519" />
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+									<CustomBehavior File="RunMacro" Macro="/target Korda Torros" NumOfTimes="1" WaitTime="0"/>
+									<If Condition="Me.CurrentTarget == null || Me.CurrentTarget.Entry != 50332">
+										<CustomBehavior File="Message" Text="Waiting 15 seconds to check again." LogColor="Lime" />
+										<CustomBehavior File="WaitTimer" WaitTime="15000" />
+									</If>
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+									<CustomBehavior File="RunMacro" Macro="/target Korda Torros" NumOfTimes="1" WaitTime="0"/>
+									
+								<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 50332">
+									<CustomBehavior File="Message" Text="Korda Torros is here, flying down to engage him." LogColor="Lime" />
+									<CustomBehavior File="FlyTo" X="2229.282" Y="1813.889" Z="487.0508" />
+									<CustomBehavior File="ForcedDismount" />
+									<!--	<CustomBehavior File="InteractWith" MobId="34830" MovementBy="ClickToMoveOnly" />	-->
+									<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="50332"
+									EventX="2229.282" EventY="1813.889" EventZ="487.0508"
+									MoveOutOfGroundEffectAuraId1="124289"
+									MoveAwayFromMobCastingSpellId1="124289"
+									MoveAwayFromMobWithAuraId1="124289">
+										<Safespots>
+											<Hotspot X="2257.815" Y="1679.939" Z="495.9726" />
+											<Hotspot X="2253.961" Y="1639.424" Z="500.978" />
+											<Hotspot X="2283.104" Y="1643.916" Z="507.9476" />
+											<Hotspot X="2288.072" Y="1673.083" Z="504.0831" />
+											<Hotspot X="2241.365" Y="1828.295" Z="497.4228" />
+											<Hotspot X="2266.386" Y="1800.738" Z="495.4963" />
+											<Hotspot X="2221.783" Y="1794.3" Z="486.2109" />
+											<Hotspot X="2294.023" Y="1742.215" Z="503.8736" />
+											<Hotspot X="2285.656" Y="1698.62" Z="498.1512" />
+											<Hotspot X="2243.818" Y="1597.109" Z="498.4084" />
+											<Hotspot X="2200.784" Y="1619.424" Z="493.307" />
+										</Safespots>
+									</CustomBehavior>
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="5" WaitTime="2"/>
+									<CustomBehavior File="UserSettings" LootMobs="True"  />
+									<If Condition="HasItem(86566)" >
+										<CustomBehavior File="FlyTo" X="2209.165" Y="1794.111" Z="621.4176" />
+										<CustomBehavior File="Message" Text="Stopping the bot." LogColor="Lime" />
+										<CustomBehavior File="UserSettings" StopBot="true" />
+									</If>
+								</If>
+								
+								<If Condition="Me.CurrentTarget == null || Me.CurrentTarget.Entry != 50332" >
+									<CustomBehavior File="Message" Text="Korda Torros isn't here. I will fly around for a few minutes and then return." LogColor="Lime" />
+									<CustomBehavior File="FlyTo" X="2272.347" Y="1818.569" Z="581.1762" />
+									<CustomBehavior File="FlyTo" X="2222.051" Y="1907.945" Z="573.8419" />
+									<CustomBehavior File="FlyTo" X="2175.341" Y="1998.141" Z="560.3792" />
+									<CustomBehavior File="FlyTo" X="2130.424" Y="2089.069" Z="550.4527" />
+									<CustomBehavior File="FlyTo" X="2078.172" Y="2176.962" Z="554.4449" />
+									<CustomBehavior File="FlyTo" X="2024.583" Y="2263.623" Z="556.8463" />
+									<CustomBehavior File="FlyTo" X="1970.758" Y="2350.664" Z="559.2583" />
+									<CustomBehavior File="FlyTo" X="1926.728" Y="2438.994" Z="530.5165" />
+									<CustomBehavior File="FlyTo" X="1901.638" Y="2521.625" Z="476.4897" />
+									<CustomBehavior File="FlyTo" X="1889.431" Y="2608.476" Z="424.3778" />
+									<CustomBehavior File="FlyTo" X="1887.698" Y="2707.546" Z="400.0078" />
+									<CustomBehavior File="FlyTo" X="1870.637" Y="2805.009" Z="373.536" />
+									<CustomBehavior File="FlyTo" X="1850.347" Y="2899.936" Z="341.948" />
+									<CustomBehavior File="FlyTo" X="1827.001" Y="2999.336" Z="338.8934" />
+									<CustomBehavior File="FlyTo" X="1814.878" Y="3100.652" Z="341.525" />
+									<CustomBehavior File="FlyTo" X="1801.582" Y="3202.105" Z="343.9083" />
+									<CustomBehavior File="FlyTo" X="1769.296" Y="3298.438" Z="346.0912" />
+									<CustomBehavior File="FlyTo" X="1696.396" Y="3367.725" Z="346.2057" />
+									<CustomBehavior File="FlyTo" X="1602.848" Y="3408.572" Z="341.8605" />
+									<CustomBehavior File="FlyTo" X="1508.671" Y="3448.708" Z="338.9243" />
+									<CustomBehavior File="FlyTo" X="1413.977" Y="3484.386" Z="327.8865" />
+									<CustomBehavior File="FlyTo" X="1315.735" Y="3484.083" Z="306.3287" />
+									<CustomBehavior File="FlyTo" X="1250.43" Y="3409.581" Z="289.8282" />
+									<CustomBehavior File="FlyTo" X="1256.207" Y="3310.201" Z="266.2328" />
+									<CustomBehavior File="FlyTo" X="1276.281" Y="3210.382" Z="261.0328" />
+									<CustomBehavior File="FlyTo" X="1303.103" Y="3111.954" Z="261.2543" />
+									<CustomBehavior File="FlyTo" X="1322.981" Y="3013.771" Z="281.3195" />
+									<CustomBehavior File="FlyTo" X="1361.858" Y="2923.883" Z="308.6176" />
+									<CustomBehavior File="FlyTo" X="1418.74" Y="2841.871" Z="331.9745" />
+									<CustomBehavior File="FlyTo" X="1477.837" Y="2761.011" Z="351.1776" />
+									<CustomBehavior File="FlyTo" X="1554.683" Y="2695.345" Z="365.4132" />
+									<CustomBehavior File="FlyTo" X="1649.323" Y="2660.194" Z="369.028" />
+									<CustomBehavior File="FlyTo" X="1751.275" Y="2655.91" Z="375.8965" />
+									<CustomBehavior File="FlyTo" X="1847.874" Y="2663.398" Z="401.9918" />
+									<CustomBehavior File="FlyTo" X="1925.7" Y="2649.738" Z="466.4915" />
+									<CustomBehavior File="FlyTo" X="2000.734" Y="2636.486" Z="534.5161" />
+									<CustomBehavior File="FlyTo" X="2080.417" Y="2625.659" Z="597.5488" />
+									<CustomBehavior File="FlyTo" X="2177.205" Y="2624.15" Z="626.9473" />
+									<CustomBehavior File="FlyTo" X="2276.765" Y="2639.46" Z="631.111" />
+									<CustomBehavior File="FlyTo" X="2334.37" Y="2720.589" Z="614.3482" />
+									<CustomBehavior File="FlyTo" X="2403.74" Y="2793.974" Z="606.0064" />
+									<CustomBehavior File="FlyTo" X="2489.169" Y="2849.403" Z="598.8224" />
+									<CustomBehavior File="FlyTo" X="2586.772" Y="2875.699" Z="586.7434" />
+									<CustomBehavior File="FlyTo" X="2687.478" Y="2871.583" Z="573.8515" />
+									<CustomBehavior File="FlyTo" X="2788.496" Y="2855.777" Z="568.9952" />
+									<CustomBehavior File="FlyTo" X="2888.709" Y="2839.977" Z="560.3859" />
+									<CustomBehavior File="FlyTo" X="2983.946" Y="2807.447" Z="542.4138" />
+									<CustomBehavior File="FlyTo" X="3073.087" Y="2763.403" Z="553.5638" />
+									<CustomBehavior File="FlyTo" X="3130.801" Y="2692.969" Z="597.9707" />
+									<CustomBehavior File="FlyTo" X="3101.824" Y="2605.554" Z="637.2264" />
+									<CustomBehavior File="FlyTo" X="3024.073" Y="2539.88" Z="649.4932" />
+									<CustomBehavior File="FlyTo" X="2930.168" Y="2505.261" Z="667.5372" />
+									<CustomBehavior File="FlyTo" X="2835.778" Y="2484.898" Z="700.1406" />
+									<CustomBehavior File="FlyTo" X="2741.135" Y="2449.6" Z="709.4702" />
+									<CustomBehavior File="FlyTo" X="2667.322" Y="2379.275" Z="715.1215" />
+									<CustomBehavior File="FlyTo" X="2587.595" Y="2316.229" Z="720.2316" />
+									<CustomBehavior File="FlyTo" X="2498.159" Y="2274.121" Z="698.9744" />
+									<CustomBehavior File="FlyTo" X="2405.321" Y="2249.392" Z="666.5339" />
+									<CustomBehavior File="FlyTo" X="2324.923" Y="2223.27" Z="608.8739" />
+									<CustomBehavior File="FlyTo" X="2243.908" Y="2194.915" Z="553.4606" />
+									<CustomBehavior File="FlyTo" X="2173.799" Y="2140.569" Z="506.9007" />
+									<CustomBehavior File="FlyTo" X="2139.926" Y="2046" Z="500.8436" />
+									<CustomBehavior File="FlyTo" X="2177.165" Y="1950.965" Z="501.1639" />
+									<CustomBehavior File="FlyTo" X="2198.437" Y="1918.187" Z="497.9849" />
+								</If>
+
+									<CustomBehavior File="FlyTo" X="2267.962" Y="1765.068" Z="566.4519" />
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+									<CustomBehavior File="RunMacro" Macro="/target Korda Torros" NumOfTimes="1" WaitTime="0"/>
+									<If Condition="Me.CurrentTarget == null || Me.CurrentTarget.Entry != 50332">
+										<CustomBehavior File="Message" Text="Waiting 15 seconds to check again." LogColor="Lime" />
+										<CustomBehavior File="WaitTimer" WaitTime="15000" />
+									</If>
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+									<CustomBehavior File="RunMacro" Macro="/target Korda Torros" NumOfTimes="1" WaitTime="0"/>
+									
+								<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 50332">
+									<CustomBehavior File="Message" Text="Korda Torros is here, flying down to engage him." LogColor="Lime" />
+									<CustomBehavior File="FlyTo" X="2229.282" Y="1813.889" Z="487.0508" />
+									<CustomBehavior File="ForcedDismount" />
+									<!--	<CustomBehavior File="InteractWith" MobId="34830" MovementBy="ClickToMoveOnly" />	-->
+									<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+									EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="50332"
+									EventX="2229.282" EventY="1813.889" EventZ="487.0508"
+									MoveOutOfGroundEffectAuraId1="124289"
+									MoveAwayFromMobCastingSpellId1="124289"
+									MoveAwayFromMobWithAuraId1="124289">
+										<Safespots>
+											<Hotspot X="2257.815" Y="1679.939" Z="495.9726" />
+											<Hotspot X="2253.961" Y="1639.424" Z="500.978" />
+											<Hotspot X="2283.104" Y="1643.916" Z="507.9476" />
+											<Hotspot X="2288.072" Y="1673.083" Z="504.0831" />
+											<Hotspot X="2241.365" Y="1828.295" Z="497.4228" />
+											<Hotspot X="2266.386" Y="1800.738" Z="495.4963" />
+											<Hotspot X="2221.783" Y="1794.3" Z="486.2109" />
+											<Hotspot X="2294.023" Y="1742.215" Z="503.8736" />
+											<Hotspot X="2285.656" Y="1698.62" Z="498.1512" />
+											<Hotspot X="2243.818" Y="1597.109" Z="498.4084" />
+											<Hotspot X="2200.784" Y="1619.424" Z="493.307" />
+										</Safespots>
+									</CustomBehavior>
+									<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="5" WaitTime="2"/>
+									<CustomBehavior File="UserSettings" LootMobs="True"  />
+									<If Condition="HasItem(86566)" >
+										<CustomBehavior File="FlyTo" X="2209.165" Y="1794.111" Z="621.4176" />
+										<CustomBehavior File="Message" Text="Stopping the bot." LogColor="Lime" />
+										<CustomBehavior File="UserSettings" StopBot="true" />
+									</If>
+								</If>
+									
+								<If Condition="Me.CurrentTarget == null || Me.CurrentTarget.Entry != 50332" >
+									<CustomBehavior File="Message" Text="Korda Torros isn't here. I will fly around for a few minutes and then return." LogColor="Lime" />
+									<CustomBehavior File="FlyTo" X="2087.713" Y="1735.922" Z="500.6231" />
+									<CustomBehavior File="FlyTo" X="2014.848" Y="1665.741" Z="505.4064" />
+									<CustomBehavior File="FlyTo" X="1948.719" Y="1588.561" Z="513.285" />
+									<CustomBehavior File="FlyTo" X="1904.478" Y="1497.071" Z="524.6261" />
+									<CustomBehavior File="FlyTo" X="1863.829" Y="1404.464" Z="538.6353" />
+									<CustomBehavior File="FlyTo" X="1821.022" Y="1313.461" Z="557.3651" />
+									<CustomBehavior File="FlyTo" X="1778.519" Y="1224.57" Z="584.3848" />
+									<CustomBehavior File="FlyTo" X="1735.572" Y="1134.75" Z="607.7501" />
+									<CustomBehavior File="FlyTo" X="1691.499" Y="1044.906" Z="627.9341" />
+									<CustomBehavior File="FlyTo" X="1641.774" Y="956.7812" Z="642.1364" />
+									<CustomBehavior File="FlyTo" X="1584.668" Y="872.4482" Z="649.5706" />
+									<CustomBehavior File="FlyTo" X="1518.744" Y="794.4944" Z="659.4216" />
+									<CustomBehavior File="FlyTo" X="1452.147" Y="717.8616" Z="669.2689" />
+									<CustomBehavior File="FlyTo" X="1391.113" Y="637.286" Z="684.5421" />
+									<CustomBehavior File="FlyTo" X="1330.525" Y="556.3082" Z="699.7473" />
+									<CustomBehavior File="FlyTo" X="1270.643" Y="474.5097" Z="714.2744" />
+									<CustomBehavior File="FlyTo" X="1224.703" Y="384.7196" Z="726.0914" />
+									<CustomBehavior File="FlyTo" X="1200.457" Y="286.3518" Z="738.6496" />
+									<CustomBehavior File="FlyTo" X="1178.39" Y="186.6311" Z="746.012" />
+									<CustomBehavior File="FlyTo" X="1158.795" Y="86.67515" Z="745.5591" />
+									<CustomBehavior File="FlyTo" X="1141.587" Y="-12.07952" Z="724.7883" />
+									<CustomBehavior File="FlyTo" X="1119.909" Y="-97.44629" Z="674.1901" />
+									<CustomBehavior File="FlyTo" X="1065.62" Y="-153.1236" Z="608.298" />
+									<CustomBehavior File="FlyTo" X="980.0707" Y="-158.1322" Z="553.3098" />
+									<CustomBehavior File="FlyTo" X="896.3232" Y="-151.99" Z="495.0842" />
+									<CustomBehavior File="FlyTo" X="801.5316" Y="-142.0514" Z="459.3252" />
+									<CustomBehavior File="FlyTo" X="704.6885" Y="-156.1335" Z="435.6269" />
+									<CustomBehavior File="FlyTo" X="645.1851" Y="-236.6328" Z="436.7514" />
+									<CustomBehavior File="FlyTo" X="618.8947" Y="-334.3001" Z="424.6614" />
+									<CustomBehavior File="FlyTo" X="613.4725" Y="-424.1778" Z="378.0683" />
+									<CustomBehavior File="FlyTo" X="573.3544" Y="-500.1848" Z="326.0482" />
+									<CustomBehavior File="FlyTo" X="492.9981" Y="-547.593" Z="286.6205" />
+									<CustomBehavior File="FlyTo" X="391.252" Y="-537.934" Z="283.4263" />
+									<CustomBehavior File="FlyTo" X="327.7065" Y="-457.4353" Z="274.6042" />
+									<CustomBehavior File="FlyTo" X="330.3007" Y="-355.7949" Z="263.4962" />
+									<CustomBehavior File="FlyTo" X="375.0735" Y="-265.8401" Z="244.9986" />
+									<CustomBehavior File="FlyTo" X="388.8811" Y="-166.1604" Z="228.2912" />
+									<CustomBehavior File="FlyTo" X="392.9131" Y="-64.73811" Z="216.6406" />
+									<CustomBehavior File="FlyTo" X="405.5295" Y="36.44808" Z="218.9896" />
+									<CustomBehavior File="FlyTo" X="404.4348" Y="138.776" Z="222.5077" />
+									<CustomBehavior File="FlyTo" X="407.9228" Y="240.9473" Z="227.1292" />
+									<CustomBehavior File="FlyTo" X="422.3509" Y="340.7618" Z="241.1673" />
+									<CustomBehavior File="FlyTo" X="459.7167" Y="429.57" Z="275.2469" />
+									<CustomBehavior File="FlyTo" X="499.6307" Y="511.2443" Z="322.0234" />
+									<CustomBehavior File="FlyTo" X="544.4272" Y="583.9147" Z="378.3959" />
+									<CustomBehavior File="FlyTo" X="597.6582" Y="645.1362" Z="439.9343" />
+									<CustomBehavior File="FlyTo" X="648.7384" Y="695.7964" Z="512.8334" />
+									<CustomBehavior File="FlyTo" X="701.7514" Y="748.1579" Z="582.6978" />
+									<CustomBehavior File="FlyTo" X="756.2018" Y="801.6331" Z="650.7158" />
+									<CustomBehavior File="FlyTo" X="827.443" Y="861.2001" Z="691.8962" />
+									<CustomBehavior File="FlyTo" X="915.6647" Y="911.2838" Z="703.3857" />
+									<CustomBehavior File="FlyTo" X="1009.277" Y="950.6746" Z="715.1372" />
+									<CustomBehavior File="FlyTo" X="1099.549" Y="998.267" Z="716.9475" />
+									<CustomBehavior File="FlyTo" X="1185.584" Y="1052.82" Z="711.1733" />
+									<CustomBehavior File="FlyTo" X="1267.737" Y="1113.609" Z="705.2808" />
+									<CustomBehavior File="FlyTo" X="1350.422" Y="1173.659" Z="699.6249" />
+									<CustomBehavior File="FlyTo" X="1440.193" Y="1222.429" Z="698.3785" />
+									<CustomBehavior File="FlyTo" X="1504.677" Y="1301.511" Z="697.3498" />
+									<CustomBehavior File="FlyTo" X="1564.769" Y="1384.259" Z="694.6356" />
+									<CustomBehavior File="FlyTo" X="1625.097" Y="1466.9" Z="692.7606" />
+									<CustomBehavior File="FlyTo" X="1685.368" Y="1549.464" Z="690.8874" />
+									<CustomBehavior File="FlyTo" X="1745.583" Y="1631.951" Z="689.0159" />
+									<CustomBehavior File="FlyTo" X="1805.589" Y="1714.589" Z="687.1443" />
+									<CustomBehavior File="FlyTo" X="1870.858" Y="1792.258" Z="680.4527" />
+									<CustomBehavior File="FlyTo" X="1939.043" Y="1863.867" Z="654.9063" />
+									<CustomBehavior File="FlyTo" X="2008.236" Y="1929.725" Z="619.2759" />
+									<CustomBehavior File="FlyTo" X="2094.405" Y="1969.864" Z="584.7131" />
+									<CustomBehavior File="FlyTo" X="2186.904" Y="1956.297" Z="547.8104" />
+									<CustomBehavior File="FlyTo" X="2219.786" Y="1921.594" Z="531.375" />
+								</If>
+						</While>
+					
+							<CustomBehavior File="Message" Text="Checking my gears durability and free bag slots." LogColor="Lime" />
+								
+								<If Condition="(Me.FreeBagSlots &lt; 10) || (Me.LowestDurabilityPercent &lt; 0.3)" >
+									<CustomBehavior File="Message" Text="Checking my gears durability and free bag slots." LogColor="Lime" />
+									<CustomBehavior File="WaitTimer" WaitTime="1000" />
+									<CustomBehavior File="Message" Text="I have detected that my gear is about to break or my bags are nearly full. I'm going to hearth, and repair. Then I'll return to the farming location" LogColor="Lime" />
+									<CustomBehavior File="FlyTo" X="3048.986" Y="1248.262" Z="655.574" />
+				
+										<SetVendor>
+											<Vendors>
+												<Vendor Name="Ironshaper Shou" Entry="59827" Type="Repair" X="3042.047" Y="1245.347" Z="654.3094" />
+											</Vendors>
+										</SetVendor>						
+										<SetMailbox>
+											<Mailboxes>
+												<Mailbox X="3105.984" Y="1235.366" Z="654.0722" />
+											</Mailboxes>
+										</SetMailbox>			
+										<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+								</If>
+							
+					</While>	
+					
+				</If>
+				
+	</QuestOrder >			
+  
+ </HBProfile>

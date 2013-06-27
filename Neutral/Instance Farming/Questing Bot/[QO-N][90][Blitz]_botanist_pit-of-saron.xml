@@ -1,0 +1,339 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][90][Blitz]_botanist_pit-of-saron</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>True</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Collapsing Icicle" Entry="36847" />
+		<Mob Name="Collapsing Icicle" Entry="36847" />
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>		
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" UseMount="True" MountDistance="10" LootMobs="True" PullDistance="25" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+		 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This profile will endlessly farm Pit of Saron. It does vendor Epics. Make sure you have none in your bags that you want to keep. Will fly to the Argent Tournament grounds to vendor and repair." Title="WARNING" />
+
+
+				<If Condition="Me.X &lt; 5583 || Me.X &gt; 5603 || Me.Y &lt; 2001 || Me.Y &gt; 2021.057" >
+					<If Condition="Me.ZoneId != 4813" > 
+						<CustomBehavior File="Message" Text="I am flying to the Pit of Saron inside Frozen Halls." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="5961.686" Y="2153.792" Z="716.7491" />
+						<CustomBehavior File="MyCTM" X="5790.766" Y="2254.771" Z="888.5391" />
+						<CustomBehavior File="MyCTM" X="5692.304" Y="2159.46" Z="798.1241" DestName="Forge of Souls" />
+							<RunTo X="5593.713" Y="2011.442" Z="798.041" /> 
+					</If>							
+				</If>
+
+				<If Condition="Me.ZoneId == 4813" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside the Pit of Saron. Running out to reset the dungeon." LogColor="Lime" />
+						<RunTo X="526.6864" Y="164.2331" Z="527.9388" />
+						<RunTo X="434.624" Y="212.74" Z="528.709" /> 
+					<CustomBehavior File="MyCTM" X="424.0134" Y="211.5736" Z="529.9064" />  
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+				</If>
+				
+				<If Condition="(Me.FreeBagSlots &lt; 6) || (Me.LowestDurabilityPercent &lt; 0.3)" > 
+					<CustomBehavior File="Message" Text="Checking my free bag space and my gear's durability." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Flying to the repair vendor @ The Argent Tournament grounds." LogColor="Lime" />
+						<RunTo X="5693.106" Y="2167.813" Z="798.1242" />
+					<CustomBehavior File="FlyTo" X="5694.912" Y="2197.339" Z="826.4079" />
+					<CustomBehavior File="MyCTM" X="5820.244" Y="2266.59" Z="909.5264" />	
+					<CustomBehavior File="MyCTM" X="8342.837" Y="937.6993" Z="975.0637" />
+					<CustomBehavior File="MyCTM" X="8586.275" Y="939.3901" Z="616.4142" />
+					<CustomBehavior File="MyCTM" X="8552.242" Y="932.2313" Z="547.2932" />
+					<CustomBehavior File="ForcedDismount" />
+					<SetVendor>
+						<Vendors>
+							<Vendor Name="Brollen Wheatbeard" Entry="33599" Type="Repair" X="8548.112" Y="933.3629" Z="547.2943" />
+						</Vendors>
+					</SetVendor>						
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="8589.71" Y="695.7098" Z="547.2932" />
+						</Mailboxes>
+					</SetMailbox>
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					
+					<CustomBehavior File="Message" Text="Flying to the Frozen Halls." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="8586.275" Y="939.3901" Z="616.4142" />
+					<CustomBehavior File="MyCTM" X="6050.875" Y="1752.029" Z="855.2743" />
+					<CustomBehavior File="MyCTM" X="8342.837" Y="937.6993" Z="975.0637" />
+					<CustomBehavior File="MyCTM" X="5820.244" Y="2266.59" Z="909.5264" />
+					<CustomBehavior File="MyCTM" X="5694.912" Y="2197.339" Z="826.4079" />
+					<CustomBehavior File="MyCTM" X="5694.021" Y="2171.631" Z="798.1272" />
+						<RunTo X="5593.713" Y="2011.442" Z="798.041" /> 
+				</If>
+				
+		<While Condition="true" >
+		
+				<If Condition="Me.X &gt; 5583 &amp;&amp; Me.X &lt; 5603 &amp;&amp; Me.Y &gt; 2001 &amp;&amp; Me.Y &lt; 2021.057" >
+					<CustomBehavior File="Message" Text="I am resetting Pit of Saron." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />				
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
+					<CustomBehavior File="Message" Text="I have reset the Pit of Saron." LogColor="Lime" />
+					<RunTo X="5593.713" Y="2011.442" Z="798.041" />
+					<CustomBehavior File="Message" Text="Opening the gate so I may enter the Pit of Saron." LogColor="Lime" />
+					<CustomBehavior File="InteractWith" MobId="201761" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="5590.884" Y="2009.19" Z="797.3859" />
+					<CustomBehavior File="MyCTM" X="5583.571" Y="2010.004" Z="798.0425" />
+					<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+				</If>
+
+			<While Condition="Me.ZoneId != 4813" >
+					<CustomBehavior File="Message" Text="Failed to go through the portal. Waiting 60 seconds, then trying again." LogColor="Lime" />
+						<RunTo X="5593.713" Y="2011.442" Z="798.041" />
+					<CustomBehavior File="WaitTimer" WaitTime="60000" />
+					<CustomBehavior File="Message" Text="Attempting to enter Pit of Saron again.." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />	
+					<CustomBehavior File="Message" Text="Opening the gate so I may enter the Pit of Saron." LogColor="Lime" />
+					<CustomBehavior File="InteractWith" MobId="201761" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="5590.884" Y="2009.19" Z="797.3859" />
+					<CustomBehavior File="MyCTM" X="5583.571" Y="2010.004" Z="798.0425" />
+					<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+			</While>
+
+											 <!-- Pit of saron dungeon script -->
+		
+				<If Condition="Me.ZoneId == 4813" >
+					<CustomBehavior File="Message" Text="Opening all my bags so you can see what we have." LogColor="Lime" />
+					<CustomBehavior File="RunMacro" Macro="/script OpenAllBags();" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="443.3825" Y="219.5138" Z="528.7079" />
+						<Hotspot X="468.5802" Y="237.8249" Z="528.7079" />
+						<Hotspot X="499.3831" Y="241.6078" Z="528.7102" />
+						<Hotspot X="530.7369" Y="246.4134" Z="527.7518" />
+						<Hotspot X="547.5206" Y="275.2216" Z="515.5425" />
+						<Hotspot X="542.9275" Y="304.2597" Z="507.4146" />
+						<Hotspot X="574.261" Y="304.4987" Z="508.0981" />
+						<Hotspot X="603.039" Y="315.9579" Z="507.7249" />
+						<Hotspot X="627.8752" Y="329.1573" Z="511.8988" />
+						<Hotspot X="618.8069" Y="289.353" Z="507.3831" />
+						<Hotspot X="628.7004" Y="257.4767" Z="507.6559" />
+						<Hotspot X="645.6365" Y="228.6913" Z="508.0293" />
+						<Hotspot X="674.2511" Y="215.9103" Z="509.0541" />
+						<Hotspot X="700.5161" Y="195.1423" Z="511.6764" />
+						<Hotspot X="712.0822" Y="164.4427" Z="510.8062" />
+						<Hotspot X="693.0988" Y="139.1732" Z="510.2009" />
+						<Hotspot X="667.4234" Y="122.8738" Z="512.4077" />
+						<Hotspot X="640.3137" Y="139.7031" Z="508.7057" />
+						<Hotspot X="629.106" Y="171.3184" Z="507.6333" />
+						<Hotspot X="623.2535" Y="204.2956" Z="507.337" />
+						<Hotspot X="592.4723" Y="200.1826" Z="508.8805" />
+						<Hotspot X="580.3552" Y="171.785" Z="509.7415" />
+						<Hotspot X="573.4915" Y="139.8408" Z="511.9155" />
+						<Hotspot X="557.9498" Y="110.149" Z="513.4293" />
+						<Hotspot X="550.5363" Y="78.3341" Z="525.7391" />
+						<Hotspot X="550.5363" Y="78.3341" Z="525.7391" />
+						<Hotspot X="576.6999" Y="64.73608" Z="525.1922" />
+						<Hotspot X="559.6483" Y="105.1991" Z="514.1418" />
+						<Hotspot X="587.8522" Y="119.5601" Z="508.1262" />
+						<Hotspot X="621.0928" Y="115.66" Z="508.9861" />
+						<Hotspot X="649.8721" Y="104.857" Z="512.2444" />
+						<Hotspot X="613.6316" Y="134.9885" Z="506.4356" />
+					</CustomBehavior>
+					
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+						<RunTo X="626.6089" Y="109.0008" Z="510.3853" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="624.4434" Y="91.84718" Z="511.8912" />
+						<Hotspot X="616.9582" Y="47.21424" Z="512.417" />
+						<Hotspot X="600.1474" Y="56.57896" Z="509.9384" />
+						<Hotspot X="614.1622" Y="55.64116" Z="512.4358" />
+					</CustomBehavior>
+						<CustomBehavior File="WaitTimer" WaitTime="5000" />
+						<RunTo X="614.1622" Y="55.64116" Z="512.4358" />
+						
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="622.5341" Y="2.504699" Z="513.7393" />
+						<Hotspot X="626.7677" Y="-17.59917" Z="513.7393" />
+						<Hotspot X="643.1475" Y="-32.86152" Z="513.7402" />
+						<Hotspot X="682.0283" Y="-102.2411" Z="513.7374" />
+						<Hotspot X="649.8623" Y="-113.9127" Z="512.8029" />
+					</CustomBehavior>
+						<RunTo X="649.8623" Y="-113.9127" Z="512.8029" />
+						
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="687.929" Y="-99.97472" Z="513.7352" />
+						<Hotspot X="694.8412" Y="-121.4999" Z="514.2146" />
+						<Hotspot X="696.0863" Y="-151.2747" Z="528.0613" />
+						<Hotspot X="636.5652" Y="-201.7082" Z="528.9317" />
+					</CustomBehavior>
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<RunTo X="636.5652" Y="-201.7082" Z="528.9317" />	<!-- 1st boss -->	
+					
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="695.1485" Y="-151.3834" Z="528.0607" />
+						<Hotspot X="694.6182" Y="-119.2049" Z="513.8766" />
+						<Hotspot X="712.5334" Y="-99.58644" Z="513.7338" />
+						<Hotspot X="734.1124" Y="-108.88" Z="513.7262" />
+						<Hotspot X="743.5999" Y="-124.6393" Z="512.6193" />
+						<Hotspot X="735.1683" Y="-111.0216" Z="513.6226" />
+						<Hotspot X="748.8749" Y="-68.62511" Z="511.2243" />
+						<Hotspot X="751.566" Y="-47.74838" Z="508.2432" />
+						<Hotspot X="796.1545" Y="-18.09139" Z="508.5409" />
+						<Hotspot X="822.1256" Y="4.116664" Z="509.7042" />
+						<Hotspot X="847.6523" Y="8.157051" Z="510.2869" />
+						<Hotspot X="843.4446" Y="-23.70424" Z="509.3991" />
+						<Hotspot X="817.0136" Y="3.275597" Z="509.6867" />
+					</CustomBehavior>
+						<RunTo X="817.0136" Y="3.275597" Z="509.6867" />
+						
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="832.2035" Y="29.60359" Z="510.2469" />
+						<Hotspot X="797.0593" Y="72.47561" Z="510.6154" />
+						<Hotspot X="771.5424" Y="107.8866" Z="511.2329" />
+						<Hotspot X="754.9777" Y="140.338" Z="510.9785" />
+						<Hotspot X="784.6689" Y="132.1787" Z="509.7379" />
+						<Hotspot X="796.4088" Y="108.8712" Z="509.0592" />
+						<Hotspot X="828.1417" Y="112.7984" Z="509.5137" />
+						<Hotspot X="851.0217" Y="123.4935" Z="509.9089" />
+					</CustomBehavior>
+						<RunTo X="851.0217" Y="123.4935" Z="509.9089" />	<!-- 2nd boss -->
+						
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="829.9934" Y="106.6358" Z="509.6979" />
+						<Hotspot X="807.3466" Y="85.99548" Z="509.2114" />
+						<Hotspot X="813.2112" Y="70.21114" Z="509.945" />
+						<Hotspot X="837.6093" Y="37.50151" Z="510.4451" />
+						<Hotspot X="841.4435" Y="36.80426" Z="510.7307" />
+						<Hotspot X="873.9235" Y="50.16882" Z="522.266" />
+						<Hotspot X="883.5592" Y="53.34127" Z="527.9537" />
+					</CustomBehavior>
+						<RunTo X="883.5592" Y="53.34127" Z="527.9537" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />	
+					
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="889.2043" Y="60.73462" Z="533.6683" />
+						<Hotspot X="902.5587" Y="69.79943" Z="544.2125" />
+						<Hotspot X="915.3716" Y="77.3623" Z="554.0329" />
+						<Hotspot X="935.9598" Y="83.30604" Z="564.1827" />
+						<Hotspot X="944.5588" Y="83.54119" Z="565.6531" />
+						<Hotspot X="953.1628" Y="51.18221" Z="567.7461" />
+						<Hotspot X="952.0579" Y="46.90575" Z="568.5248" />
+						<Hotspot X="938.0092" Y="17.31608" Z="575.2094" />
+						<Hotspot X="935.1153" Y="10.61856" Z="576.6678" />
+						<Hotspot X="927.4821" Y="-27.21768" Z="587.8607" />
+						<Hotspot X="927.4589" Y="-27.40102" Z="587.9124" />
+						<Hotspot X="931.7409" Y="-67.11006" Z="591.9217" />
+						<Hotspot X="936.7328" Y="-78.5929" Z="592.2694" />
+						<Hotspot X="920.1246" Y="-72.90229" Z="592.3804" />
+						<Hotspot X="943.4962" Y="-52.33714" Z="592.2147" />
+					</CustomBehavior>
+						<RunTo X="950.6534" Y="-102.7325" Z="594.8953" />	
+					
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="950.6534" Y="-102.7325" Z="594.8953" />
+						<Hotspot X="972.743" Y="-119.3983" Z="598.8572" />
+						<Hotspot X="1006.602" Y="-135.4178" Z="619.8951" />
+						<Hotspot X="1041.774" Y="-115.1785" Z="628.9306" />
+						<Hotspot X="1058.308" Y="-77.558" Z="633.742" />
+						<Hotspot X="1068.781" Y="-27.30101" Z="633.5489" />
+						<Hotspot X="1075.606" Y="37.94562" Z="629.6573" />
+						<Hotspot X="1062.873" Y="102.4443" Z="630.5422" />
+						<Hotspot X="1032.861" Y="152.2478" Z="628.1561" />
+					</CustomBehavior>
+						<RunTo X="1032.861" Y="152.2478" Z="628.1561" />
+					<CustomBehavior File="WaitTimer" WaitTime="30000" />	
+						
+						<RunTo X="1065.546" Y="99.32065" Z="630.9979" />
+					<CustomBehavior File="WaitTimer" WaitTime="45000" />
+					
+						<RunTo X="860.9722" Y="40.27008" Z="514.5809" />
+						<RunTo X="434.624" Y="212.74" Z="528.709" /> 
+					<CustomBehavior File="MyCTM" X="424.0134" Y="211.5736" Z="529.9064" />  
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+				</If>	
+					
+				<If Condition="(Me.FreeBagSlots &lt; 6) || (Me.LowestDurabilityPercent &lt; 0.3)" > 
+					<CustomBehavior File="Message" Text="Checking my free bag space and my gear's durability." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Flying to the repair vendor @ The Argent Tournament grounds." LogColor="Lime" />
+						<RunTo X="5693.106" Y="2167.813" Z="798.1242" />
+					<CustomBehavior File="FlyTo" X="5694.912" Y="2197.339" Z="826.4079" />
+					<CustomBehavior File="MyCTM" X="5820.244" Y="2266.59" Z="909.5264" />	
+					<CustomBehavior File="MyCTM" X="8342.837" Y="937.6993" Z="975.0637" />
+					<CustomBehavior File="MyCTM" X="8586.275" Y="939.3901" Z="616.4142" />
+					<CustomBehavior File="MyCTM" X="8552.242" Y="932.2313" Z="547.2932" />
+					<CustomBehavior File="ForcedDismount" />
+					<SetVendor>
+						<Vendors>
+							<Vendor Name="Brollen Wheatbeard" Entry="33599" Type="Repair" X="8548.112" Y="933.3629" Z="547.2943" />
+						</Vendors>
+					</SetVendor>						
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="8589.71" Y="695.7098" Z="547.2932" />
+						</Mailboxes>
+					</SetMailbox>
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					
+					<CustomBehavior File="Message" Text="Flying to the Frozen Halls." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="8586.275" Y="939.3901" Z="616.4142" />
+					<CustomBehavior File="MyCTM" X="6050.875" Y="1752.029" Z="855.2743" />
+					<CustomBehavior File="MyCTM" X="8342.837" Y="937.6993" Z="975.0637" />
+					<CustomBehavior File="MyCTM" X="5820.244" Y="2266.59" Z="909.5264" />
+					<CustomBehavior File="MyCTM" X="5694.912" Y="2197.339" Z="826.4079" />
+					<CustomBehavior File="MyCTM" X="5694.021" Y="2171.631" Z="798.1272" />
+						<RunTo X="5593.713" Y="2011.442" Z="798.041" /> 
+				</If>
+						
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

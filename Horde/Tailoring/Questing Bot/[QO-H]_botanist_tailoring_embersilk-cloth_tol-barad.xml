@@ -1,0 +1,173 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-H] Botanist Embersilk Cloth Tol Barad</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Darkwood Lurker" Entry="46508" />
+		<Mob Name="Darkwood Broodmother" Entry="46507" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions>22</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This profile will farm Tol'bard for embersilk cloth. In order to properly run this profile, you need a plugin like elixir or similar that will drink porions/flask. You need plenty of Potion's of Treasure Finding which the plugin should be configured to drink hourly. And your charcter needs to be a minimum of 450 Tailoring skill. You will also need the plugin Tidybags. Make sure that Tidybags is disabled. The profile will enable it when it needs to." Title="WARNING" />
+
+	<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="20" KillBetweenHotspots="True" LogoutForInactivity="False" />
+	
+         <While Condition="true" >
+		 
+		        <If Condition="Me.MapId == 732" > <!-- in tol barad -->
+		 			<If Condition="Me.Y &gt; 1490 &amp;&amp; Me.Y &lt; 1771" > <!-- near farming area -->
+						<CustomBehavior File="Message" Text="I am near the farming area, moving to the first hot spot." LogColor="Yellow" />
+						<CustomBehavior File="ForcedMount" MountType="Ground" />
+						<RunTo X="-491.11" Y="1546.41" Z="19.06094" />
+					</If>
+				</If>
+
+		
+				<If Condition="Me.ZoneId != 1637 &amp;&amp; Me.MapId != 732"> <!--not in Orgrimmar and not in Tol Barad-->
+					    <CustomBehavior File="Message" Text="I'm not in Orgrimmar or Tol Barad, flying to Orgrimmar portals." LogColor="Yellow" />
+						<CustomBehavior File="FlyTo" X="2031.267" Y="-4332.826" Z="95.47218"  DestName="Orgrimmar Portals" />
+					    <CustomBehavior File="Message" Text="Taking the portal to Tol' Barad." LogColor="Yellow" />
+					    <CustomBehavior File="InteractWith" MobId="206595" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="2031.22" Y="-4330.87" Z="95.471" />						
+					    <CustomBehavior File="Message" Text="Waiting for the zone to load." LogColor="Yellow" />
+					    <CustomBehavior File="WaitTimer" WaitTime="5000" GoalText="Waiting for the zone to load. {TimeRemaining}" />
+					    <CustomBehavior File="ForcedDismount" />
+					    <CustomBehavior File="ForcedMount" MountType="Ground" />						
+				</If>
+
+
+
+				<If Condition="Me.ZoneId == 1637" > <!--in Orgrimmar -->
+					<CustomBehavior File="Message" Text="I am in Orgrimmar, flying to the Orgrimmar portals." LogColor="Yellow" />					
+					<CustomBehavior File="FlyTo" X="2031.267" Y="-4332.826" Z="95.47218"  DestName="Orgrimmar Portals" />
+					<CustomBehavior File="Message" Text="Taking the portal to Tol' Barad." LogColor="Yellow" />
+					<CustomBehavior File="InteractWith" MobId="206595" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="2031.22" Y="-4330.87" Z="95.471" />				
+					<CustomBehavior File="Message" Text="Waiting for the zone to load." LogColor="Yellow" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					
+				
+					
+				</If>
+				
+				                              <!-- moving to the grind area if I am not already there-->
+							   
+				<If Condition="Me.Y &gt; 1363 &amp;&amp; Me.Y &lt; 1415" >		   
+					<CustomBehavior File="Message" Text="I am near the Tol Barad starting area. Moving to the farming area.." LogColor="Yellow" />
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+					<RunTo X="-546.2583" Y="1406.217" Z="22.16079" />
+					<RunTo X="-528.2133" Y="1493.143" Z="23.25751" />
+					<RunTo X="-491.11" Y="1546.41" Z="19.06094" />
+					<CustomBehavior File="Message" Text="I have reached the first hot spot. Starting to farm until my bags are full or my gear is broke." LogColor="Yellow" />
+				</If>
+										
+					            <!-- grind area -->
+                
+					<SetGrindArea><GrindArea>
+						<TargetMinLevel>1</TargetMinLevel>
+						<TargetMaxLevel>86</TargetMaxLevel>
+						<Factions>189 14 22</Factions>
+						<MaxDistance>40</MaxDistance>
+						<Hotspots>
+							<Hotspot X="-491.11" Y="1546.41" Z="19.06094" />
+							<Hotspot X="-449.4842" Y="1577.915" Z="24.52687" />
+							<Hotspot X="-418.1969" Y="1592.392" Z="22.94986" />
+							<Hotspot X="-378.2781" Y="1675.85" Z="18.64709" />
+							<Hotspot X="-377.3382" Y="1727.058" Z="22.91491" />
+							<Hotspot X="-332.5232" Y="1684.12" Z="21.25834" />
+							<Hotspot X="-330.8539" Y="1637.225" Z="24.14325" />
+							<Hotspot X="-356.2483" Y="1582.95" Z="22.74309" />
+							<Hotspot X="-410.439" Y="1556.022" Z="22.0483" />
+							<Hotspot X="-483.9972" Y="1495.262" Z="22.04822" />
+						</Hotspots>
+					</GrindArea></SetGrindArea>
+					
+				                         <!-- Grind until bag slots are less than 4 or gear durability less than 30% -->
+													   
+					<GrindTo Condition="(Me.FreeBagSlots &lt; 15) || (Me.LowestDurabilityPercent &lt; 0.3)" GoalText="Farming" />
+						
+				                     <!-- vendor run set hearthstone to innkeeper in the valley of wisdom -->
+																	 
+			
+		<If Condition="(Me.FreeBagSlots &lt; 15) || (Me.LowestDurabilityPercent &lt; 0.3)" > <!-- Will go vendor/repair if needed -->
+			<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth,repair and mail." LogColor="Yellow" />
+
+            <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+            <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+            <CustomBehavior File="Message" Text="Successfully hearthed." LogColor="Yellow" />
+			<CustomBehavior File="Message" Text="Sorting my bags.......making them sexy :D  !!!" LogColor="Yellow" />
+			<CustomBehavior File="RunMacro" Macro="/sort bags" />
+			<CustomBehavior File="WaitTimer" WaitTime="15000"/>
+            <CustomBehavior File="EnablePlugin" Names="Tidy Bags 3.6 Reloaded" />
+			<CustomBehavior File="Message" Text="Tidy Bags has been enabled." LogColor="Yellow" />
+			<CustomBehavior File="WaitTimer" WaitTime="80000"/>
+			<CustomBehavior File="DisablePlugin" Names="Tidy Bags 3.6 Reloaded" />
+			<CustomBehavior File="Message" Text="Tidy Bags has been disabled." LogColor="Yellow" />						
+						
+			<SetVendor>
+				<Vendors>
+					<Vendor Name="Kaja" Entry="3322" Type="Repair" X="1908.45" Y="-4217.19" Z="36.86888" />
+				</Vendors>
+			</SetVendor>
+			<CustomBehavior File="Message" Text="Repairing and selling all my grey items." LogColor="Yellow" />
+			<CustomBehavior File="WaitTimer" WaitTime="10000" />			
+			<CustomBehavior File="Message" Text="Moving to the mailbox near the Inn." LogColor="Yellow" />
+			<SetMailbox>
+				<Mailboxes>
+					<Mailbox X="1923.19" Y="-4192.695" Z="36.97497" />
+				</Mailboxes>
+			</SetMailbox>
+			
+			<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+			
+
+			<CustomBehavior File="FlyTo" X="2031.267" Y="-4332.826" Z="95.47218"  DestName="Orgrimmar Portals" />
+			<CustomBehavior File="Message" Text="Flying to the Orgrimmar portals." LogColor="Yellow" />
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="Message" Text="Taking the portal to Tol' Barad." LogColor="Yellow" />
+			<CustomBehavior File="InteractWith" MobId="206595" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="2031.22" Y="-4330.87" Z="95.471" />
+			<CustomBehavior File="Message" Text="Waiting for the zone to load." LogColor="Yellow" />
+			<CustomBehavior File="WaitTimer" WaitTime="10000" />
+			
+		</If>
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

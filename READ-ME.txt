@@ -1,0 +1,21 @@
+Hi, 
+
+Inside each folder you will find a READ-ME file.
+
+Make sure you read it before using the profiles in that folder.
+
+It will tell you which bot to use for that particular folder.
+
+Profiles created after 09/10/12 will have a popup window shortly after you start the profile.
+
+The popup will give you instructions for that profile. Each popup and profile are different, so read them the first time you use each profile.
+
+After 30 seconds, most of the popups will automatically disappear and the bot will proceed.
+
+There are a few profiles with popups that will require your assistance. You will be warned when you start the profile, if your assistance will be needed.
+ 
+Otherwise, press continue if you have read the popup.
+
+Thank you.
+
+Botanist

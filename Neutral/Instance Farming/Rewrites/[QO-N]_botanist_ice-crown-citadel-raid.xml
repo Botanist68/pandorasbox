@@ -1,0 +1,272 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N]_botanist_ice-crown-citadel-raid</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="5256.286" Y="2512.213" Z="677.9609" Radius="4" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+		<Item name="Book of Glyph Mastery" entry="45912" />
+		<Item name="Frostweave Cloth" entry="33470" />		
+	</ProtectedItems>
+
+	<Factions>16</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+	<CustomBehavior File="UserSettings" LootMobs="False" PullDistance="1" KillBetweenHotspots="True" />
+				 
+				<If Condition="Me.MapId == 571" >
+					<If Condition="Me.ZoneId != 4809" >
+						<If Condition="Me.X &gt; 5829.6673 || Me.X &lt; 5777.097 || Me.Y &gt; 2093.192 || Me.Y &lt; 2059.223" >
+							<CustomBehavior File="Message" Text="I am flying Nesingwary Base Camp in Sholazar Basin." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="5571.18" Y="5750.717" Z="-75.13001" />
+							<CustomBehavior File="ForcedDismount" />
+								<RunTo X="5569.8" Y="5763.163" Z="-75.2255" />
+							<CustomBehavior File="Message" Text="I've reached Nesingwary Base Camp. Setting my hearthstone with the innkeep." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="SetHearthstone" MobId="28038" X="5566.248" Y="5763.706" Z="-75.22614" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<RunTo X="5571.18" Y="5750.717" Z="-75.13001" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="FlyTo" X="5615.411" Y="5757.188" Z="7.660307"  DestName="Frozen Halls" />
+							<CustomBehavior File="Message" Text="Flying to Icecrown Citadel." LogColor="Yellow" />
+							<CustomBehavior File="MyCTM" X="5687.889" Y="5370.179" Z="264.1593" />
+							<CustomBehavior File="MyCTM" X="5815.41" Y="3227.248" Z="741.3565" />
+							<CustomBehavior File="MyCTM" X="5615.529" Y="2558.794" Z="914.5122" />
+							<CustomBehavior File="MyCTM" X="5856.322" Y="2442.805" Z="912.943" />
+							<CustomBehavior File="MyCTM" X="5940.275" Y="2144.144" Z="684.9545" />
+							<CustomBehavior File="MyCTM" X="5791.683" Y="2072.169" Z="636.0641" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="Message" Text="I've reached the entrance to Icecrown Citadel." LogColor="Lime" />
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+									Text="You need to convert your party into a raid then press continue on this window." Title="WARNING" />
+						</If>							
+					</If>
+				</If>
+									  
+				<If Condition="Me.ZoneId == 4812" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside Icecrown Citadel. Running out to reset the raid." LogColor="Lime" />
+						<RunTo X="73.0174" Y="2211.49" Z="30.1157" />
+					<CustomBehavior File="MyCTM" X="81.74292" Y="2212.232" Z="30.1157" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="Message" Text="I'm outside the portal." LogColor="Yellow" />
+						<RunTo X="5791.683" Y="2072.169" Z="636.0641" />
+				</If>
+
+		<While Condition="true" >
+				
+				<If Condition="Me.X &lt; 5829.6673 &amp;&amp; Me.X &gt; 5777.097 &amp;&amp; Me.Y &lt; 2093.192 &amp;&amp; Me.Y &gt; 2059.223" >
+					<CustomBehavior File="Message" Text="I am resetting Icecrown Citadel." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />				
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" /> 
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
+					<CustomBehavior File="Message" Text="I have reset the Icecrown Citadel." LogColor="Lime" />
+					<CustomBehavior File="MyCTM" X="5778.067" Y="2066.093" Z="636.0641" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+				</If>														
+				
+				          <!-- icecrown citadel dungeon script -->
+						  
+						<Runto X="-44.13171" Y="2211.841" Z="27.90283" />
+						
+						
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-77.31824" Y="2215.294" Z="27.90264" />
+						<Hotspot X="-139.0525" Y="2211.191" Z="35.23373" />
+						<Hotspot X="-163.8963" Y="2210.946" Z="35.23373" />
+						<Hotspot X="-142.2782" Y="2211.504" Z="35.23373" />
+					</CustomBehavior>
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>
+						<Runto X="-142.2782" Y="2211.504" Z="35.23373" /> <!-- archway -->
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>	
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-163.499" Y="2210.352" Z="35.23373" />
+						<Hotspot X="-174.4874" Y="2174.847" Z="37.98528" />
+					</CustomBehavior>
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>
+						<Runto X="-174.4874" Y="2174.847" Z="37.98528" />	<!-- 1st left -->
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />	
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>	
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-190.6677" Y="2163.615" Z="37.98528" />
+						<Hotspot X="-208.8347" Y="2173.365" Z="37.98528" />
+						<Hotspot X="-227.9932" Y="2173.513" Z="38.29972" />
+						<Hotspot X="-241.3521" Y="2158.636" Z="37.98556" />
+					</CustomBehavior>
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>
+						<Runto X="-241.3521" Y="2158.636" Z="37.98556" />	<!-- 2nd left -->
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />	
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>	
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-221.5246" Y="2179.36" Z="37.98523" />
+						<Hotspot X="-204.59" Y="2203.209" Z="35.23349" />
+						<Hotspot X="-174.8879" Y="2204.66" Z="35.23349" />
+					</CustomBehavior>
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>
+						<Runto X="-174.8879" Y="2204.66" Z="35.23349" />	<!-- center left -->
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />	
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>	
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-176.5581" Y="2221.27" Z="35.23349" />
+						<Hotspot X="-208.2953" Y="2219.384" Z="35.23349" />
+						<Hotspot X="-243.6676" Y="2265.397" Z="38.00717" />
+					</CustomBehavior>
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>
+						<Runto X="-243.6676" Y="2265.397" Z="38.00717" />	<!-- back right -->
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />	
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>	
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-224.5161" Y="2245.925" Z="37.98519" />
+						<Hotspot X="-208.426" Y="2251.048" Z="37.98519" />
+						<Hotspot X="-197.0372" Y="2262.142" Z="37.98519" />
+						<Hotspot X="-176.5295" Y="2248.214" Z="37.98519" />
+					</CustomBehavior>
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>
+						<Runto X="-176.5295" Y="2248.214" Z="37.98519" />	<!-- front right -->
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />	
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>	
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-173.905" Y="2227.717" Z="35.23361" />
+						<Hotspot X="-199.8323" Y="2212.143" Z="35.23361" />
+						<Hotspot X="-264.469" Y="2211.72" Z="42.56456" />
+					</CustomBehavior>
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>
+						<Runto X="-264.469" Y="2211.72" Z="42.56456" /> <!-- archway -->
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />	
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>	
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-272.9183" Y="2210.911" Z="42.56455" />
+						<Hotspot X="-281.6885" Y="2232.265" Z="41.98026" />
+						<Hotspot X="-294.325" Y="2225.759" Z="41.9728" />
+						<Hotspot X="-306.1363" Y="2225.669" Z="41.97966" />
+						<Hotspot X="-318.6137" Y="2231.094" Z="41.99057" />
+						<Hotspot X="-320.2089" Y="2214.382" Z="42.56456" />
+					</CustomBehavior>	
+						<Runto X="-320.2089" Y="2214.382" Z="42.56456" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />	
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-316.6241" Y="2190.549" Z="42.01832" />
+						<Hotspot X="-307.9283" Y="2197.737" Z="41.98794" />
+						<Hotspot X="-292.2488" Y="2198.491" Z="41.9776" />
+						<Hotspot X="-279.5557" Y="2192.073" Z="42.00487" />
+						<Hotspot X="-310.9648" Y="2212.302" Z="42.50279" />
+						<Hotspot X="-239.6756" Y="2211.64" Z="42.56444" />
+					</CustomBehavior>
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>
+						<Runto X="-239.6756" Y="2211.64" Z="42.56444" />	<!-- last pull -->
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />	
+						<Runto X="-258.2928" Y="2209.905" Z="42.5646" />
+						<Runto X="-247.9463" Y="2210.361" Z="42.5646" />
+						<Runto X="-232.4766" Y="2211.043" Z="40.8963" />
+						<Runto X="-222.2359" Y="2220.188" Z="37.29473" />
+						<Runto X="-221.2676" Y="2235.544" Z="36.70068" />
+						<Runto X="-214.3284" Y="2248.755" Z="37.98528" />
+						<Runto X="-201.8623" Y="2257.703" Z="37.98528" />
+						<Runto X="-187.0388" Y="2257.436" Z="37.98528" />
+						<Runto X="-176.2193" Y="2247.172" Z="37.98528" />
+						<Runto X="-172.9838" Y="2232.155" Z="35.63578" />
+						<Runto X="-173.2259" Y="2216.664" Z="35.2347" />
+						<Runto X="-173.4641" Y="2201.428" Z="35.2347" />
+						<Runto X="-173.7066" Y="2185.914" Z="35.87361" />
+						<Runto X="-177.6205" Y="2171.184" Z="37.98528" />
+						<Runto X="-189.406" Y="2161.76" Z="37.98528" />
+						<Runto X="-203.2468" Y="2166.641" Z="37.98528" />
+						<Runto X="-216.0313" Y="2175.446" Z="37.98528" />
+						<Runto X="-223.7373" Y="2187.885" Z="37.16911" />
+						<Runto X="-228.6352" Y="2202.563" Z="39.15987" />
+						<Runto X="-221.3165" Y="2213.346" Z="37.32673" />
+						<Runto X="-205.8928" Y="2212.436" Z="35.23367" />
+						<Runto X="-190.4286" Y="2212.72" Z="35.23367" />
+						<Runto X="-175.1583" Y="2213.165" Z="35.23367" />
+						<Runto X="-159.8258" Y="2211.821" Z="35.23367" />
+						<Runto X="-144.672" Y="2212.048" Z="35.23367" />
+						<Runto X="-141.8785" Y="2211.74" Z="35.23367" />
+						
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>
+					
+				<If Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 
+				
+					<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+					<If Condition="Me.ZoneId != 4812" >					
+						<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor, then mailing." LogColor="Lime" />						
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Mardan Thunderhoof" Entry="28040" Type="Repair" X="5552.257" Y="5738.877" Z="-76.21748" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="5563.184" Y="5756.806" Z="-75.43555" />
+							</Mailboxes>
+						</SetMailbox>
+			
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						
+							<RunTo X="5571.18" Y="5750.717" Z="-75.13001" />
+						<CustomBehavior File="ForcedMount" MountType="Flying" />
+						<CustomBehavior File="FlyTo" X="5615.411" Y="5757.188" Z="7.660307"  DestName="Frozen Halls" />
+						<CustomBehavior File="Message" Text="Flying to Icecrown Citadel." LogColor="Yellow" />
+						<CustomBehavior File="MyCTM" X="5687.889" Y="5370.179" Z="264.1593" />
+						<CustomBehavior File="MyCTM" X="5815.41" Y="3227.248" Z="741.3565" />
+						<CustomBehavior File="MyCTM" X="5615.529" Y="2558.794" Z="914.5122" />
+						<CustomBehavior File="MyCTM" X="5856.322" Y="2442.805" Z="912.943" />
+						<CustomBehavior File="MyCTM" X="5940.275" Y="2144.144" Z="684.9545" />
+						<CustomBehavior File="MyCTM" X="5791.683" Y="2072.169" Z="636.0641" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="Message" Text="I've reached the entrance to Icecrown Citadel." LogColor="Lime" />
+					</If>	
+				</If>
+				<If Condition="Me.ZoneId == 4812" >
+					<CustomBehavior File="Message" Text="Waiting 60 seconds to avoid getting instance locked." LogColor="Lime" />
+						<RunTo X="73.0174" Y="2211.49" Z="30.1157" />
+					<CustomBehavior File="WaitTimer" WaitTime="60" />	
+					<CustomBehavior File="MyCTM" X="81.74292" Y="2212.232" Z="30.1157" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="Message" Text="I'm outside the portal." LogColor="Yellow" />
+						<RunTo X="5791.683" Y="2072.169" Z="636.0641" />
+				</If>		
+					
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

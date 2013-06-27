@@ -1,0 +1,150 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-Goto][Ground][pretend-to-fish]_botanist_ghostly-pandaren-fisherman</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Pengsong" Entry="66587" />
+		<Mob Name="Amberscale Basilisk" Entry="66188" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<QuestOrder>
+		
+	    
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This profile will farm the Ghostly Pandaren Fisherman for Pandaren Fishing Charm. The profile does not set your hearth, mail, vendor or repair. You need to manually set your hearth anywhere but Valley of the Four Winds. This profile will run until it speaks to the fisherman. The profile will go to the Fisherman's spawn point (where it will equip a plain 'fishing pole' that you buy from a fishing supply vendor and PRETEND to fish), while searching for the fisherman every 2 minutes. If it does find him, it will interact with him, receive the Pandaren Fishing Charm. It will then hearth and stop the bot ." Title="WARNING" />
+						
+			
+			
+				<CustomBehavior File="Message" Text="Position check #1" LogColor="Lime" />
+				<If Condition="Me.MapId == 870" >				 
+					<If Condition="Me.ZoneId != 5805" >
+						<CustomBehavior File="Message" Text="I am in Pandaria, but not in Valley of the Four Winds, taking the flight path to Halfhill." LogColor="Lime" />						
+						<RunTo X="-235.2961" Y="568.2637" Z="167.8411" />							
+						<CustomBehavior File="Message" Text="I have reached Halfhill " LogColor="Lime" />
+					</If>						
+				</If>
+				
+				
+				<CustomBehavior File="Message" Text="Position check #2" LogColor="Lime" />
+				<CustomBehavior File="Message" Text="I am in Valley of the Four Winds, going in search of the Ghostly Pandaren Fisherman." LogColor="Lime" />
+				<If Condition="Me.ZoneId == 5805" >
+					<RunTo X="435.0948" Y="839.5363" Z="145.4977" />
+					
+				</If>
+				
+				
+			<While Condition="Me.ZoneId == 5805 &amp;&amp; Me.X &gt; 425 &amp;&amp; Me.X &lt; 475 &amp;&amp; Me.Y &gt; 825 &amp;&amp; Me.Y &lt; 875" > 
+												
+				<CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" PullDistance="1" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+					
+                                             <!-- valley of the four winds  -->
+											 											 
+				<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+				<CustomBehavior File="Message" Text="Searching for the Ghostly Pandaren Fisherman." LogColor="Lime" />
+				<CustomBehavior File="RunMacro" Macro="/target Ghostly Pandaren Fisherman" NumOfTimes="1" WaitTime="0"/>
+					<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 64004">
+						<CustomBehavior File="Message" Text="Found the Ghostly Pandaren Fisherman. I'm going to talk to him." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="64004" NumOfTimes="1" CollectionDistance="30" ObjectType="Npc" X="455.9621" Y="842.5572" Z="145.3767" /> 
+						<CustomBehavior File="RunMacro" Macro="/script SelectGossipOption(1)\n/script CloseGossip()" NumOfTimes="1" WaitTime="2000" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<CustomBehavior File="Message" Text="I have talked to the Ghostly Pandaren Fisherman. I should have the Ancient Pandaren Fishing Charm in my bags" LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="3000" />
+						<CustomBehavior File="Message" Text="Using my hearthstone." LogColor="Lime" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					    <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+						<CustomBehavior File="Message" Text="I have hearthed back to my current home. Stopping the bot" LogColor="Lime" />
+						<CustomBehavior File="UserSettings" StopBot="true" />
+					</If>
+					
+					<CustomBehavior File="Message" Text="I didn't find the Ghostly Pandaren Fisherman. Pretending to fish for 2 minutes before searching again." LogColor="Lime" />
+						<RunTo X="451.0118" Y="841.0981" Z="145.5773" />
+						<RunTo X="443.1783" Y="837.804" Z="145.6386" />
+						<RunTo X="428.3721" Y="837.3765" Z="144.6163" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />	
+					<CustomBehavior File="RunMacro" Macro="/equip Fishing Pole" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="RunMacro" Macro="/run UIErrorsFrame:Clear()" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="RunMacro" Macro="/cast fishing" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="14000" />
+					<CustomBehavior File="RunMacro" Macro="/run UIErrorsFrame:Clear()" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="RunMacro" Macro="/cast fishing" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="RunMacro" Macro="/run UIErrorsFrame:Clear()" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="RunMacro" Macro="/cast fishing" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="11000" />
+					<CustomBehavior File="RunMacro" Macro="/run UIErrorsFrame:Clear()" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="RunMacro" Macro="/cast fishing" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="6000" />
+					<CustomBehavior File="RunMacro" Macro="/run UIErrorsFrame:Clear()" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="RunMacro" Macro="/cast fishing" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+					<CustomBehavior File="RunMacro" Macro="/run UIErrorsFrame:Clear()" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="RunMacro" Macro="/cast fishing" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="RunMacro" Macro="/run UIErrorsFrame:Clear()" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="RunMacro" Macro="/cast fishing" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="14000" />
+					<CustomBehavior File="RunMacro" Macro="/run UIErrorsFrame:Clear()" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="RunMacro" Macro="/cast fishing" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="11000" />
+					<CustomBehavior File="RunMacro" Macro="/run UIErrorsFrame:Clear()" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="RunMacro" Macro="/cast fishing" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="9000" />
+					<CustomBehavior File="RunMacro" Macro="/run UIErrorsFrame:Clear()" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="RunMacro" Macro="/cast fishing" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="RunMacro" Macro="/run UIErrorsFrame:Clear()" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="RunMacro" Macro="/cast fishing" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="8000" />
+					<CustomBehavior File="RunMacro" Macro="/run UIErrorsFrame:Clear()" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="RunMacro" Macro="/cast fishing" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+						<RunTo X="451.0118" Y="841.0981" Z="145.5773" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						
+			</While>
+
+					<CustomBehavior File="Message" Text="I have hearthed back to my current home. Stopping the bot" LogColor="Lime" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
+											
+		</QuestOrder>
+
+
+</HBProfile>
+

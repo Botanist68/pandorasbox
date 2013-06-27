@@ -1,0 +1,131 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[A-AutoAngler][Pool-Fishing][Jewel-Danio][Redbelly-Mandarin][Emperor-Salmon]_botanist_vale-of-eternal-blossoms</Name>
+   
+	<MinLevel>90</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>True</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="1452.185" Y="616.9977" Z="403.3035" Radius="30" />
+		<Blackspot X="801.3157" Y="-2020.946" Z="59.14861" Radius="45" />
+		<Blackspot X="2003.698" Y="-90.13161" Z="390.919" Radius="45" />
+		<Blackspot X="1065.516" Y="-1484.407" Z="96.77965" Radius="50" />
+		<Blackspot X="1515.955" Y="-568.2357" Z="307.7042" Radius="50" />
+		<Blackspot X="1249.74" Y="-1225.877" Z="180.5407" Radius="45" />
+	</Blackspots>
+
+	<Mailboxes>
+		<Mailbox X="872.9365" Y="275.4873" Z="503.2267" />
+	</Mailboxes>
+ 
+	<Vendors>
+		<Vendor Name="Pera Firestone" Entry="64480" Type="Repair" X="937.8229" Y="327.382" Z="506.1206" />
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+	<Item Name="Elementium Lockbox" Entry="68729" />
+	<Item Name="Raw Tiger Steak" Entry="74833" />
+	<Item Name="Exotic Leather" Entry="72120" />
+	<Item Name="Raw Turtle Meat" Entry="74837" />	
+	</ProtectedItems>
+	
+	<Hotspots>
+		<Hotspot X="1496.91" Y="646.7321" Z="419.8507" />
+		<Hotspot X="1452.65" Y="656.1285" Z="420.6877" />
+		<Hotspot X="1394.497" Y="679.809" Z="421.5428" />
+		<Hotspot X="1350.692" Y="723.514" Z="416.6144" />
+		<Hotspot X="1288.487" Y="717.2543" Z="402.3876" />
+		<Hotspot X="1226.794" Y="703.7413" Z="398.9247" />
+		<Hotspot X="1179.368" Y="662.032" Z="400.2985" />
+		<Hotspot X="1152.479" Y="604.3413" Z="404.1444" />
+		<Hotspot X="1174.528" Y="549.6223" Z="407.9984" />
+		<Hotspot X="1216.313" Y="531.1439" Z="414.3498" />
+		<Hotspot X="1224.477" Y="476.9264" Z="443.2415" />
+		<Hotspot X="1201.306" Y="438.2096" Z="440.2053" />
+		<Hotspot X="1181.022" Y="378.4049" Z="447.2323" />
+		<Hotspot X="1169.52" Y="317.6911" Z="460.7149" />
+		<Hotspot X="1162.227" Y="256.6694" Z="477.6491" />
+		<Hotspot X="1146.401" Y="197.3226" Z="494.9654" />
+		<Hotspot X="1102.833" Y="207.5059" Z="500.7608" />
+		<Hotspot X="1097.041" Y="269.0256" Z="488.4862" />
+		<Hotspot X="1083.198" Y="328.8094" Z="470.5901" />
+		<Hotspot X="1061.444" Y="383.1622" Z="445.1883" />
+		<Hotspot X="1035.535" Y="438.325" Z="426.0743" />
+		<Hotspot X="996.4533" Y="485.9417" Z="411.3904" />
+		<Hotspot X="949.6637" Y="528.1349" Z="403.6993" />
+		<Hotspot X="955.5998" Y="589.6391" Z="403.0982" />
+		<Hotspot X="966.3888" Y="652.7443" Z="409.6996" />
+		<Hotspot X="994.7435" Y="709.0797" Z="417.002" />
+		<Hotspot X="1034.665" Y="758.8927" Z="415.9812" />
+		<Hotspot X="1069.612" Y="810.4425" Z="426.4082" />
+		<Hotspot X="1087.862" Y="870.3196" Z="434.5486" />
+		<Hotspot X="1112.36" Y="928.0848" Z="438.0014" />
+		<Hotspot X="1152.036" Y="978.2846" Z="441.9572" />
+		<Hotspot X="1175.068" Y="1037.66" Z="445.2563" />
+		<Hotspot X="1181.805" Y="1098.74" Z="441.1399" />
+		<Hotspot X="1172.452" Y="1160.191" Z="425.3496" />
+		<Hotspot X="1169.602" Y="1222.326" Z="411.6143" />
+		<Hotspot X="1168.526" Y="1284.746" Z="398.5789" />
+		<Hotspot X="1161.881" Y="1346.061" Z="382.2396" />
+		<Hotspot X="1152.715" Y="1407.243" Z="364.9367" />
+		<Hotspot X="1129.825" Y="1467.93" Z="357.9994" />
+		<Hotspot X="1085.133" Y="1512.122" Z="358.3661" />
+		<Hotspot X="1027.606" Y="1540.737" Z="357.9696" />
+		<Hotspot X="975.3799" Y="1576.899" Z="357.5673" />
+		<Hotspot X="919.7749" Y="1607.543" Z="363.9971" />
+		<Hotspot X="861.486" Y="1633.014" Z="367.248" />
+		<Hotspot X="814.4504" Y="1675.416" Z="366.6565" />
+		<Hotspot X="768.4153" Y="1718.376" Z="373.9118" />
+		<Hotspot X="708.3589" Y="1736.004" Z="377.5717" />
+		<Hotspot X="645.0793" Y="1726.758" Z="376.1897" />
+		<Hotspot X="601.8481" Y="1714.627" Z="389.5116" />
+		<Hotspot X="607.4315" Y="1662.377" Z="417.4202" />
+		<Hotspot X="651.917" Y="1679.518" Z="413.44" />
+		<Hotspot X="691.2869" Y="1720.869" Z="386.4797" />
+		<Hotspot X="751.319" Y="1728.24" Z="369.72" />
+		<Hotspot X="796.6953" Y="1709.263" Z="361.2027" />
+		<Hotspot X="834.0979" Y="1657.803" Z="361.5771" />
+		<Hotspot X="883.1084" Y="1620.841" Z="360.8452" />
+		<Hotspot X="942.02" Y="1598.192" Z="354.7419" />
+		<Hotspot X="995.0035" Y="1561.4" Z="354.537" />
+		<Hotspot X="1047.246" Y="1525.107" Z="353.4722" />
+		<Hotspot X="1098.254" Y="1487.501" Z="356.3938" />
+		<Hotspot X="1148.81" Y="1450.717" Z="366.031" />
+		<Hotspot X="1201.377" Y="1421.569" Z="388.878" />
+		<Hotspot X="1247.994" Y="1380.902" Z="403.8728" />
+		<Hotspot X="1291.813" Y="1335.569" Z="408.9991" />
+		<Hotspot X="1329.129" Y="1284.312" Z="413.1631" />
+		<Hotspot X="1357.427" Y="1227.845" Z="422.1659" />
+		<Hotspot X="1375.719" Y="1168.549" Z="438.7207" />
+		<Hotspot X="1395.79" Y="1113.653" Z="462.8317" />
+		<Hotspot X="1426.409" Y="1062.522" Z="485.7477" />
+		<Hotspot X="1446.847" Y="1002.441" Z="491.049" />
+		<Hotspot X="1456.22" Y="942.4003" Z="473.361" />
+		<Hotspot X="1461.776" Y="883.519" Z="448.0309" />
+		<Hotspot X="1466.02" Y="820.8523" Z="436.5533" />
+		<Hotspot X="1489.889" Y="764.3944" Z="432.2926" />
+		<Hotspot X="1503.414" Y="713.7441" Z="434.0673" />
+    </Hotspots>
+</HBProfile>
+

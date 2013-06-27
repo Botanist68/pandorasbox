@@ -1,0 +1,325 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][Doesn't-Set-Hearth]_botanist_halls-of-lightening</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+		<Item name="Book of Glyph Mastery" entry="45912" />
+		<Item name="Frostweave Cloth" entry="33470" />		
+	</ProtectedItems>
+
+	<Factions>16</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+	<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="True" />
+	
+	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This profile will endlessly farm Halls of Lightening. It does vendor ALL loot including except cloth and epics. Make sure you have none in your bags that you want to keep. The profile will not set you hearthstone, you need to manually set it. Start the profile anywhere in Northrend." Title="WARNING" />
+	
+         
+		 
+				<If Condition="Me.MapId == 571" > 
+					<If Condition="Me.X &gt; 9200 || Me.X &lt; 9100 || Me.Y &gt; -1200 || Me.Y &lt; -1450" >
+						<CustomBehavior File="Message" Text="I am flying Halls of Lightning." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="9175.68" Y="-1378.8" Z="1103.57" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="Message" Text="I've reached the portal to Halls of Lightening." LogColor="Lime" />
+					</If>								
+				</If>
+		 									  
+				<If Condition="Me.ZoneId == 4272" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside the Halls of Lightening. Running out to reset the dungeon." LogColor="Lime" />
+						<RunTo X="1331.41" Y="241.904" Z="52.5046" />
+					<CustomBehavior File="MyCTM" X="1333.524" Y="275.7161" Z="52.81057" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="Message" Text="I have exited Halls of lightening." LogColor="Lime" />
+						<RunTo X="9175.68" Y="-1378.8" Z="1103.57" />
+				</If>
+
+		<While Condition="true" >
+		
+				<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+					<CustomBehavior File="WaitTimer" WaitTime="1000"/>
+					<CustomBehavior File="Message" Text="I've detected that I have less than 25 empty bag slots or my gear is about to break. Flying to the repair vendor." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="8451.118" Y="-327.6262" Z="907.0436" />
+					<CustomBehavior File="ForcedDismount" />
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Dargum Hammerdeep" Entry="29964" Type="Repair" X="8383.45" Y="-390.166" Z="903.1189" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="8442.632" Y="-327.6092" Z="906.6084" />
+							</Mailboxes>
+						</SetMailbox>		
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						<RunTo X="8451.118" Y="-327.6262" Z="907.0436" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />
+					<CustomBehavior File="Message" Text="Flying back to the Halls of Lightening." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="9175.68" Y="-1378.8" Z="1103.57" />					
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="Message" Text="I've reached the Halls of Lightening" LogColor="Lime" />
+						<RunTo X="9175.68" Y="-1378.8" Z="1103.57" />	
+				</If>
+				
+				<If Condition="Me.X &lt; 9200 &amp;&amp; Me.X &gt; 9100 &amp;&amp; Me.Y &lt; -1200 &amp;&amp; Me.Y &gt; -1450" >
+					<CustomBehavior File="Message" Text="I am resetting the Halls of Lightening." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />				
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" /> 
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
+					<CustomBehavior File="Message" Text="I have reset the Halls of Lightening." LogColor="Lime" />
+					<CustomBehavior File="MyCTM" X="9186.854" Y="-1388.016" Z="1110.216" />
+					<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+				</If>
+				
+				<If Condition="Me.ZoneId == 4272" >
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1326.068" Y="163.9199" Z="53.70412" />
+						<Hotspot X="1332.254" Y="99.32719" Z="40.18035" />
+						<Hotspot X="1353.304" Y="89.62331" Z="40.18035" />
+						<Hotspot X="1382.151" Y="60.58167" Z="50.03889" />
+						<Hotspot X="1370.751" Y="49.92919" Z="50.03889" />
+						<Hotspot X="1340.484" Y="80.59077" Z="40.17969" />
+					</CustomBehavior>	
+						<RunTo X="1340.484" Y="80.59077" Z="40.17969" />
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="1317.1" Y="92.93698" Z="40.17969" />
+						<Hotspot X="1281.464" Y="93.33759" Z="33.50557" />
+						<Hotspot X="1262.2" Y="109.4272" Z="33.50601" />
+					</CustomBehavior>
+						<RunTo X="1262.2" Y="109.4272" Z="33.50601" />
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1254.912" Y="81.80631" Z="33.50601" />
+						<Hotspot X="1254.707" Y="-5.323892" Z="33.50622" />
+						<Hotspot X="1270.233" Y="-5.421998" Z="33.50622" />
+						<Hotspot X="1269.905" Y="79.5057" Z="33.50622" />
+					</CustomBehavior>
+						<RunTo X="1269.905" Y="79.5057" Z="33.50622" />	
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1262.139" Y="74.68214" Z="33.50622" />
+						<Hotspot X="1262.303" Y="-0.2338661" Z="33.50575" />
+						<Hotspot X="1266.988" Y="-15.70143" Z="33.50575" />
+						<Hotspot X="1301.222" Y="-34.1812" Z="37.76591" />
+						<Hotspot X="1260.517" Y="-34.11843" Z="33.50573" />
+					</CustomBehavior>
+						<RunTo X="1260.517" Y="-34.11843" Z="33.50573" />
+
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1273.477" Y="-26.7691" Z="33.50578" />
+						<Hotspot X="1334.925" Y="-30.51667" Z="40.18055" />
+						<Hotspot X="1351.752" Y="-17.09063" Z="40.18056" />
+						<Hotspot X="1381.074" Y="11.50614" Z="50.03818" />
+						<Hotspot X="1371.537" Y="21.5994" Z="50.03818" />
+						<Hotspot X="1347.989" Y="-2.27765" Z="40.18062" />
+					</CustomBehavior>
+						<RunTo X="1347.989" Y="-2.27765" Z="40.18062" />	
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1356.694" Y="-1.794541" Z="42.12183" />
+						<Hotspot X="1380.72" Y="21.32062" Z="50.03841" />
+						<Hotspot X="1401.744" Y="43.71712" Z="50.03841" />
+						<Hotspot X="1404.899" Y="32.14876" Z="50.03841" />
+						<Hotspot X="1436.214" Y="31.64485" Z="56.66756" />
+					</CustomBehavior>
+						<RunTo X="1436.214" Y="31.64485" Z="56.66756" />
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="1395.647" Y="36.54034" Z="50.03838" />
+						<Hotspot X="1332.28" Y="-26.81706" Z="40.18063" />
+						<Hotspot X="1332.12" Y="-92.98" Z="23.56636" />
+							<!-- pulls iron crusible trash -->
+						<Hotspot X="1331.658" Y="-116.0548" Z="23.22709" />
+						<Hotspot X="1322.112" Y="-129.2765" Z="23.22563" />
+						<Hotspot X="1346.529" Y="-132.4508" Z="23.22563" />	
+						<Hotspot X="1332.334" Y="-148.155" Z="23.22555" />
+						<Hotspot X="1305.949" Y="-164.7361" Z="23.22555" />
+						<Hotspot X="1320.973" Y="-184.379" Z="23.22555" />
+						<Hotspot X="1302.281" Y="-216.1157" Z="23.22555" />
+						<Hotspot X="1324.044" Y="-185.3264" Z="23.22555" />
+						<Hotspot X="1359.55" Y="-163.417" Z="23.22555" />
+						<Hotspot X="1332.176" Y="-140.5708" Z="23.22555" />
+						<Hotspot X="1345.609" Y="-168.1721" Z="23.22555" />
+						<Hotspot X="1349.418" Y="-196.1588" Z="23.22555" />
+						<Hotspot X="1363.903" Y="-216.3537" Z="23.22555" />
+						<Hotspot X="1336.589" Y="-188.3824" Z="23.22555" />
+						<Hotspot X="1331.36" Y="-231.6672" Z="37.79219" />	
+					</CustomBehavior>
+						<RunTo X="1331.36" Y="-231.6672" Z="37.79219" />	
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1292.039" Y="-238.6138" Z="37.8052" />
+						<Hotspot X="1371.306" Y="-240.6404" Z="37.80804" />
+						<Hotspot X="1353.158" Y="-237.1769" Z="37.80671" />
+						<Hotspot X="1296.571" Y="-240.4983" Z="37.80479" />
+						<Hotspot X="1369.052" Y="-239.4881" Z="37.80821" />
+						<Hotspot X="1353.926" Y="-227.8156" Z="37.79855" />
+						<Hotspot X="1354.76" Y="-203.1309" Z="51.97512" />
+						<Hotspot X="1366.58" Y="-182.1774" Z="52.0262" />
+						<Hotspot X="1368.955" Y="-136.2336" Z="56.03887" />
+						<Hotspot X="1331.488" Y="-144.3529" Z="52.02663" />
+						<Hotspot X="1295.872" Y="-133.0932" Z="56.06705" />
+						<Hotspot X="1297.458" Y="-189.761" Z="52.02179" />	
+					</CustomBehavior>
+						<RunTo X="1297.458" Y="-189.761" Z="52.02179" />
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">					
+						<Hotspot X="1331.496" Y="-137.8157" Z="53.87852" />
+						<Hotspot X="1332.336" Y="-103.4903" Z="56.71786" /> <!-- 2nd boss -->
+					</CustomBehavior>
+						<RunTo X="1332.336" Y="-103.4903" Z="56.71786" />
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1279.396" Y="-164.6664" Z="52.02194" />
+						<Hotspot X="1189.363" Y="-174.5618" Z="52.30507" />
+						<Hotspot X="1176.492" Y="-233.1908" Z="52.36838" />
+						<Hotspot X="1176.534" Y="-328.7049" Z="52.33836" />
+					</CustomBehavior>
+						<RunTo X="1176.534" Y="-328.7049" Z="52.33836" />
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1175.929" Y="-261.0364" Z="52.35305" />
+						<Hotspot X="1115.381" Y="-262.6395" Z="56.87391" />
+						<Hotspot X="1125.848" Y="-291.7877" Z="56.87513" />
+						<Hotspot X="1126.382" Y="-330.2854" Z="56.87399" />
+						<Hotspot X="1126.741" Y="-297.4795" Z="56.87571" />
+						<Hotspot X="1114.355" Y="-261.8406" Z="56.8745" />
+						<Hotspot X="1066.833" Y="-262.8583" Z="61.22644" />	<!-- 3rd boss -->
+					</CustomBehavior>
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1066.833" Y="-262.8583" Z="61.22644" />
+						<Hotspot X="1073.328" Y="-242.5458" Z="61.2276" />
+						<Hotspot X="1073.303" Y="-214.2632" Z="61.18791" />
+						<Hotspot X="1070.69" Y="-192.3296" Z="56.81334" />
+						<Hotspot X="1092.87" Y="-171.5366" Z="56.65441" />
+						<Hotspot X="1101.286" Y="-142.8331" Z="61.21917" />
+						<Hotspot X="1106.552" Y="-115.0964" Z="61.26813" />
+						<Hotspot X="1059.231" Y="-170.8725" Z="56.63253" />
+						<Hotspot X="1059.231" Y="-170.8725" Z="56.63253" />
+						<Hotspot X="1044.702" Y="-145.0285" Z="61.20986" />
+						<Hotspot X="1033.164" Y="-113.1006" Z="61.23853" />
+						<Hotspot X="1073.013" Y="-105.5554" Z="56.74242" />
+						<Hotspot X="1073.411" Y="-43.87227" Z="61.18915" />
+						<Hotspot X="1072.89" Y="-17.58141" Z="61.20686" />
+						<Hotspot X="1073.975" Y="-58.83869" Z="61.25078" />
+					</CustomBehavior>
+						<RunTo X="1073.975" Y="-58.83869" Z="61.25078" />
+					
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1074.236" Y="-21.1833" Z="61.20282" />
+						<Hotspot X="1050.233" Y="-7.674835" Z="61.1954" />
+						<Hotspot X="1033.342" Y="11.06973" Z="61.1954" />
+						<Hotspot X="1033.801" Y="49.84793" Z="59.16308" />
+						<Hotspot X="1036.375" Y="61.36528" Z="61.19514" />
+						<Hotspot X="1065.966" Y="88.58159" Z="61.15608" />
+						<Hotspot X="1079.115" Y="90.98849" Z="61.14471" />
+						<Hotspot X="1033.851" Y="55.70658" Z="60.93853" />
+						<Hotspot X="1032.568" Y="35.46587" Z="58.34366" />
+						<Hotspot X="1059.861" Y="50.03205" Z="53.38387" />
+						<Hotspot X="1081.863" Y="65.45926" Z="53.40552" />
+						<Hotspot X="1105.646" Y="48.00858" Z="53.39554" />
+						<Hotspot X="1102.725" Y="17.95224" Z="53.38489" />
+						<Hotspot X="1082.344" Y="3.266062" Z="53.38092" />
+					</CustomBehavior>
+						<RunTo X="1082.344" Y="3.266062" Z="53.38092" />
+						
+						<RunTo X="1129.141" Y="34.46079" Z="58.3444" />
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1150.821" Y="34.38512" Z="60.57405" />
+						<Hotspot X="1177.28" Y="62.62251" Z="60.73008" />
+						<Hotspot X="1211.615" Y="42.92529" Z="60.73008" />
+						<Hotspot X="1223.104" Y="34.37615" Z="60.73008" />
+						<Hotspot X="1250.818" Y="33.77605" Z="56.65352" />
+					</CustomBehavior>
+						<RunTo X="1250.818" Y="33.77605" Z="56.65352" />	
+					<CustomBehavior File="MyCTM" X="1266.242" Y="32.54805" Z="33.50598" />	<!-- jump down -->
+						<RunTo X="1331.41" Y="241.904" Z="52.5046" />
+					<CustomBehavior File="MyCTM" X="1333.524" Y="275.7161" Z="52.81057" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="Message" Text="I have exited Halls of lightening." LogColor="Lime" />
+						<RunTo X="9175.68" Y="-1378.8" Z="1103.57" />
+					<CustomBehavior File="Message" Text="Checking my free bag space and my gear's durability." LogColor="Lime" />
+						<If Condition="(Me.FreeBagSlots &lt; 25) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+							<CustomBehavior File="WaitTimer" WaitTime="1000"/>
+							<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Flying to the repair vendor." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="8977.425" Y="-1215.391" Z="1220.316" />
+							<CustomBehavior File="MyCTM" X="8552.134" Y="-372.7983" Z="1199.937" />
+							<CustomBehavior File="MyCTM" X="8465.006" Y="-310.6439" Z="927.4614" />
+							<CustomBehavior File="MyCTM" X="8399.413" Y="-386.4885" Z="903.0173" />
+							<CustomBehavior File="ForcedDismount" />
+								<SetVendor>
+									<Vendors>
+										<Vendor Name="Dargum Hammerdeep" Entry="29964" Type="Repair" X="8383.45" Y="-390.166" Z="903.1189" />
+									</Vendors>
+								</SetVendor>
+								<SetMailbox>
+									<Mailboxes>
+										<Mailbox X="8442.632" Y="-327.6092" Z="906.6084" />
+									</Mailboxes>
+								</SetMailbox>		
+							<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+								<RunTo X="8451.118" Y="-327.6262" Z="907.0436" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="Message" Text="Flying back to the Halls of Lightening." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="8511.641" Y="-284.2477" Z="976.2979" />
+							<CustomBehavior File="MyCTM" X="8571.907" Y="-423.6156" Z="1124.205" />
+							<CustomBehavior File="MyCTM" X="8937.85" Y="-1206.409" Z="1165.468" />
+							<CustomBehavior File="MyCTM" X="9175.68" Y="-1378.8" Z="1103.57" />					
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="Message" Text="I've reached the Halls of Lightening" LogColor="Lime" />
+								<RunTo X="9175.68" Y="-1378.8" Z="1103.57" />	
+						</If>
+						<If Condition="(Me.FreeBagSlots &gt; 25) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" > 					
+							<CustomBehavior File="WaitTimer" WaitTime="1000"/>
+							<CustomBehavior File="Message" Text="I have determined that I have more than 25 empty bag slots and that my gear is above 30% durability." LogColor="Lime" />
+						</If>
+				</If>
+				
+				
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

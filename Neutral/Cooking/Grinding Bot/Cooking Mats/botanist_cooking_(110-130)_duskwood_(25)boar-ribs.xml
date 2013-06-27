@@ -1,0 +1,40 @@
+<HBProfile>
+  <Name>botanist_cooking_(110-130)_duskwood_(25)boar-ribs</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>7</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+      <Vendor Name="Gavin Gnarltree" Entry="225" Type="Repair" X="-10596.89" Y="-1154.147" Z="30.05965" />
+	</Vendors>
+	
+	<Mailboxes>
+      <Mailbox X="-10548.31" Y="-1157.843" Z="27.89518" />
+	</Mailboxes>
+
+    <Hotspots>
+     <Hotspot X="-11087.49" Y="-618.0876" Z="29.36979" />
+     <Hotspot X="-10996.68" Y="-507.0173" Z="33.69192" />
+     <Hotspot X="-11085.86" Y="-482.1953" Z="31.28823" />
+    </Hotspots>
+  
+  <Blackspots>
+
+  </Blackspots>
+  
+</HBProfile>

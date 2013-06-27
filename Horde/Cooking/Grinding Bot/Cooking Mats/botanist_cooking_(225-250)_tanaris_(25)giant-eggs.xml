@@ -1,0 +1,45 @@
+<HBProfile>
+  <Name>botanist_cooking_(225-250)_tanaris_(25)giant-eggs</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>73</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+      <Vendor Name="Krinkle Goodsteel" Entry="5411" Type="Repair" X="-7232.01" Y="-3751.71" Z="9.092834" />
+	</Vendors>
+	
+	<Mailboxes>
+      <Mailbox X="-7086.205" Y="-3851.506" Z="9.546361" />
+	</Mailboxes>
+    
+    <AvoidMobs>
+
+    </AvoidMobs>
+	
+  <Hotspots>
+    <Hotspot X="-8052.242" Y="-3429.62" Z="42.89071" />
+    <Hotspot X="-7964.832" Y="-3541.614" Z="44.65833" />
+    <Hotspot X="-7777.954" Y="-3623.674" Z="44.73785" />
+	<Hotspot X="-7531.139" Y="-3625.789" Z="10.16375" />
+  </Hotspots>
+  
+  <Blackspots>
+
+  </Blackspots>
+  
+</HBProfile>

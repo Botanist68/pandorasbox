@@ -1,0 +1,214 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-H} Botanist Utgarde Keep</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>True</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+		<Item name="Book of Glyph Mastery" entry="45912" />
+		<Item name="Frostweave Cloth" entry="33470" />		
+	</ProtectedItems>
+
+	<Factions>9999</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+	<CustomBehavior File="UserSettings" LootMobs="True" PullDistance="25" TrainNewSkills="False" LearnFlightPaths="False" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+	
+         <While Condition="true" >
+		 
+		                                            <!-- my use hearth vendor check --> 
+													
+		 					<CustomBehavior File="Message" Text="Checking my free bag space and my gear's durability." LogColor="Yellow" />
+					
+					<If Condition="(Me.FreeBagSlots &lt; 6) || (Me.LowestDurabilityPercent &lt; 0.3)" > <!-- Will go vendor/repair if needed -->
+					
+						<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth, repair and mail." LogColor="Yellow" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+						<CustomBehavior File="Message" Text="Succesfully hearthed to Westguard, moving to the repair vendor, mailing and then flying back to Utgarde Keep." LogColor="Yellow" />						
+						
+						<SetVendor>
+							<Vendors>
+								<Vendor Name="Orson Locke" Entry="24330" Type="Repair" X="418.2729" Y="-4653.623" Z="246.9195" />
+							</Vendors>
+						</SetVendor>
+						<SetMailbox>
+							<Mailboxes>
+								<Mailbox X="440.3733" Y="-4557.622" Z="245.5402" />
+							</Mailboxes>
+						</SetMailbox>
+			
+						<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						
+						<CustomBehavior File="FlyTo" X="1341.751" Y="-3443.204" Z="334.5994" DestName="Hover Point" />
+						<CustomBehavior File="Message" Text="Flying back to the Utgarde Keep." LogColor="Yellow" />
+						<CustomBehavior File="MyCTM" X="834.8967" Y="-4869.542" Z="410.802" />
+						<CustomBehavior File="MyCTM" X="1099.519" Y="-4904.857" Z="41.24844" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="Message" Text="I've reached the entrance to Utgarde Keep. Now running to the portal." LogColor="Yellow" />
+						<RunTo X="1221.63" Y="-4864.75" Z="41.2481" />
+				  </If>
+
+					<If Condition="Me.ZoneId != 495" > <!-- not in howling fjord -->
+						<If Condition="Me.ZoneId != 206" > <!-- not in utgarde keep -->
+							<CustomBehavior File="Message" Text="I'mm flying to Utgarde Keep entrance in Howling Fjord." LogColor="Yellow" />
+							<CustomBehavior File="FlyTo" X="1099.519" Y="-4904.857" Z="41.24844" DestName="Utgarde Keep" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="ForcedMount" MountType="Ground" />
+							<CustomBehavior File="Message" Text="I've reached the entrance to Utgarrde Keep. Now running to the portal" LogColor="Yellow" />
+							<RunTo X="1221.63" Y="-4864.75" Z="41.2481" />
+                        </If>							
+					</If>
+					
+				   <If Condition="Me.ZoneId == 495" > 
+						<If Condition="Me.X &gt; 1223 || Me.X &lt;  1219 &amp;&amp; Me.Y &gt; -4850 || Me.Y &lt; -4876" >
+							<CustomBehavior File="Message" Text="I'm in Howling Fjord, but not close to the portal. I'm flying to the Utgarde Keep entrance." LogColor="Yellow" />
+							<CustomBehavior File="FlyTo" X="1099.519" Y="-4904.857" Z="41.24844" DestName="Utgarde Keep" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="ForcedMount" MountType="Ground" />
+							<CustomBehavior File="Message" Text="I've reached the entrance to Utgarrde Keep. Now running to the portal" LogColor="Yellow" />
+							<RunTo X="1221.63" Y="-4864.75" Z="41.2481" />
+							<CustomBehavior File="Message" Text="Checking my position." LogColor="Yellow" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						</If> 
+                     </If> 
+
+                    <If Condition="Me.ZoneId == 206" >
+						<CustomBehavior File="Message" Text="You started the bot with me inside the Utgarde Keep. Running out to reset the dungeon." LogColor="Yellow" />
+						<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
+						<CustomBehavior File="MyCTM" X="144.7174" Y="-88.65063" Z="12.55168" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+						<CustomBehavior File="Message" Text="I'm outside Utgarde Keep's portal." LogColor="Yellow" />
+						<RunTo X="1221.63" Y="-4864.75" Z="41.2481" />	
+					</If>					 
+					
+					
+					<If Condition="Me.X &lt; 1223 &amp;&amp; Me.X &gt;  1219 &amp;&amp; Me.Y &lt; -4850 &amp;&amp; Me.Y &gt; -4876" >
+						<CustomBehavior File="Message" Text="I am resetting Utgarde Keep." LogColor="Yellow" />
+						<CustomBehavior File="WaitTimer" WaitTime="5000" />				
+						<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" /> 
+						<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> <!-- Changes the instanceto to "normal" , if it was on "heroic" for the first run -->
+						<CustomBehavior File="Message" Text="I have reset Utgarde Keep." LogColor="Yellow" />
+						<CustomBehavior File="Message" Text="All systems are: Go. I am running Utgarde Keep." LogColor="Yellow" />
+						<RunTo X="1221.63" Y="-4864.75" Z="41.2481" />
+						<CustomBehavior File="MyCTM" X="1236.77" Y="-4860.844" Z="41.24859" /> 
+						<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Yellow" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+					</If>
+					
+							
+				
+				                                       <!-- Forge of Souls Dungeon Script -->
+				<If Condition="Me.ZoneId == 206" >
+					<RunTo X="202.3272" Y="-69.66723" Z="21.8048" />
+					<RunTo X="242.8414" Y="-47.34113" Z="24.67859" />
+					<RunTo X="261.2508" Y="-59.74778" Z="24.6786" />
+					<RunTo X="273.9291" Y="-49.73494" Z="24.67859" />
+					<RunTo X="325.8829" Y="-37.61718" Z="22.75492" />
+					<RunTo X="344.6747" Y="-48.18287" Z="22.75492" />
+					<RunTo X="398.1854" Y="-38.03218" Z="22.75497" />
+					<RunTo X="399.8088" Y="-17.14453" Z="22.75497" />
+					<RunTo X="404.8141" Y="9.750615" Z="23.7701" />
+					<RunTo X="376.9125" Y="97.09068" Z="30.74201" />
+					<RunTo X="350.1375" Y="103.5265" Z="30.76158" />
+					<RunTo X="350.4319" Y="148.2111" Z="30.75374" />
+					<RunTo X="380.9722" Y="152.9147" Z="30.77567" />
+					<RunTo X="373.8289" Y="173.3462" Z="30.77573" />
+					<RunTo X="328.2306" Y="173.1101" Z="30.81119" />
+					<RunTo X="338.4904" Y="194.2802" Z="30.81556" />
+					<RunTo X="330.1336" Y="241.4129" Z="30.75172" />
+					<RunTo X="268.6141" Y="233.381" Z="42.86861" />
+					<RunTo X="226.7387" Y="219.0405" Z="40.81503" />
+					<RunTo X="215.3859" Y="227.8075" Z="40.89516" />
+					<CustomBehavior File="Message" Text="I am pulling the first boss, Prince Keleseth!............Good Luck!!!" LogColor="Yellow" />
+					<RunTo X="189.0911" Y="202.1596" Z="40.81638" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" GoalText="TimeRemaining}" />
+					<RunTo X="162.0687" Y="253.7004" Z="42.86673" />
+					<RunTo X="137.6176" Y="279.0445" Z="42.86673" />
+					<RunTo X="92.64787" Y="259.2912" Z="42.86898" />
+					<RunTo X="96.73255" Y="203.5807" Z="49.37141" />
+                    <RunTo x="92.65913" Y="134.5293" Z="65.51474" />					
+					<RunTo X="95.00027" Y="126.9951" Z="65.5075" />
+					<RunTo X="129.928" Y="80.76999" Z="65.71054" />					
+					<RunTo X="124.7948" Y="52.50665" Z="65.69763" />
+					<RunTo X="87.89036" Y="112.2579" Z="87.28146" />
+					<RunTo X="112.4845" Y="114.0565" Z="87.30371" />
+					<RunTo X="125.0854" Y="58.60426" Z="109.0358" />
+					<RunTo X="63.63167" Y="39.01738" Z="115.0492" />
+					<RunTo X="35.07497" Y="22.19249" Z="115.0299" />
+					<RunTo X="53.85064" Y="-28.44793" Z="118.7753" />
+					<CustomBehavior File="Message" Text="I am pulling the second boss, Dalronn the Controller!............Good Luck!!!" LogColor="Yellow" />					
+					<RunTo X="95.29373" Y="-39.02306" Z="118.7753" />  					
+					<RunTo X="226.0391" Y="9.078213" Z="135.1999" />
+					<RunTo X="229.0729" Y="-8.355564" Z="135.1999" />
+					<RunTo X="178.2408" Y="-24.34726" Z="156.8581" />
+					<RunTo X="234.1966" Y="6.273705" Z="178.5074" />
+					<RunTo X="264.2439" Y="-88.1589" Z="190.4049" />
+					<RunTo X="273.7704" Y="-150.6136" Z="190.102" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<RunTo X="229.3031" Y="-166.634" Z="190.1953" />
+					<CustomBehavior File="ForcedDismount" />
+					<RunTo X="159.1785" Y="-174.2894" Z="180.502" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="Message" Text="I am pulling the third boss, Ingvar the Plunderer!............Good Luck!!!" LogColor="Yellow" />
+					<RunTo X="242.1024" Y="-332.522" Z="180.4576" />
+                    <RunTo X="148.9575" Y="-146.5824" Z="176.4006" />
+                    <CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
+                    <CustomBehavior File="Message" Text="I'm jumping off" LogColor="Yellow" />					
+					<CustomBehavior File="MyCTM" X="142.794" Y="-125.7" Z="169.8036" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+                    <CustomBehavior File="MyCTM" X="132.7065" Y="-131.1562" Z="88.13988" />					
+					<CustomBehavior File="MyCTM" X="154.5971" Y="-147." Z="94.20316" />
+					<CustomBehavior File="Message" Text="I'm jumping off" LogColor="Yellow" />
+					<CustomBehavior File="MyCTM" X="154.5971" Y="-150.75" Z="94.20316" />
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+					<CustomBehavior File="MyCTM" X="181.2367" Y="-150.8797" Z="10.76077" />
+					<RunTo X="215.5063" Y="-134.7789" Z="8.868741" />
+					<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
+					<CustomBehavior File="MyCTM" X="144.7174" Y="-88.65063" Z="12.55168" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="Message" Text="I have completed Utgarde Keep." LogColor="Yellow" />
+					<RunTo X="1221.63" Y="-4864.75" Z="41.2481" />
+				</If>
+								
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

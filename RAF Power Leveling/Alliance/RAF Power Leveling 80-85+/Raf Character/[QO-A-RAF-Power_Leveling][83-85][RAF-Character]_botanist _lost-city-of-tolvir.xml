@@ -1,0 +1,212 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A-RAF-Power_Leveling][83-85][RAF-Character]_botanist _lost-city-of-tolvir</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>True</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Tol'vir Land Mine Vehicle" Entry="44798" />
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="-10781.9" Y="-1400.864" Z="15.35398" Radius="25" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions>14,16,2156</Factions>
+	
+	<ProtectedItems>
+	<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" LootMobs="False" SkinMobs="False" PullDistance="20" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+		 
+		
+	
+         
+		 
+		 
+				<If Condition="Me.MapId == 571" >
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I am in Northrend. I need to be in Uldum. I am flying to Dalaran to use the portal." LogColor="Lime" />
+					<CustomBehavior File="FlyTo"  X="5731.763" Y="1015.778" Z="174.4795" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="InteractWith" MobId="191230" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="5731.57373" Y="1015.09253" Z="174.479324" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<RunTo X="5803.281" Y="626.3439" Z="647.5372" />
+						<RunTo X="5759.243" Y="677.8333" Z="642.776" />
+						<RunTo X="5720.719" Y="724.3422" Z="641.5389" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I am taking the portal to Stormwind." LogColor="Lime" />
+					<CustomBehavior File="InteractWith" MobId="190960" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="5719.184" Y="719.6667" Z="641.727844" />
+					<CustomBehavior File="WaitTimer" WaitTime="20000" /> 
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.X &lt; -7565.834 &amp;&amp; Me.X &gt; -7582.962 &amp;&amp; Me.Y &lt; -1297.568 &amp;&amp; Me.Y &gt; -1328.157" >		
+							<RunTo X="-7575.632" Y="-1281.575" Z="245.5256" />
+							<RunTo X="-7616.589" Y="-1217.624" Z="232.2216" />
+						<CustomBehavior File="FlyTo" X="-7612.768" Y="-1164.566" Z="296.5215" />
+						<CustomBehavior File="FlyTo" X="-7480.476" Y="-1070.674" Z="265.1808" />
+						<CustomBehavior File="FlyTo" X="-7423.922" Y="-1059.697" Z="282.0618" />
+						<CustomBehavior File="FlyTo" X="-7400.896" Y="-1110.272" Z="290.9341" />
+						<CustomBehavior File="FlyTo" X="-7372.185" Y="-1097.202" Z="290.481" />
+						<CustomBehavior File="FlyTo" X="-7342.74" Y="-1113.869" Z="290.6519" />
+						<CustomBehavior File="FlyTo" X="-7232.4" Y="-1036.165" Z="357.9617" />
+					</If>	
+				</If>
+				
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.X &gt; -10080.06" >
+						<CustomBehavior File="Message" Text="I am in Eastern Kingdoms. I need to be in Kalimdor. I will take the boat to Ratchet." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-10353.59" Y="-7.647873" Z="284.1171" />
+						<CustomBehavior File="FlyTo" X="-14281.86" Y="564.9252" Z="7.45587" />
+						<CustomBehavior File="ForcedDismount" />	
+						<CustomBehavior File="UseTransport" TransportId="20808" 
+											WaitAtX="-14281.86" WaitAtY="564.9252" WaitAtZ="7.45587"
+											TransportStartX="-14277.74" TransportStartY="582.86" TransportStartZ="0.015"
+											StandOnX="-14271.49" StandOnY="581.3417" StandOnZ="6.019351"
+											TransportEndX="-1005.613" TransportEndY="-3841.648" TransportEndZ="0.03330701"	
+											GetOffX="-997.8598" GetOffY="-3824.981" GetOffZ="5.466243" />								
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<RunTo X="-984.0112" Y="-3801.92" Z="5.412419" />
+					</If>			
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.X &lt; -10080.06" >
+						<CustomBehavior File="Message" Text="I am in Eastern Kingdoms. I need to be in Kalimdor. I will take the boat to Ratchet." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-14281.86" Y="564.9252" Z="7.45587" />
+						<CustomBehavior File="ForcedDismount" />	
+						<CustomBehavior File="UseTransport" TransportId="20808" 
+											WaitAtX="-14281.86" WaitAtY="564.9252" WaitAtZ="7.45587"
+											TransportStartX="-14277.74" TransportStartY="582.86" TransportStartZ="0.015"
+											StandOnX="-14271.49" StandOnY="581.3417" StandOnZ="6.019351"
+											TransportEndX="-1005.613" TransportEndY="-3841.648" TransportEndZ="0.03330701"	
+											GetOffX="-997.8598" GetOffY="-3824.981" GetOffZ="5.466243" />								
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<RunTo X="-984.0112" Y="-3801.92" Z="5.412419" />
+					</If>			
+				</If>
+
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.Y &lt; -1320.377 || Me.Y &gt; -1291.219 || Me.X &gt; -10658.9 || Me.X &lt; -10684.36" >
+						<CustomBehavior File="Message" Text="Flying to Tol'vir." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-10576.51" Y="-1263.633" Z="108.0087" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="RAF Characters - Press continue after the Main Character has entered the instance." Title="WARNING" />
+						<CustomBehavior File="FlyTo" X="-10679.7" Y="-1307.1" Z="17.3427" />
+						<CustomBehavior File="ForcedDismount" />
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 755">
+					<CustomBehavior File="Message" Text="You started the bot with me inside the the Lost City of Tol' vir. Running out to reset the dungeon." LogColor="Lime" />
+						<RunTo X="-10743.76" Y="-1323.944" Z="15.3528" />
+					<CustomBehavior File="MyCTM" X="-10735.47" Y="-1322.338" Z="15.35296" />
+					<CustomBehavior File="MyCTM" X="-10693.41" Y="-1311.165" Z="17.6785" />
+					<CustomBehavior File="GoThruPortal" X="-10687.9" Y="-1309.086" Z="17.65984" />
+				</If>
+				
+		<While Condition="true" >		
+											  
+				<If Condition="Me.ZoneId == 5034" >														 
+					<If Condition="Me.Y &gt; -1320.377 &amp;&amp; Me.Y &lt; -1291.219 &amp;&amp; Me.X &lt; -10658.9 &amp;&amp; Me.X &gt; -10684.36" >
+						<If Condition="Me.Level &gt;= 85" >
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="**********RAF Character - This character has reached level 85. You can continue to run this profile as much as you want by pressing continue. Be aware that there may be quicker way to level your character beyond this level.**********" Title="WARNING" />
+						</If>
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<CustomBehavior File="MyCTM" X="-10687.6" Y="-1309.67" Z="17.8213" /> 
+						<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="RAF Characters - Press continue on the Main Character first, then press continue on this window." Title="WARNING" />
+					</If>				
+				</If>
+
+                               <!-- lost city of tol' vir dungeon script -->
+				<If Condition="Me.MapId == 755">
+						<CustomBehavior File="MyCTM" X="-10759.61" Y="-1328.41" Z="18.94535" />
+					<CustomBehavior File="Message" Text="Waiting 160 seconds, 1st bridge." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="160000" />
+					
+					<CustomBehavior File="MyCTM" X="-10701.42" Y="-1312.855" Z="17.60353" />
+					<CustomBehavior File="Message" Text="Waiting 150 seconds, entrance." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="150000" />
+					
+						<RunTo X="-10898.99" Y="-1388.555" Z="15.35296" />
+					<CustomBehavior File="Message" Text="Waiting 90 seconds, near 1st boss." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="90000" />
+					
+						<RunTo X="-10860.98" Y="-1426.574" Z="16.90477" />
+						<RunTo X="-10868.71" Y="-1471.843" Z="17.06911" />
+					<CustomBehavior File="Message" Text="Waiting 130 seconds, 2nd bridge." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="130000" />
+					
+						<RunTo X="-11025.62" Y="-1458.188" Z="6.677164" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, fountain 1 of 4." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+					
+					<RunTo X="-11040.56" Y="-1463.102" Z="6.677164" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, fountain 2 of 4." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+					
+					<RunTo X="-11025.62" Y="-1458.188" Z="6.677164" />
+					<CustomBehavior File="Message" Text="Waiting 120 seconds, fountain 3 of 4." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="120000" />
+					
+					<RunTo X="-11040.56" Y="-1463.102" Z="6.677164" />
+					<CustomBehavior File="Message" Text="Waiting 60 seconds, fountain 4 of 4." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="60000" />
+				
+						<RunTo X="-10865.04" Y="-1366.34" Z="15.35312" />
+					<CustomBehavior File="Message" Text="Waiting 80 seconds, 1st boss." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="80000" />
+					
+						<RunTo X="-10787.05" Y="-1291.71" Z="15.35312" />
+						<RunTo X="-10760.65" Y="-1328.782" Z="18.89924" />
+					<CustomBehavior File="Message" Text="Waiting 140 seconds, before exit." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="140000" />
+						
+						<RunTo X="-10745.81" Y="-1324.906" Z="15.35447" />
+					<CustomBehavior File="MyCTM" X="-10735.47" Y="-1322.338" Z="15.35296" />
+					<CustomBehavior File="MyCTM" X="-10693.41" Y="-1311.165" Z="17.6785" />
+					<CustomBehavior File="GoThruPortal" X="-10687.9" Y="-1309.086" Z="17.65984" />
+				</If>
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

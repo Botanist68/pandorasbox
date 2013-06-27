@@ -1,0 +1,79 @@
+<HBProfile>
+  <Name>botanist_herbing_northern-stranglethern_bruiseweed</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>101</MaxLevel>
+  <Factions>99999</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+     <Vendor Name="Jutak" Entry="2843" Type="Repair" X="-14467.77" Y="468.375" Z="15.02453" />
+	</Vendors>
+	
+	<Mailboxes>
+     <Mailbox X="-14418.82" Y="517.8762" Z="5.003973" />
+	</Mailboxes>
+
+  <Hotspots>
+    <Hotspot X="-12282.69" Y="244.1767" Z="23.27684" />
+    <Hotspot X="-12321.2" Y="132.221" Z="48.27733" />
+    <Hotspot X="-12377.48" Y="1.328568" Z="36.06944" />
+    <Hotspot X="-12434.6" Y="-133.6924" Z="31.68614" />
+    <Hotspot X="-12514.21" Y="-255.5659" Z="35.73416" />
+    <Hotspot X="-12598.69" Y="-373.0936" Z="28.98093" />
+    <Hotspot X="-12701.07" Y="-467.898" Z="51.61831" />
+    <Hotspot X="-12831.32" Y="-533.7303" Z="57.69525" />
+    <Hotspot X="-12953.75" Y="-609.06" Z="68.25703" />
+    <Hotspot X="-13086.81" Y="-645.3011" Z="104.322" />
+    <Hotspot X="-13096.53" Y="-757.9554" Z="121.1943" />
+    <Hotspot X="-13049.48" Y="-868.7338" Z="132.5682" />
+    <Hotspot X="-12940.41" Y="-784.3826" Z="103.9385" />
+    <Hotspot X="-12810.09" Y="-731.3365" Z="92.50076" />
+    <Hotspot X="-12690.79" Y="-807.5151" Z="74.27641" />
+    <Hotspot X="-12571.19" Y="-884.0604" Z="60.45935" />
+    <Hotspot X="-12435.59" Y="-932.4869" Z="48.52599" />
+    <Hotspot X="-12301.33" Y="-991.1389" Z="45.29511" />
+    <Hotspot X="-12156.21" Y="-982.7421" Z="59.53428" />
+    <Hotspot X="-12036.49" Y="-902.7514" Z="53.90014" />
+    <Hotspot X="-11962.61" Y="-784.8831" Z="38.51554" />
+    <Hotspot X="-11887.32" Y="-665.0933" Z="31.53357" />
+    <Hotspot X="-11745.84" Y="-628.4011" Z="50.1718" />
+    <Hotspot X="-11604.61" Y="-616.8497" Z="49.48046" />
+    <Hotspot X="-11504.28" Y="-707.0685" Z="71.9421" />
+    <Hotspot X="-11408.81" Y="-633.0386" Z="103.5307" />
+    <Hotspot X="-11430.45" Y="-488.8214" Z="95.06516" />
+    <Hotspot X="-11503.57" Y="-368.7292" Z="57.21833" />
+    <Hotspot X="-11614.41" Y="-272.9822" Z="53.40547" />
+    <Hotspot X="-11701.58" Y="-157.742" Z="53.05604" />
+    <Hotspot X="-11792.34" Y="-43.93058" Z="53.46181" />
+    <Hotspot X="-11894.11" Y="57.33809" Z="37.9073" />
+    <Hotspot X="-11944.1" Y="193.739" Z="30.78374" />
+    <Hotspot X="-11917.12" Y="336.9614" Z="37.55135" />
+    <Hotspot X="-11863.64" Y="467.6514" Z="55.07104" />
+    <Hotspot X="-11723.97" Y="436.6946" Z="57.28395" />
+    <Hotspot X="-11642.1" Y="515.7594" Z="60.80888" />
+    <Hotspot X="-11611.33" Y="653.8222" Z="69.1357" />
+    <Hotspot X="-11592.33" Y="778.2393" Z="61.60741" />
+    <Hotspot X="-11730.04" Y="767.7576" Z="61.60408" />
+    <Hotspot X="-11811.96" Y="651.0588" Z="72.99467" />
+    <Hotspot X="-11860.36" Y="515.2628" Z="56.71785" />
+    <Hotspot X="-11919.77" Y="383.9106" Z="44.87554" />
+    <Hotspot X="-12045.13" Y="349.478" Z="19.0787" />
+    <Hotspot X="-12191.04" Y="350.7628" Z="22.41951" />
+  </Hotspots>
+  <Blackspots>
+  </Blackspots>
+</HBProfile>

@@ -1,0 +1,64 @@
+<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-H]_botanist_pangaea</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites></TargetElites>
+	
+	<AvoidMobs>
+		<AvoidMob Name="Training Dummy" Entry="44548" />
+		<AvoidMob Name="Thuros Lightfingers" Entry="61" />
+		<AvoidMob Name="Ritualist Tarak" Entry="43363" />
+		<AvoidMob Name="Overlord Barbarius" Entry="43369" />
+		 
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="351.9265" Y="-4747.049" Z="12.24206" Radius="10" />
+	</Blackspots>
+
+	<Mailboxes></Mailboxes>
+ 
+	<Vendors>
+		<Vendor Name="Innkeeper Grosk" Entry="6928" Type="Food" X="340.3629" Y="-4686.287" Z="16.48972" />
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems></ProtectedItems>
+	
+	<ClearVendor /><ClearMailbox />
+		
+	<QuestOrder>
+	
+			<If Condition="Me.Level &gt;= 85" >
+					<If Condition="((!HasQuest(29547)) &amp;&amp; (!IsQuestCompleted(29547)))" >
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-H-7][Comanche]_botanist_pangaea" />
+					</If>
+				</If>	
+					
+				<If Condition="Me.Level &gt;= 85" >	
+					<If Condition="((!HasQuest(29547)) &amp;&amp; (IsQuestCompleted(29547)))" >
+						<CustomBehavior File="LoadProfile" ProfileName="[QO-H-8][Apache]_botanist_pangaea" />
+					</If>
+				</If>	
+				
+	</QuestOrder >			
+  
+ </HBProfile>

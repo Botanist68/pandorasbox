@@ -1,0 +1,162 @@
+﻿<HBProfile creator="Botanist and Wigglez" version="1.0">
+	<Name>[QO-H-RAF-Power_Leveling][42-48][RAF-Character]_botanist+wigglez_blackrock-depths</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />	
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<CustomBehavior File="UserSettings" 
+						UseMount="True" 
+						LootMobs="False" 
+						SkinMobs="False" 
+						PullDistance="1" 
+						KillBetweenHotspots="True" 
+						FindVendorsAutomatically="False" />
+				
+		<!--
+		<If Condition="Me.MapId == 230">
+			<CustomBehavior File="Message" Text="You started the bot with me inside Blackrock Depths. Running out to reset the dungeon." LogColor="Cyan" />
+			
+			<RunTo X="2593.68" Y="1111.23" Z="50.9518" />
+			<CustomBehavior File="MyCTM" X="2592.638" Y="1116.691" Z="50.39219" />
+			
+			<CustomBehavior File="WaitTimer" WaitTime="15000" />
+				
+			<RunTo X="-4659.44" Y="-2527.94" Z="81.6564" />	
+		</If>
+		
+		-->
+		
+		<While Condition = "true">
+			<If Condition="Me.MapId == 230">
+				<RunTo X="2593.68" Y="1111.23" Z="50.9518" />
+				<CustomBehavior File="UserDialog" 
+								AllowBotStop="False" 
+								SoundCue="Exclamation" 
+								SoundCueInterval="15" 
+								ExpiryAction="InputEnabled_Continue" 
+								Text="RAF Character - Press continue on the level 90 first, then press continue on this window." 
+								Title="WARNING" />
+			</If>		
+			
+			<!-- Blackrock Depths dungeon script -->
+			<If Condition="Me.MapId == 230">
+				<!-- Inside portal entrance dropoff -->
+				<RunTo X="456.929" Y="34.0923" Z="-69.5617" />
+				
+				<CustomBehavior File="Message" Text="We are at the entrance." LogColor="Cyan" />
+				
+				<CustomBehavior File="Message" Text="Avoiding instance lock at this point, DO NOT TOUCH." LogColor="red" />
+				
+				<!-- Five minute timer -->
+				<CustomBehavior File="Message" Text="Waiting for 140 seconds. 1 of 2." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="140000" />
+				
+				<CustomBehavior File="Message" Text="Waiting for 160 seconds. 2 of 2." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="160000" />
+				
+				<!-- Move -->
+				<RunTo X="454.3352" Y="31.84152" Z="-69.99304" />
+				
+				<!-- Five minute timer -->
+				<CustomBehavior File="Message" Text="Waiting for 200 seconds. 1 of 3." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="200000" />
+				
+				<CustomBehavior File="Message" Text="At this point, the booster should be near the entrance or close to being done kiting." LogColor="Cyan" />
+				
+				<CustomBehavior File="Message" Text="Waiting for 70 seconds. 2 of 3." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="70000" />
+				
+				<CustomBehavior File="Message" Text="Making sure combat has finished and all experience is gained." LogColor="Cyan" />
+				
+				<CustomBehavior File="Message" Text="Waiting for 30 seconds. 3 of 3." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="30000" />
+				
+				<!-- Move -->
+				<RunTo X="462.6214" Y="30.75961" Z="-70.20031" />
+				
+				<!-- Five minute timer -->
+				<CustomBehavior File="Message" Text="Waiting for 60 seconds. 1 of 4." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="60000" />
+				
+				<CustomBehavior File="Message" Text="The booster should be killing by now." LogColor="Cyan" />
+				
+				<CustomBehavior File="Message" Text="Waiting for 50 seconds. 2 of 4." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="50000" />
+				
+				<CustomBehavior File="Message" Text="Waiting for 40 seconds. 3 of 4." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="40000" />
+				
+				<CustomBehavior File="Message" Text="Waiting for 150 seconds. 4 of 4." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="150000" />
+				
+				<CustomBehavior File="Message" Text="Fifteen minutes have passed. Just to be safe, we're waiting two more in case the booster is killing too slow." LogColor="Cyan" />
+				
+				<!-- Move -->
+				<RunTo X="455.4377" Y="24.22257" Z="-70.7578" />
+				
+				<!-- Two minute timer -->
+				<CustomBehavior File="Message" Text="Waiting for 40 seconds. 1 of 2." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="40000" />
+				
+				<CustomBehavior File="Message" Text="Waiting for 80 seconds. 2 of 2." LogColor="Cyan" />
+				<CustomBehavior File="WaitTimer" WaitTime="80000" />
+				
+				<CustomBehavior File="Message" Text="Moving back to the entrance." LogColor="Cyan" />
+				<RunTo X="2563.788" Y="1057.905" Z="52.79597" />
+				
+				
+				<CustomBehavior File="Message" Text="Running out to reset the instance." LogColor="Cyan" />
+				
+				<!-- Find out what this is from Botanist -->
+				<CustomBehavior File="MyCTM" X="2592.638" Y="1116.691" Z="50.39219" />
+				
+				<CustomBehavior File="WaitTimer" WaitTime="15000" />
+				
+				<!-- Outside portal entrance dropoff -->
+				<RunTo X="-7178.41" Y="-922.152" Z="166.092" />
+				
+				<CustomBehavior File="Message" Text="We have made it back to the outside entrance." LogColor="Cyan" />
+			</If>
+		</While>
+	</QuestOrder>
+</HBProfile>
+

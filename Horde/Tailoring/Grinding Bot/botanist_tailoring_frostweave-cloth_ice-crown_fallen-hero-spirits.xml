@@ -1,0 +1,51 @@
+<HBProfile>
+  <Name>botanist tailoring frostweave cloth sholazar basin</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>634 974</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+
+	</Vendors>
+	
+	<Mailboxes>
+
+	</Mailboxes>
+
+  <Hotspots>
+<Hotspot X="7394.09" Y="2522.856" Z="392.0542" />
+<Hotspot X="7371.925" Y="2631.924" Z="392.2188" />
+<Hotspot X="7327.703" Y="2822.978" Z="402.8901" />
+<Hotspot X="7148.572" Y="2901.158" Z="418.1729" />
+<Hotspot X="7089.862" Y="2949.691" Z="437.7931" />
+<Hotspot X="7113.79" Y="2764.883" Z="404.6027" />
+<Hotspot X="7166.516" Y="2711.013" Z="398.4792" />
+<Hotspot X="7214.539" Y="2687.093" Z="394.893" />
+<Hotspot X="7222.258" Y="2605.84" Z="393.1475" />
+<Hotspot X="7273.389" Y="2630.133" Z="393.8016" />
+<Hotspot X="7135.075" Y="2631.599" Z="394.8349" />
+<Hotspot X="7108.711" Y="2567.25" Z="399.3596" />
+<Hotspot X="7182.251" Y="2511.455" Z="402.0414" />
+<Hotspot X="7193.229" Y="2476.25" Z="408.0879" />
+<Hotspot X="7298.787" Y="2512.78" Z="395.0894" />
+  </Hotspots> 
+  
+  
+  <Blackspots>
+  </Blackspots>
+</HBProfile>

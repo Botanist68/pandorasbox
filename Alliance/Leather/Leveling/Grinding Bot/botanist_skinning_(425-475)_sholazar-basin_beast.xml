@@ -1,0 +1,58 @@
+<HBProfile>
+  <Name>botanist_skinning_(425-475)_sholazar-basin_beast</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>101</MaxLevel>
+  <Factions>190 1990 2030 14 1999</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+  <Factions>2030 1999 14</Factions>
+	<Vendors>
+      <Vendor Name="Mardan Thunderhoof" Entry="28040" Type="Repair" X="5552.257" Y="5738.877" Z="-76.21783" />
+	</Vendors>
+	
+	<Mailboxes>
+      <Mailbox X="5563.732" Y="5754.462" Z="-75.74088" />
+	</Mailboxes>
+
+  <Hotspots>
+   <Hotspot X="5553.865" Y="5751.746" Z="-77.40363" />
+   <Hotspot X="5725.953" Y="5647.341" Z="-75.1948" />
+   <Hotspot X="5951.667" Y="5572.865" Z="-77.48389" />
+   <Hotspot X="6184.199" Y="5546.283" Z="-48.88159" />
+   <Hotspot X="6184.524" Y="5543.623" Z="-49.73053" />
+   <Hotspot X="6019.582" Y="5740.144" Z="-38.82749" />
+   <Hotspot X="5673.81" Y="5982.046" Z="-41.04105" />
+   <Hotspot X="5376.563" Y="5965.682" Z="-43.36787" />
+   <Hotspot X="5235.54" Y="5980.163" Z="-43.46241" />
+   <Hotspot X="5184.263" Y="5795.401" Z="-79.72282" />
+   <Hotspot X="5355.499" Y="5600.856" Z="-89.99897" />
+   <Hotspot X="5445.642" Y="5807.331" Z="-73.58642" />
+  </Hotspots>
+  
+  <Blackspots>
+  <Blackspot X="5919.802" Y="5498.588" Z="-84.38374" Radius="75" />
+  <Blackspot X="3556.123" Y="5426.293" Z="40.05876" Radius="50" />
+  <Blackspot X="3718.541" Y="5505.682" Z="43.71566" Radius="50" />
+  </Blackspots>
+  
+    <AvoidMobs>
+	  <Mob id="28123" name="Venture Co. Excavator" />
+	  <Mob id="41293" name="Harbor Shredfin" />
+	  <Mob id="25850" name="Trapped Mammoth Calf" />
+	  <Mob id="25355" name="Beryl Hound" />
+    </AvoidMobs>
+
+</HBProfile>

@@ -1,0 +1,210 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A-RAF-Power_Leveling][58-61][RAF-Character]_botanist_hellfire-ramparts</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" LootMobs="False" PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="True" />
+
+				<If Condition="Me.ZoneId == 25" >														 
+					<If Condition="Me.Y &gt; -1236.614 &amp;&amp; Me.Y &lt; -1213.534 &amp;&amp; Me.X &lt; -7500.099 &amp;&amp; Me.X &gt; -7545.701" >
+							<RunTo X="-7534.334" Y="-1213.745" Z="285.4166" />
+						<CustomBehavior File="MyCTM" X="-7520.588" Y="-1179.661" Z="257.8594" />
+							<RunTo X="-7508.373" Y="-1171.754" Z="260.581" />
+							<RunTo X="-7497.022" Y="-1161.084" Z="262.6483" />
+							<RunTo X="-7490.77" Y="-1129.269" Z="265.5616" />
+							<RunTo X="-7492.135" Y="-1095.872" Z="265.7509" />
+							<RunTo X="-7481.576" Y="-1071.324" Z="265.2269" />
+							<RunTo X="-7449.503" Y="-1061.821" Z="268.5789" />
+							<RunTo X="-7419.682" Y="-1068.955" Z="275.4716" />
+							<RunTo X="-7409.773" Y="-1100.563" Z="278.0758" />
+							<RunTo X="-7381.52" Y="-1101.144" Z="278.0758" />
+							<RunTo X="-7348.339" Y="-1102.154" Z="277.1232" />
+							<RunTo X="-7321.719" Y="-1082.258" Z="277.0695" />
+							<RunTo X="-7292.309" Y="-1068.002" Z="275.6622" />
+							<RunTo X="-7258.914" Y="-1073.263" Z="262.6544" />
+							<RunTo X="-7227.453" Y="-1071.955" Z="246.0306" />
+							<RunTo X="-7195.023" Y="-1078.258" Z="241.4416" />
+							<RunTo X="-7176.113" Y="-1104.096" Z="241.2235" />
+							<RunTo X="-7189.942" Y="-1134.514" Z="243.3272" />
+							<RunTo X="-7198.254" Y="-1166.405" Z="248.2859" />
+							<RunTo X="-7194.795" Y="-1200.034" Z="248.1786" />
+							<RunTo X="-7194.186" Y="-1233.627" Z="245.9999" />
+							<RunTo X="-7193.663" Y="-1267.302" Z="244.4836" />
+							<RunTo X="-7176.006" Y="-1295.375" Z="243.0424" />
+							<RunTo X="-7154.226" Y="-1321.406" Z="245.9133" />
+							<RunTo X="-7124.292" Y="-1335.931" Z="243.9624" />
+							<RunTo X="-7095.604" Y="-1322.032" Z="250.5548" />
+							<RunTo X="-7092.765" Y="-1291.211" Z="264.5858" />
+							<RunTo X="-7108.098" Y="-1264.553" Z="272.2821" />
+							<RunTo X="-7099.967" Y="-1251.233" Z="274.8603" />
+							<RunTo X="-7113.391" Y="-1234.633" Z="289.362" />
+							<RunTo X="-7123.107" Y="-1234.047" Z="290.2455" /> <!-- iron summit fp  searing gorge-->
+
+							<RunTo X="-11112.3" Y="-3435.74" Z="79.08883" />
+							<RunTo X="-11121.06" Y="-3481.092" Z="65.19508" />
+							<RunTo X="-11145.46" Y="-3513.686" Z="64.84451" />
+							<RunTo X="-11173.34" Y="-3540.574" Z="54.43033" />
+							<RunTo X="-11209.01" Y="-3547.8" Z="33.21493" />
+							<RunTo X="-11248.52" Y="-3539.435" Z="22.83359" />
+							<RunTo X="-11289.53" Y="-3531.927" Z="19.00665" />
+							<RunTo X="-11318.08" Y="-3501.606" Z="16.60137" />
+							<RunTo X="-11352.24" Y="-3478.344" Z="14.241" />
+							<RunTo X="-11364.85" Y="-3440.772" Z="6.958364" />
+							<RunTo X="-11351.09" Y="-3401.147" Z="7.468936" />
+							<RunTo X="-11370.95" Y="-3358.98" Z="7.856955" />
+							<RunTo X="-11394.46" Y="-3325.043" Z="7.82894" />
+							<RunTo X="-11419.79" Y="-3292.815" Z="7.124138" />
+							<RunTo X="-11438.06" Y="-3255.901" Z="10.06923" />
+							<RunTo X="-11471.74" Y="-3222.043" Z="13.68688" />
+							<RunTo X="-11504.08" Y="-3197.506" Z="10.34705" />
+							<RunTo X="-11534.47" Y="-3169.515" Z="5.589439" />
+							<RunTo X="-11562.41" Y="-3140.365" Z="4.823739" />
+							<RunTo X="-11603.14" Y="-3146.319" Z="4.886854" />
+							<RunTo X="-11639.51" Y="-3162.663" Z="1.692384" />
+							<RunTo X="-11679.27" Y="-3167.512" Z="-2.572251" />
+							<RunTo X="-11720.11" Y="-3170.696" Z="-7.662271" />
+							<RunTo X="-11754.32" Y="-3188.181" Z="-21.22192" />
+							<RunTo X="-11790.88" Y="-3203.346" Z="-27.8223" />
+							<RunTo X="-11830.67" Y="-3206.456" Z="-30.61857" />
+							<RunTo X="-11870.93" Y="-3203.573" Z="-20.80988" />
+							<RunTo X="-11901.27" Y="-3207.707" Z="-14.77159" />
+						<CustomBehavior File="MyCTM" X="-11911.1" Y="-3207.676" Z="-14.74713" />
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					</If>	
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<CustomBehavior File="Message" Text="I am in Easter Kingdoms. I need to be in Outlands. Moving to the Dark Portal." LogColor="Lime" />
+						<RunTo X="-11901.27" Y="-3207.707" Z="-14.77159" />
+					<CustomBehavior File="MyCTM" X="-11911.1" Y="-3207.676" Z="-14.74713" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+				</If>	
+					
+				<If Condition="Me.ZoneId == 3483" >
+					<If Condition="Me.Y &lt; 1069.764" >	
+						<CustomBehavior File="Message" Text="I am in Hellfire Peninsula near the Dark Portal. Flying to Honor Hold." LogColor="Lime" />
+							<RunTo X="-319.8671" Y="1025.37" Z="54.18081" />
+							<RunTo X="-673.42" Y="2717.27" Z="94.18" />
+							
+					</If>
+				</If>
+
+				<If Condition="Me.ZoneId == 3483" >
+					<If Condition="Me.Y &lt; 3057.441 || Me.Y &gt; 3081.078 || Me.X &lt; -368.0191 || Me.X &gt; -354.5314" >
+						<CustomBehavior File="Message" Text="Moving to the portal entrance." LogColor="Lime" />
+							<RunTo X="-673.42" Y="2717.27" Z="94.18" />
+							<RunTo X="-666.3282" Y="2679.177" Z="88.95171" />
+							<RunTo X="-643.329" Y="2712.696" Z="86.79436" />
+							<RunTo X="-622.0861" Y="2747.098" Z="84.1032" />
+							<RunTo X="-601.9482" Y="2779.982" Z="73.34931" />
+							<RunTo X="-593.4697" Y="2818.924" Z="62.56115" />
+							<RunTo X="-580.825" Y="2857.111" Z="58.46742" />
+							<RunTo X="-546.197" Y="2877.918" Z="47.9992" />
+							<RunTo X="-528.7916" Y="2912.388" Z="35.86855" />
+							<RunTo X="-524.6116" Y="2951.232" Z="23.23003" />
+							<RunTo X="-508.4182" Y="2988.265" Z="10.73034" />
+							<RunTo X="-475.3603" Y="3009.141" Z="-1.785526" />
+							<RunTo X="-437.2993" Y="3015.867" Z="-15.63672" />
+							<RunTo X="-397.8664" Y="3024.654" Z="-16.14803" />
+							<RunTo X="-358.7253" Y="3033.963" Z="-13.85922" />
+							<RunTo X="-361.5213" Y="3074.08" Z="-15.06886" />
+							<RunTo X="-363.436" Y="3078.43" Z="-15.0013" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="RAF Character - Press continue after the main character has entered the instance." Title="WARNING" />	
+					</If>
+				</If>
+				
+	<While Condition="true" >
+	
+				<If Condition="Me.ZoneId == 3562">
+					<CustomBehavior File="Message" Text="You started the bot with me inside Hellfire Ramparts, I'm running out to reset the dungeon." LogColor="Lime" />								
+						<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+					<CustomBehavior File="MyCTM" X="-1358.9" Y="1635.161" Z="68.4994" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<RunTo X="-363.436" Y="3078.43" Z="-15.0013" />
+				</If>
+																							  
+				<If Condition="Me.ZoneId == 3483" >														 
+					<If Condition="Me.Y &gt; 3057.441 &amp;&amp; Me.Y &lt; 3081.078 &amp;&amp; Me.X &gt; -368.0191 &amp;&amp; Me.X &lt; -354.5314" >
+						<If Condition="Me.Level &gt;= 61" >
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="**********RAF Character - This character has reached the appropriate level to run Blood Furnace. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />
+					</If>
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<CustomBehavior File="MyCTM" X="-364.7503" Y="3083.706" Z="-14.68035" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" />	
+					</If>				
+				</If>
+
+                               <!-- hellfire ramparts dungeon script -->
+				<If Condition="Me.ZoneId == 3562">
+					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="RAF Character - Press continue when you are ready to begin." Title="WARNING" />
+				</If>
+				
+				<If Condition="Me.ZoneId == 3562">
+					 <CustomBehavior File="UserSettings" LootMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+				
+						<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+					
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="180" AllowCombat="false">	
+						<Hotspot X="-1350.005" Y="1642.375" Z="68.41135" />
+						<Hotspot X="-1357.744" Y="1645.519" Z="68.41924" />
+					</CustomBehavior>
+					
+		
+						<RunTo X="-1355.28" Y="1641.57" Z="68.274" />
+					<CustomBehavior File="Message" Text="Adjustable 30 second timer.." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="30000" />	
+					<CustomBehavior File="MyCTM" X="-1358.9" Y="1635.161" Z="68.4994" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+						<RunTo X="-363.436" Y="3078.43" Z="-15.00145" />
+				</If>	
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

@@ -1,0 +1,205 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-Rep][The-Klaxxi][Flying][90-tank][mote-of-spirit][dread-amber-shards]_botanist_the-clutches-of-shek'zeer_[south] </Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<AvoidMob Name="Pengsong" Entry="66587" />
+		<AvoidMob Name="Amberscale Basilisk" Entry="66188" />
+		<AvoidMob Name="Kyparite Pulverizer" Entry="65432" />
+        <AvoidMob Name="King Spineclaw" Entry="66472" />
+		<AvoidMob Name="Captain Ripflesh" Entry="60767" />
+		<AvoidMob Name="Slingtail Fishripper" Entry="55195" />
+		<AvoidMob Name="Longfang Howler" Entry="56524" />
+		<AvoidMob Name="Mutated Silkmoth" Entry="57422" />
+        <AvoidMob Name="Wildscale Hunter" Entry="58900" />
+		<AvoidMob Name="Softshell Snapling" Entry="63060" />
+		<AvoidMob Name="Wildscale Poacher" Entry="58899" />
+		<AvoidMob Name="Twitchheel Hoarder" Entry="56538" />
+		<AvoidMob Name="Mushan Nomad" Entry="56523" />
+		<AvoidMob Name="Glade Hunter" Entry="57299" />
+		<AvoidMob Name="Mushan Nomad" Entry="56523"  />
+        <AvoidMob  Name="Frenzyhop" Entry="56514" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="-156.8496" Y="3368.719" Z="106.9521" Radius="81.50259" />
+		<Blackspot X="-352.3593" Y="2499.506" Z="147.5603" Radius="61.5323" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<QuestOrder>
+		
+	    
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This profile is meant for a level 90 Tank class. This profile will farm the Clutches of Shek'zeer in Dread Wastes for Motes of Spirit. The profile includes setting your hearth, mailing, vendor and repair. This profile will run indefinitely, be sure to set an alt to mail to in the settings and tools tab of Honorbuddy. Start the profile anywhere in Pandaria. Please send Paypal donations to botanist1968@gmail.com" Title="WARNING" />
+						
+			
+			
+				<CustomBehavior File="Message" Text="Position check #1" LogColor="Lime" />
+				<If Condition="Me.MapId == 870" >				 
+					<If Condition="Me.ZoneId != 6138" >
+						<CustomBehavior File="Message" Text="I am in Pandaria, but not in Dread Wastes flying to Klaxxi'vess." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="262.4349" Y="3149.81" Z="214.5022" DestName="Klaxxi'vess" />	
+						<CustomBehavior File="Message" Text="I have reached Klaxxie'vess. " LogColor="Lime" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="2000" />
+						<CustomBehavior File="SetHearthstone" MobId="65220"  X="263.1545" Y="3146.569" Z="214.501" />
+					</If>						
+				</If>
+				
+				
+				<CustomBehavior File="Message" Text="Position check #2" LogColor="Lime" />		
+				<If Condition="Me.ZoneId == 6138" >
+					<If Condition="Me.X &lt; 75 || Me.X &gt; 310 || Me.Y &lt; 3095.547 || Me.Y &gt; 3349.551" >
+						<CustomBehavior File="Message" Text="I am in Dread Wastes, flying to Klaxxi'vess" LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="262.4349" Y="3149.81" Z="214.5022" DestName="Klaxxi'vess" />	
+						<CustomBehavior File="Message" Text="I have reached Klaxxie'vess. " LogColor="Lime" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="2000" />
+						<CustomBehavior File="SetHearthstone" MobId="65220"  X="263.1545" Y="3146.569" Z="214.501" />
+					</If>
+				</If>
+				
+		<While Condition="true" >		
+										
+				<CustomBehavior File="UserSettings" LootMobs="True"  PullDistance="45" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+				<CustomBehavior File="Message" Text="Position check #3" LogColor="Lime" />			  
+			    <If Condition="Me.ZoneId == 6138" >
+					<If Condition="Me.X &gt; 75 &amp;&amp; Me.X &lt; 310 &amp;&amp; Me.Y &gt; 3095.547 &amp;&amp; Me.Y &lt; 3349.551" >
+					<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
+					<CustomBehavior File="FlyTo"  X="-168.6077" Y="3260.14" Z="114.1615" />				
+					<CustomBehavior File="ForcedDismount" />
+					</If>
+				</If>	
+
+				<CustomBehavior File="Message" Text="Position check #4" LogColor="Lime" />				
+				<If Condition="Me.ZoneId == 6138" >
+					<If Condition="Me.X &lt; -50 &amp;&amp; Me.X &gt; -250 &amp;&amp; Me.Y &gt; 3000 &amp;&amp; Me.Y &lt; 3400" >
+						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
+						<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
+						<CustomBehavior File="RunMacro" Macro="/sort bags" />
+							<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >	
+								<SetGrindArea><GrindArea>
+								<Factions>2557,2550,14,2558</Factions>
+									<Hotspots>
+										<Hotspot X="-174.5802" Y="3240.575" Z="114.6878" />
+										<Hotspot X="-176.481" Y="3214.526" Z="115.9508" />
+										<Hotspot X="-186.6879" Y="3191.536" Z="117.4077" />
+										<Hotspot X="-196.5645" Y="3168.255" Z="118.4104" />
+										<Hotspot X="-205.9501" Y="3144.805" Z="119.5172" />
+										<Hotspot X="-216.4073" Y="3121.835" Z="121.5845" />
+										<Hotspot X="-226.9645" Y="3098.651" Z="123.1166" />
+										<Hotspot X="-242.9963" Y="3078.369" Z="123.6989" />
+										<Hotspot X="-253.6637" Y="3054.497" Z="125.3671" />
+										<Hotspot X="-245.1475" Y="3030.854" Z="124.7509" />
+										<Hotspot X="-244.7399" Y="3005.63" Z="125.1961" />
+										<Hotspot X="-250.3995" Y="2981.071" Z="125.5326" />
+										<Hotspot X="-256.155" Y="2956.096" Z="127.0851" />
+										<Hotspot X="-261.2271" Y="2931.556" Z="127.6775" />
+										<Hotspot X="-255.9604" Y="2906.775" Z="127.3128" />
+										<Hotspot X="-260.0281" Y="2881.084" Z="126.9771" />
+										<Hotspot X="-273.7534" Y="2859.774" Z="125.7113" />
+										<Hotspot X="-289.0558" Y="2839.373" Z="125.5376" />
+										<Hotspot X="-297.8052" Y="2814.928" Z="125.5348" />
+										<Hotspot X="-298.1858" Y="2789.422" Z="126.1944" />
+										<Hotspot X="-296.582" Y="2764.126" Z="130.7342" />
+										<Hotspot X="-298.2237" Y="2738.951" Z="135.0941" />
+										<Hotspot X="-311.5635" Y="2717.526" Z="138.0411" />
+										<Hotspot X="-323.5128" Y="2695.294" Z="137.3944" />
+										<Hotspot X="-331.2792" Y="2670.561" Z="138.0123" />
+										<Hotspot X="-336.6558" Y="2645.336" Z="137.7338" />
+										<Hotspot X="-330.8519" Y="2670.173" Z="138.0121" />
+										<Hotspot X="-322.0778" Y="2694.902" Z="137.6281" />
+										<Hotspot X="-311.1688" Y="2717.556" Z="138.04" />
+										<Hotspot X="-300.0844" Y="2740.575" Z="134.8637" />
+										<Hotspot X="-296.2694" Y="2765.341" Z="130.512" />
+										<Hotspot X="-296.9502" Y="2790.638" Z="126.0765" />
+										<Hotspot X="-295.9652" Y="2816.017" Z="125.5374" />
+										<Hotspot X="-292.1115" Y="2840.936" Z="125.5374" />
+										<Hotspot X="-290.2431" Y="2865.985" Z="127.229" />
+										<Hotspot X="-269.6343" Y="2880.253" Z="128.1867" />
+										<Hotspot X="-252.896" Y="2900.25" Z="126.7861" />
+										<Hotspot X="-256.3106" Y="2926.265" Z="126.6477" />
+										<Hotspot X="-257.144" Y="2952.332" Z="126.8922" />
+										<Hotspot X="-251.9265" Y="2977.031" Z="125.6343" />
+										<Hotspot X="-245.5793" Y="3001.526" Z="125.3142" />
+										<Hotspot X="-241.9803" Y="3027.643" Z="125.5355" />
+										<Hotspot X="-246.8815" Y="3052.584" Z="125.5356" />
+										<Hotspot X="-248.0367" Y="3077.865" Z="124.2011" />
+										<Hotspot X="-230.8492" Y="3097.449" Z="122.5062" />
+										<Hotspot X="-218.5099" Y="3119.318" Z="121.6252" />
+										<Hotspot X="-205.916" Y="3141.109" Z="119.6841" />
+										<Hotspot X="-196.4576" Y="3164.599" Z="118.4819" />
+										<Hotspot X="-188.5813" Y="3188.899" Z="117.8379" />
+										<Hotspot X="-182.9994" Y="3205.082" Z="116.0087" />									
+									</Hotspots>
+								</GrindArea></SetGrindArea>					
+								<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30)" GoalText="Farming" />
+							</If>
+					</If>
+				</If>
+								
+				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		        <If Condition="(Me.FreeBagSlots &lt; 10) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+					<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for hearth*{TimeRemaining}" />
+					<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor, then mailing." LogColor="Lime" />						
+						
+					<SetVendor>
+						<Vendors>
+							<Vendor Name="Ambersmith Zikk" Entry="64599" Type="Repair" X="147.875" Y="3194.917" Z="214.7608" />
+						</Vendors>
+					</SetVendor>
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="267.4819" Y="3152.835" Z="214.5012" />
+						</Mailboxes>
+					</SetMailbox>
+			
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+				</If>
+				<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
+				<CustomBehavior File="RunMacro" Macro="/sort bags" />						
+				
+			</While>
+	
+		</QuestOrder>
+
+
+</HBProfile>
+

@@ -1,0 +1,176 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A-RAF-Power_Leveling][15-30][RAF-Character]_botanist _stockades</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+	<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" UseFlightPaths="True" LootMobs="False" LootChests="False" SkinMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" />
+				<If Condition="Me.ZoneId == 40" >														 
+					<If Condition="Me.Y &gt; 1653.415 &amp;&amp; Me.Y &lt; 1678.776 &amp;&amp; Me.X &lt; -11201.54 &amp;&amp; Me.X &gt; -11213.74" >
+						<CustomBehavior File="Message" Text="I am outside of Deadmines. Moving to Stormwind" LogColor="Lime" />
+							<RunTo X="-11211.75" Y="1654.209" Z="26.48715" />
+							<RunTo X="-11225.06" Y="1616.918" Z="32.69131" />
+							<RunTo X="-11252.25" Y="1587.435" Z="33.49816" />
+							<RunTo X="-11231" Y="1553.482" Z="34.78107" />
+							<RunTo X="-11199.93" Y="1578.886" Z="28.33619" />
+							<RunTo X="-11160.95" Y="1569.705" Z="22.60228" />
+							<RunTo X="-11140.37" Y="1534.895" Z="19.70811" />
+							<RunTo X="-11121.67" Y="1499.315" Z="23.81027" />
+							<RunTo X="-11095.38" Y="1514.774" Z="49.80918" />
+							<RunTo X="-11056.16" Y="1520.966" Z="43.14407" />
+							<RunTo X="-11027.61" Y="1491.301" Z="43.17112" />
+							<RunTo X="-11022.71" Y="1451.297" Z="43.07125" />
+							<RunTo X="-10998.4" Y="1418.206" Z="43.04799" />
+							<RunTo X="-10957.71" Y="1421.197" Z="43.10498" />
+							<RunTo X="-10919.46" Y="1406.658" Z="43.25086" />
+							<RunTo X="-10907.11" Y="1368.288" Z="40.95783" />
+							<RunTo X="-10897.12" Y="1329.238" Z="37.92873" />
+							<RunTo X="-10892.03" Y="1289.105" Z="33.74806" />
+							<RunTo X="-10897.28" Y="1249.381" Z="33.34724" />
+							<RunTo X="-10912.28" Y="1211.586" Z="35.79401" />
+							<RunTo X="-10928.82" Y="1174.685" Z="37.4893" />
+							<RunTo X="-10946.91" Y="1138.738" Z="37.35228" />
+							<RunTo X="-10956.23" Y="1099.426" Z="36.85196" />
+							<RunTo X="-10937.85" Y="1062.375" Z="36.37809" />
+							<RunTo X="-10935.59" Y="1022.262" Z="36.58348" />
+							<RunTo X="-10903.78" Y="997.5103" Z="36.00092" />
+							<RunTo X="-10864.2" Y="1005.041" Z="31.58249" />
+							<RunTo X="-10824.33" Y="1011.114" Z="32.83778" />
+							<RunTo X="-10784.5" Y="1015.253" Z="32.8038" />
+							<RunTo X="-10743.41" Y="1021.328" Z="34.26373" />
+							<RunTo X="-10703.2" Y="1031.76" Z="34.52851" />
+							<RunTo X="-10662.24" Y="1024.42" Z="32.3655" />
+							<RunTo X="-10627.31" Y="1004.382" Z="32.42621" />
+							<RunTo X="-10590.05" Y="990.0807" Z="36.80788" />
+							<RunTo X="-10561.89" Y="1017.916" Z="44.39127" />
+							<RunTo X="-10553.58" Y="1034.762" Z="56.95539" />
+							
+							<RunTo X="-8841.06" Y="489.656" Z="109.607" />
+							<RunTo X="-8862.699" Y="523.6934" Z="107.7059" />
+							<RunTo X="-8832.944" Y="549.8037" Z="96.25399" />
+							<RunTo X="-8810.337" Y="584.6721" Z="96.52618" />
+							<RunTo X="-8826.387" Y="622.5196" Z="94.33058" />
+							<RunTo X="-8850.864" Y="654.946" Z="96.81139" />
+							<RunTo X="-8828.306" Y="688.4407" Z="97.2956" />
+							<RunTo X="-8846.619" Y="724.6434" Z="97.43546" />
+							<RunTo X="-8867.293" Y="760.417" Z="97.14893" />
+							<RunTo X="-8834.776" Y="785.0212" Z="96.38165" />
+							<RunTo X="-8805.935" Y="813.522" Z="98.88268" />
+							<RunTo X="-8774.756" Y="838.5146" Z="92.18258" />
+							<RunTo X="-8766.11" Y="845.499" Z="87.9952" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+									Text="RAF Character - Press continue after the level 90 has entered the instance." Title="WARNING" />	
+					</If>	
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.ZoneId != 1519">
+						<CustomBehavior File="Message" Text="Moving to Stormwind." LogColor="Lime" />
+							<RunTo X="-8766.11" Y="845.499" Z="87.9952" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="RAF Character - Press continue after the level 90 has entered the instance." Title="WARNING" />
+					</If>	
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.ZoneId == 1519">
+						<If Condition="Me.Y &lt; 824.5202 || Me.Y &gt; 847.8094 || Me.X &gt; -8761.179 || Me.X &lt; -8782.903" >
+							<CustomBehavior File="Message" Text="Moving to the Stockades." LogColor="Lime" />
+								<RunTo X="-8766.11" Y="845.499" Z="87.9952" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="RAF Character - Press continue after the level 90 has entered the instance." Title="WARNING" />
+						</If>
+					</If>	
+				</If>
+							
+				<If Condition="Me.ZoneId == 717">
+					<CustomBehavior File="Message" Text="You started the bot with me inside Stockades. Running out to reset the dungeon." LogColor="Lime" />					
+						<RunTo X="48.9849" Y="0.483882" Z="-16.40323" />
+					<CustomBehavior File="MyCTM" X="44.95313" Y="0.7769996" Z="-14.85414" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<RunTo X="-8766.11" Y="845.499" Z="87.9952" />
+					<RunTo X="-8766.11" Y="845.499" Z="87.9952" />
+				</If>
+					
+		<While Condition="true" >									  
+				<If Condition="Me.ZoneId == 1519" >														 
+					<If Condition="Me.Y &gt; 824.5202 &amp;&amp; Me.Y &lt; 847.8094 &amp;&amp; Me.X &lt; -8761.179 &amp;&amp; Me.X &gt; -8782.903" >
+						<If Condition="Me.Level &gt;= 30" >
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="**********RAF Character - This character has reached the appropriate level to run Uldaman. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />
+						</If>
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<CustomBehavior File="MyCTM" X="-8762.588" Y="848.4637" Z="86.26942" />
+						<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<If Condition="Me.ZoneId == 717">
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="RAF Character - Press continue on the level 90 first, then press continue on this window." Title="WARNING" />
+						</If>
+					</If>				
+				</If>
+
+                               <!-- stockades dungeon script -->
+				<If Condition="Me.ZoneId == 717">
+						<RunTo X="75.27464" Y="0.519211" Z="-25.60623" />
+					<CustomBehavior File="Message" Text="Waiting for 200 seconds 1 of 4, then moving to keep from going afk." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="200000" />
+						<RunTo X="74.65881" Y="2.526229" Z="-25.60623" />
+					<CustomBehavior File="Message" Text="Waiting for 200 seconds 2 of 4, then moving to keep from going afk." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="200000" />
+						<RunTo X="74.32831" Y="-1.393386" Z="-25.60623" />
+					<CustomBehavior File="Message" Text="Waiting for 180 seconds 3 of 4, then moving to keep from going afk." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="180000" />
+						<RunTo X="76.34531" Y="0.04853642" Z="-25.60623" />
+					<CustomBehavior File="Message" Text="Waiting for 140 seconds 4 of 4, then moving to keep from going afk." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="140000" />
+					<CustomBehavior File="Message" Text="Running out so the instance can be reset." LogColor="Lime" />
+						<RunTo X="48.9849" Y="0.483882" Z="-16.40323" />
+					<CustomBehavior File="MyCTM" X="44.95313" Y="0.7769996" Z="-14.85414" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<RunTo X="-8766.11" Y="845.499" Z="87.9952" />					
+				</If>	
+		</While>	
+	</QuestOrder>
+</HBProfile>
+

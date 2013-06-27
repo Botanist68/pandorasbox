@@ -1,0 +1,410 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][90-Optimized]_botanist_lost-city-of-tolvir</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>True</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions>14,16,2156</Factions>
+	
+	<ProtectedItems>
+	<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="True" PullDistance="20" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+		 
+		 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This profle is oriented towards an ilvl 390+ Blood Death Knight. If you aren't a BLOOD DEATH KNIGHT, THIS PROFILE MAY OR MAY NOT WORK FOR YOUR CLASS. Alliance/Horde, start the profile anywhere in Eastern Kingdoms or Kalimdore despite your faction." Title="WARNING" />
+	
+         <While Condition="true" >
+
+				<If Condition="Me.ZoneId == 1519" >
+					<If Condition="Me.IsAlliance" >
+						<CustomBehavior File="Message" Text="I'm in Stormwind, flying to the Uldum portal." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-8231.121" Y="426.3492" Z="117.896" DestName="Portal to Uldum" />							
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-8232.501" Y="420.0598" Z="117.6352" />
+						<CustomBehavior File="Message" Text="Taking the portal to Uldum." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="207695" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-9007.58" Y="871.8698" Z="129.692154" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+							<RunTo X="-9417.508" Y="-959.364" Z="113.6076" />
+							<RunTo X="-9403.146" Y="-959.2565" Z="113.7771" />
+							<RunTo X="-9391.014" Y="-948.178" Z="113.765" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeep." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="SetHearthstone" MobId="48886" X="-9389.101" Y="-944.342" Z="113.7639" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="-9403.146" Y="-959.2565" Z="113.7771" />
+							<RunTo X="-9417.508" Y="-959.364" Z="113.6076" />
+						<CustomBehavior File="Message" Text="Flying to the Lost City of Tol' vir." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-9513.571" Y="-959.1371" Z="175.1863" DestName="The Lost City of Tol' vir" /> 
+						<CustomBehavior File="MyCTM" X="-9761.203" Y="-989.5357" Z="149.4826" />
+						<CustomBehavior File="MyCTM" X="-10576.51" Y="-1263.633" Z="108.0087" />
+						<CustomBehavior File="FlyTo" X="-10679.7" Y="-1307.1" Z="17.3427" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="Message" Text="I've reached the portal to The Lost City of Tol' vir." LogColor="Lime" />
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.IsAlliance" >
+						<CustomBehavior File="Message" Text="I'm in Eastern Kingdoms, flying Stormwind to use the Uldum portal." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-8231.121" Y="426.3492" Z="117.896" DestName="Portal to Uldum" />							
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-8232.501" Y="420.0598" Z="117.6352" />
+						<CustomBehavior File="Message" Text="Taking the portal to Uldum." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="207695" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-9007.58" Y="871.8698" Z="129.692154" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+							<RunTo X="-9417.508" Y="-959.364" Z="113.6076" />
+							<RunTo X="-9403.146" Y="-959.2565" Z="113.7771" />
+							<RunTo X="-9391.014" Y="-948.178" Z="113.765" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeep." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="SetHearthstone" MobId="48886" X="-9389.101" Y="-944.342" Z="113.7639" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="-9403.146" Y="-959.2565" Z="113.7771" />
+							<RunTo X="-9417.508" Y="-959.364" Z="113.6076" />
+						<CustomBehavior File="Message" Text="Flying to the Lost City of Tol' vir." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-9513.571" Y="-959.1371" Z="175.1863" DestName="The Lost City of Tol' vir" /> 
+						<CustomBehavior File="MyCTM" X="-9761.203" Y="-989.5357" Z="149.4826" />
+						<CustomBehavior File="MyCTM" X="-10576.51" Y="-1263.633" Z="108.0087" />
+						<CustomBehavior File="FlyTo" X="-10679.7" Y="-1307.1" Z="17.3427" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="Message" Text="I've reached the portal to The Lost City of Tol' vir." LogColor="Lime" />
+					</If>	
+				</If>
+				
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.IsAlliance" >
+						<If Condition="Me.ZoneId != 5034" >
+							<CustomBehavior File="FlyTo" X="-9417.508" Y="-959.364" Z="113.6076" />
+							<CustomBehavior File="ForcedDismount" />
+								<RunTo X="-9403.146" Y="-959.2565" Z="113.7771" />
+								<RunTo X="-9391.014" Y="-948.178" Z="113.765" />
+							<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeep." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="SetHearthstone" MobId="48886" X="-9389.101" Y="-944.342" Z="113.7639" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<RunTo X="-9403.146" Y="-959.2565" Z="113.7771" />
+								<RunTo X="-9417.508" Y="-959.364" Z="113.6076" />
+							<CustomBehavior File="Message" Text="Flying to the Lost City of Tol' vir." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-9513.571" Y="-959.1371" Z="175.1863" DestName="The Lost City of Tol' vir" /> 
+							<CustomBehavior File="MyCTM" X="-9761.203" Y="-989.5357" Z="149.4826" />
+							<CustomBehavior File="MyCTM" X="-10576.51" Y="-1263.633" Z="108.0087" />
+							<CustomBehavior File="FlyTo" X="-10679.7" Y="-1307.1" Z="17.3427" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="Message" Text="I've reached the portal to The Lost City of Tol' vir." LogColor="Lime" />
+						</If>	
+					</If>	
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.IsHorde" >
+						<CustomBehavior File="Message" Text="I'm Horde, in Eastern Kingdoms, flying to the Undercity zeppelin to Orgrimmar." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2062.958" Y="277.7719" Z="105.9054" />
+						<CustomBehavior File="FlyTo" X="2066.483" Y="283.9686" Z="97.03152" />						
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="2069.196" Y="290.1878" Z="97.03156" />
+						<CustomBehavior File="Message" Text="Waiting for the zeppelin." LogColor="Lime" />	
+						<CustomBehavior File="UseTransport"
+								TransportId="164871"
+								WaitAtX="2069.196" WaitAtY="290.1878" WaitAtZ="97.03156" 
+								TransportStartX="2062.376" TransportStartY="292.998047" TransportStartZ="114.670547"
+								TransportEndX="1833.509" TransportEndY="-4391.543" TransportEndZ="152.7679"
+								StandOnX="2067.631" StandOnY="293.5163" StandOnZ="97.19795" 
+								GetOffX="1841.82" GetOffY="-4393.583" GetOffZ="135.233" 
+								/>
+							<RunTo X="1841.82" Y="-4393.583" Z="135.233" />
+					</If>	
+				</If>
+				
+				<If Condition="Me.ZoneId == 1637" >
+					<If Condition="Me.IsHorde" >
+						<CustomBehavior File="Message" Text="I'm Horde, in Orgrimmar, flying to the Uldum portal." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2040.921" Y="-4357.706" Z="98.05865" />							
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="2040.928" Y="-4359.31" Z="98.05411" />	
+						<CustomBehavior File="Message" Text="Taking the portal to Uldum." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="207687" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="2039.67017" Y="-4356.288" Z="98.00434" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+							<RunTo X="-9417.508" Y="-959.364" Z="113.6076" />
+							<RunTo X="-9403.146" Y="-959.2565" Z="113.7771" />
+							<RunTo X="-9391.014" Y="-948.178" Z="113.765" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeep." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="SetHearthstone" MobId="48886" X="-9389.101" Y="-944.342" Z="113.7639" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="-9403.146" Y="-959.2565" Z="113.7771" />
+							<RunTo X="-9417.508" Y="-959.364" Z="113.6076" />
+						<CustomBehavior File="Message" Text="Flying to the Lost City of Tol' vir." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-9513.571" Y="-959.1371" Z="175.1863" DestName="The Lost City of Tol' vir" /> 
+						<CustomBehavior File="MyCTM" X="-9761.203" Y="-989.5357" Z="149.4826" />
+						<CustomBehavior File="MyCTM" X="-10576.51" Y="-1263.633" Z="108.0087" />
+						<CustomBehavior File="FlyTo" X="-10679.7" Y="-1307.1" Z="17.3427" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="Message" Text="I've reached the portal to The Lost City of Tol' vir." LogColor="Lime" />
+					</If>		
+				</If>
+
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.IsHorde" >
+						<If Condition="Me.ZoneId != 5034" >
+							<CustomBehavior File="Message" Text="I'm Horde, in Kalimdor, flying to Ramkahen to set my hearthstone." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-9417.508" Y="-959.364" Z="113.6076" />
+								<RunTo X="-9403.146" Y="-959.2565" Z="113.7771" />
+								<RunTo X="-9391.014" Y="-948.178" Z="113.765" />
+							<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeep." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="SetHearthstone" MobId="48886" X="-9389.101" Y="-944.342" Z="113.7639" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<RunTo X="-9403.146" Y="-959.2565" Z="113.7771" />
+								<RunTo X="-9417.508" Y="-959.364" Z="113.6076" />
+							<CustomBehavior File="Message" Text="Flying to the Lost City of Tol' vir." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-9513.571" Y="-959.1371" Z="175.1863" DestName="The Lost City of Tol' vir" /> 
+							<CustomBehavior File="MyCTM" X="-9761.203" Y="-989.5357" Z="149.4826" />
+							<CustomBehavior File="MyCTM" X="-10576.51" Y="-1263.633" Z="108.0087" />
+							<CustomBehavior File="FlyTo" X="-10679.7" Y="-1307.1" Z="17.3427" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="Message" Text="I've reached the portal to The Lost City of Tol' vir." LogColor="Lime" />
+						</If>
+					</If>		
+				</If>
+									  
+				<If Condition="Me.ZoneId == 5034" >
+					<If Condition="Me.Y &lt; -1320.377 || Me.Y &gt; -1291.219 &amp;&amp; Me.X &gt; -10658.9 || Me.X &lt; -10684.36" >	<!-- outside portal box -->
+						<If Condition="Me.X &lt; -9570.096 || Me.X &gt; -9355.972 || Me.Y &lt; -1024.716 || Me.Y &gt; -879.7693" >	<!-- outside inn box -->
+							<If Condition="Me.MapId != 755">	<!-- outside tol'vir -->
+								<CustomBehavior File="Message" Text="I am in Uldum, flying to Ramkahen to set my hearthstone." LogColor="Lime" />
+								<CustomBehavior File="FlyTo" X="-10576.51" Y="-1263.633" Z="108.0087" />
+									<RunTo X="-3664.295" Y="-5249.344" Z="42.13853" />
+								<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeep." LogColor="Lime" />
+								<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<CustomBehavior File="SetHearthstone" MobId="49762"  X="-3663.24" Y="-5246.885" Z="42.13801" />
+								<CustomBehavior File="WaitTimer" WaitTime="1000" />
+									<RunTo X="-3670.765" Y="-5276.506" Z="41.83879" />
+								<CustomBehavior File="Message" Text="Flying to the Lost City of Tol' vir." LogColor="Lime" />
+								<CustomBehavior File="FlyTo" X="-9513.571" Y="-959.1371" Z="175.1863" DestName="The Lost City of Tol' vir" /> 
+								<CustomBehavior File="MyCTM" X="-9761.203" Y="-989.5357" Z="149.4826" />
+								<CustomBehavior File="MyCTM" X="-10576.51" Y="-1263.633" Z="108.0087" />
+								<CustomBehavior File="FlyTo" X="-10679.7" Y="-1307.1" Z="17.3427" />
+								<CustomBehavior File="ForcedDismount" />
+								<CustomBehavior File="Message" Text="I've reached the portal to The Lost City of Tol' vir." LogColor="Lime" />
+							</If>	
+						</If>
+					</If>
+				</If>
+				
+				<If Condition="Me.X &gt; -9570.096 &amp;&amp; Me.X &lt; -9355.972 &amp;&amp; Me.Y &gt; -1024.716 &amp;&amp; Me.Y &lt; -879.7693" >	<!-- inside inn box -->
+					<CustomBehavior File="Message" Text="I am in Uldum, flying to Tol'vir." LogColor="Lime" />
+						<RunTo X="-9417.508" Y="-959.364" Z="113.6076" />
+					<CustomBehavior File="FlyTo" X="-9513.571" Y="-959.1371" Z="175.1863" /> 
+					<CustomBehavior File="MyCTM" X="-9761.203" Y="-989.5357" Z="149.4826" />
+					<CustomBehavior File="MyCTM" X="-10576.51" Y="-1263.633" Z="108.0087" />
+					<CustomBehavior File="FlyTo" X="-10679.7" Y="-1307.1" Z="17.3427" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="Message" Text="I've reached the portal to The Lost City of Tol'vir." LogColor="Lime" />
+				</If>	
+
+				
+				<If Condition="Me.MapId == 755">
+					<CustomBehavior File="Message" Text="You started the bot with me inside the the Lost City of Tol'vir. Running out to reset the dungeon." LogColor="Lime" />					
+						<RunTo X="-10735.47" Y="-1322.338" Z="15.35296" />
+					<CustomBehavior File="MyCTM" X="-10693.41" Y="-1311.165" Z="17.6785" />
+					<CustomBehavior File="GoThruPortal" X="-10687.9" Y="-1309.086" Z="17.65984" />
+				</If>
+					
+											  
+				<If Condition="Me.ZoneId == 5034" >														 
+					<If Condition="Me.Y &gt; -1320.377 &amp;&amp; Me.Y &lt; -1291.219 &amp;&amp; Me.X &lt; -10658.9 &amp;&amp; Me.X &gt; -10684.36" >									
+						<CustomBehavior File="Message" Text="I am resetting the instance." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="3000" />				
+				    	<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />  
+						<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
+						<CustomBehavior File="Message" Text="I have reset the Lost City of Tol'vir." LogColor="Lime" />
+						<CustomBehavior File="MyCTM" X="-10687.6" Y="-1309.67" Z="17.8213" /> 
+						<CustomBehavior File="Message" Text="Waiting for the dungeon to load." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" />
+
+					</If>				
+				</If>
+
+                               <!-- lost city of tol'vir dungeon script -->
+				<If Condition="Me.MapId == 755">
+				
+					<CustomBehavior File="MyCTM" X="-10733.07" Y="-1321.398" Z="15.35322" />
+				
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-10735.33" Y="-1331.598" Z="15.35322" />
+						<Hotspot X="-10718.57" Y="-1342.258" Z="15.35322" />
+						<Hotspot X="-10715.95" Y="-1352.476" Z="15.35322" />
+						<Hotspot X="-10747.54" Y="-1362.67" Z="15.35322" />
+						<Hotspot X="-10736.66" Y="-1402.104" Z="15.35322" />
+					</CustomBehavior>
+						<RunTo X="-10736.66" Y="-1402.104" Z="15.35322" />	<!-- 1st pull left -->
+						
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-10741.41" Y="-1412.276" Z="15.35322" />
+						<Hotspot X="-10769.13" Y="-1417.252" Z="15.35322" />
+						<Hotspot X="-10780.61" Y="-1393.172" Z="15.35322" />
+						<Hotspot X="-10791.94" Y="-1409.199" Z="15.35322" />
+						<Hotspot X="-10817.6" Y="-1415.329" Z="15.35322" />
+						<Hotspot X="-10833.18" Y="-1413.035" Z="15.35322" />
+						<Hotspot X="-10870.45" Y="-1402.088" Z="15.35322" />
+					</CustomBehavior>
+						<RunTo X="-10870.45" Y="-1402.088" Z="15.35322" />	<!-- 2nd pull left to bridge -->
+
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-10859.88" Y="-1418.718" Z="15.35324" />
+						<Hotspot X="-10873.61" Y="-1495.744" Z="6.860615" />
+						<Hotspot X="-10881.43" Y="-1501.969" Z="6.669667" />
+						<Hotspot X="-10900.41" Y="-1496.607" Z="6.675354" />
+						<Hotspot X="-10963.06" Y="-1491.524" Z="6.677287" />
+						<Hotspot X="-11007.69" Y="-1511.226" Z="6.675354" />
+						<Hotspot X="-10995.26" Y="-1502.727" Z="6.622733" />
+					</CustomBehavior>
+						<RunTo X="-10995.26" Y="-1502.727" Z="6.622733" />	<!-- 3rd pull to 1st grp left side -->
+
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-10995.26" Y="-1502.727" Z="6.622733" />
+						<Hotspot X="-10996.14" Y="-1502.734" Z="6.623664" />
+						<Hotspot X="-11016.59" Y="-1469.739" Z="6.674091" />
+						<Hotspot X="-11038.45" Y="-1498.092" Z="6.674091" />
+						<Hotspot X="-11036.5" Y="-1513.824" Z="6.674091" />
+						<Hotspot X="-11053.09" Y="-1521.42" Z="6.674091" />
+						<Hotspot X="-11099.1" Y="-1533.462" Z="6.71235" />
+						<Hotspot X="-11109.21" Y="-1555.033" Z="6.677446" />
+						<Hotspot X="-11121.95" Y="-1552.26" Z="6.677539" />
+					</CustomBehavior>
+						<RunTo X="-11121.95" Y="-1552.26" Z="6.677539" />	<!-- 4th pull back left corner -->
+						
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-11079.94" Y="-1491.738" Z="6.677798" />
+					</CustomBehavior>
+						<RunTo X="-11119.83" Y="-1412.799" Z="10.81876" />	<!-- 2nd bridge -->	
+						
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">	
+						<Hotspot X="-11115.62" Y="-1428.943" Z="10.807" />
+						<Hotspot X="-11119.83" Y="-1412.799" Z="10.81876" />
+					</CustomBehavior>
+						<RunTo X="-11119.83" Y="-1412.799" Z="10.81876" />	<!-- center after 2nd bridge -->
+
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-11132.11" Y="-1410.294" Z="10.80878" />
+						<Hotspot X="-11151.47" Y="-1393.464" Z="10.80724" />
+					</CustomBehavior>
+						<RunTo X="-11151.47" Y="-1393.464" Z="10.80724" />	<!-- left after 2nd bridge -->
+
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-11142.21" Y="-1362.614" Z="10.80512" />
+						<Hotspot X="-11123.66" Y="-1366.386" Z="10.80292" />
+						<Hotspot X="-11102.53" Y="-1365.676" Z="10.80529" />
+					</CustomBehavior>
+						<RunTo X="-11102.53" Y="-1365.676" Z="10.80529" />	<!-- right after 2nd bridge -->
+
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-11116.86" Y="-1425.567" Z="10.80751" />
+						<Hotspot X="-11081.17" Y="-1488.577" Z="6.676473" />
+						<Hotspot X="-11028.18" Y="-1478.37" Z="6.677144" />
+						<Hotspot X="-11012.33" Y="-1467.462" Z="6.677144" />
+						<Hotspot X="-10975.39" Y="-1468.774" Z="6.67694" />
+						<Hotspot X="-10953.01" Y="-1472.671" Z="6.67694" />
+						<Hotspot X="-10934.94" Y="-1473.489" Z="6.67694" />
+						<Hotspot X="-10877.16" Y="-1498.953" Z="6.676429" />
+						<Hotspot X="-10869.34" Y="-1471.994" Z="17.06655" />
+						<Hotspot X="-10859.53" Y="-1418.518" Z="15.35435" />
+						<Hotspot X="-10880.02" Y="-1401.249" Z="15.3535" />
+						<Hotspot X="-10904.5" Y="-1380.5" Z="15.3535" />
+						<Hotspot X="-10908.44" Y="-1351.181" Z="15.3535" />
+						<Hotspot X="-10900.19" Y="-1338.35" Z="15.3535" />
+						<Hotspot X="-10886.04" Y="-1325.349" Z="15.3535" />
+					</CustomBehavior>
+						<RunTo X="-10886.04" Y="-1325.349" Z="15.3535" />	<!--1st pull left of 1st boss -->
+
+						<RunTo X="-10856.56" Y="-1309.58" Z="15.3535" />
+						<RunTo X="-10789.68" Y="-1291.202" Z="15.35266" />
+						<RunTo X="-10789.68" Y="-1291.202" Z="15.35266" />	<!-- 2nd pull left of 1st boss -->
+
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="-10765.79" Y="-1294.521" Z="15.35266" />
+						<Hotspot X="-10734.15" Y="-1284.643" Z="15.35266" />
+					</CustomBehavior>
+						<RunTo X="-10734.15" Y="-1284.643" Z="15.35266" />	<!-- cats at exit -->
+						<RunTo X="-10730.85" Y="-1296.557" Z="15.35266" />
+				</If>
+		
+		        <If Condition="(Me.FreeBagSlots &lt; 10) || (Me.LowestDurabilityPercent &lt; 0.3)" > 
+					
+					<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+					<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor, then mailing." LogColor="Lime" />						
+						
+					<SetVendor>
+						<Vendors>
+							<Vendor Name="Blacksmith Abasi" Entry="48617" Type="Repair" X="-9404.68" Y="-906.438" Z="112.5399" />
+						</Vendors>
+					</SetVendor>
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="-9428.854" Y="-968.5951" Z="111.0117" />
+						</Mailboxes>
+					</SetMailbox>
+			
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						
+					<CustomBehavior File="FlyTo" X="-9513.571" Y="-959.1371" Z="175.1863"  DestName="Frozen Halls" />
+					<CustomBehavior File="Message" Text="Flying back to the Lost City of Tol' vir." LogColor="Lime" />
+					<CustomBehavior File="MyCTM" X="-9761.203" Y="-989.5357" Z="149.4826" />
+					<CustomBehavior File="MyCTM" X="-10576.51" Y="-1263.633" Z="108.0087" />
+					<CustomBehavior File="FlyTo" X="-10679.7" Y="-1307.1" Z="17.3427" />
+					<CustomBehavior File="Message" Text="I've reached the portal to The Lost City of Tol' vir." LogColor="Lime" />
+					<CustomBehavior File="ForcedDismount" />
+				</If>
+				
+				<RunTo X="-10719.85" Y="-1337.731" Z="15.35395" />
+				<RunTo X="-10735.86" Y="-1321.817" Z="15.35395" />
+				<CustomBehavior File="Message" Text="Waiting 60 seconds to avoid getting instance locked." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="60000" />
+				<CustomBehavior File="MyCTM" X="-10693.41" Y="-1311.165" Z="17.6785" />
+				<CustomBehavior File="GoThruPortal" X="-10687.9" Y="-1309.086" Z="17.65984" />
+		
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

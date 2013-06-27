@@ -1,0 +1,138 @@
+<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][flying][Sarnak - Fishsticker-Crossbow]_botanist_jade-forest</Name>
+   
+	<MinLevel>90</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.0</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites></TargetElites>
+	
+	<AvoidMobs>
+			
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="-10630.92" Y="1118.568" Z="33.69128" Radius="3" />
+	</Blackspots>
+
+	<Mailboxes>
+	
+	</Mailboxes>
+ 
+	<Vendors>
+	
+	</Vendors>
+	
+	<ProtectedItems>
+	
+	</ProtectedItems>
+		
+	<QuestOrder>
+	
+					
+	
+				<If Condition="Me.MapId == 870" >
+					<If Condition="Me.X &gt; 1701.374 || Me.X &lt; 1567.62 || Me.Y &gt; -1701.924 || Me.Y &lt; -1989.28" >
+						<If Condition="Me.X &gt; 230 || Me.X &lt; 180 || Me.Y &gt; -3030 || Me.Y &lt; -3070" >
+							<CustomBehavior File="Message" Text="Flying to Dawns Blossom to set my Hearthstone." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="1595.112" Y="-1792.846" Z="259.9725" />
+							<CustomBehavior File="ForcedDismount" />
+								<RunTo X="1619.983" Y="-1743.301" Z="264.4512" />
+							<CustomBehavior File="Message" Text="Setting my Heartstone with the innkeep." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="SetHearthstone" MobId="55809" X="1620.29" Y="-1740.795" Z="263.3519" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="Message" Text="I have set my Heartstone." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<RunTo X="1595.112" Y="-1792.846" Z="259.9725" />
+						</If>	
+					</If>	
+				</If>
+				
+				<If Condition="Me.MapId == 870" >
+					<If Condition="Me.X &gt; 230 || Me.X &lt; 180 || Me.Y &gt; -3030 || Me.Y &lt; -3070" >
+						<CustomBehavior File="Message" Text="Flying to the farming location." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="186.4052" Y="-3088.067" Z="22.10894" />
+						<CustomBehavior File="ForcedDismount" />
+					</If>	
+				</If>	
+	
+		<While Condition="(!HasItem(87650)) &amp;&amp; (Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >
+					<CustomBehavior File="UserSettings" MountDistance="30" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="30" LogoutForInactivity="True" />	
+						<RunTo X="186.4052" Y="-3088.067" Z="22.10894" />
+				<If Condition="Me.X &lt; 225 &amp;&amp; Me.X &gt; 150 &amp;&amp; Me.Y &gt; -3100 &amp;&amp; Me.Y &lt; -3025" >
+					<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until I loot Fishsticker Crossbow." LogColor="Lime" />
+							<RunTo X="204.9803" Y="-3043.684" Z="24.79587" />
+						<SetGrindArea><GrindArea>
+						<Factions>14</Factions>
+							<Hotspots>
+								<Hotspot X="204.9803" Y="-3043.684" Z="24.79587" />										
+							</Hotspots>
+						</GrindArea></SetGrindArea>					
+					<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (HasItem(87650))" GoalText="Farming" />
+				</If>
+					
+		</While>
+		
+				<CustomBehavior File="Message" Text="Checking my gears durability and free bag slots." LogColor="Lime" />
+					
+					<If Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; 0.3)" >						
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I have detected that my gear is about to break or my bags are nearly full. I'm going to hearth, and repair. Then I'll return to the farming location" LogColor="Lime" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+						<If Condition="Me.X &gt; 230 || Me.X &lt; 180 || Me.Y &gt; -3030 || Me.Y &lt; -3070" >
+							<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor." LogColor="Lime" />	
+							<SetVendor>
+								<Vendors>
+									<Vendor Name="Singegruff" Entry="56705" Type="Repair" X="1528.802" Y="-1806.385" Z="246.2001" />
+								</Vendors>
+							</SetVendor>						
+							<SetMailbox>
+								<Mailboxes>
+									<Mailbox X="1604.64" Y="-1793.303" Z="260.033" />
+								</Mailboxes>
+							</SetMailbox>			
+							<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						</If>
+						<If Condition="Me.X &lt; 230 &amp;&amp; Me.X &gt; 180 &amp;&amp; Me.Y &lt; -3030 &amp;&amp; Me.Y &gt; -3070" >
+							<CustomBehavior File="Message" Text="I did not succesfully hearth, flying to the repair vendor." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="3048.6" Y="1247.121" Z="655.5292" />
+							<CustomBehavior File="ForcedDismount" />
+							<SetVendor>
+								<Vendors>
+									<Vendor Name="Singegruff" Entry="56705" Type="Repair" X="1528.802" Y="-1806.385" Z="246.2001" />
+								</Vendors>
+							</SetVendor>						
+							<SetMailbox>
+								<Mailboxes>
+									<Mailbox X="1604.64" Y="-1793.303" Z="260.033" />
+								</Mailboxes>
+							</SetMailbox>			
+							<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						</If>
+					</If>
+				
+				<If Condition="(HasItem(87650))" >
+					<CustomBehavior File="FlyTo" X="226.3272" Y="-3210.533" Z="111.9882" />
+					<CustomBehavior File="Message" Text="Stopping the bot." LogColor="Lime" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
+				</If>
+			
+	</QuestOrder >			
+  
+ </HBProfile>

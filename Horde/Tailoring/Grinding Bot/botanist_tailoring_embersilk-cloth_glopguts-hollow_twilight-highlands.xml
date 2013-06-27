@@ -1,0 +1,45 @@
+<HBProfile>
+  <Name>botanist_tailoring_embersilk-cloth_glopguts-hollow_twilight-highlands</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>45 2146</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+
+	</Vendors>
+	
+	<Mailboxes>
+
+	</Mailboxes>
+
+  <Hotspots>
+   <Hotspot X="-3046.879" Y="-4586.241" Z="163.1754" />
+   <Hotspot X="-2939.075" Y="-4403.667" Z="181.109" />
+   <Hotspot X="-3094.694" Y="-4445.596" Z="182.6439" />
+   <Hotspot X="-3141.65" Y="-4428.869" Z="183.6979" />
+   <Hotspot X="-3417.5" Y="-4435.26" Z="178.8271" />
+   <Hotspot X="-3332.859" Y="-4507.419" Z="169.703" />
+   <Hotspot X="-3185.149" Y="-4717.248" Z="129.6224" />
+  </Hotspots> 
+  
+  
+  <Blackspots>
+   <Blackspot X="-4460.226" Y="-4671.717" Z="169.9822" Radius="40" />
+   <Blackspot X="-4701.915" Y="-4719.892" Z="184.2078" Radius="40" />
+  </Blackspots>
+</HBProfile>

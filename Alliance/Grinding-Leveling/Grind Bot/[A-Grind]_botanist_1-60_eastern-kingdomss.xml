@@ -1,0 +1,1964 @@
+<HBProfile>
+  <!--Created By Botanist-->
+  <Name>Botanist Grinding 1-60</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>3</MinFreeBagSlots>
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <MinLevel>1</MinLevel>
+  <MaxLevel>42</MaxLevel>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>False</MailPurple>
+
+     <Vendors>
+	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>	  
+
+  <!--*********************************************************************************Begin Grind**********************************************************************************************-->
+  
+  
+  <!--****************** If your toon is dying a lot, you can edit minimum and maximum level requirements for each subprofile *** If you edit one, you will need to edit all the *****************
+  
+      ********************************************subsequent minimum and maximum level requirements to coincide with the changes you made. ******************************************************-->
+
+    <SubProfile>
+     <Name>Northshire Valley</Name>
+     <MinLevel>1</MinLevel>                                             <!--Edit this to change the minimum level of your toon to begin this subprofile-->
+     <MaxLevel>4</MaxLevel>                                           <!--Edit this to change the maximum level of your toon to begin the next subprofile-->
+ 	 <TargetElites>False</TargetElites>
+     <AvoidMobs>
+	  <AvoidMob Name="Training Dummy" Entry="44548" />
+     </AvoidMobs>
+	 <Blackspots>
+	  <Blackspot X="-8967.969" Y="-152.5323" Z="81.50369" Radius="60" />
+     </Blackspots>
+     <Mailboxes>
+      <Mailbox X="-8907.727" Y="-129.1731" Z="81.02128" />
+     </Mailboxes>
+	 <!--Northshire Vendors-->
+     <Vendors>
+      <Vendor Name="Brother Danil" Entry="152" Type="Food" X="-8901.59" Y="-112.716" Z="81.84846" />
+      <Vendor Name="Godric Rothgar" Entry="1213" Type="Repair" X="-8898.231" Y="-119.8379" Z="81.83279" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>32 7</Factions>
+     <TargetMinLevel>1</TargetMinLevel> 
+     <TargetMaxLevel>5</TargetMaxLevel> 
+     <Hotspots>      
+      <Hotspot X="-8854.119" Y="-109.3343" Z="80.58908" />
+      <Hotspot X="-8834.542" Y="-47.76368" Z="89.04072" />
+      <Hotspot X="-8773.873" Y="-124.6106" Z="83.2557" />
+      <Hotspot X="-8773.714" Y="-241.6339" Z="83.9351" />	  
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+
+    <SubProfile>
+     <Name>Northshire Valley</Name>
+     <MinLevel>4</MinLevel>
+     <MaxLevel>6</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>   
+     </AvoidMobs>
+	 <Blackspots>     
+     </Blackspots>
+     <Mailboxes>
+      <Mailbox X="-8907.727" Y="-129.1731" Z="81.02128" />
+     </Mailboxes>
+	 <!--Northshire Vendors-->
+     <Vendors>
+      <Vendor Name="Brother Danil" Entry="152" Type="Food" X="-8901.59" Y="-112.716" Z="81.84846" />
+      <Vendor Name="Godric Rothgar" Entry="1213" Type="Repair" X="-8898.231" Y="-119.8379" Z="81.83279" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>32 7 14 26 18</Factions>
+     <TargetMinLevel>3</TargetMinLevel> 
+     <TargetMaxLevel>7</TargetMaxLevel> 
+     <Hotspots>      
+      <Hotspot X="-9031.686" Y="-261.0446" Z="73.69391" />
+      <Hotspot X="-9048.483" Y="-410.3029" Z="71.89119" />
+      <Hotspot X="-8902.5" Y="-421.7392" Z="70.18612" />	  
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+
+    <SubProfile>
+     <Name>Goldshire</Name>
+     <MinLevel>6</MinLevel>
+     <MaxLevel>8</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+       <AvoidMob Name="Thuros Lightfingers" Entry="61" />
+     </AvoidMobs>
+	 <Blackspots>
+	 <Blackspot X="-9863.878" Y="-221.174" Z="36.03822" Radius="60" />
+      <Blackspot X="-9153.688" Y="87.20483" Z="79.124" Radius="60" />
+      <Blackspot X="-9313.213" Y="-282.7583" Z="70.09749" Radius="40" />
+      <Blackspot X="-9151.979" Y="87.14644" Z="75.88408" Radius="40" />	  
+     </Blackspots>
+     <Mailboxes>
+      <Mailbox X="-9455.805" Y="46.77775" Z="56.60654" />
+     </Mailboxes>
+	 <!--Goldshire Vendors-->
+     <Vendors>
+      <Vendor Name="Innkeeper Farley" Entry="295" Type="Food" X="-9462.663" Y="16.19151" Z="56.96357" />
+      <Vendor Name="Corina Steele" Entry="54" Type="Repair" X="-9464.4" Y="94.0174" Z="58.34156" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>32 7 14 17 22 38 26 18</Factions>
+     <TargetMinLevel>5</TargetMinLevel> 
+     <TargetMaxLevel>8</TargetMaxLevel> 
+     <Hotspots>      
+      <Hotspot X="-9129.688" Y="-110.2538" Z="77.31974" />
+      <Hotspot X="-9208.177" Y="-179.6387" Z="73.60952" />
+      <Hotspot X="-9741.113" Y="192.4416" Z="50.55345" />
+      <Hotspot X="-9900.437" Y="301.1275" Z="35.3463" />
+      <Hotspot X="-9732.989" Y="407.5997" Z="40.6978" />
+      <Hotspot X="-9637.905" Y="359.7185" Z="43.26482" />
+      <Hotspot X="-9523.7" Y="312.5088" Z="52.9637" />
+      <Hotspot X="-9473.171" Y="262.3835" Z="54.2991" />
+      <Hotspot X="-9406.634" Y="230.7337" Z="60.94017" />
+      <Hotspot X="-9339.416" Y="340.8481" Z="65.08644" />
+      <Hotspot X="-9234.653" Y="227.2314" Z="72.03829" />
+      <Hotspot X="-9222.103" Y="160.6313" Z="72.49479" />
+      <Hotspot X="-9230.361" Y="70.88864" Z="75.37903" />
+      <Hotspot X="-9227.129" Y="-25.09151" Z="73.50539" />
+      <Hotspot X="-9165.694" Y="-78.7133" Z="76.42145" />
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+  
+    <SubProfile>
+     <Name>Goldshire</Name>
+     <MinLevel>8</MinLevel>
+     <MaxLevel>11</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Thuros Lightfingers" Entry="61" />
+     </AvoidMobs>
+	 <Blackspots>
+      <Blackspot X="-9862.049" Y="-222.6463" Z="36.1132" Radius="70" />    
+     </Blackspots>
+     <Mailboxes>
+      <Mailbox X="-9455.805" Y="46.77775" Z="56.60654" />
+     </Mailboxes>
+	 <!--Goldshire Vendors-->
+     <Vendors>
+      <Vendor Name="Innkeeper Farley" Entry="295" Type="Food" X="-9462.663" Y="16.19151" Z="56.96357" />
+      <Vendor Name="Corina Steele" Entry="54" Type="Repair" X="-9464.4" Y="94.0174" Z="58.34156" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>32 7 14 17 22 38 44 189 18</Factions>
+     <TargetMinLevel>5</TargetMinLevel> 
+     <TargetMaxLevel>10</TargetMaxLevel> 
+     <Hotspots>      
+      <Hotspot X="-9724.451" Y="-669.4288" Z="45.19353" />
+      <Hotspot X="-9798.928" Y="-610.0446" Z="32.60097" />
+	  <Hotspot X="-9788.446" Y="-540.7917" Z="31.83908" />
+      <Hotspot X="-9869.068" Y="-372.3931" Z="32.98726" />
+      <Hotspot X="-9795.104" Y="-258.28" Z="41.06807" />
+      <Hotspot X="-9823.771" Y="-201.1391" Z="39.17317" />
+      <Hotspot X="-9893.185" Y="-81.02245" Z="27.82337" />
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+	<SubProfile>
+     <Name>Furlbrow's Pumpkin Farm</Name>
+     <MinLevel>11</MinLevel>
+     <MaxLevel>13</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Thuros Lightfingers" Entry="61" />
+     </AvoidMobs>
+	 <Blackspots>
+      <Blackspot X="-10222.2" Y="1447.849" Z="40.67194" Radius="100" />    
+     </Blackspots>
+     <Mailboxes>
+      <Mailbox X="-10643.64" Y="1157.44" Z="33.23347" />
+     </Mailboxes>
+	 <!--Sentinel Hill Vendors-->
+     <Vendors>
+      <Vendor Name="Innkeeper Heather" Entry="8931" Type="Food" X="-10653.28" Y="1166.431" Z="34.5047" />
+      <Vendor Name="William MacGregor" Entry="1668" Type="Repair" X="-10653.31" Y="996.5868" Z="32.87475" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>189 14 38 20</Factions>
+     <TargetMinLevel>9</TargetMinLevel> 
+     <TargetMaxLevel>13</TargetMaxLevel> 
+     <Hotspots>      
+      <Hotspot X="-10068.68" Y="932.5858" Z="35.1198" />
+      <Hotspot X="-10201.4" Y="1017.193" Z="36.52847" />
+	  <Hotspot X="-9923.991" Y="1222.103" Z="42.37767" />
+      <Hotspot X="-9903.853" Y="1655.223" Z="32.74086" />
+      <Hotspot X="-10028.72" Y="1541.581" Z="43.26708" />
+      <Hotspot X="-10070.36" Y="1325.623" Z="45.27948" />
+      <Hotspot X="-10157.1" Y="1115.275" Z="37.01828" />
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+	<SubProfile>
+     <Name>Mortwake's Tower</Name>
+     <MinLevel>13</MinLevel>
+     <MaxLevel>17</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Thuros Lightfingers" Entry="61" />
+     </AvoidMobs>
+	 <Blackspots>
+      <Blackspot X="-10222.2" Y="1447.849" Z="40.67194" Radius="100" />
+      <Blackspot X="-10323.99" Y="1226.107" Z="37.43304" Radius="60" />
+      <Blackspot X="-10825" Y="1762.474" Z="36.67266" Radius="45" />	  
+     </Blackspots>
+     <Mailboxes>
+      <Mailbox X="-10643.64" Y="1157.44" Z="33.23347" />
+     </Mailboxes>
+	 <!--Sentinel Hill Vendors-->
+     <Vendors>
+      <Vendor Name="Innkeeper Heather" Entry="8931" Type="Food" X="-10653.28" Y="1166.431" Z="34.5047" />
+      <Vendor Name="William MacGregor" Entry="1668" Type="Repair" X="-10653.31" Y="996.5868" Z="32.87475" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>189 14 38 73 20</Factions>
+     <TargetMinLevel>11</TargetMinLevel> 
+     <TargetMaxLevel>15</TargetMaxLevel> 
+     <Hotspots>      
+      <Hotspot X="-10274.7" Y="1216.491" Z="36.84206" />
+      <Hotspot X="-10377.53" Y="1352.293" Z="48.76157" />
+      <Hotspot X="-10462.04" Y="1485.308" Z="45.56185" />
+      <Hotspot X="-10647.81" Y="1661.217" Z="41.82202" />
+      <Hotspot X="-11101.36" Y="1837.758" Z="40.30698" />
+      <Hotspot X="-11217.8" Y="1897.332" Z="36.54684" />
+      <Hotspot X="-11016.8" Y="1153.037" Z="39.29791" />
+      <Hotspot X="-11007.44" Y="1046.519" Z="39.58773" />
+      <Hotspot X="-11075.36" Y="912.6299" Z="40.77591" />
+      <Hotspot X="-11063.25" Y="805.6655" Z="39.29251" />
+      <Hotspot X="-11035.59" Y="644.6534" Z="34.29305" />
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+	<SubProfile>
+     <Name>Lakeshire</Name>
+     <MinLevel>17</MinLevel>
+     <MaxLevel>19</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Thuros Lightfingers" Entry="61" />
+     </AvoidMobs>
+	 <Blackspots>
+      <Blackspot X="-9159.795" Y="-2727.358" Z="88.68489" Radius="65" />    
+     </Blackspots>
+     <Mailboxes>
+      <Mailbox X="-9249.324" Y="-2144.12" Z="64.02943" />
+     </Mailboxes>
+	 <!--Lakeshire-->
+     <Vendors>
+      <Vendor Name="Innkeeper Brianna" Entry="6727" Type="Food" X="-9223.979" Y="-2157.121" Z="63.73061" />
+      <Vendor Name="Kara Adams" Entry="793" Type="Repair" X="-9247.732" Y="-2234.377" Z="63.9332" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>19 189 40 18 22</Factions>
+     <TargetMinLevel>14</TargetMinLevel> 
+     <TargetMaxLevel>18</TargetMaxLevel> 
+     <Hotspots>      
+      <Hotspot X="-9506.314" Y="-2289.695" Z="74.63203" />
+      <Hotspot X="-9633.405" Y="-2361.34" Z="65.51991" />
+	  <Hotspot X="-9635.922" Y="-2771.048" Z="58.61058" />	   
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+		<SubProfile>
+     <Name>Lakeshire</Name>
+     <MinLevel>19</MinLevel>
+     <MaxLevel>21</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Blackrock Worg Captain" Entry="43341"  />
+	  <AvoidMob Name="Blackrock Battle Worg" Entry="43340"  />
+	  <Avoidmob Name="Dire Condor" Entry="428" />
+     </AvoidMobs>
+	 <Blackspots>
+      <Blackspot X="-9175.799" Y="-2767.18" Z="88.66733" Radius="15" />
+      <Blackspot X="-9161.728" Y="-2739.052" Z="88.72148" Radius="15" />
+      <Blackspot X="-9153.02" Y="-2711.84" Z="88.72701" Radius="15" />
+      <Blackspot X="-8624.683" Y="-2576.899" Z="132.5333" Radius="15" />	  
+     </Blackspots>
+     <Mailboxes>
+      <Mailbox X="-9249.324" Y="-2144.12" Z="64.02943" />
+     </Mailboxes>
+	 <!--Lakeshire-->
+     <Vendors>
+      <Vendor Name="Innkeeper Brianna" Entry="6727" Type="Food" X="-9223.979" Y="-2157.121" Z="63.73061" />
+      <Vendor Name="Kara Adams" Entry="793" Type="Repair" X="-9247.732" Y="-2234.377" Z="63.9332" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>19 189 2200 40 18 22 39</Factions>
+     <TargetMinLevel>14</TargetMinLevel> 
+     <TargetMaxLevel>22</TargetMaxLevel> 
+     <Hotspots>      
+      <Hotspot X="-9123.309" Y="-2529.79" Z="116.0381" />
+      <Hotspot X="-9185.609" Y="-2655.919" Z="99.06588" />
+	  <Hotspot X="-9092.73" Y="-2702.498" Z="92.22063" />
+      <Hotspot X="-9199.997" Y="-3037.118" Z="95.75002" />
+      <Hotspot X="-9157.043" Y="-3219.214" Z="103.1085" />	  
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+    <SubProfile>
+     <Name>Darkshire</Name>
+     <MinLevel>21</MinLevel>
+     <MaxLevel>25</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Blackrock Worg Captain" Entry="43341"  />
+     </AvoidMobs>
+	 <Blackspots>
+      <Blackspot X="-9175.799" Y="-2767.18" Z="88.66733" Radius="20" />				 
+     </Blackspots>
+     <Mailboxes>
+      <Mailbox X="-10548.73" Y="-1157.723" Z="27.89394" />
+     </Mailboxes>
+     <Vendors>
+      <Vendor Name="Innkeeper Trelayne" Entry="6790" Type="Food" X="-10516" Y="-1161.213" Z="28.09994" />
+      <Vendor Name="Gavin Gnarltree" Entry="225" Type="Repair" X="-10617.34" Y="-1153.902" Z="27.11313" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>24 14 7 38 22 21</Factions>
+     <TargetMinLevel>19</TargetMinLevel> 
+     <TargetMaxLevel>25</TargetMaxLevel> 
+     <Hotspots>      
+      <Hotspot X="-10804.34" Y="-1232.67" Z="36.11907" />
+      <Hotspot X="-10938.64" Y="-1262.905" Z="51.75391" />
+      <Hotspot X="-10991.67" Y="-1146.609" Z="39.50811" />
+      <Hotspot X="-10998.58" Y="-974.9396" Z="65.35736" />
+      <Hotspot X="-11016.48" Y="-800.4901" Z="60.0729" />
+      <Hotspot X="-11043.25" Y="-626.5473" Z="27.49701" />
+      <Hotspot X="-10856.34" Y="-479.2597" Z="42.06155" />
+      <Hotspot X="-10782.04" Y="-650.0756" Z="41.99237" />	  
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+	<SubProfile>
+     <Name>Northern Stranglethorn Vale</Name>
+     <MinLevel>25</MinLevel>
+     <MaxLevel>29</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Blackrock Worg Captain" Entry="43341"  />
+     </AvoidMobs>
+	 <Blackspots>
+      <Blackspot X="-11996.11" Y="324.7034" Z="2.559255" Radius="100" />
+	  <Blackspot X="-8624.683" Y="-2576.899" Z="132.5333" Radius="100" />
+     </Blackspots>
+     <Mailboxes>
+	 <!--Darkshire-->
+      <Mailbox X="-10548.73" Y="-1157.723" Z="27.89394" />
+     </Mailboxes>
+     <Vendors>
+	 <!--Rebel Camp-->
+      <Vendor Name="Corporal Bluth" Entry="734" Type="Food" X="-11295.82" Y="-201.3427" Z="75.602" />
+	 <!--Nesingwary's Expedition Camp-->
+      <Vendor Name="Jaquilina Dramet" Entry="2483" Type="Repair" X="-11650.59" Y="-47.65972" Z="16.2403" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>188 16 28</Factions>
+     <TargetMinLevel>23</TargetMinLevel> 
+     <TargetMaxLevel>29</TargetMaxLevel> 
+     <Hotspots>      
+      <Hotspot X="-11659.32" Y="55.76678" Z="17.17645" />
+      <Hotspot X="-11535.97" Y="190.0192" Z="17.27522" />
+      <Hotspot X="-11633.53" Y="389.8286" Z="44.70286" />
+      <Hotspot X="-11826.44" Y="257.7841" Z="17.59777" />
+      <Hotspot X="-11016.48" Y="-800.4901" Z="60.0729" />
+      <Hotspot X="-11043.25" Y="-626.5473" Z="27.49701" />	  
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+		<SubProfile>
+     <Name>Booty Bay</Name>
+     <MinLevel>29</MinLevel>
+     <MaxLevel>33</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Gorlash" Entry="1492" />
+     </AvoidMobs>
+	 <Blackspots>
+      <Blackspot X="-11996.11" Y="324.7034" Z="2.559255" Radius="100" />
+	  <Blackspot X="-8624.683" Y="-2576.899" Z="132.5333" Radius="100" />
+     </Blackspots>
+     <Mailboxes>
+      <Mailbox X="-14420.73" Y="518.1976" Z="4.994853" />
+     </Mailboxes>
+     <Vendors>
+	  <Vendor Name="Jutak" Entry="2843" Type="Repair" X="-14467.77" Y="468.375" Z="15.02452" />
+	  <Vendor Name="Innkeeper Skindle" Entry="6807" Type="Food" X="-14457.73" Y="495.3478" Z="15.12667" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>47 49 16 72 119 7 74</Factions>
+     <TargetMinLevel>25</TargetMinLevel> 
+     <TargetMaxLevel>32</TargetMaxLevel> 
+     <Hotspots>      
+      <Hotspot X="-14639.69" Y="296.1839" Z="3.397022" />
+      <Hotspot X="-14216.54" Y="215.998" Z="11.60023" />
+      <Hotspot X="-14026.19" Y="200.519" Z="13.38833" />
+      <Hotspot X="-13955" Y="120.6938" Z="14.73391" />
+      <Hotspot X="-13883.76" Y="-52.8908" Z="27.44912" />
+      <Hotspot X="-13829.57" Y="-149.7624" Z="15.58549" />
+      <Hotspot X="-13791.16" Y="123.5736" Z="22.22287" />
+      <Hotspot X="-13655.8" Y="281.5858" Z="39.43233" />
+      <Hotspot X="-13696.39" Y="557.6444" Z="19.28177" />
+      <Hotspot X="-13859.59" Y="648.2197" Z="12.94509" />
+      <Hotspot X="-13952.76" Y="521.1376" Z="37.04623" />
+      <Hotspot X="-14127.59" Y="442.0752" Z="4.210244" />	  
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+    <SubProfile>
+     <Name>Hinterlands</Name>
+     <MinLevel>33</MinLevel>
+     <MaxLevel>35</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Blackrock Worg Captain" Entry="43341"  />
+     </AvoidMobs>
+	 <Blackspots>
+      <Blackspot X="-25.71493" Y="-2808.923" Z="122.3414" Radius="100" />
+	  <Blackspot X="-8624.683" Y="-2576.899" Z="132.5333" Radius="100" />
+     </Blackspots>
+     <Mailboxes>
+	 <!--Hinterlands-->
+      <Mailbox X="294.6089" Y="-2117.91" Z="121.838" />
+     </Mailboxes>
+     <Vendors>
+	 <!--Hinterlands-->
+      <Vendor Name="Innkeeper Thulfram" Entry="7744" Type="Food" X="320.059" Y="-2119.22" Z="121.8395" />
+	 <!--Hinterlands-->
+      <Vendor Name="Harggan" Entry="8161" Type="Repair" X="311.295" Y="-2092.38" Z="123.2282" />
+	  <Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>18 14 38 22 45 654 7 87 45 68 795</Factions>
+     <TargetMinLevel>26</TargetMinLevel> 
+     <TargetMaxLevel>35</TargetMaxLevel> 
+     <Hotspots>
+      <Hotspot X="-826.1176" Y="-2412.328" Z="64.66367" />
+      <Hotspot X="-327.0251" Y="-2579.955" Z="137.5973" />
+	  <Hotspot X="-166.1757" Y="-2767.026" Z="121.2583" />
+	  <Hotspot X="-276.5887" Y="-2922.945" Z="83.50198" />
+	  <Hotspot X="-376.5893" Y="-2787.896" Z="76.04737" />
+	  <Hotspot X="-424.2107" Y="-2876.194" Z="84.17181" />
+      <Hotspot X="-198.9142" Y="-3185.388" Z="121.9064" />
+	  <Hotspot X="-264.0752" Y="-3304.926" Z="131.8115" />
+      <Hotspot X="-120.2158" Y="-3407.242" Z="125.5071" />
+	  <Hotspot X="-79.86553" Y="-3401.068" Z="119.2434" />
+	  <Hotspot X="148.9321" Y="-3340.397" Z="117.0639" />
+	  <Hotspot X="273.4206" Y="-3262.534" Z="113.5487" />
+      <Hotspot X="299.911" Y="-3075.645" Z="118.2281" />
+      <Hotspot X="277.912" Y="-2995.728" Z="114.4639" />
+      <Hotspot X="155.5975" Y="-2914.344" Z="110.1295" />
+      <Hotspot X="212.4767" Y="-2323.166" Z="111.192" />
+      <Hotspot X="195.6168" Y="-2230.445" Z="98.8603" />
+      <Hotspot X="179.8548" Y="-2159.438" Z="100.7023" />
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+	<SubProfile>
+     <Name>Western Plaguelands</Name>
+     <MinLevel>35</MinLevel>
+     <MaxLevel>40</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Blackrock Worg Captain" Entry="43341"  />
+     </AvoidMobs>
+	 <Blackspots>
+      <Blackspot X="1525.592" Y="-1610.12" Z="65.16791" Radius="200" />
+	  <Blackspot X="1387.082" Y="-1515.57" Z="59.16008" Radius="150" />
+     </Blackspots>
+     <Mailboxes>
+	 <!--Western Plaguelands-->
+      <Mailbox X="947.52" Y="-1461.081" Z="62.48606" />
+     </Mailboxes>
+     <Vendors>
+	 <!--Western Plaguelands-->
+      <Vendor Name="Mother Matterly" Entry="46269" Type="Food" X="942.109" Y="-1446.09" Z="63.39734" />
+	 <!--Western Plaguelands-->
+      <Vendor Name="Leonard Porter" Entry="12942" Type="Repair" X="949.8846" Y="-1435.649" Z="62.58992" />
+	  <Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>16 44 312 38 19 312 22</Factions>
+     <TargetMinLevel>33</TargetMinLevel> 
+     <TargetMaxLevel>41</TargetMaxLevel> 
+     <Hotspots>
+      <Hotspot X="1054.095" Y="-1320.915" Z="63.11167" />
+	  <Hotspot X="1171.137" Y="-1129.77" Z="61.04792" />
+	  <Hotspot X="1580.765" Y="-1189.925" Z="75.80379" />
+	  <Hotspot X="1463.747" Y="-1086.664" Z="71.43775" />
+	  <Hotspot X="1611.151" Y="-915.8057" Z="66.07803" />
+	  <Hotspot X="1762.699" Y="-909.102" Z="67.56734" />
+	  <Hotspot X="1926.559" Y="-1481.856" Z="60.88079" />
+	  <Hotspot X="2105.599" Y="-1564.802" Z="67.21046" />
+	  <Hotspot X="2233.716" Y="-1635.046" Z="85.8826" />
+	  <Hotspot X="2204.989" Y="-1655.022" Z="79.7764" />
+	  <Hotspot X="2092.806" Y="-1719.799" Z="60.13475" />
+	  <Hotspot X="1959.255" Y="-1908.794" Z="76.08413" />
+	  <Hotspot X="1691.857" Y="-1744.188" Z="59.38677" />
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+    <SubProfile>
+     <Name>Eastern Plaguelands</Name>
+     <MinLevel>40</MinLevel>
+     <MaxLevel>43</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Blackrock Worg Captain" Entry="43341"  />
+     </AvoidMobs>
+	 <Blackspots>
+	  <Blackspot X="2003.4" Y="-4467.55" Z="73.62361" Radius="225" />
+	  <Blackspot X="1653.793" Y="-4811" Z="86.80752" Radius="40" />
+     </Blackspots>
+     <Mailboxes>
+	 <!--Light's Hope Chapel-->
+      <Mailbox X="2289.537" Y="-5322.643" Z="89.87147" />
+     </Mailboxes>
+     <Vendors>
+	 <!--Light's Hope Chapel-->
+      <Vendor Name="Jessica Chambers" Entry="16256" Type="Food" X="2295.74" Y="-5336.82" Z="90.7522" />
+	 <!--Light's Hope Chapel-->
+      <Vendor Name="Vincent Randolph" Entry="47286" Type="Repair" X="2262.932" Y="-5291.715" Z="82.32799" />
+	  <Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>41 21 7 2030 91</Factions>
+     <TargetMinLevel>38</TargetMinLevel> 
+     <TargetMaxLevel>45</TargetMaxLevel> 
+     <Hotspots>
+      <Hotspot X="2113.031" Y="-5220.797" Z="74.05625" />
+      <Hotspot X="1985.453" Y="-5199.139" Z="81.54816" />
+      <Hotspot X="1881.812" Y="-5084.551" Z="79.07931" />
+      <Hotspot X="1800.84" Y="-5026.725" Z="86.92346" />
+      <Hotspot X="1667.546" Y="-4969.966" Z="77.07418" />
+	  <Hotspot X="1776.439" Y="-4666.792" Z="77.07355" />
+	  <Hotspot X="1842.139" Y="-4473.422" Z="75.49562" />
+	  <Hotspot X="2263.78" Y="-4296.951" Z="73.61194" />
+      <Hotspot X="2417.452" Y="-4175.829" Z="73.48341" />
+      <Hotspot X="2563.486" Y="-4275.794" Z="76.40856" />
+      <Hotspot X="2564.606" Y="-4563.568" Z="80.51332" />
+      <Hotspot X="2476.746" Y="-4808.557" Z="78.92248" />
+      <Hotspot X="2372.323" Y="-5066.5" Z="88.80709" />
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+	    <SubProfile>
+     <Name>Badlands</Name>
+     <MinLevel>43</MinLevel>
+     <MaxLevel>46</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Kalaran the Annihilator" Entry="46859"  />
+	  <AvoidMob Name="Anathemus" Entry="2754" />
+     </AvoidMobs>
+	 <Blackspots>
+	  <Blackspot X="-6740.803" Y="-2530.427" Z="241.9482" Radius="100" />
+	  <Blackspot X="-7038.604" Y="-2506.52" Z="246.2232" Radius="35" />
+	  <Blackspot X="-7342.984" Y="-2275.711" Z="239.7346" Radius="15" />
+     </Blackspots>
+     <Mailboxes>
+	 <!--Dragons's Mouth-->
+      <Mailbox X="-7004.795" Y="-2540.702" Z="241.7136" />
+     </Mailboxes>
+     <Vendors>
+	 <!--Dustwind Dig-->
+      <Vendor Name="Gavran Goodspade" Entry="46659" Type="Food" X="-6602.21" Y="-3417.08" Z="279.2865" />
+	 <!--Dustwind Dig-->
+      <Vendor Name="Vernon Farcavern" Entry="48090" Type="Repair" X="-6599.86" Y="-3414" Z="279.2875" />
+	  <Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>38 16 45 91</Factions>
+     <TargetMinLevel>43</TargetMinLevel> 
+     <TargetMaxLevel>50</TargetMaxLevel> 
+     <Hotspots>
+      <Hotspot X="-6743.847" Y="-3542.614" Z="245.5112" />
+      <Hotspot X="-6877.062" Y="-3931.281" Z="265.7463" />
+      <Hotspot X="-6849.057" Y="-4099.548" Z="264.6965" />
+      <Hotspot X="-6647.059" Y="-4090.303" Z="265.2691" />
+      <Hotspot X="-6463.538" Y="-4096.696" Z="263.1266" />
+	  <Hotspot X="-6417.266" Y="-3983.089" Z="264.9845" />
+      <Hotspot X="-6439.978" Y="-3853.107" Z="309.107" />
+      <Hotspot X="-6384.601" Y="-3657.802" Z="242.9248" />
+      <Hotspot X="-6339.146" Y="-3504.549" Z="241.7355" />
+      <Hotspot X="-6480.724" Y="-3314.25" Z="241.6956" />
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+	<SubProfile>
+     <Name>Searing Gorge</Name>
+     <MinLevel>46</MinLevel>
+     <MaxLevel>50</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Blackrock Worg Captain" Entry="43341"  />
+     </AvoidMobs>
+	 <Blackspots>
+	 <Blackspot X="-6668.112" Y="-1751.932" Z="259.7436" Radius="30" />
+	  <Blackspot X="-6971.354" Y="-1112.741" Z="238.1286" Radius="30" />
+     </Blackspots>
+     <Mailboxes>
+	 <!--Dragon's Mouth-->
+      <Mailbox X="-7004.795" Y="-2540.702" Z="241.7136" />
+     </Mailboxes>
+     <Vendors>
+	 <!--Thorium Point-->
+      <Vendor Name="Master Smith Burninate" Entry="14624" Type="Food" X="-6526.64" Y="-1185.78" Z="309.2665" />
+	 <!--Thorium Point-->
+      <Vendor Name="Master Smith Burninate" Entry="14624" Type="Repair" X="-6526.64" Y="-1185.78" Z="309.2665" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>54 2111 575 91 14</Factions>
+     <TargetMinLevel>45</TargetMinLevel> 
+     <TargetMaxLevel>53</TargetMaxLevel> 
+     <Hotspots>
+      <Hotspot X="-7154.876" Y="-1679.056" Z="240.5164" />
+      <Hotspot X="-6915.464" Y="-1669.094" Z="243.6363" />
+      <Hotspot X="-6895.673" Y="-1809.074" Z="240.7256" />
+      <Hotspot X="-6604.045" Y="-1900.787" Z="246.0482" />
+      <Hotspot X="-6679.657" Y="-1521.048" Z="243.191" />
+      <Hotspot X="-6735.649" Y="-1195.075" Z="241.1106" />
+      <Hotspot X="-6758.302" Y="-939.135" Z="246.3964" />
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+	<SubProfile>
+     <Name>Burning Stepps</Name>
+     <MinLevel>50</MinLevel>
+     <MaxLevel>52</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Blackrock Worg Captain" Entry="43341"  />
+     </AvoidMobs>
+	 <Blackspots>
+	  <Blackspot X="2003.4" Y="-4467.55" Z="73.62361" Radius="200" />
+     </Blackspots>
+     <Mailboxes>
+	 <!--Lakeshire-->
+      <Mailbox X="-9250.143" Y="-2144.083" Z="64.02795" />
+     </Mailboxes>
+     <Vendors>
+	 <!--Morgan's Vigil-->
+      <Vendor Name="Gabrielle Chase" Entry="3298" Type="Food" X="-8354.43" Y="-2734.1" Z="185.0969" />
+	 <!--Morgan's Vigil-->
+      <Vendor Name="Felder Stover" Entry="1296" Type="Repair" X="-8366.36" Y="-2762.51" Z="187.5339" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>38 103 40</Factions>
+     <TargetMinLevel>48</TargetMinLevel> 
+     <TargetMaxLevel>53</TargetMaxLevel> 
+     <Hotspots>
+      <Hotspot X="-9250.143" Y="-2144.083" Z="64.02795" />
+      <Hotspot X="-8250.759" Y="-2698.105" Z="135.903" />
+      <Hotspot X="-8156.746" Y="-2908.204" Z="133.453" />
+      <Hotspot X="-7946.114" Y="-2906.573" Z="132.7087" />
+      <Hotspot X="-7766.498" Y="-2940.142" Z="130.4723" />
+      <Hotspot X="-7634.742" Y="-2924.828" Z="131.1137" />
+      <Hotspot X="-7607.452" Y="-2766.08" Z="133.6157" />
+      <Hotspot X="-7603.398" Y="-2563.797" Z="133.5452" />
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+	<SubProfile>
+     <Name>Swamp of Sorrows</Name>
+     <MinLevel>52</MinLevel>
+     <MaxLevel>55</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Blackrock Worg Captain" Entry="43341"  />
+	  <AvoidMob Name="Stonard Kodo Beast" Entry="46748" />
+     </AvoidMobs>
+	 <Blackspots>
+	  <Blackspot X="-10449.69" Y="-3276.388" Z="20.91853" Radius="200" />
+	  <Blackspot X="-10081.07" Y="-3480.129" Z="22.00357" Radius="65" />
+     </Blackspots>
+     <Mailboxes>
+	 <!--Bog Paddle-->
+      <Mailbox X="-9784.355" Y="-3883.034" Z="21.72665" />
+     </Mailboxes>
+     <Vendors>
+	 <!--Bog Paddle-->
+      <Vendor Name="Cap'n Geech" Entry="47334" Type="Food" X="-9766.99" Y="-3879.23" Z="21.93396" />
+	 <!--Bog Paddle-->
+      <Vendor Name="Dronk Drophammer" Entry="47059" Type="Repair" X="-9766.76" Y="-3901.64" Z="21.8145" />
+	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>51 22 29 16 7 14 91</Factions>
+     <TargetMinLevel>50</TargetMinLevel> 
+     <TargetMaxLevel>56</TargetMaxLevel> 
+     <Hotspots>
+      <Hotspot X="-9916.445" Y="-3704.21" Z="22.66233" />
+      <Hotspot X="-10009.59" Y="-3563.609" Z="21.67824" />
+      <Hotspot X="-10135.24" Y="-3332.19" Z="22.64305" />
+      <Hotspot X="-10189.8" Y="-3225.88" Z="20.40475" />
+      <Hotspot X="-10119.48" Y="-3092.362" Z="22.79011" />
+      <Hotspot X="-10166.65" Y="-2961.178" Z="22.41277" />
+      <Hotspot X="-10225.04" Y="-2755.113" Z="22.63818" />
+	  <Hotspot X="-10522.28" Y="-2577.891" Z="22.81956" />
+      <Hotspot X="-10415.69" Y="-2939.926" Z="22.20968" />
+      <Hotspot X="-10331.06" Y="-3073.856" Z="22.91804" />
+      <Hotspot X="-10228.52" Y="-3467.758" Z="23.2692" />
+      <Hotspot X="-10219.11" Y="-3991.019" Z="22.91207" />
+      <Hotspot X="-10268.68" Y="-4220.906" Z="20.37909" />
+	  <Hotspot X="-10172.52" Y="-4337.874" Z="3.703507" />
+      <Hotspot X="-9979.843" Y="-4171.034" Z="21.76805" />
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+	 <SubProfile>
+     <Name>Blasted Lands</Name>
+     <MinLevel>55</MinLevel>
+     <MaxLevel>60</MaxLevel>
+	 <TargetElites>False</TargetElites>
+	 <AvoidMobs>
+	  <AvoidMob Name="Blackrock Worg Captain" Entry="43341"  />
+	   <AvoidMob Name="Felscale Crawler" Entry="45087" />
+      </AvoidMobs>
+	 <Blackspots>
+	  <Blackspot X="2003.4" Y="-4467.55" Z="73.62361" Radius="200" />
+	  <Blackspot X="-10977.1" Y="-2771.339" Z="4.886963" Radius="120" />
+	  <Blackspot X="-11398.36" Y="-2714.294" Z="10.7571" Radius="45" />
+     </Blackspots>
+     <Mailboxes>
+	 <!--Nethergarde Keep-->
+      <Mailbox X="-10994.28" Y="-3387.396" Z="62.00501" />
+     </Mailboxes>
+     <Vendors>
+	 <!--Light's Hope Chapel-->
+      <Vendor Name="Mama Morton" Entry="44325" Type="Food" X="-10925.3" Y="-3417.68" Z="66.49853" />
+	 <!--Nethergarde Keep-->
+      <Vendor Name="Strumner Flintheel" Entry="5508" Type="Repair" X="-10951.8" Y="-3451.99" Z="66.7612" />
+	  	    <!-- Goldshire Trainers-->
+		<Vendor Name="Keryn Sylvius" Entry="917" Type="Train" TrainClass="Rogue" X="-9465.792" Y="12.6454" Z="63.82055" />
+		<Vendor Name="Priestess Josetta" Entry="377" Type="Train" TrainClass="Priest" X="-9460.753" Y="33.13379" Z="63.82045" />
+		<Vendor Name="Brother Wilhelm" Entry="927" Type="Train" TrainClass="Paladin" X="-9466.16" Y="109.757" Z="57.61904" />
+		<Vendor Name="Lyria Du Lac" Entry="913" Type="Train" TrainClass="Warrior" X="-9463.16" Y="110.005" Z="57.70275" />
+		<Vendor Name="Maximillian Crowe" Entry="906" Type="Train" TrainClass="Warlock" X="-9472.802" Y="-5.326606" Z="49.79485" />
+		<Vendor Name="Zaldimar Wefhellt" Entry="328" Type="Train" TrainClass="Mage" X="-9471.675" Y="34.45095" Z="63.82158" />
+		<Vendor Name="Benjamin Foxworthy" Entry="46983" Type="Train" TrainClass="Hunter" X="-9464.94" Y="117.432" Z="57.96372" />
+		<!-- Westfall Sentinal Hill Trainers -->
+		<Vendor Name="Sister Darnhald" Entry="49741" Type="Train" TrainClass="Paladin" X="-10658.86" Y="1170.22" Z="34.49004" />
+		<Vendor Name="Kallen Stanner" Entry="49736" Type="Train" TrainClass="Warrior" X="-10657.5" Y="1172.181" Z="34.51397" />
+		<Vendor Name="Priestess Cocoa Anderson" Entry="49749" Type="Train" TrainClass="Priest" X="-10654.83" Y="1177.418" Z="34.56167" />
+		<Vendor Name="Deborah Fain" Entry="49769" Type="Train" TrainClass="Warlock" X="-10644.16" Y="1168.688" Z="34.5554" />
+		<Vendor Name="Zalna Wefhellt" Entry="49760" Type="Train" TrainClass="Mage" X="-10644.23" Y="1185.938" Z="34.09024" />
+		<Vendor Name="Lyndsay Hollister" Entry="43011" Type="Train" TrainClass="Hunter" X="-10642.74" Y="1187.929" Z="34.14152" />
+		<Vendor Name="Sern Hallows" Entry="49745" Type="Train" TrainClass="Rogue" X="-10634.92" Y="1191.038" Z="34.27001" />
+		<!--Stormwind Trainers-->
+		<Vendor Name="Brother Joshua" Entry="5489" Type="Train" TrainClass="Priest" X="-8519.56" Y="862.8282" Z="109.8286" />
+		<Vendor Name="Osborne the Night Man" Entry="918" Type="Train" TrainClass="Rogue" X="-8752.939" Y="376.3212" Z="101.0491" />
+		<Vendor Name="Wu Shen" Entry="5479" Type="Train" TrainClass="Warrior" X="-8803.79" Y="330.7847" Z="115.4658" />
+		<Vendor Name="Ursula Deline" Entry="5495" Type="Train" TrainClass="Warlock" X="-8971.052" Y="1029.896" Z="101.4036" />
+		<Vendor Name="Lord Grayson Shadowbreaker" Entry="928" Type="Train" TrainClass="Paladin" X="-8516.007" Y="804.5712" Z="106.5188" />
+		<Vendor Name="Elsharin" Entry="5498" Type="Train" TrainClass="Mage" X="-9006.13" Y="885.3715" Z="29.62114" />
+		<Vendor Name="Einris Brightspear" Entry="5515" Type="Train" TrainClass="Hunter" X="-8416.09" Y="547.868" Z="95.44888" />
+		<!--Stormwind Only Classes Trainers-->
+		<Vendor Name="Celestine of the Harvest" Entry="44395" Type="Train" TrainClass="Druid" X="-8284.26" Y="724.349" Z="75.2835" />
+		<Vendor Name="Farseer Umbrua" Entry="20407" Type="Train" TrainClass="Shaman" X="-8359.28" Y="577.384" Z="104.249" />
+		<!--Ironforge Trainers-->
+		<Vendor Name="Braenna Flintcrag" Entry="5142" Type="Train" TrainClass="Priest" X="-4617.629" Y="-906.6656" Z="501.073" />
+		<Vendor Name="Brandur Ironhammer" Entry="5149" Type="Train" TrainClass="Paladin" X="-4601.648" Y="-896.4678" Z="502.7671" />
+		<Vendor Name="Dink" Entry="7312" Type="Train" TrainClass="Mage" X="-4614.484" Y="-928.3623" Z="501.0683" />
+		<Vendor Name="Darba the Crone" Entry="50729" Type="Train" TrainClass="Warlock" X="-4599.313" Y="-1107.486" Z="504.9388" />
+		<Vendor Name="Fenthwick" Entry="5167" Type="Train" TrainClass="Rogue" X="-4650.119" Y="-1120.803" Z="508.5508" />
+		<Vendor Name="Farseer Javad" Entry="23127" Type="Train" TrainClass="Shaman" X="-4720.412" Y="-1149.962" Z="502.448" />
+		<Vendor Name="Kelstrum Stonebreaker" Entry="1901" Type="Train" TrainClass="Warrior" X="-5044.874" Y="-1243.064" Z="507.7531" />
+		<Vendor Name="Olmin Burningbeard" Entry="5116" Type="Train" TrainClass="Hunter" X="-5010.387" Y="-1274.048" Z="507.7523" />
+     </Vendors>
+     <GrindArea>
+     <Factions>189 49 38 45 90 14 7</Factions>
+     <TargetMinLevel>53</TargetMinLevel> 
+     <TargetMaxLevel>60</TargetMaxLevel> 
+     <Hotspots>
+      <Hotspot X="-11169.12" Y="-3195.15" Z="6.735375" />
+	  <Hotspot X="-11259.33" Y="-3032.793" Z="5.366214" />
+      <Hotspot X="-11447.87" Y="-2869.64" Z="2.019943" />
+	  <Hotspot X="-11636.63" Y="-3067.787" Z="10.76127" />
+      <Hotspot X="-11529.34" Y="-3295.988" Z="8.771472" />
+	  <Hotspot X="-11409.42" Y="-3563.089" Z="11.81013" />
+	  <Hotspot X="-11826.95" Y="-3823.692" Z="57.67365" />
+      <Hotspot X="-12108.16" Y="-3779.562" Z="5.977233" />
+      <Hotspot X="-12365.44" Y="-3693.599" Z="11.01861" />
+      <Hotspot X="-12533.38" Y="-3276.135" Z="7.181072" />
+      <Hotspot X="-12630.2" Y="-3040.354" Z="5.615096" />
+     </Hotspots>
+     </GrindArea>
+    </SubProfile>
+	
+    <!--*******************************************************************Protected & Forced Mail Items**********************************************************************************-->
+	
+	<ProtectedItems>
+    <!--Normal Stuff-->
+    <Item>6948</Item>     <!-- Hearthstone -->
+    <Item>7005</Item>     <!-- Skinning Knife -->
+    <Item>2901</Item>     <!-- Mining Pick -->
+    <Item>5956</Item>	  <!-- Blacksmith Hammer-->
+    <Item>6256</Item>	  <!-- Fishing Pole-->
+    <Item>6365</Item>	  <!-- Strong Fishing Pole-->
+    <Item>40772</Item>    <!-- Gnomish Army Knife -->
+
+
+    <!--Enchanting Items-->
+    <Item>6218</Item>	  <!-- Runed Copper Rod-->
+    <Item>6339</Item>	  <!-- Runed Silver Rod-->
+    <Item>11130</Item>	  <!-- Runed Golden Rod-->
+    <Item>11145</Item>	  <!-- Runed Truesilver Rod-->
+    <Item>16207</Item>	  <!-- Runed Arcanite Rod-->
+    <Item>22461</Item>	  <!-- Runed Fel iron Rod-->
+    <Item>22462</Item>	  <!-- Runed Adamantite Rod-->
+    <Item>22463</Item>	  <!-- Runed Eternium Rod-->
+    <Item>44452</Item>	  <!-- Runed Titanium Rod-->
+
+    <!--Mage Items-->
+    <!--Reagents-->
+    <Item>17032</Item>    <!--Rune Of Portals-->
+    <Item>17031</Item>    <!--Rune of Teleportation-->
+    <Item>17056</Item>    <!--Light Feather-->
+    <Item>17020</Item>    <!--Arcane Powder-->
+	
+    <!--Conjured Drink-->
+    <Item>5350</Item>     <!-- Conjured Water -->
+    <Item>2288</Item>     <!-- Conjured Fresh Water -->
+    <Item>2136</Item>     <!-- Conjured Purified Water -->
+    <Item>3772</Item>     <!-- Conjured Spring Water -->
+    <Item>8077</Item>     <!-- Conjured Mineral Water -->
+    <Item>8078</Item>     <!-- Conjured Mineral Water -->
+    <Item>8079</Item>     <!-- Conjured Crystal Water -->
+    <Item>30703</Item>    <!-- Conjured Mountain Spring Water -->
+    <Item>22018</Item>    <!-- Conjured Glacier Water -->
+
+    <!--Conjured Food-->
+    <Item>5349</Item>     <!-- Conjured Muffin -->
+    <Item>1113</Item>     <!-- Conjured Bread -->
+    <Item>1114</Item>     <!-- Conjured Rye -->
+    <Item>1487</Item>     <!-- Conjured Pumpernickel -->
+    <Item>8075</Item>     <!-- Conjured Sourdough -->
+    <Item>8076</Item>     <!-- Conjured Sweet Roll -->
+    <Item>22895</Item>    <!-- Conjured Cinnamon Roll -->
+    <Item>34062</Item>    <!-- Conjured Mana Biscuit -->
+    <Item>22019</Item>    <!-- Conjured Croissant -->
+    <Item>43518</Item>    <!-- Conjured Mana Pie -->
+    <Item>43523</Item>    <!-- Conjured Mana Strudel -->
+
+    <!--Conjured Gem-->
+    <Item>5514</Item>     <!-- Mana Agate -->
+    <Item>5513</Item>     <!-- Mana Jade -->
+    <Item>8007</Item>     <!-- Mana Citrine -->
+    <Item>8008</Item>     <!-- Mana Ruby -->
+    <Item>22044</Item>    <!-- Mana Emerald -->
+    <Item>33312</Item>    <!-- Mana Sapphire -->
+
+
+    <!--Shaman Items-->
+    <!--Totems-->
+    <Item>5175</Item>     <!-- Earth Totem -->
+    <Item>5176</Item>     <!-- Fire Totem -->
+    <Item>5177</Item>     <!-- Water Totem -->
+    <Item>5178</Item>     <!-- Air Totem -->
+    <!--Reagents-->
+    <Item>17058</Item>    <!-- Fish Oil -->
+    <Item>17057</Item>    <!-- Shiny Fish Scales -->
+    <Item>17030</Item>    <!-- Ankh -->
+
+    <!--Priest Items-->
+    <!--Reagents-->
+    <Item>17028</Item>    <!-- Holy Candle -->
+    <Item>17029</Item>    <!-- Sacred Candle -->
+    <Item>44615</Item>    <!-- Devout Candle -->
+
+    <!--Paladin Items-->
+    <!--Reagents-->
+    <Item>17033</Item>    <!-- Symbol of Divinity -->
+    <Item>21177</Item>    <!-- Symbol of Kings -->
+    <Item>17030</Item>    <!-- Symbol of Divinity -->
+    <Item>17030</Item>    <!-- Symbol of Divinity -->
+    <Item>17030</Item>    <!-- Symbol of Divinity -->
+
+    <!--Druid Items-->
+    <!--Reagents-->
+    <Item>17034</Item>    <!-- Maple Seed -->
+    <Item>17035</Item>    <!-- Stranglethorn Seed -->
+    <Item>17036</Item>    <!-- AShwood Seed -->
+    <Item>17037</Item>    <!-- Hornbeam Seed -->
+    <Item>17038</Item>    <!-- Ironwood Seed -->
+    <Item>22147</Item>    <!-- Flintweed Seed -->
+    <Item>44614</Item>    <!-- Starleaf Seed -->
+    <Item>17026</Item>    <!-- Wild Thornroot -->
+    <Item>22148</Item>    <!-- Wild Quillvine -->
+    <Item>17021</Item>    <!-- Wild Berries -->
+    <Item>44605</Item>    <!-- Wild Spineleaf -->
+
+    <!--Rogue Items-->
+    <!--Reagents-->
+    <Item>5060</Item>    <!-- Thieves' Tools -->
+    <Item>3775</Item>    <!-- Crippling Poison -->
+    <Item>5237</Item>    <!-- Mind-numbing Poison -->
+    <Item>6947</Item>    <!-- Instant Poison -->
+    <Item>6949</Item>    <!-- Instant Poison II -->
+    <Item>6950</Item>    <!-- Instant Poison III-->
+    <Item>8926</Item>    <!-- Instant Poison IV-->
+    <Item>8927</Item>    <!-- Instant Poison V -->
+    <Item>8928</Item>    <!-- Instant Poison VI-->
+    <Item>22054</Item>   <!-- Instant Poison VII-->
+    <Item>43230</Item>   <!-- Instant Poison VIII-->
+    <Item>43231</Item>   <!-- Instant Poison IX-->
+    <Item>2892</Item>    <!-- Deadly Poison -->
+    <Item>2893</Item>    <!-- Deadly Poison II-->
+    <Item>8984</Item>    <!-- Deadly Poison III-->
+    <Item>8985</Item>    <!-- Deadly Poison IV-->
+    <Item>20844</Item>   <!-- Deadly Poison V-->
+    <Item>22053</Item>   <!-- Deadly Poison VI-->
+    <Item>22054</Item>   <!-- Deadly Poison VII-->
+    <Item>43232</Item>   <!-- Deadly Poison VIII-->
+    <Item>43233</Item>   <!-- Deadly Poison IX-->
+    <Item>10918</Item>   <!-- Wound Poison -->
+    <Item>10920</Item>   <!-- Wound Poison II-->
+    <Item>10921</Item>   <!-- Wound Poison III-->
+    <Item>10922</Item>   <!-- Wound Poison IV-->
+    <Item>22055</Item>   <!-- Wound Poison V-->
+    <Item>43234</Item>   <!-- Wound Poison VI-->
+    <Item>43235</Item>   <!-- Wound Poison VII-->
+    <Item>21835</Item>   <!-- Anesthetic Poison -->
+    <Item>43237</Item>   <!-- Anesthetic Poison II-->
+
+    <!--Death Knight Items-->
+    <!--Reagents-->
+    <Item>37201</Item>    <!-- Corpse Dust -->
+
+    <!--Warlock Items-->
+    <!--Reagents-->
+    <Item>5565</Item>     <!-- Infernal Stone -->
+    <Item>6265</Item>     <!-- SoulShard -->
+    <Item>16583</Item>    <!-- Demonic Figurine -->
+
+    <!--Healing Potions-->
+    <Item>118</Item>      <!-- Minor Healing Potion -->
+    <Item>858</Item>      <!-- Lesser Healing Potion -->
+    <Item>4596</Item>     <!-- Discolored Healing Potion -->
+    <Item>929</Item>      <!-- Healing Potion -->
+    <Item>1710</Item>     <!-- Greater Healing Potion -->
+    <Item>3928</Item>     <!-- Superior Healing Potion -->
+    <Item>13446</Item>    <!-- Major Healing Potion -->
+    <Item>17348</Item>    <!-- Major Healing Draught PvP -->
+    <Item>28100</Item>    <!-- Volatile Healing Potion -->
+    <Item>33934</Item>    <!-- Crystal Healing Potion -->
+    <Item>22829</Item>    <!-- Super Healing Potion -->
+    <Item>17349</Item>    <!-- Super Healing Draught -->
+    <Item>32947</Item>    <!-- Auchenai Healing Potion -->
+    <Item>33092</Item>    <!-- Healing Potion Injector -->
+    <Item>18839</Item>    <!-- Combat Healing Potion -->
+    <Item>31839</Item>    <!-- Major Combat Healing Potion -->
+    <Item>31852</Item>    <!-- Major Combat Healing Potion -->
+    <Item>31853</Item>    <!-- Major Combat Healing Potion -->
+    <Item>31838</Item>    <!-- Major Combat Healing Potion -->
+    <Item>39671</Item>    <!-- Resurgent Healing Potion -->
+    <Item>33447</Item>    <!-- Runic Healing Potion -->
+    <Item>41166</Item>    <!-- Runic Healing Injector -->
+    <Item>43531</Item>    <!-- Argent Healing Potion -->
+	
+    <!--Mana Potions-->
+    <Item>2455</Item>     <!-- Minor Mana Potion -->
+    <Item>3385</Item>     <!-- Lesser Mana Potion -->
+    <Item>3827</Item>     <!-- Mana Potion -->
+    <Item>6149</Item>     <!-- Greater Mana Potion -->
+    <Item>13443</Item>    <!-- Superior Mana Potion -->
+    <Item>13444</Item>    <!-- Major Mana Potion -->
+    <Item>22832</Item>    <!-- Super Mana Potion -->
+    <Item>28101</Item>    <!-- Unstable Mana Potion -->
+    <Item>31677</Item>    <!-- Fel Mana Potion -->
+    <Item>43530</Item>    <!-- Argent Mana Potion -->
+    <Item>33093</Item>    <!-- Mana Potion Injector -->
+    <Item>42545</Item>    <!-- Runic Mana Injector -->
+    <Item>33448</Item>    <!-- Runic Mana Potion -->
+    <Item>40067</Item>    <!-- Icy Mana Potion -->
+    <Item>18841</Item>    <!-- Combat Mana Potion -->
+    <Item>31855</Item>    <!-- Major Combat Mana Potion -->
+    <Item>31854</Item>    <!-- Major Combat Mana Potion -->
+    <Item>31841</Item>    <!-- Major Combat Mana Potion -->
+    <Item>31840</Item>    <!-- Major Combat Mana Potion -->
+    <Item>17352</Item>    <!-- Superior Mana Draught -->
+    <Item>17351</Item>    <!-- Major Mana Draught -->
+
+    <!--Mana Oils-->
+    <Item>20745</Item>    <!-- Minor Mana Oil -->
+    <Item>20747</Item>    <!-- Lesser Mana Oil -->
+    <Item>20748</Item>    <!-- Brilliant Mana Oil -->
+    <Item>22521</Item>    <!-- Superior Mana Oil -->
+    <Item>36899</Item>    <!-- Exeptional Mana Oil -->
+
+    <!--Bandages-->
+    <Item>1251</Item>     <!-- Linen Bandage -->
+    <Item>2581</Item>     <!-- Heavy Linen Bandage -->
+    <Item>3530</Item>     <!-- Wool Bandage -->
+    <Item>3531</Item>     <!-- Heavy Wool Bandage -->
+    <Item>6450</Item>     <!-- Silk Bandage -->
+    <Item>6451</Item>     <!-- Heavy Silk Bandage -->
+    <Item>8544</Item>     <!-- Mageweave Bandage -->
+    <Item>8545</Item>     <!-- Heavy Mageweave Bandage -->
+    <Item>14529</Item>    <!-- Runecloth Bandage -->
+    <Item>14530</Item>    <!-- Heavy Runecloth Bandage -->
+    <Item>21990</Item>    <!-- Netherweave Bandage -->
+    <Item>21991</Item>    <!-- Heavy Netherweave Bandage -->
+    <Item>34721</Item>    <!-- Frostweave Bandage -->
+    <Item>34722</Item>    <!-- Heavy Frostweave Bandage -->
+
+    <!--Drinks-->
+    <!--1-5-->
+    <Item>159</Item>	<!--Refreshing Spring Water-->
+
+    <!--5-15-->
+    <Item>1179</Item>	<!--Ice Cold Milk-->
+
+    <!--15-25-->
+    <Item>1205</Item>	<!--Melon Juice-->
+
+    <!--25-35-->
+    <Item>1708</Item>	<!--Sweet Nectar-->
+
+    <!--35-45-->
+    <Item>1645</Item>	<!--Moonberry Juice-->
+
+    <!--45-55-->
+    <Item>8766</Item>	<!--Morning Glory Dew-->
+    <Item>22324</Item>	<!--Winter Kimchi-->
+
+    <!--55-65-->
+    <Item>28399</Item>	<!--Filtered Draenic Water-->
+    <Item>29454</Item>	<!--Silverwine-->
+
+    <!--65-75--> 
+    <Item>27860</Item>	<!--Purified Draenic Water-->
+    <Item>29395</Item>	<!--Ethermead-->
+    <Item>33444</Item>	<!--Pungent Seal Whey-->
+    <Item>33445</Item>	<!--Honeymint Tea-->
+    <Item>35954</Item>	<!--Sweetened Goat's Milk-->
+
+    <!--Food-->
+    <!--1-5-->
+    <Item>20857</Item>	<!--Honey Bread-->
+    <Item>2070</Item>	<!--Darnassian Bleu-->
+    <Item>117</Item>	<!--Tough Jerky-->
+    <Item>4540</Item>	<!--Tough Hunk of Bread-->
+    <Item>4604</Item>	<!--Forest Mushroom Cap-->
+    <Item>4536</Item>	<!--Shiny Red Apple-->
+    <Item>787</Item>	<!--Slitherskin Mackerel-->
+
+    <!--5-15-->
+    <Item>2287</Item>	<!--Haunch of Meat-->
+    <Item>17406</Item>	<!--Holiday Cheesewheel-->
+    <Item>4537</Item>	<!--Tel'Abim Banana-->
+    <Item>414</Item>	<!--Dalaran Sharp-->
+    <Item>4541</Item>	<!--Freshly Baked Bread-->
+    <Item>4605</Item>	<!--Red-Speckled Mushroom-->
+    <Item>4592</Item>	<!--Longjaw Mud Snapper-->
+
+    <!--15-25-->
+    <Item>3770</Item>	<!--Mutton chop-->
+    <Item>422</Item>	<!--Dwarven Mild-->
+    <Item>4538</Item>	<!--Snapvine Watermelon-->
+    <Item>16170</Item>	<!--Steamed Mandu-->
+    <Item>7228</Item>	<!--Strawberry Ice Cream-->
+    <Item>4542</Item>	<!--Moist Cornbread-->
+    <Item>4606</Item>	<!--Spongy Morel-->
+    <Item>4593</Item>	<!--Bristle Whisker Catfish-->
+
+    <!--25-35-->
+    <Item>18632</Item>	<!--Moonbrook Riot Taffy-->
+    <Item>16169</Item>	<!--Wild Ricecake-->
+    <Item>4607</Item>	<!--Delicious Cave Mold-->
+    <Item>4539</Item>	<!--GoldenBark Apple-->
+    <Item>17407</Item>	<!--Graccu's Homemade Meat Pie-->
+    <Item>3771</Item>	<!--Wild Hog Shank-->
+    <Item>4544</Item>	<!--Mulgore Spice Bread-->
+    <Item>1707</Item>	<!--Stormwind Brie-->
+    <Item>4594</Item>	<!--Rockscale Cod-->
+
+    <!--35-45-->
+    <Item>18635</Item>	<!--Bellara's Nutterbar-->
+    <Item>21030</Item>	<!--Darnassus Kimchi Pie-->
+    <Item>16168</Item>	<!--Heaven Peach-->
+    <Item>17408</Item>	<!--Spicy Beefstick-->
+    <Item>21552</Item>	<!--Striped Yellowtail-->
+    <Item>4599</Item>	<!--Cured Ham Steak-->
+    <Item>3927</Item>	<!--Fine aged Cheddar-->
+    <Item>4602</Item>	<!--Moon Harvest Pumpkin-->
+    <Item>4608</Item>	<!--Raw Black Truffle-->
+    <Item>4601</Item>	<!--Soft Banana Bread-->
+
+    <!--45-55-->
+    <Item>21031</Item>	<!--Cabbage Kimchi-->
+    <Item>21033</Item>	<!--Radish Kimchi-->
+    <Item>8957</Item>	<!--Spinefin Halibut-->
+    <Item>8932</Item>	<!--Alterac Swiss-->
+    <Item>8953</Item>	<!--Deep Fried Plantains-->
+    <Item>8948</Item>	<!--Dried King Bolete-->
+    <Item>8950</Item>	<!--Homemade Cherry Pie-->
+    <Item>8952</Item>	<!--Roasted Quail-->
+
+    <!--55-65-->
+    <Item>29393</Item>	<!--Diamon Berries-->
+    <Item>27857</Item>	<!--Garadar Sharp-->
+    <Item>27855</Item>	<!--Mag'har Grainbread-->
+    <Item>27856</Item>	<!--Skethnyl Berries-->
+    <Item>27854</Item>	<!--Smoked Talbuk Venison-->
+    <Item>27858</Item>	<!--Sunspring Carp-->
+    <Item>27859</Item>	<!--Zangar Caps-->
+
+    <!--65-75-->
+   <Item>29449</Item>	<!--BladeSpire Bagel-->
+   <Item>29451</Item>	<!--Clefthoof Ribs-->
+   <Item>29394</Item>	<!--Lyribread-->
+   <Item>35949</Item>	<!--Tundra Berries-->
+   <Item>29452</Item>	<!--Zangar Trout-->
+   <Item>33449</Item>	<!--Crusty Flatbread-->
+   <Item>33451</Item>	<!--Fillet of Icefin-->
+   <Item>37252</Item>	<!--Frostberries-->
+   <Item>33452</Item>	<!--Honey-Spiced Lichen-->
+   <Item>29448</Item>	<!--Mag'har Mild Cheese-->
+   <Item>33454</Item>	<!--Salted Venison-->
+   <Item>33443</Item>	<!--Sour Goat Cheese-->
+   <Item>29453</Item>	<!--Sporeggar Mushroom-->
+   <Item>29450</Item>	<!--Telaari Grapes-->
+
+    <!--75-80-->
+   <Item>42429</Item>	<!--Red Velvet Cupcake-->
+   <Item>42431</Item>	<!--Dalaran Brownie-->
+
+   </ProtectedItems>
+
+   <ForceMail>
+    <!--Cloth-->
+    <Item>2589</Item>      <!--Linen Cloth-->
+    <Item>2592</Item>      <!--Wool Cloth-->
+    <Item>4306</Item>      <!--Silk cloth-->
+    <Item>4338</Item>      <!--Mageweave cloth-->
+    <Item>14047</Item>     <!--Runecloth-->
+    <Item>21877</Item>     <!--Netherweave Cloth-->
+    <Item>22470</Item>     <!--Frostweave Cloth-->
+
+    <!--Leather-->
+    <Item>2934</Item>      <!--Ruined Leather Scraps-->
+    <Item>2318</Item>      <!--Light Leather-->
+    <Item>783</Item>       <!--Light Hide-->
+    <Item>4231</Item>      <!--Cured Light Hide-->
+    <Item>2319</Item>      <!--Medium Leather-->
+    <Item>4232</Item>      <!--Medium Hide-->
+    <Item>4233</Item>      <!--Cured Medium Hide-->
+    <Item>4304</Item>      <!--Heavy Leather-->
+    <Item>4235</Item>      <!--Heavy Hide-->
+    <Item>4236</Item>      <!--Cured Heavy Hide-->
+    <Item>4234</Item>      <!--Thick Leather-->
+    <Item>8169</Item>      <!--Thick Hide-->
+    <Item>8172</Item>      <!--Cured Thick Hide-->
+    <Item>8170</Item>      <!--Rugged Leather-->
+    <Item>8171</Item>      <!--Rugged Hide-->
+    <Item>15407</Item>     <!--Cured Rugged Hide-->
+    <Item>25708</Item>     <!--Thick Clefthoof Leather-->
+    <Item>25707</Item>     <!--Fel Hide-->
+    <Item>38558</Item>     <!--Nerubian Chitin-->
+    <Item>21887</Item>     <!--Knothide Leathter-->
+    <Item>25649</Item>     <!--Knothide Leathter Scraps-->
+    <Item>23793</Item>     <!--Heavy Knothide Leathter-->
+    <Item>33568</Item>     <!--Borean Leather-->
+    <Item>33567</Item>     <!--Borean Leather Scraps-->
+    <Item>38425</Item>     <!--Heavy Borean Leather-->
+    <Item>38557</Item>     <!--Icy Dragonscale-->
+    <Item>44128</Item>     <!--Artic Fur-->
+
+    <!--Herbs-->
+    <Item>2447</Item>      <!--Peacebloom-->
+    <Item>765</Item>       <!--Silverleaf-->
+    <Item>2449</Item>      <!--Earthroot-->
+    <Item>785</Item>       <!--Mageroyal-->
+    <Item>2450</Item>      <!--Briarthorn-->
+    <Item>2452</Item>      <!--Swiftthistle-->
+    <Item>2453</Item>      <!--Bruiseweed-->
+    <Item>3355</Item>      <!--Wild Steelbloom-->
+    <Item>3356</Item>      <!--Kingsblood-->
+    <Item>3357</Item>      <!--Liferoot-->
+    <Item>3821</Item>      <!--Liferoot-->
+    <Item>3818</Item>      <!--Fadeleaf-->
+    <Item>3358</Item>      <!--Khadgar's Whisker-->
+    <Item>3819</Item>      <!--Wintersbite-->
+    <Item>8831</Item>      <!--Purple Lotus-->
+    <Item>8836</Item>      <!--Arthas' Tears-->
+    <Item>8839</Item>      <!--Blindweed-->
+    <Item>4625</Item>      <!--Firebloom-->
+    <Item>8846</Item>      <!--Gromsblood-->
+    <Item>8838</Item>      <!--Sungrass-->
+    <Item>13464</Item>     <!--Sungrass-->
+    <Item>13466</Item>     <!--Plaguebloom-->
+    <Item>13465</Item>     <!--Mountain Silversage-->
+    <Item>13467</Item>     <!--Icecap-->
+    <Item>13463</Item>     <!--Dreamfoil-->
+    <Item>13468</Item>     <!--Black Lotus-->
+
+    <Item>22793</Item>     <!--Mana Thistle-->
+    <Item>22792</Item>     <!--Nightmare Vine-->
+    <Item>22791</Item>     <!--Netherbloom-->
+    <Item>22786</Item>     <!--Dreaming Glory-->
+    <Item>22787</Item>     <!--Ragveil-->
+    <Item>22788</Item>     <!--Flame Cap-->
+    <Item>22785</Item>     <!--Felweed-->
+    <Item>22789</Item>     <!--Terocone-->
+    <Item>22794</Item>     <!--Fel Lotus-->
+    <Item>36901</Item>     <!--Goldclover-->
+
+    <Item>191303</Item>    <!--Firethorn-->
+    <Item>37921</Item>     <!--Deadnettle-->
+    <Item>36904</Item>     <!--Tiger Lily-->
+    <Item>36907</Item>     <!--Talandra's Rose-->
+    <Item>36903</Item>     <!--Adder's Tongue-->
+    <Item>36906</Item>     <!--Icethorn-->
+    <Item>36905</Item>     <!--Lichbloom-->
+    <Item>36908</Item>     <!--Frost Lotus-->
+
+    <!--Ores-->
+    <Item>2770</Item>     <!--Copper Ore-->
+    <Item>2771</Item>     <!--Tin Ore-->
+    <Item>2775</Item>     <!--Silver Ore-->
+    <Item>2776</Item>     <!--Gold Ore-->
+    <Item>2772</Item>     <!--Iron Ore-->
+    <Item>3858</Item>     <!--Mithril Ore-->
+    <Item>7911</Item>     <!--Truesilver Ore-->
+    <Item>10620</Item>    <!--Thorium Ore-->
+
+    <Item>23425</Item>    <!--Adamatite Ore-->
+    <Item>23424</Item>    <!--Fel Iron Ore-->
+    <Item>23426</Item>    <!--Khorium Ore-->
+
+    <Item>23447</Item>    <!--Eternium Ore-->
+    <Item>36909</Item>    <!--Cobalt Ore-->
+    <Item>36912</Item>    <!--Saronite Ore-->
+    <Item>36910</Item>    <!--Titanium Ore-->
+
+    <!--Gas Clouds-->
+    <Item>17378</Item>    <!--Mote of Shadow-->
+    <Item>17408</Item>    <!--Mote of Water-->
+    <Item>24222</Item>    <!--Mote of Mana-->
+    <Item>32544</Item>    <!--Mote of Air-->
+    <Item>22573</Item>    <!--Mote of Earth-->
+    <Item>22575</Item>    <!--Mote of Life-->
+    <Item>22574</Item>    <!--Mote of Fire-->
+
+    <!--Crystallized-->
+    <Item>37700</Item>    <!--Crystallized Air-->
+    <Item>37701</Item>    <!--Crystallized Earth-->
+    <Item>37702</Item>    <!--Crystallized Fire-->
+    <Item>37703</Item>    <!--Crystallized Shadow-->
+    <Item>37704</Item>    <!--Crystallized Life-->
+    <Item>37705</Item>    <!--Crystallized Water-->
+	
+	<!--User Specific Items-->
+	<Item>17056</Item>    <!--Light Feather-->
+   </ForceMail>
+   
+ </HBProfile>

@@ -1,0 +1,126 @@
+<HBProfile>
+	<Name>[QO-A-11][Iroquois]_botanist_pangaea</Name>
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+  
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+  
+	<MailGrey>False</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+  
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+  
+	<TargetElites>False</TargetElites>
+
+  
+	<AvoidMobs>
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+	
+	<Mailboxes>
+	</Mailboxes>
+	
+	<Vendors>
+	</Vendors>
+	
+
+			
+		<SetVendor>
+			<Vendors>
+			</Vendors>
+		</SetVendor>
+		
+		
+	
+	<QuestOrder>
+	
+
+			
+				<If Condition="Me.MapId == 870" >
+					<CustomBehavior File="UserSettings" MountDistance="30" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="75" LogoutForInactivity="True" />
+						<RunTo X="3669.161" Y="542.5462" Z="639.6909" />
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="3819.135" Y="535.2518" Z="639.0074" />
+					</CustomBehavior>
+					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryAction="InputEnabled_Continue" 
+							Text="Do not close this window or press continue. You will have to manually accepted this quest, then talk to Xuen, the big ghost cat beside you. After about 30 seconds you will be pulled into combat. You will then need to kill that mob as well as the next 2 mobs that spawn. Then turn in the quest and accept the next quest. Then press continue on this window or you can press stop and then restart the bot once you have completed this quest and accepted the next. The bot will control combat for you during this time. You just need to control movement and kite the mobs as the bot kills them. There is no hurry. This window has a 10 minute timer on it." Title="WARNING" />
+					
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="3744.404" Y="540.0235" Z="639.691" />
+						<Hotspot X="3672.721" Y="540.8846" Z="639.6897" />
+					</CustomBehavior>
+					<CustomBehavior File="UserSettings" LootMobs="True" UseMount="False" UseFlightPaths="True" PullDistance="25" />
+						<RunTo X="3668.67" Y="539.3801" Z="639.6936" />
+						<RunTo X="3604.916" Y="544.9504" Z="614.8521" />
+						<RunTo X="3627.708" Y="500.9166" Z="631.7834" />
+						<RunTo X="3663.452" Y="466.1414" Z="635.1683" />
+						<RunTo X="3667.508" Y="434.8673" Z="620.9752" />
+						<RunTo X="3657.995" Y="416.9966" Z="607.8278" />
+						<RunTo X="3687.351" Y="378.0444" Z="596.545" />
+						<RunTo X="3662.7" Y="366.1254" Z="596.1027" />
+						<RunTo X="3520.178" Y="412.8131" Z="586.9307" />
+					<CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" UseFlightPaths="True" PullDistance="25" />
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+						<RunTo X="3151.692" Y="654.7242" Z="502.0549" />
+						<RunTo X="3096.143" Y="619.9125" Z="503.3592" />
+						<RunTo X="3040.529" Y="617.9021" Z="508.6184" />
+						<RunTo X="2996.334" Y="589.7946" Z="517.7688" />
+						<RunTo X="2856.211" Y="655.3724" Z="539.7859" />
+						<RunTo X="2772.056" Y="718.444" Z="544.3932" />
+						<RunTo X="2703.236" Y="760.9003" Z="537.0139" />
+						<RunTo X="2607.58" Y="749.1624" Z="526.7829" />
+						<RunTo X="2578.855" Y="770.7654" Z="520.7036" />
+						<RunTo X="2500.529" Y="840.9852" Z="514.8064" />
+						<RunTo X="2398.998" Y="991.2231" Z="501.478" />
+						<RunTo X="2308.469" Y="1137.032" Z="494.5619" />
+						<RunTo X="2180.938" Y="1233.787" Z="486.6184" />
+						<RunTo X="1973.211" Y="1389.095" Z="465.3243" />
+						<RunTo X="1883.426" Y="1386.72" Z="464.8231" />										
+						<RunTo X="1822.997" Y="1358.76" Z="468.8537" />
+						<RunTo X="1790.512" Y="1390.957" Z="468.854" />
+					<CustomBehavior File="InteractWith" MobId="64848" GossipOptions="1" NumOfTimes="1" X="1790.512" Y="1390.957" Z="468.854" />
+					<CustomBehavior File="WaitTimer" WaitTime="60000" />
+					
+						<RunTo X="1760.241" Y="1362.869" Z="468.8548" />
+						<RunTo X="1661.003" Y="1365.792" Z="453.6066" />
+						<RunTo X="1398.547" Y="1278.859" Z="401.8181" />
+						<RunTo X="1279.29" Y="1257.812" Z="381.6919" />
+						<RunTo X="1221.075" Y="1062.523" Z="425.9672" />
+						<RunTo X="1218.668" Y="1027.106" Z="425.9672" />
+						<RunTo X="1219.434" Y="953.7667" Z="407.5988" />
+						<RunTo X="1144.354" Y="797.7713" Z="386.4244" />
+						<RunTo X="1052.051" Y="719.5231" Z="389.0949" />
+						<RunTo X="1042.836" Y="678.4745" Z="389.8649" />
+						<RunTo X="1055.462" Y="560.1208" Z="397.8468" />
+						<RunTo X="991.6543" Y="406.4271" Z="421.344" />
+						<RunTo X="961.856" Y="314.5293" Z="457.437" />
+						<RunTo X="936.1135" Y="257.0541" Z="502.4698" />
+						<RunTo X="902.855" Y="241.7156" Z="503.1086" />
+						<RunTo X="876.0497" Y="309.8843" Z="503.0419" />
+						<RunTo X="908.4436" Y="343.5705" Z="506.0943" />
+								
+					<CustomBehavior File="Message" Text="I have reached the level 90 flying trainer. I hope this profile was satisfactory for you needs. Please show your appreciation for the many our of my time I put into this by donating at botanist1968@gmail.com" LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I am stopping the bot. Thank you for using my profiles, Botanist" LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
+				</If>
+				
+				<If Condition="Me.MapId != 870" >
+					<CustomBehavior File="Message" Text="You need to be in Pandaria to run this profile. I am stopping the bot." LogColor="Lime" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
+				</If>
+				
+	</QuestOrder>
+
+</HBProfile>	

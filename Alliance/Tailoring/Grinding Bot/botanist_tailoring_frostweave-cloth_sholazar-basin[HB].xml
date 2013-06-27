@@ -1,0 +1,39 @@
+<HBProfile>
+  <Name>botanist tailoring frostweave cloth sholazar basin</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>2080</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+
+	</Vendors>
+	
+	<Mailboxes>
+
+	</Mailboxes>
+
+  <Hotspots>
+   <Hotspot X="6100.848" Y="4520.956" Z="-78.95024" />
+   <Hotspot X="6012.25" Y="4467.354" Z="-88.63103" />
+   <Hotspot X="6111.014" Y="4430.145" Z="-85.08505" />
+  </Hotspots> 
+  
+  
+  <Blackspots>
+  </Blackspots>
+</HBProfile>

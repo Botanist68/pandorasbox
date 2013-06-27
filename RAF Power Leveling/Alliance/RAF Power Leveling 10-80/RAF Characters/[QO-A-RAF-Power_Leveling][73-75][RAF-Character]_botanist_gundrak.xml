@@ -1,0 +1,141 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A-RAF-Power_Leveling][73-75][RAF-Character]_botanist_ gundrak</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+		<Mob Name="Drakkari Guardian" Entry="26620" />
+		<Mob Name="Drakkari Frenzy" Entry="29834"  />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+		<Item name="Book of Glyph Mastery" entry="45912" />
+		<Item name="Frostweave Cloth" entry="33470" />		
+	</ProtectedItems>
+
+	<Factions>16</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+	<CustomBehavior File="UserSettings" UseMount="True" MountDistance="20"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="1" LogoutForInactivity="True" /> 	
+
+				<If Condition="Me.MapId == 571" >
+					<If Condition="Me.X &lt; 4819.964 &amp;&amp; Me.X &gt; 4737.752 &amp;&amp; Me.Y &lt; -2000.14 &amp;&amp; Me.Y &gt; -2050.412" >
+						<RunTo X="4883.622" Y="-2060.747" Z="250.0509" />
+					</If>
+				</If>	
+				
+				<If Condition="Me.MapId == 571" >
+					<If Condition="Me.X &gt; 6975.555 || Me.X &lt; 6940.883 || Me.Y &gt; -4394.594 || Me.Y &lt; -4431.571" >
+						<CustomBehavior File="FlyTo" X="5772.513" Y="-3580.623" Z="538.9045" />
+						<CustomBehavior File="MyCTM" X="6859.742" Y="-4459.997" Z="611.2068" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="RAF Characters - Press continue after the Main Character has entered the instance." Title="WARNING" />
+						<CustomBehavior File="MyCTM" X="6955.24" Y="-4416.92" Z="450.0226" />
+						<CustomBehavior File="ForcedDismount" />
+					</If>
+				</If>
+													
+				<If Condition="Me.ZoneId == 4416" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside Gundrak. Running out to reset the dungeon." LogColor="Lime" />
+						<RunTo X="1891.823" Y="649.8093" Z="176.6732" />
+					<CustomBehavior File="MyCTM" X="1897.433" Y="657.5444" Z="176.6386" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000"  />
+					<CustomBehavior File="Message" Text="I'm outside Gundrak." LogColor="Lime" />
+						<RunTo X="6955.24" Y="-4416.92" Z="450.0226" />	
+				</If>
+
+				
+	<While Condition="true" >
+		
+				<If Condition="Me.ZoneId == 66" >
+					<If Condition="Me.X &lt; 6975.555 &amp;&amp; Me.X &gt; 6940.883 &amp;&amp; Me.Y &lt; -4394.594 &amp;&amp; Me.Y &gt; -4431.571" >
+						<If Condition="Me.Level &gt;= 75" >
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="**********RAF Character - This character has reached the appropriate level to run Halls of Lihgtning. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />
+						</If>
+						<CustomBehavior File="WaitTimer" WaitTime="10000" />
+						<CustomBehavior File="MyCTM" X="6973.431" Y="-4399.899" Z="441.576" />
+						<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+						
+						<If Condition="Me.ZoneId == 4416" >
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+						Text="RAF Characters - Press continue on the Main Character first, then press continue on this window." Title="WARNING" />
+						</If>
+					</If>
+				</If>					
+				
+				<!-- gundrak script -->
+				<If Condition="Me.ZoneId == 4416" >
+					<CustomBehavior File="UserSettings" UseMount="False" MountDistance="20"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="1" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LogoutForInactivity="True" />
+						
+					<RunTo X="1886.632" Y="632.9327" Z="176.6945" />
+						
+					<CustomBehavior File="Message" Text="Waiting 130 seconds, entrance." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="130000" />
+					
+					<RunTo X="1761.564" Y="683.5315" Z="129.217" />
+						
+					<CustomBehavior File="Message" Text="Waiting 130 seconds. 1 of 4." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="130000" />
+					
+					<RunTo X="1763.774" Y="684.9312" Z="129.217" />
+					
+					<CustomBehavior File="Message" Text="Waiting 85 seconds. 2 of 4." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="85000" />
+					
+					<RunTo X="1761.564" Y="683.5315" Z="129.217" />
+					
+					<CustomBehavior File="Message" Text="Waiting 270 seconds. 3 of 4." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="270000" />
+					
+					<RunTo X="1763.774" Y="684.9312" Z="129.217" />
+					
+					<CustomBehavior File="Message" Text="Waiting 105 seconds. 4 of 4." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="105000" />
+					
+					<RunTo X="1761.564" Y="683.5315" Z="129.217" />
+					<RunTo X="1884.924" Y="633.2445" Z="176.6958" />
+					<RunTo X="1895.065" Y="653.4861" Z="176.6607" />
+					
+					<CustomBehavior File="MyCTM" X="1898.122" Y="657.9296" Z="176.6365" />
+					
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="Message" Text="I'm outside Gundrak." LogColor="Lime" />
+						
+					<RunTo X="6955.24" Y="-4416.92" Z="450.0226" />
+				</If>								
+		</While>	
+	</QuestOrder>
+</HBProfile>

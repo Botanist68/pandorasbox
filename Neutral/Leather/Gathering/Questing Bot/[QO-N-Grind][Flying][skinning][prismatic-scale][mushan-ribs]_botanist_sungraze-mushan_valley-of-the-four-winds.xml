@@ -1,0 +1,171 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-Grind][Flying][skinning][prismatic-scale][mushan-ribs]_botanist_sungraze-mushan_valley-of-the-four-winds</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<AvoidMob Name="Plainshawk" Entry="58910" />
+		<AvoidMob Name="Longfang Howler" Entry="56524" />
+		<AvoidMob Name="Mutated Silkmoth" Entry="57422" />
+		<AvoidMob Name="Softshell Snapling" Entry="63060" />
+		<AvoidMob Name="Twitchheel Hoarder" Entry="56538" />
+		<AvoidMob Name="Thieving Plainshawk" Entry="56034"   />		 
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="-132.2157" Y="183.5226" Z="154.4443" Radius="100" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions>2260</Factions>
+	
+	<ProtectedItems>
+		<Item Name="Elementium Lockbox" Entry="68729" />
+		<Item Name="Raw Turtle Meat" Entry="74837" />		
+	</ProtectedItems>
+	
+
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<QuestOrder>
+		
+	    
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="You should be able to start this profile anywhere in Pandaria. This profile will farm the Sungraze Mushan in Valley of the Four Winds. The profile will auto set your hearth where needed. Includes repair vendor and mailing." Title="WARNING" />
+						
+			
+			
+				<CustomBehavior File="Message" Text="Position check #1" LogColor="Lime" />
+				<If Condition="Me.MapId == 870" >				 
+					<If Condition="Me.ZoneId != 5805" >
+						<CustomBehavior File="Message" Text="I am in Pandaria, but not in Valley of the Four Winds, moving to Halfhill." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-195.414" Y="409.0086" Z="165.5139" DestName="HalfHill" />
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-204.9184" Y="495.6101" Z="187.1923" DestName="HalfHill" />
+							<RunTo X="-226.3131" Y="514.6094" Z="190.9428" DestName="Innkeeper" />	
+						<CustomBehavior File="Message" Text="I have reached HalfHill. " LogColor="Lime" />
+					</If>						
+				</If>
+				
+				
+				<CustomBehavior File="Message" Text="Position check #2" LogColor="Lime" />		
+				<If Condition="Me.ZoneId == 5805" >
+					
+						<CustomBehavior File="Message" Text="I am in Valley of the Four Winds, moving to the innkeeper in Halfhill" LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-204.9184" Y="495.6101" Z="187.1923" DestName="HalfHill" />
+							<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-226.3131" Y="514.6094" Z="190.9428" DestName="Innkeeper" />	
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="SetHearthstone" MobId="59582"  X="-226.3131" Y="514.6094" Z="190.9428" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				</If>
+				
+		<While Condition="true" >		
+										
+				<CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="True" NinjaSkin="True" PullDistance="60" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+					
+                                             <!-- halfhill  -->
+				<CustomBehavior File="Message" Text="Position check #3" LogColor="Lime" />			  
+			    <If Condition="Me.ZoneId == 5805" >
+					<If Condition="Me.X &gt; -317.1932 &amp;&amp; Me.X &lt; -42.4191 &amp;&amp; Me.Y &gt; 384.9974 &amp;&amp; Me.Y &lt; 672.6077" >
+					<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />										
+						<RunTo X="-224.2688" Y="508.2177" Z="190.9273" />
+						<RunTo X="-205.1523" Y="496.0287" Z="187.1964" />
+					<CustomBehavior File="ForcedMount" MountType="Flying" />						
+					<CustomBehavior File="FlyTo" X="236.5891" Y="-876.6082" Z="238.3074" />						
+					<CustomBehavior File="ForcedDismount" />
+					</If>
+				</If>	
+
+				<CustomBehavior File="Message" Text="Position check #4" LogColor="Lime" />				
+				<If Condition="Me.ZoneId == 5805" >
+					<If Condition="Me.X &gt; 150 &amp;&amp; Me.X &lt; 400 &amp;&amp; Me.Y &gt; -1000 &amp;&amp; Me.Y &lt; -700" >
+						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
+							<If	Condition="(Me.FreeBagSlots &gt;= 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
+								<SetGrindArea><GrindArea>
+								<Factions>7,2260,16,14</Factions>
+									<Hotspots>
+										<Hotspot X="236.5891" Y="-876.6082" Z="238.3074" />
+										<Hotspot X="130.7516" Y="-812.0088" Z="244.3322" />
+										<Hotspot X="67.65553" Y="-738.4069" Z="227.2929" />
+										<Hotspot X="-107.2941" Y="-730.2172" Z="188.6312" />
+										<Hotspot X="40.98406" Y="-607.289" Z="219.2482" />
+										<Hotspot X="-33.36464" Y="-540.8384" Z="198.9371" />
+										<Hotspot X="-92.34456" Y="-444.2153" Z="181.3249" />
+										<Hotspot X="-246.726" Y="-421.5426" Z="171.3161" />
+										<Hotspot X="-242.3703" Y="-329.4231" Z="169.2699" />
+										<Hotspot X="-445.9056" Y="-319.5071" Z="155.7161" />
+										<Hotspot X="-536.8705" Y="-194.6378" Z="158.8395" />
+										<Hotspot X="-665.0842" Y="-103.5455" Z="159.043" />
+										<Hotspot X="-737.3763" Y="136.3579" Z="149.6279" />
+										<Hotspot X="-812.1857" Y="217.9481" Z="161.2509" />
+										<Hotspot X="-846.5538" Y="323.623" Z="150.347" />
+										<Hotspot X="-873.0419" Y="693.9942" Z="159.2397" />
+										<Hotspot X="-826.9858" Y="866.9109" Z="152.5254" />
+										<Hotspot X="-875.097" Y="1175.795" Z="143.1561" />
+										<Hotspot X="-1054.451" Y="1485.332" Z="150.6276" />
+										<Hotspot X="-747.7358" Y="1533.178" Z="150.2258" />	
+										<Hotspot X="-743.7971" Y="1700.081" Z="152.7358" />
+										<Hotspot X="-648.9296" Y="1803.828" Z="145.181" />
+										<Hotspot X="-505.658" Y="1857.842" Z="137.8207" />										
+									</Hotspots>
+								</GrindArea></SetGrindArea>	
+								<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30)" GoalText="Farming" />
+							</If>
+					</If>
+				</If>
+								
+				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		        <If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+					<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />
+					<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor, then mailing." LogColor="Lime" />						
+						
+					<SetVendor>
+						<Vendors>
+							<Vendor Name="Trader Jambeezi" Entry="59583" Type="Repair" X="-208.7705" Y="494.7552" Z="187.1559" />
+						</Vendors>
+					</SetVendor>
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="-207.5743" Y="496.2178" Z="187.2141" />
+						</Mailboxes>
+					</SetMailbox>
+			
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+				</If>
+				<CustomBehavior File="RunMacro" Macro="/sort bags" />						
+				
+			</While>
+	
+		</QuestOrder>
+
+
+</HBProfile>
+

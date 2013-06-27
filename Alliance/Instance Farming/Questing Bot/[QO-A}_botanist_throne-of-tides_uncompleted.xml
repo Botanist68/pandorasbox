@@ -1,0 +1,169 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A}_botanist_throne-of-tides_uncompleted</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>86</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>True</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+	<CustomBehavior File="UserSettings" TrainNewSkills="False" LearnFlightPaths="False" KillBetweenHotspots="True" LogoutForInactivity="False" />
+	
+         <While Condition="Me.GetReputationLevelWith(1037) &lt; Styx.WoWUnitReaction.Exalted" >
+
+		
+				<If Condition="Me.ZoneId != 5004" > <!-- not in Throne of Tides -->
+						<If Condition="Me.X &gt; -5500 || Me.X &lt; -5700" > <!-- not outside throne of tides-->
+							<CustomBehavior File="Message" Text="I am flying you to the Vashj' ir Portal." LogColor="Yellow" />
+							<CustomBehavior File="FlyTo" X="-8193.971" Y="447.1004" Z="116.8761"  DestName="Vashj' ir Portal" />
+							<CustomBehavior File="Message" Text="Taking the portal to Vashj' ir." LogColor="Yellow" />
+							<CustomBehavior File="InteractWith" MobId="207691" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8191.101" Y="449.5851" Z="116.6482" />
+							<CustomBehavior File="Message" Text="Waiting for the zone to load." LogColor="Yellow" />
+							<CustomBehavior File="MyCTM" X="-4443.599" Y="3813.054" Z="-89.13544" />
+							<CustomBehavior File="MyCTM" X="-4457.708" Y="3813.966" Z="-89.4816" />
+							<CustomBehavior File="MyCTM" X="-4481.405" Y="3811.019" Z="-104.6159" />
+							<CustomBehavior File="MyCTM" X="-4506.125" Y="3820.139" Z="-104.9814" />
+							<CustomBehavior File="ForcedMount" MountType="Water" />
+							<CustomBehavior File="WaitTimer" WaitTime="5000" />
+							<CustomBehavior File="MyCTM" X="-4570.039" Y="3746.354" Z="-1.531629" />
+							<CustomBehavior File="ForcedDismount" />							
+							<CustomBehavior File="Message" Text="I am flying you to the Abyssal Deapths." LogColor="Yellow" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="WaitTimer" WaitTime="5000" />
+							<CustomBehavior File="MyCTM" X="-4960.089" Y="4285.901" Z="178.4017" />
+							<CustomBehavior File="MyCTM" X="-5660.545" Y="5360.125" Z="262.9113" />
+							<CustomBehavior File="MyCTM" X="-5659.519" Y="5358.552" Z="-1.56824"  DestName="Water Collision" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="ForcedMount" MountType="Water" />
+							<CustomBehavior File="WaitTimer" WaitTime="5000" />
+							<CustomBehavior File="MyCTM" X="-5583.682" Y="5400.549" Z="-1796.89" />
+							<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for the Instance to initialize. {TimeRemaining}" />
+						</If>					
+				</If>
+						<RunTo X="-5584.194" Y="5399.379" Z="-1797.853" />
+						<CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for the Instance to initialize. {TimeRemaining}" />
+						<RunTo X="-510.9691" Y="806.7858" Z="257.581" />
+						<RunTo X="-344.5446" Y="808.8181" Z="259.2971" />	
+						<RunTo X="-286.5032" Y="808.0684" Z="260.0808" />
+                        <CustomBehavior File="MyCTM" X="-248.7541" Y="807.9549" Z="258.4955" />
+
+                                                        <!-- Use Elevator -->
+						
+                        <CustomBehavior File="UseTransport" TransportId="207209"
+											WaitAtX="-248.7541" WaitAtY="807.9549" WaitAtZ="258.4955" 
+											TransportStartX="-215.2937" TransportStartY="806.2046" TransportStartZ="253.7109"  
+											StandOnX="-218.8956" StandOnY="806.791" StandOnZ="262.3357" 
+											TransportEndX="-215.2937" TransportEndY="806.2046" TransportEndZ="791.1983"
+											GetOffX="-188.228" GetOffY="802.6721" GetOffZ="796.4362" />
+											
+						<RunTo X="-146.3539" Y="802.0481" Z="796.5053" />
+						<RunTo X="-102.9404" Y="802.3936" Z="796.5472" />
+						<RunTo X="-69.77445" Y="801.7372" Z="796.768" />
+						<RunTo X="-21.87541" Y="802.3144" Z="807.2563" />
+						<RunTo X="28.43225" Y="802.706" Z="806.3171" />
+						<RunTo X="50.26899" Y="778.3283" Z="806.3171" />
+						<RunTo X="187.8763" Y="802.1415" Z="807.6381" />
+						
+						
+						
+						
+						
+						
+						<RunTo X="80.0361" Y="803.3319" Z="806.3171" />
+						<RunTo X="80.0361" Y="803.3319" Z="806.3171" />
+						<RunTo X="80.0361" Y="803.3319" Z="806.3171" />
+						<RunTo X="80.0361" Y="803.3319" Z="806.3171" />
+						<RunTo X="80.0361" Y="803.3319" Z="806.3171" />
+						<RunTo X="80.0361" Y="803.3319" Z="806.3171" />
+
+
+
+
+
+
+
+
+
+
+
+											
+                        <CustomBehavior File="UserSettings" StopBot="true" />					
+			
+				
+
+			
+		<If Condition="(Me.LowestDurabilityPercent &lt; 0.3) || (Me.FreeBagSlots &lt; 5)" > <!-- Will go vendor/repair if needed -->
+			<RunTo X="5693.006" Y="2160.364" Z="798.1266" />
+
+
+			<CustomBehavior File="FlyTo" X="5778.635" Y="2259.571" Z="881.6924" />
+			<CustomBehavior File="MyCTM" X="5956.05" Y="1762.781" Z="902.8656" />
+			<CustomBehavior File="MyCTM" X="5879.949" Y="829.5707" Z="761.8273" />
+			<CustomBehavior File="MyCTM" X="5784.433" Y="693.5184" Z="647.0923" />
+			<CustomBehavior File="ForcedDismount" />
+			
+			
+			<SetVendor>
+				<Vendors>
+					<Vendor Name="Paldesse" Entry="28995" Type="Repair" X="5795.263" Y="691.4948" Z="647.0985" />
+				</Vendors>
+			</SetVendor>
+			
+			<SetMailbox>
+				<Mailboxes>
+					<Mailbox X="5800.018" Y="728.9745" Z="640.4772" />
+				</Mailboxes>
+			</SetMailbox>
+			
+			<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+			
+			<RunTo X="5794.406" Y="761.8998" Z="657.9158" />
+
+			<CustomBehavior File="FlyTo" X="5683.77" Y="851.4304" Z="853.8888" />
+			<CustomBehavior File="MyCTM" X="5923.054" Y="1970.915" Z="895.39" />
+			<CustomBehavior File="MyCTMo"  X="5776.24" Y="2254.551" Z="875.2991" />
+			<CustomBehavior File="FlyTo" X="5693.006" Y="2160.364" Z="798.1266" />
+			<CustomBehavior File="ForcedDismount" />
+			<RunTo X="5610.114" Y="2029.788" Z="798.0424" />
+			
+		</If>
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

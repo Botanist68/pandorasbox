@@ -1,0 +1,47 @@
+<HBProfile>
+  <Name>botanist_herbing_(mote-of-life)_zangamarsh</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>101</MaxLevel>
+  <Factions>1706</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+  
+	<Vendors>
+      
+	</Vendors>
+	
+	<Mailboxes>
+
+	</Mailboxes>
+
+  <Hotspots>
+<Hotspot X="383.1745" Y="5314.391" Z="10.4629" />
+<Hotspot X="553.1573" Y="5209.939" Z="1.083593" />
+<Hotspot X="711.4869" Y="5201.684" Z="5.970635" />
+<Hotspot X="827.6393" Y="5377.077" Z="-0.784454" />
+<Hotspot X="692.8013" Y="5527.233" Z="3.31067" />
+<Hotspot X="484.7564" Y="5431.99" Z="2.047099" />
+  </Hotspots>
+  
+  <Blackspots>
+  
+  </Blackspots>
+  
+    <AvoidMobs>
+
+    </AvoidMobs>
+
+</HBProfile>

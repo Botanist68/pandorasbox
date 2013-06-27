@@ -1,0 +1,53 @@
+<HBProfile>
+  <Name>botanist_grind_uldum_volatile-air[HB]</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>834 91</Factions>
+  <AvoidMobs>
+  <Mob id="25227" name="Crypt Crawler" />
+  </AvoidMobs>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+     <Vendor Name="Blacksmith Abasi" Entry="48617" Type="Repair" X="-9404.68" Y="-906.438" Z="112.541" />
+	</Vendors>
+	
+	<Mailboxes>
+     <Mailbox X="-9431.387" Y="-965.4422" Z="111.0114" />
+	</Mailboxes>
+
+  <Hotspots>
+  <Hotspot X="-10004.03" Y="-344.0736" Z="61.1857" />
+   <Hotspot X="-9777.15" Y="-235.3699" Z="101.8909" />
+   <Hotspot X="-9570.019" Y="-291.6719" Z="97.99511" />
+   <Hotspot X="-9343.023" Y="-122.1578" Z="137.8398" />
+   <Hotspot X="-9562.684" Y="20.49513" Z="113.8197" />
+   <Hotspot X="-9639.479" Y="-161.6313" Z="96.01039" />
+   <Hotspot X="-9717.474" Y="-136.2003" Z="81.46583" />
+   <Hotspot X="-9862.336" Y="-46.06785" Z="59.30997" />
+   <Hotspot X="-9734.012" Y="221.163" Z="82.22846" />
+   <Hotspot X="-9943.676" Y="384.255" Z="46.05222" />
+   <Hotspot X="-10022.9" Y="252.4592" Z="41.89067" />
+   <Hotspot X="-10062.98" Y="106.554" Z="75.5177" />
+   <Hotspot X="-10077.6" Y="11.54966" Z="46.60791" />
+   <Hotspot X="-9955.887" Y="38.82997" Z="71.89288" />
+   <Hotspot X="-9915.596" Y="-94.53223" Z="71.87753" />
+   <Hotspot X="-9947.412" Y="-191.8254" Z="58.54294" />
+  </Hotspots>
+  <Blackspots>
+  </Blackspots>
+</HBProfile>

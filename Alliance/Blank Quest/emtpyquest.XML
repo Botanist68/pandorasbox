@@ -1,0 +1,24 @@
+<HBProfile>
+  <MinDurability>0.1</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+    
+<QuestOrder>
+
+	<SetGrindArea>
+		<GrindArea>
+		<Factions>9999</Factions>
+			<Hotspots>
+			</Hotspots>
+		</GrindArea>
+    </SetGrindArea>
+	<GrindTo Level="60" />
+	
+</QuestOrder>
+</HBProfile>

@@ -1,0 +1,192 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N}_botanist_pit-of-saron</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>True</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item name="Book of Glyph Mastery" entry="45912" />
+		<Item name="Frostweave Cloth" entry="33470" />		
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" LootMobs="True" PullDistance="25" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+		 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This profile will endlessly farm Pit of Saron. It does vendor Epics. Make sure you have none in your bags that you want to keep. Set your hearth at Nesingwary Base Camp in Sholazar Basin. Start the profile anywhere in Northrend." Title="WARNING" />
+	>
+
+				<If Condition="Me.X &lt; 5585.215 || Me.X &gt; 5606.308 || Me.Y &lt; 2012.57 || Me.Y &gt; 2023.057" >
+					<If Condition="Me.ZoneId != 4813" > <!-- not inside the pit of saron -->
+						<CustomBehavior File="Message" Text="I am flying to the Pit of Saron inside the Frozen Halls." LogColor="Yellow" />
+						<CustomBehavior File="FlyTo" X="5692.304" Y="2159.46" Z="798.1241" DestName="Forge of Souls" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="ForcedMount" MountType="Ground" />
+						<RunTo X="5593.713" Y="2011.442" Z="798.041" /> <!-- outside pit of saron gate -->
+					</If>							
+				</If>
+
+				<If Condition="Me.ZoneId == 4813" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside the The Pit of Saron. Running out to reset the dungeon." LogColor="Yellow" />
+					<RunTo X="424.2701" Y="212.7614" Z="529.9111" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+				</If>
+				
+		<While Condition="true" >
+		
+				<If Condition="Me.X &gt; 5585.215 &amp;&amp; Me.X &lt; 5606.308 &amp;&amp; Me.Y &gt; 2012.57 &amp;&amp; Me.Y &lt; 2023.057" >
+					<CustomBehavior File="Message" Text="I am resetting the Pit of Saron." LogColor="Yellow" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />				
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" /> 
+					<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
+					<CustomBehavior File="Message" Text="I have reset the Pit of Saron." LogColor="Yellow" />
+					<RunTo X="5593.713" Y="2011.442" Z="798.041" />
+					<CustomBehavior File="Message" Text="Opening the gate so I may enter the Forge of Souls." LogColor="Yellow" />
+					<CustomBehavior File="InteractWith" MobId="201761" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="5590.884" Y="2009.19" Z="797.3859" />
+					<CustomBehavior File="MyCTM" X="5586.107" Y="2005.752" Z="799.3646" /> 
+					<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Yellow" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+				</If>	
+
+											 <!-- Pit of saron dungeon script -->
+		
+				<If Condition="Me.ZoneId == 4813" >
+					<RunTo X="470.8945" Y="210.3388" Z="528.7087" />
+					<RunTo X="618.9637" Y="86.58404" Z="512.2325" />
+					<RunTo X="695.1255" Y="-121.2127" Z="514.067" />
+					<RunTo X="697.1439" Y="-150.961" Z="528.0613" />
+					<CustomBehavior File="Message" Text="I pulling the first boss, Garfrost!............Good Luck!!!" LogColor="Yellow" />					
+					<RunTo X="673.3995" Y="-178.1619" Z="526.6893" />  <!-- Pulls the first boss Garfrost -->					
+					<RunTo X="695.1255" Y="-121.2127" Z="514.067" />					
+					<RunTo X="710.3344" Y="-108.5253" Z="513.7344" />
+					<RunTo X="739.4673" Y="-107.976" Z="513.3207" />
+					<RunTo X="796.5402" Y="-20.21034" Z="508.6304" />
+					<CustomBehavior File="Message" Text="I am waiting for the mobs above me to jump down." LogColor="Yellow" />					
+					<CustomBehavior File="WaitTimer" WaitTime="8000" />
+					<RunTo X="824.4445" Y="1.027147" Z="509.6249" />
+					<CustomBehavior File="ForcedDismount" />
+					
+					<RunTo X="842.7997" Y="90.07192" Z="510.3936" /> <!-- righthand boxes at krick -->
+					<RunTo   X="816.7589" Y="92.44064" Z="509.208" />				
+					<RunTo X="802.8785" Y="115.0179" Z="509.0123" />
+					<RunTo X="818.9902" Y="132.579" Z="509.3696" />										
+					<CustomBehavior File="Message" Text="I am waiting 10 seconds for DK's runes to regenerate." LogColor="Yellow" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					<CustomBehavior File="Message" Text="Casting Army of the Dead, if I am a DK" LogColor="Yellow" />
+					<CustomBehavior File="RunMacro" Macro="/cast Army of the Dead" />
+					<CustomBehavior File="Message" Text="I pulling the second boss, Ick..............Good Luck!!!" LogColor="Yellow" />					
+					<RunTo X="836.113" Y="116.2214" Z="509.6828" />  <!-- Pulls the second boss Ick -->
+					
+					<RunTo X="811.9011" Y="86.56169" Z="509.2023" />
+					<RunTo X="837.4393" Y="30.45591" Z="510.4109" />
+					<RunTo X="850.467" Y="37.57341" Z="511.8412" />					
+					<CustomBehavior File="Message" Text="Waiting on mobs to spawn." LogColor="Yellow" />					
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />  <!-- wait time for mobs to run to their position -->
+					<RunTo X="864.457" Y="43.39716" Z="516.4118" />
+					
+					<RunTo X="896.879" Y="66.29165" Z="539.898" />
+					<RunTo X="945.8674" Y="76.40682" Z="565.7674" />
+					<RunTo X="947.2997" Y="69.89456" Z="566.0615" />					
+					<CustomBehavior File="Message" Text="Waiting for next set of mobs to spawn." LogColor="Yellow" />					
+					<CustomBehavior File="WaitTimer" WaitTime="14000" />  <!-- wait time for mobs to run to their position -->
+					<RunTo X="947.7966" Y="40.94383" Z="569.9064" />
+					<RunTo X="929.8402" Y="-12.29987" Z="583.605" />
+					<RunTo X="1054.4" Y="-92.86186" Z="632.808" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<RunTo X="1058.957" Y="108.8648" Z="629.0496" />
+					
+					<RunTo X="1039.984" Y="150.7973" Z="628.1562" /> <!-- Wait point for Tyrannus -->
+					<CustomBehavior File="Message" Text="Waiting for Tyrannus to dismount." LogColor="Yellow" />					
+					<CustomBehavior File="WaitTimer" WaitTime="33500" />  <!-- wait time for Tyrannus speach -->				
+					<CustomBehavior File="Message" Text="Pulling the third boss,, Tyrannus.............Good Luck !!!" LogColor="Yellow" />					
+					<RunTo X="1025.67" Y="170.243" Z="628.1561" /> <!-- Pulls Tyrannus -->
+					
+					<RunTo X="1064.73" Y="95.54331" Z="631.002" /> <!-- Exit of the tunnel where Jaina summons you -->
+					<CustomBehavior File="Message" Text="Waiting for Jaina to summon me to the entrance of the tunnel." LogColor="Yellow" />					
+					<CustomBehavior File="WaitTimer" WaitTime="22000" />  <!-- wait time for Jaina's speach -->
+					
+					<CustomBehavior File="Message" Text="My work here is done. Leaving the dungeon so I can reset it." LogColor="Yellow" />
+					<RunTo X="938.3696" Y="-81.10951" Z="593.1186" />									
+					<RunTo X="845.3818" Y="39.10653" Z="511.2395" /> <!--Bottom of path leading to the tunnel -->
+					<RunTo X="736.7063" Y="170.6839" Z="512.207" /> <!--Base of the cliff where the bats spawn -->
+					<RunTo X="672.5227" Y="225.463" Z="510.5709" /> <!--Base of the cliff where the bats spawn closer to the portal-->
+					<RunTo X="559.9222" Y="225.9592" Z="521.8997" /> <!--Ramp leading to the exit portal-->
+					<RunTo X="507.479" Y="230.5516" Z="528.7092" /> <!--Last mob near exit portal-->
+					<CustomBehavior File="MyCTM" X="424.0134" Y="211.5736" Z="529.9064" />  <!-- Exit portal -->
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+				</If>	
+					
+				<If Condition="(Me.FreeBagSlots &lt; 6) || (Me.LowestDurabilityPercent &lt; 0.3)" > <!-- Will go vendor/repair if needed -->
+					<CustomBehavior File="Message" Text="Checking my free bag space and my gear's durability." LogColor="Yellow" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth,repair and mail." LogColor="Yellow" />
+						<RunTo X="5645.429" Y="2093.021" Z="798.0546" />
+						<RunTo X="5687.182" Y="2102.765" Z="798.0546" />
+						<RunTo X="5693.106" Y="2167.813" Z="798.1242" />
+					<CustomBehavior File="FlyTo" X="6044.955" Y="1766.297" Z="878.0318" />	
+					<CustomBehavior File="MyCTM" X="6049.271" Y="1746.539" Z="887.5058" />
+					<CustomBehavior File="MyCTM" X="5882.906" Y="806.4935" Z="740.7064" />
+					<CustomBehavior File="MyCTM" X="5775.829" Y="701.8654" Z="655.6901" />
+					<CustomBehavior File="MyCTM" X="5786.623" Y="692.3592" Z="647.0965" />
+					<CustomBehavior File="ForcedDismount" />
+						<RunTo X="5794.064" Y="686.5718" Z="647.099" />
+					<SetVendor>
+						<Vendors>
+							<Vendor Name="Rueben Lauren" Entry="35496" Type="Repair" X="5798.024" Y="689.6007" Z="647.0988" />
+						</Vendors>
+					</SetVendor>						
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="5799.902" Y="728.4384" Z="640.5135" />
+						</Mailboxes>
+					</SetMailbox>
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+					
+					<CustomBehavior File="Message" Text="Flying to the Frozen Halls." LogColor="Yellow" />
+					<CustomBehavior File="FlyTo" X="5873.787" Y="782.1909" Z="734.6581" />
+					<CustomBehavior File="MyCTM" X="6050.875" Y="1752.029" Z="855.2743" />
+					<CustomBehavior File="MyCTM" X="5813.93" Y="2251.58" Z="878.9666" />
+					<CustomBehavior File="MyCTM" X="5694.021" Y="2171.631" Z="798.1272" />
+						<RunTo X="5593.713" Y="2011.442" Z="798.041" /> <!-- outside pit of saron gate -->
+			  </If>
+						
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

@@ -1,0 +1,49 @@
+<HBProfile>
+  <Name>botanist_skinning_(cobra-scales)_shadowmoon-valley</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+   <MinLevel>1</MinLevel>
+    <MaxLevel>101</MaxLevel>
+  <Factions>1826 1813</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+  
+	<Vendors>
+      
+	</Vendors>
+	
+	<Mailboxes>
+
+	</Mailboxes>
+
+  <Hotspots>
+<Hotspot X="-2953.955" Y="1314.164" Z="7.769195" />
+<Hotspot X="-2924.238" Y="1360.008" Z="7.846286" />
+<Hotspot X="-2837.723" Y="1238.239" Z="5.897249" />
+<Hotspot X="-2681.011" Y="1180.708" Z="5.315485" />
+<Hotspot X="-2712.638" Y="1322.306" Z="34.06575" />
+<Hotspot X="-2582.573" Y="1391.866" Z="42.57373" />
+<Hotspot X="-2789.885" Y="1390.818" Z="38.84536" />
+<Hotspot X="-2720.556" Y="1234.319" Z="33.3299" />
+  </Hotspots>
+  
+  <Blackspots>
+  
+  </Blackspots>
+  
+    <AvoidMobs>
+
+    </AvoidMobs>
+
+</HBProfile>

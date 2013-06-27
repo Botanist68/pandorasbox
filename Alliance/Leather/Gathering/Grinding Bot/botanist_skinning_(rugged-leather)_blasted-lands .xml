@@ -1,0 +1,52 @@
+<HBProfile>
+  <Name>botanist_skinning_(rugged-leather)_blasted-lands</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>101</MaxLevel>
+  <Factions>49 189 38</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+  
+	<Vendors>
+      <Vendor Name="Leonard Porter" Entry="12942" Type="Repair" X="949.8846" Y="-1435.649" Z="62.59011" />
+	</Vendors>
+	
+	<Mailboxes>
+      <Mailbox X="948.3221" Y="-1462.237" Z="62.36975" />
+	</Mailboxes>
+
+  <Hotspots>
+<Hotspot X="-10915" Y="-2924.371" Z="12.8876" />
+<Hotspot X="-11060.42" Y="-2896.021" Z="8.957715" />
+<Hotspot X="-11241.08" Y="-3022.812" Z="6.076283" />
+<Hotspot X="-11384.5" Y="-2910.383" Z="5.444083" />
+<Hotspot X="-11485.2" Y="-3067.109" Z="2.238249" />
+<Hotspot X="-11477.55" Y="-3256.794" Z="16.986" />
+<Hotspot X="-11359.26" Y="-3269.281" Z="9.00762" />
+<Hotspot X="-11235.57" Y="-3158.886" Z="4.088121" />
+<Hotspot X="-11191.54" Y="-3298.191" Z="10.41979" />
+<Hotspot X="-10984.7" Y="-3212.425" Z="41.60606" />
+<Hotspot X="-10872.56" Y="-2992.386" Z="23.88758" />
+  </Hotspots>
+  
+  <Blackspots>
+  
+  </Blackspots>
+  
+    <AvoidMobs>
+
+    </AvoidMobs>
+
+</HBProfile>

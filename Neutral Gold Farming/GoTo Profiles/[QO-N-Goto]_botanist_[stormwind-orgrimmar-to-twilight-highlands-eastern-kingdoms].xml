@@ -1,0 +1,147 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-Goto]_botanist_[stormwind-orgrimmar-to-twilight-highlands-eastern-kingdoms]</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.0</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<QuestOrder>
+		
+	    <CustomBehavior File="UserSettings" LootMobs="False" SkinMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This is a goto profile. It will take you from Stormwind/Orgrimmar to Twilight Highlands. This profile is used to move your farmers from one continent to another while using GatherBuddy and Arelog." Title="WARNING" />
+						
+			<While Condition="true" >
+			
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.ZoneId != 4922" >
+						<If Condition="Me.IsAlliance" >
+							<CustomBehavior File="Message" Text="I'm Eastern Kingdoms, flying to Stormwind and using the portal to Twilight Highlands." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-8199.543" Y="530.3414" Z="117.1778" />							
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="Message" Text="Taking the portal to Twilight Highlands." LogColor="Lime" />
+							<CustomBehavior File="InteractWith" MobId="207694" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="-8186.14941" Y="413.729156" Z="116.749718" />
+							<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />					
+							<If Condition="Me.MapId == 4922" >				 
+								<CustomBehavior File="UserSettings" StopBot="true" />				
+							</If>
+						</If>
+					</If>	
+				</If>
+
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.ZoneId != 4922" >
+						<If Condition="Me.IsHorde" >
+							<CustomBehavior File="Message" Text="I'm Eastern Kingdoms, flying to Dragonmaw Port in Twilight Highlands." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-8199.543" Y="530.3414" Z="117.1778" />							
+							<CustomBehavior File="ForcedDismount" />					
+							<If Condition="Me.MapId == 4922" >				 
+								<CustomBehavior File="UserSettings" StopBot="true" />				
+							</If>
+						</If>
+					</If>	
+				</If>
+						
+				
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.IsAlliance" >
+						<CustomBehavior File="Message" Text="I'm Kalimdor, flying to Rachet." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-996.9926" Y="-3824.178" Z="5.496727" />						
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-996.7842" Y="-3827.834" Z="5.570349" />
+						<CustomBehavior File="Message" Text="Waiting for the boat." LogColor="Lime" />	
+						<CustomBehavior File="UseTransport"
+							TransportId="20808"
+							WaitAtX="-996.7842" WaitAtY="-3827.834" WaitAtZ="5.570349" 
+							TransportStartX="-1005.61346" TransportStartY="-3864.279" TransportStartZ="-0.0262415316"
+							TransportEndX="-14277.7451" TransportEndY="582.86615" TransportEndZ="0.0493392348"
+							StandOnX="-999.8182" StandOnY="-3833.799" StandOnZ="6.034274" 
+							GetOffX="-14280.22" GetOffY="567.6113" GetOffZ="6.696649" />
+							<RunTo X="-14280.22" Y="567.6113" Z="6.696649" />
+						<CustomBehavior File="FlyTo" X="-8199.543" Y="530.3414" Z="117.1778" />							
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="Message" Text="Taking the portal to Twilight Highlands." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="207694" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="-8186.14941" Y="413.729156" Z="116.749718" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />					
+						<If Condition="Me.MapId == 4922" >				 
+							<CustomBehavior File="UserSettings" StopBot="true" />				
+						</If>
+					</If>	
+				</If>		
+
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.IsHorde" >
+						<If Condition="Me.X &lt; 1895.627 &amp;&amp; Me.X &gt; 1713.31 &amp;&amp; Me.Y &gt; -4440.429 &amp;&amp; Me.Y &lt; -4283.688 &amp;&amp; Me.Z &lt; 35" >
+							<CustomBehavior File="Message" Text="I am in the Cleft of Shadow in Orgrimmar, moving to the Blastedlands portal." LogColor="Lime" />
+							<CustomBehavior File="ForcedMount" MountType="Ground" />
+								<RunTo X="1762.854" Y="-4309.535" Z="6.254258" />
+							<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+								<Hotspot X="1730.763" Y="-4275.545" Z="18.2034" />
+								<Hotspot X="1711.883" Y="-4285.05" Z="27.82295" />
+								<Hotspot X="1710.476" Y="-4303.737" Z="31.42606" />
+								<Hotspot X="1712.552" Y="-4329.021" Z="31.21049" />
+							</CustomBehavior>	
+						</If>
+					</If>		
+				</If>
+				
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.IsHorde" >
+						<CustomBehavior File="Message" Text="I'm Horde in Kalimdor, flying to Orgrimmar and using the portal to Twilight Highlands." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2046.067" Y="-4378.166" Z="169.8945" />
+						<CustomBehavior File="FlyTo" X="2033.141" Y="-4378.952" Z="98.04233" />							
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="InteractWith" MobId="207686" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="2065.761" Y="-4389.834" Z="98.06441" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+						<If Condition="Me.MapId == 4922" >				 
+							<CustomBehavior File="UserSettings" StopBot="true" />				
+						</If>
+					</If>
+				</If>	
+				
+												
+			</While>	
+	
+		</QuestOrder>
+
+
+</HBProfile>
+

@@ -1,0 +1,153 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-Grind][86-89][vermin-nest]_botanist_valley-of-the-four-winds</Name>
+   
+	<MinLevel>86</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Thieving Plainshawk" Entry="56034"  />
+		<Mob Name="Pengsong" Entry="66587" />
+		<Mob Name="Amberscale Basilisk" Entry="66188" />
+		<Mob Name="Kyparite Pulverizer" Entry="65432" />
+        <Mob Name="King Spineclaw" Entry="66472" />
+		<Mob Name="Captain Ripflesh" Entry="60767" />
+		<Mob Name="Slingtail Fishripper" Entry="55195" />
+		<Mob Name="Longfang Howler" Entry="56524" />
+		<Mob Name="Mutated Silkmoth" Entry="57422" />
+        <Mob Name="Wildscale Hunter" Entry="58900" />
+		<Mob Name="Softshell Snapling" Entry="63060" />
+		<Mob Name="Wildscale Poacher" Entry="58899" />
+		<Mob Name="Twitchheel Hoarder" Entry="56538" />
+		<Mob Name="Mushan Nomad" Entry="56523" />
+		<Mob Name="Glade Hunter" Entry="57299" />
+		<Mob Name="Mushan Nomad" Entry="56523"  />
+        <Mob  Name="Frenzyhop" Entry="56514" />
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="-132.2157" Y="183.5226" Z="154.4443" Radius="100" />
+		<Blackspot X="-78.12493" Y="-306.6411" Z="145.583" Radius="25" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<QuestOrder>
+		
+	    
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" Text="This is an 86-89 leveling profile. You should be able to start this profile anywhere in Pandaria. This profile will farm the Snagtooth Virmin in Valley of the Four Winds. The profile will auto set your hearth where needed. Includes repair vendor and mailing." Title="WARNING" />
+						
+				<If Condition="Me.MapId == 870" >				 
+					<If Condition="Me.ZoneId != 5805" >
+						<CustomBehavior File="Message" Text="Position check" LogColor="Lime" />
+						<CustomBehavior File="Message" Text="I am in Pandaria, but not in Valley of the Four Winds, moving to Pang's Stead." LogColor="Lime" />
+							<RunTo X="536.158" Y="-613.4866" Z="258.6633" />	
+						<CustomBehavior File="Message" Text="I have reached Pang's Stead. " LogColor="Lime" />
+					</If>						
+				</If>
+				
+				<If Condition="Me.ZoneId == 5805" >
+					<If Condition="Me.X &gt; 433.1196 || Me.X &lt; 305.1341 || Me.Y &gt; -588.7653 || Me.Y &lt; -778.6105" >
+						<CustomBehavior File="Message" Text="Position check" LogColor="Lime" />
+						<CustomBehavior File="Message" Text="I am in Valley of the Four Winds, moving to the innkeeper in Pang's Stead" LogColor="Lime" />
+							<RunTo X="536.158" Y="-613.4866" Z="258.6633" />
+							<RunTo X="565.5558" Y="-606.5535" Z="264.484" />							
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
+						<CustomBehavior File="SetHearthstone" MobId="65528" X="567.5018" Y="-608.4028" Z="263.4467" />
+							<RunTo X="536.158" Y="-613.4866" Z="258.6633" />
+						<CustomBehavior File="Message" Text="I have set my hearthstone, moving to the farming area." LogColor="Lime" />
+						<CustomBehavior File="ForcedMount" MountType="Ground" />
+						<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+							<Hotspot X="421.7004" Y="-724.2316" Z="236.1643" />
+						</CustomBehavior>
+					</If>		
+				</If>
+				
+		<While Condition="Me.Level &gt;= 86 &amp;&amp; Me.Level &lt;= 88" >
+		
+				<CustomBehavior File="UserSettings" LootMobs="True" SkinMobs="False" NinjaSkin="False" PullDistance="30" KillBetweenHotspots="True" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+				
+				<If Condition="Me.ZoneId == 5805" >
+					<If Condition="Me.X &lt; 433.1196 &amp;&amp; Me.X &gt; 305.1341 &amp;&amp; Me.Y &lt; -588.7653 &amp;&amp; Me.Y &gt; -778.6105" >
+						<CustomBehavior File="Message" Text="Position check" LogColor="Lime" />
+						<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />
+							<SetGrindArea><GrindArea>
+							<Factions>14</Factions>
+								<Hotspots>
+									<Hotspot X="381.965" Y="-730.9833" Z="236.9281" />
+									<Hotspot X="395.5351" Y="-646.6114" Z="202.448" />
+									<Hotspot X="322.7459" Y="-647.0361" Z="240.5954" />
+									<Hotspot X="263.8156" Y="-650.1862" Z="235.5946" />
+									<Hotspot X="287.0855" Y="-711.8473" Z="227.3619" />										
+								</Hotspots>
+							</GrindArea></SetGrindArea>					
+							<GrindTo Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 89)" GoalText="Farming" />
+
+					</If>
+				</If>
+								
+				<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		        <If Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; 0.3)" > 					
+					<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Going to hearth, repair and mail." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+					<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor, then mailing." LogColor="Lime" />						
+						
+					<SetVendor>
+						<Vendors>
+							<Vendor Name="Claretta" Entry="61215" Type="Repair" X="528.3212" Y="-652.0018" Z="257.0843" />
+						</Vendors>
+					</SetVendor>
+					<SetMailbox>
+						<Mailboxes>
+							<Mailbox X="537.1553" Y="-614.8893" Z="258.6869" />
+						</Mailboxes>
+					</SetMailbox>
+					<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						<RunTo X="421.7004" Y="-724.2316" Z="236.1643" />
+				</If>
+						
+				
+		</While>
+			
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="Message" Text="I have reached level 89. I'm stopping the bot" LogColor="Lime" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="UserSettings" StopBot="true" />
+	
+		</QuestOrder>
+
+
+</HBProfile>
+

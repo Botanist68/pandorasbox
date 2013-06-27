@@ -1,0 +1,433 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-Goto]_botanist_[uk-fos-pos-hol-gun-dtk-tolvir-grim-batol-tol'vir-stonecore-black-rock-caverns-botanica][to][stormwind-or-orgrimmar]</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>151</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey></MailGrey>
+	<MailWhite></MailWhite>
+	<MailGreen></MailGreen>
+	<MailBlue></MailBlue>
+	<MailPurple></MailPurple>
+   
+	<SellGrey></SellGrey>
+	<SellWhite></SellWhite>
+	<SellGreen></SellGreen>
+	<SellBlue></SellBlue>
+	<SellPurple></SellPurple>
+   
+	<TargetElites></TargetElites>
+	
+	<AvoidMobs></AvoidMobs>
+	
+	<Blackspots></Blackspots>
+
+	<Mailboxes></Mailboxes>
+ 
+	<Vendors></Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems></ProtectedItems>
+	
+
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<QuestOrder>
+		
+	    <CustomBehavior File="UserSettings" LootMobs="False" SkinMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This is a goto profile. It will take your character from inside or outside Utgarde keep, Forge of Souls, Pit of Saron, Drak'Tharon Keep, Gundrak, Halls of Lightning, Grim Batol, Blackrock Caverns, Tol'vir, Stonecore or anywhere else outside of instances in Northrend, Eastern Kingdoms, Deepholm or Kalimdor to Stormwind/Orgrimmar respectively. This profile is used to move your farmers from one continent to another while using Arelog." Title="WARNING" />
+						
+			<While Condition="true" >
+			
+																<!-- northrend -->
+																
+				 <If Condition="Me.ZoneId == 206" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside the Utgarde Keep. Running out." LogColor="Yellow" />
+						<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
+					<CustomBehavior File="MyCTM" X="144.7174" Y="-88.65063" Z="12.55168" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+					<CustomBehavior File="Message" Text="I have exited Utgard Keep." LogColor="Yellow" />
+						<RunTo X="1100.065" Y="-4903.753" Z="41.24797" />
+					<CustomBehavior File="FlyTo" X="818.8842" Y="-4719.595" Z="399.6199" />
+					<CustomBehavior File="MyCTM" X="2773.168" Y="-2820.956" Z="486.3375" />
+					<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />		<!-- dalaran split  -->
+				</If>
+				
+				<If Condition="Me.ZoneId == 4809" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside the Forge of Souls. Running out." LogColor="Yellow" />
+						<RunTo X="4916.663" Y="2186.1" Z="638.733" />
+					<CustomBehavior File="MyCTM" X="4921.312" Y="2168.66" Z="638.733" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+					<CustomBehavior File="Message" Text="I have exited Forge of Souls." LogColor="Yellow" />
+						<RunTo  X="5692.927" Y="2159.419" Z="798.1265" />
+					<CustomBehavior File="FlyTo" X="5739.474" Y="2226.147" Z="869.8992" />
+					<CustomBehavior File="MyCTM" X="6041.727" Y="1772.317" Z="875.8958" />
+					<CustomBehavior File="MyCTM" X="5886.037" Y="844.0146" Z="924.4833" />
+					<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />
+				</If>
+				
+				<If Condition="Me.ZoneId == 4813" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside the The Pit of Saron. Running out." LogColor="Yellow" />
+						<RunTo X="507.479" Y="230.5516" Z="528.7092" />
+					<CustomBehavior File="MyCTM" X="424.0134" Y="211.5736" Z="529.9064" />	
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+					<CustomBehavior File="Message" Text="I have exited Forge of Souls." LogColor="Yellow" />
+						<RunTo  X="5692.927" Y="2159.419" Z="798.1265" />
+					<CustomBehavior File="FlyTo" X="5739.474" Y="2226.147" Z="869.8992" />
+					<CustomBehavior File="MyCTM" X="6041.727" Y="1772.317" Z="875.8958" />
+					<CustomBehavior File="MyCTM" X="5886.037" Y="844.0146" Z="924.4833" />
+					<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />
+				</If>
+				
+				<If Condition="Me.ZoneId == 4196" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside Drak'Tharon Keep. Running out." LogColor="Lime" />
+						<RunTo X="-517.15" Y="-489.201" Z="11.01775" />
+					<CustomBehavior File="MyCTM" X="-518.2795" Y="-481.8023" Z="10.98073" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="Message" Text="I have exited Drak'Tharon Keep." LogColor="Lime" />
+						<RunTo X="4887.523" Y="-2047.255" Z="250.0505" />
+					<CustomBehavior File="FlyTo" X="5007.083" Y="-1974.464" Z="693.4725" />
+					<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />
+				</If>
+				
+				<If Condition="Me.ZoneId == 4416" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside Gundrak. Running out." LogColor="Lime" />
+						<RunTo X="1891.823" Y="649.8093" Z="176.6732" />
+					<CustomBehavior File="MyCTM" X="1897.433" Y="657.5444" Z="176.6386" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="Message" Text="I have exited Gundrak." LogColor="Lime" />
+						<RunTo X="6948.716" Y="-4423.442" Z="450.9999" />
+					<CustomBehavior File="FlyTo" X="6786.107" Y="-4431.66" Z="651.6688" />
+					<CustomBehavior File="MyCTM" X="5007.083" Y="-1974.464" Z="693.4725" />
+					<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />
+				</If>
+				
+				<If Condition="Me.ZoneId == 4272" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside the Halls of Lightning. Running out." LogColor="Lime" />
+						<RunTo X="1331.41" Y="241.904" Z="52.5046" />
+					<CustomBehavior File="MyCTM" X="1333.524" Y="275.7161" Z="52.81057" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+					<CustomBehavior File="Message" Text="I have exited Halls of lightening." LogColor="Lime" />
+						<RunTo X="9175.68" Y="-1378.8" Z="1103.57" />
+					<CustomBehavior File="FlyTo" X="9023.235" Y="-1265.74" Z="1292.891" />
+					<CustomBehavior File="MyCTM" X="7579.332" Y="-218.9893" Z="1395.662" />
+					<CustomBehavior File="MyCTM" X="6189.162" Y="287.3433" Z="1012.564" />
+					<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />	
+				</If>
+				
+				<If Condition="Me.MapId == 571" >
+					<If Condition="Me.X &lt; 5571.772 || Me.X &gt; 6014.294 || Me.Y &lt; 344.5054 || Me.Y &gt; 980.1671" >
+						<CustomBehavior File="FlyTo" X="6304.646" Y="470.2616" Z="614.2431" />
+						<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />
+					</If>	
+				</If>
+				
+				<If Condition="Me.MapId == 571" >
+					<If Condition="Me.X &gt; 5571.772 &amp;&amp; Me.X &lt; 6014.294 &amp;&amp; Me.Y &gt; 344.5054 &amp;&amp; Me.Y &lt; 980.1671 &amp;&amp; Me.Z &lt; 546.6583" >
+						<CustomBehavior File="FlyTo" X="6304.646" Y="470.2616" Z="614.2431" />
+						<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />
+					</If>	
+				</If>
+				
+				 <If Condition="Me.MapId == 571" >
+					<If Condition="Me.X &gt; 5571.772 &amp;&amp; Me.X &lt; 6014.294 &amp;&amp; Me.Y &gt; 344.5054 &amp;&amp; Me.Y &lt; 980.1671 &amp;&amp; Me.Z &gt; 546.6583" >
+						<CustomBehavior File="FlyTo" X="5812.89" Y="452.0196" Z="834.9374" />
+					</If>	
+				</If>
+				
+				<If Condition="Me.IsAlliance" >
+					<If Condition="Me.MapId == 571" >
+						<If Condition="Me.X &gt; 5571.772 &amp;&amp; Me.X &lt; 6014.294 &amp;&amp; Me.Y &gt; 344.5054 &amp;&amp; Me.Y &lt; 980.1671 &amp;&amp; Me.Z &gt; 546.6583" >
+							<CustomBehavior File="MyCTM" X="5779.911" Y="658.5972" Z="691.2542" />
+							<CustomBehavior File="MyCTM" X="5763.661" Y="711.3369" Z="645.2635" />
+							<CustomBehavior File="MyCTM" X="5734.757" Y="734.0301" Z="644.2011" />
+							<CustomBehavior File="MyCTM" X="5719.946" Y="722.8207" Z="641.5872" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="Message" Text="Taking the portal to Stormwind." LogColor="Lime" />
+							<CustomBehavior File="InteractWith" MobId="190960" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="5719.184" Y="719.6667" Z="641.727844" />
+							<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+								<RunTo X="-8999.836" Y="862.2664" Z="129.4596" />
+							<CustomBehavior File="FlyTo" X="-8210.189" Y="429.4182" Z="118.0619" />	
+							<CustomBehavior File="UserSettings" StopBot="true" />
+						</If>
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 571" >
+					<If Condition="Me.X &gt; 5571.772 &amp;&amp; Me.X &lt; 6014.294 &amp;&amp; Me.Y &gt; 344.5054 &amp;&amp; Me.Y &lt; 980.1671 &amp;&amp; Me.Z &gt; 546.6583" >
+						<If Condition="Me.IsHorde" >
+							<CustomBehavior File="MyCTM" X="5859.709" Y="513.9592" Z="744.3047" />
+							<CustomBehavior File="MyCTM" X="5898.019" Y="560.2869" Z="639.482" />
+							<CustomBehavior File="MyCTM" X="5912.298" Y="584.528" Z="639.8353" />
+							<CustomBehavior File="MyCTM" X="5923.668" Y="590.299" Z="639.8754" />
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="Message" Text="Taking the portal to Orgrimmar." LogColor="Lime" />
+							<CustomBehavior File="InteractWith" MobId="191009" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="5925.874" Y="593.1875" Z="640.5933" />
+							<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+								<RunTo X="1792.964" Y="-4318.308" Z="-8.601953" />
+								<RunTo X="1774.7" Y="-4297.018" Z="6.581204" />
+								<RunTo X="1758.978" Y="-4306.09" Z="6.676451" />
+								<RunTo X="1740.514" Y="-4295.021" Z="15.19361" />
+								<RunTo X="1783.615" Y="-4232.43" Z="40.51825" />
+								<RunTo X="1850.462" Y="-4243.718" Z="39.6242" />
+								<RunTo X="1855.118" Y="-4258.479" Z="39.82828" />
+							<CustomBehavior File="FlyTo" X="2048.695" Y="-4376.715" Z="98.86051" />	
+							<CustomBehavior File="UserSettings" StopBot="true" />
+						</If>
+					</If>
+				</If>
+	
+																	<!-- Eastern Kingdoms -->
+	
+				<If Condition="Me.MapId == 670">
+					<CustomBehavior File="Message" Text="You started the bot with me inside Grim Batol, running out." LogColor="Lime" />
+						<RunTo X="-617.1314" Y="-216.1342" Z="276.6051" />
+					<CustomBehavior File="MyCTM" X="-624.155" Y="-189.365" Z="272.04" />
+					<CustomBehavior File="GoThruPortal" X="-629.6733" Y="-175.2985" Z="272.1489" />
+				</If>	
+						
+				<If Condition="Me.IsAlliance" >
+					<If Condition="Me.ZoneId == 4922">
+						<CustomBehavior File="Message" Text="I am Alliance, in Twilight Highlands. Taking the portal to Stormwind." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-4886.929" Y="-6631.044" Z="10.05825" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="MyCTM" X="-4892.792" Y="-6622.975" Z="10.84829" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+							<RunTo X="-8208.543" Y="427.7808" Z="118.0817" />
+						<CustomBehavior File="UserSettings" StopBot="true" />	
+					</If>
+				</If>
+	
+				<If Condition="Me.IsHorde" >
+					<If Condition="Me.ZoneId == 4922">
+						<CustomBehavior File="Message" Text="I am Horde, in Twilight Highlands. Taking the portal to Orgrimmar." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-4032.849" Y="-6339.408" Z="37.7867" />
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-4034.075" Y="-6318.959" Z="38.69443" />
+						<CustomBehavior File="MyCTM" X="-4040.546" Y="-6313.272" Z="38.70071" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+							<RunTo X="2048.695" Y="-4376.715" Z="98.86051" />	
+						<CustomBehavior File="UserSettings" StopBot="true" />	
+					</If>
+				</If>
+				
+				<If Condition="Me.ZoneId == 4926" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside Blackrock Caverns, running out." LogColor="Lime" />
+						<RunTo X="210.0881" Y="1117.478" Z="206.6087" />
+					<CustomBehavior File="MyCTM" X="215.7276" Y="1140.736" Z="206.7795" />					
+					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="{TimeRemaining}" />						
+					<CustomBehavior File="Message" Text="I have exited Blackrock Caverns." LogColor="Lime" />
+						<RunTo X="-7575.632" Y="-1281.575" Z="245.5256" />
+						<RunTo X="-7616.589" Y="-1217.624" Z="232.2216" />
+					<CustomBehavior File="FlyTo" X="-7612.768" Y="-1164.566" Z="296.5215" />
+					<CustomBehavior File="FlyTo" X="-7480.476" Y="-1070.674" Z="265.1808" />
+					<CustomBehavior File="FlyTo" X="-7423.922" Y="-1059.697" Z="282.0618" />
+					<CustomBehavior File="FlyTo" X="-7400.896" Y="-1110.272" Z="290.9341" />
+					<CustomBehavior File="FlyTo" X="-7372.185" Y="-1097.202" Z="290.481" />
+					<CustomBehavior File="FlyTo" X="-7342.74" Y="-1113.869" Z="290.6519" />
+					<CustomBehavior File="FlyTo" X="-7232.4" Y="-1036.165" Z="357.9617" />
+					<If Condition="Me.IsAlliance" >
+						<CustomBehavior File="Message" Text="I am Alliance, flying the Stormwind poratals." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-8210.189" Y="429.4182" Z="118.0619" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserSettings" StopBot="true" />	
+					</If>
+					<If Condition="Me.IsHorde" >
+						<CustomBehavior File="Message" Text="I am Horde in Eastern Kingdoms, flying to the zeppelin near Undercity." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2062.958" Y="277.7719" Z="105.9054" />
+						<CustomBehavior File="FlyTo" X="2066.483" Y="283.9686" Z="97.03152" />						
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="2069.196" Y="290.1878" Z="97.03156" />
+						<CustomBehavior File="Message" Text="Waiting for the zeppelin." LogColor="Lime" />	
+						<CustomBehavior File="UseTransport"
+								TransportId="164871"
+								WaitAtX="2069.196" WaitAtY="290.1878" WaitAtZ="97.03156" 
+								TransportStartX="2062.376" TransportStartY="292.998047" TransportStartZ="114.670547"
+								TransportEndX="1833.509" TransportEndY="-4391.543" TransportEndZ="152.7679"
+								StandOnX="2067.631" StandOnY="293.5163" StandOnZ="97.19795" 
+								GetOffX="1841.82" GetOffY="-4393.583" GetOffZ="135.233" 
+								/>
+							<RunTo X="1841.82" Y="-4393.583" Z="135.233" />
+						<CustomBehavior File="FlyTo" X="2048.695" Y="-4376.715" Z="98.86051" />	
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserSettings" StopBot="true" />		
+					</If>
+				</If>
+				<If Condition="Me.MapId == 0">
+					<If Condition="Me.IsAlliance" >	
+						<If Condition="Me.ZoneId != 1519" >
+							<CustomBehavior File="Message" Text="I am Alliance in Eastern Kingdoms, flying to the Stormwind portals." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-8210.189" Y="429.4182" Z="118.0619" />	
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="UserSettings" StopBot="true" />
+						</If>	
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 0">
+					<If Condition="Me.IsAlliance" >	
+						<If Condition="Me.ZoneId == 1519" >
+							<CustomBehavior File="Message" Text="I am Alliance in Stormwind, flying to the portals." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="-8210.189" Y="429.4182" Z="118.0619" />	
+							<CustomBehavior File="ForcedDismount" />
+							<CustomBehavior File="UserSettings" StopBot="true" />
+						</If>	
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 0">
+					<If Condition="Me.IsHorde" >
+						<CustomBehavior File="Message" Text="I am Horde, flying the zeppelin near Undercity." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2062.958" Y="277.7719" Z="105.9054" />
+						<CustomBehavior File="FlyTo" X="2066.483" Y="283.9686" Z="97.03152" />						
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="2069.196" Y="290.1878" Z="97.03156" />
+						<CustomBehavior File="Message" Text="Waiting for the zeppelin." LogColor="Lime" />	
+						<CustomBehavior File="UseTransport"
+								TransportId="164871"
+								WaitAtX="2069.196" WaitAtY="290.1878" WaitAtZ="97.03156" 
+								TransportStartX="2062.376" TransportStartY="292.998047" TransportStartZ="114.670547"
+								TransportEndX="1833.509" TransportEndY="-4391.543" TransportEndZ="152.7679"
+								StandOnX="2067.631" StandOnY="293.5163" StandOnZ="97.19795" 
+								GetOffX="1841.82" GetOffY="-4393.583" GetOffZ="135.233" 
+								/>
+							<RunTo X="1841.82" Y="-4393.583" Z="135.233" />
+						<CustomBehavior File="FlyTo" X="2048.695" Y="-4376.715" Z="98.86051" />	
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserSettings" StopBot="true" />
+					</If>
+				</If>
+				
+															<!-- outlands -->
+															
+				<If Condition="Me.ZoneId == 3847" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside Botanica. Running out." LogColor="Lime" />
+						<RunTo X="40.5531" Y="-28.7947" Z="-1.11728" />						
+					<CustomBehavior File="MyCTM" X="48.45898" Y="-35.63333" Z="-1.098357" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+						<RunTo X="3427.733" Y="1515.943" Z="179.5686" />
+					<If Condition="Me.IsAlliance" >
+						<CustomBehavior File="Message" Text="I am Alliance, flying to the Dark portal." LogColor="Lime" />
+						<CustomBehavior File="ForcedMount" MountType="Flying" />
+						<CustomBehavior File="FlyTo" X="3395.615" Y="1550.769" Z="315.6389" />
+						<CustomBehavior File="MyCTM" X="2892.608" Y="1623.582" Z="345.2257" />
+						<CustomBehavior File="MyCTM" X="71.72729" Y="1191.244" Z="460.5757" />
+						<CustomBehavior File="MyCTM" X="-249.6566" Y="1094.856" Z="160.5806" />
+						<CustomBehavior File="MyCTM" X="-337.115" Y="968.0978" Z="54.28664" />
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-337.5969" Y="965.7953" Z="54.28156" />
+						<CustomBehavior File="Message" Text="Taking the portal to Stormwind." LogColor="Lime" />	
+						<CustomBehavior File="InteractWith" MobId="195139" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="-337.4917" Y="962.618835" Z="54.2885323" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+							<RunTo X="-8999.836" Y="862.2664" Z="129.4596" />
+						<CustomBehavior File="FlyTo" X="-8210.189" Y="429.4182" Z="118.0619" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserSettings" StopBot="true" />	
+					</If>
+					<If Condition="Me.IsHorde" >
+						<CustomBehavior File="Message" Text="I am Horde, flying to the Dark portal." LogColor="Lime" />
+						<CustomBehavior File="ForcedMount" MountType="Flying" />
+						<CustomBehavior File="FlyTo" X="3395.615" Y="1550.769" Z="315.6389" />
+						<CustomBehavior File="MyCTM" X="2892.608" Y="1623.582" Z="345.2257" />
+						<CustomBehavior File="MyCTM" X="71.72729" Y="1191.244" Z="460.5757" />
+						<CustomBehavior File="MyCTM" X="-249.6566" Y="1094.856" Z="160.5806" />
+						<CustomBehavior File="MyCTM" X="-161.7087" Y="971.8326" Z="54.28625" />
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-161.6802" Y="968.9823" Z="54.28202" />
+						<CustomBehavior File="Message" Text="Taking the portal to Orgrimmar." LogColor="Lime" />	
+						<CustomBehavior File="InteractWith" MobId="195140" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="-161.317764" Y="965.409851" Z="54.29044" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+							<RunTo X="1792.964" Y="-4318.308" Z="-8.601953" />
+							<RunTo X="1774.7" Y="-4297.018" Z="6.581204" />
+							<RunTo X="1758.978" Y="-4306.09" Z="6.676451" />
+							<RunTo X="1740.514" Y="-4295.021" Z="15.19361" />
+							<RunTo X="1783.615" Y="-4232.43" Z="40.51825" />
+							<RunTo X="1850.462" Y="-4243.718" Z="39.6242" />
+							<RunTo X="1855.118" Y="-4258.479" Z="39.82828" />
+						<CustomBehavior File="FlyTo" X="2048.695" Y="-4376.715" Z="98.86051" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserSettings" StopBot="true" />		
+					</If>	
+				</If>											
+															
+				<If Condition="Me.MapId == 530" >
+					<If Condition="Me.IsAlliance" >
+						<CustomBehavior File="Message" Text="I am Alliance in Outlands, flying to the Dark portal." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-327.35" Y="1020.49" Z="54.24791" />
+							<RunTo X="-337.5969" Y="965.7953" Z="54.28156" />
+						<CustomBehavior File="Message" Text="Taking the portal to Stormwind." LogColor="Lime" />	
+						<CustomBehavior File="InteractWith" MobId="195139" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="-337.4917" Y="962.618835" Z="54.2885323" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+							<RunTo X="-8999.836" Y="862.2664" Z="129.4596" />
+						<CustomBehavior File="FlyTo" X="-8210.189" Y="429.4182" Z="118.0619" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserSettings" StopBot="true" />	
+					</If>
+					<If Condition="Me.IsHorde" >
+						<CustomBehavior File="FlyTo" X="-179.8552" Y="1028.289" Z="54.17742" />
+							<RunTo X="-161.6802" Y="968.9823" Z="54.28202" />
+						<CustomBehavior File="Message" Text="Taking the portal to Orgrimmar." LogColor="Lime" />	
+						<CustomBehavior File="InteractWith" MobId="195140" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="-161.317764" Y="965.409851" Z="54.29044" />
+						<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="TimeRemaining}" />
+							<RunTo X="1792.964" Y="-4318.308" Z="-8.601953" />
+							<RunTo X="1774.7" Y="-4297.018" Z="6.581204" />
+							<RunTo X="1758.978" Y="-4306.09" Z="6.676451" />
+							<RunTo X="1740.514" Y="-4295.021" Z="15.19361" />
+							<RunTo X="1783.615" Y="-4232.43" Z="40.51825" />
+							<RunTo X="1850.462" Y="-4243.718" Z="39.6242" />
+							<RunTo X="1855.118" Y="-4258.479" Z="39.82828" />
+						<CustomBehavior File="FlyTo" X="2048.695" Y="-4376.715" Z="98.86051" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserSettings" StopBot="true" />		
+					</If>											
+				</If>											
+															
+														<!-- kalimdor -->	
+															
+				<If Condition="Me.MapId == 755">
+					<CustomBehavior File="Message" Text="You started the bot with me inside the the Tol' vir. Running out." LogColor="Lime" />					
+						<RunTo X="-10735.47" Y="-1322.338" Z="15.35296" />
+					<CustomBehavior File="MyCTM" X="-10693.41" Y="-1311.165" Z="17.6785" />
+					<CustomBehavior File="GoThruPortal" X="-10687.9" Y="-1309.086" Z="17.65984" />
+				</If>		
+				
+				<If Condition="Me.MapId == 1">	
+					<If Condition="Me.IsAlliance" >
+						<CustomBehavior File="Message" Text="I am Alliance in Kalimdor, flying to Ratchet." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-994.0004" Y="-3827.987" Z="5.634368" />						
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-994.0004" Y="-3827.987" Z="5.634368" />
+						<CustomBehavior File="Message" Text="Waiting for the boat." LogColor="Lime" />	
+						<CustomBehavior File="UseTransport"
+							TransportId="20808"
+							WaitAtX="-994.0004" WaitAtY="-3827.987" WaitAtZ="5.634368" 
+							TransportStartX="-1005.61346" TransportStartY="-3841.648" TransportStartZ="-0.0262415316"
+							TransportEndX="-14277.7451" TransportEndY="582.86615" TransportEndZ="-0.048539947"
+							StandOnX="-999.8182" StandOnY="-3833.799" StandOnZ="6.034274" 
+							GetOffX="-14280.22" GetOffY="567.6113" GetOffZ="6.696649" />
+							<RunTo X="-14280.22" Y="567.6113" Z="6.696649" />
+						<CustomBehavior File="FlyTo" X="-8210.189" Y="429.4182" Z="118.0619" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserSettings" StopBot="true" />
+					</If>
+					<If Condition="Me.IsHorde" >
+						<CustomBehavior File="Message" Text="I am Horde in Kalimdor, flying to Orgrimmar." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2048.695" Y="-4376.715" Z="98.86051" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserSettings" StopBot="true" />		
+					</If>
+				</If>	
+											
+
+			</While>	
+	
+		</QuestOrder>
+
+</HBProfile>
+

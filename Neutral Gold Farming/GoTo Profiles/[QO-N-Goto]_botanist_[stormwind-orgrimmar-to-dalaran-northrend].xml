@@ -1,0 +1,126 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N-Goto]_botanist_[stormwind-orgrimmar-to-dalaran-northrend]</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.0</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="4376.337" Y="2289.652" Z="452.9949" Radius="585" />
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>
+		<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+
+		<ClearVendor />
+		<ClearMailbox />
+		
+		<QuestOrder>
+		
+		<CustomBehavior File="UserSettings" UseFlightPaths="True" UseMount="True" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" LogoutForInactivity="True" />
+		
+	    <CustomBehavior File="UserSettings" LootMobs="False" SkinMobs="False" PullDistance="1" KillBetweenHotspots="False" FindVendorsAutomatically="False" UseFlightPaths="True" LootRadius="75" LogoutForInactivity="True" />
+		<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="2" ExpiryTime="10" ExpiryAction="InputEnabled_Continue" 
+						Text="This is a goto profile. It will take you from Stormwind/Orgrimar to Dalaran. This profile is used to move your farmers from one continent to another while using Arelog." Title="WARNING" />
+						
+			<While Condition="true" >
+			
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.IsAlliance" >
+						<CustomBehavior File="Message" Text="I am Alliance in Eastern Kingdoms, moving to the Stormwind docks." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-8290.875" Y="1401.994" Z="4.75181" />						
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-8296.671" Y="1408.536" Z="4.387943" />
+						<CustomBehavior File="Message" Text="Waiting for the boat." LogColor="Lime" />	
+						<CustomBehavior File="UseTransport"
+							TransportId="190536"
+							WaitAtX="-8296.671" WaitAtY="1408.536" WaitAtZ="4.387943" 
+							TransportStartX="-8288.816" TransportStartY="1424.70251" TransportStartZ="-0.0262415316"
+							TransportEndX="2218.39063" TransportEndY="5119.58838" TransportEndZ="0.0438275056"
+							StandOnX="-8293.692" StandOnY="1423.561" StandOnZ="9.45188" 
+							GetOffX="2228.751" GetOffY="5133.219" GetOffZ="5.343585" />
+							<RunTo X="2228.751" Y="5133.219" Z="5.343585" />
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.IsHorde" >
+						<If Condition="Me.X &lt; 1895.627 &amp;&amp; Me.X &gt; 1713.31 &amp;&amp; Me.Y &gt; -4440.429 &amp;&amp; Me.Y &lt; -4283.688 &amp;&amp; Me.Z &lt; 35" >
+							<CustomBehavior File="Message" Text="I am in the Cleft of Shadow in Orgrimmar, moving to the Blastedlands portal." LogColor="Lime" />
+							<CustomBehavior File="ForcedMount" MountType="Ground" />
+								<RunTo X="1762.854" Y="-4309.535" Z="6.254258" />
+							<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+								<Hotspot X="1730.763" Y="-4275.545" Z="18.2034" />
+								<Hotspot X="1711.883" Y="-4285.05" Z="27.82295" />
+								<Hotspot X="1710.476" Y="-4303.737" Z="31.42606" />
+								<Hotspot X="1712.552" Y="-4329.021" Z="31.21049" />
+							</CustomBehavior>	
+						</If>
+					</If>		
+				</If>
+				
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.IsHorde" >
+						<CustomBehavior File="FlyTo" X="1748.178" Y="-4271.429" Z="156.7331" />
+						<CustomBehavior File="MyCTM" X="1762.645" Y="-4286.081" Z="133.1075" />
+						<CustomBehavior File="ForcedDismount" />	
+						<CustomBehavior File="Message" Text="Waiting for the Zeppelin." LogColor="Lime" />
+						<CustomBehavior File="UseTransport" TransportId="186238"
+							WaitAtX="1763.203" WaitAtY="-4284.529" WaitAtZ="133.1072" 
+							TransportStartX="1775.066" TransportStartY="-4299.745" TransportStartZ="151.0326" 
+							StandOnX="1770.22" StandOnY="-4292.056" StandOnZ="133.1872"
+							TransportEndX="2837.90" TransportEndY="6187.44" TransportEndZ="140.16"	
+							GetOffX="2836.319" GetOffY="6184.29" GetOffZ="121.9199" />
+							<RunTo X="2732.697" Y="6092.212" Z="75.20207" />
+					</If>	
+				</If>
+				
+				<If Condition="Me.MapId == 571" >
+					<CustomBehavior File="UserSettings" UseMount="True" />
+					<CustomBehavior File="FlyTo" X="3432.497" Y="2542.232" Z="265.7303" />
+					<CustomBehavior File="MyCTM" X="3817.707" Y="1804.988" Z="494.3248" />
+					<CustomBehavior File="MyCTM" X="4090.979" Y="1449.112" Z="494.3248" />
+					<CustomBehavior File="MyCTM" X="5104.135" Y="1015.498" Z="494.3248" />
+					<CustomBehavior File="MyCTM" X="5589.06" Y="734.8011" Z="832.7194" />
+					<CustomBehavior File="MyCTM" X="5812.89" Y="452.0196" Z="834.9374" />	<!-- Dalaran fp -->
+					<CustomBehavior File="UserSettings" UseMount="True" />		
+					<If Condition="Me.ZoneId == 4395" >				 
+						<CustomBehavior File="UserSettings" StopBot="true" />				
+					</If>
+				</If>		
+				
+		</While>	
+	
+	</QuestOrder>
+
+</HBProfile>
+

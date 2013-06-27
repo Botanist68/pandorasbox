@@ -1,0 +1,764 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HBProfile>
+  <Name>[A-Grind]_botanist_68-80_grind</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>3</MinFreeBagSlots>
+  <SellGrey>true</SellGrey>
+  <SellWhite>false</SellWhite>
+  <SellGreen>false</SellGreen>
+  <MailWhite>true</MailWhite>
+  <MailBlue>true</MailBlue>
+  <MailPurple>false</MailPurple>
+  <SubProfile>
+    <Name>Borean Tundra - Wooly Rhino Farming</Name>
+    <MinLevel>68</MinLevel>
+    <MaxLevel>70</MaxLevel>
+    <TargetElites>false</TargetElites>
+    <GrindArea>
+      <TargetMinLevel>67</TargetMinLevel>
+      <TargetMaxLevel>72</TargetMaxLevel>
+      <Factions>1985 188 1980</Factions>
+      <MaxDistance>65</MaxDistance>
+      <Hotspots>
+        <Hotspot x="2813.08" y="5671.741" z="49.55005" />
+        <Hotspot x="2973.434" y="5679.962" z="54.87309" />
+        <Hotspot x="2891.608" y="5436.375" z="58.02554" />
+        <Hotspot x="2696.84253" y="5480.013" z="0" />
+        <Hotspot x="2542.67578" y="5546.67969" z="0" />
+        <Hotspot x="2619.75928" y="5719.59668" z="0" />
+      </Hotspots>
+    </GrindArea>
+    <Mailboxes>
+      <Mailbox x="2262.001" y="5196.721" z="11.36193" />
+    </Mailboxes>
+    <Vendors>
+      <Vendor id="25245" name="James Deacon" type="Food" x="2282.294" y="5210.832" z="12.49368" />
+      <Vendor id="27011" name="Broff Bombast" type="Repair" x="2359.466" y="5237.433" z="7.712661" />
+    </Vendors>
+    <AvoidMobs>
+      <Mob id="25227" name="Crypt Crawler" />
+    </AvoidMobs>
+    <BlackSpots>
+      <BlackSpot x="-8831.937" y="-388.6716" z="164.2827" radius="80" />
+      <BlackSpot x="2737.097" y="5605.383" z="26.6373" radius="15" />
+    </BlackSpots>
+  </SubProfile>
+  <SubProfile>
+    <Name>Fizzcrank Airstrip - Beast</Name>
+    <MinLevel>70</MinLevel>
+    <MaxLevel>71</MaxLevel>
+    <TargetElites>false</TargetElites>
+    <GrindArea>
+      <TargetMinLevel>69</TargetMinLevel>
+      <TargetMaxLevel>73</TargetMaxLevel>
+      <Factions>16 189</Factions>
+      <MaxDistance>45</MaxDistance>
+      <Hotspots>
+        <Hotspot x="3978.286" y="5310.059" z="13.04078" />
+        <Hotspot x="3889.534" y="5256.701" z="13.04027" />
+        <Hotspot x="3828.625" y="5168.45" z="14.33629" />
+        <Hotspot x="3790.407" y="5089.677" z="-1.50973" />
+        <Hotspot x="3673.91" y="5062.565" z="13.0344" />
+        <Hotspot x="3519.813" y="5114.486" z="14.01281" />
+        <Hotspot x="3311.99" y="5151.092" z="13.0393" />
+        <Hotspot x="3393.915" y="5000.704" z="13.04011" />
+        <Hotspot x="3472.963" y="4860.799" z="12.73742" />
+        <Hotspot x="3534.942" y="4806.692" z="-1.473677" />
+        <Hotspot x="3575.366" y="4926.225" z="-0.6020868" />
+        <Hotspot x="3631.109" y="4998.55" z="-1.49529" />
+        <Hotspot x="3734.865" y="5015.56" z="-1.509685" />
+        <Hotspot x="3830.791" y="5029.44" z="-1.510004" />
+        <Hotspot x="3880.455" y="5120.029" z="-0.9316963" />
+        <Hotspot x="3976.437" y="5141.642" z="-1.509364" />
+      </Hotspots>
+    </GrindArea>
+    <Mailboxes>
+      <Mailbox x="4163.402" y="5286.778" z="26.35528" />
+    </Mailboxes>
+    <Vendors>
+      <Vendor id="26596" name="'Charlie' Northtop" type="Food" x="4178.471" y="5278.223" z="26.69424" />
+      <Vendor id="26599" name="Willis Wobblewheel" type="Repair" x="4135.004" y="5281.168" z="25.08898" />
+    </Vendors>
+    <AvoidMobs>
+      <Mob id="25227" name="Crypt Crawler" />
+      <Mob id="25753" name="Sentry-bot 57-K" />
+      <Mob id="25814" name="Fizzcrank Mechagnome" />
+    </AvoidMobs>
+    <BlackSpots>
+      <BlackSpot x="-8831.937" y="-388.6716" z="164.2827" radius="80" />
+	  <Blackspot X="4029.614" Y="4856.99" Z="-12.77488" Radius="75" />
+	  <Blackspot X="3771.086" Y="4774.113" Z="3.472893" Radius="75" />
+	  <Blackspot X="3591.669" Y="4596.473" Z="-13.0975" Radius="75" />
+    </BlackSpots>
+  </SubProfile>
+  <SubProfile>
+    <Name>Star's Rest - Beast</Name>
+    <MinLevel>71</MinLevel>
+    <MaxLevel>72</MaxLevel>
+    <TargetElites>false</TargetElites>
+    <GrindArea>
+      <TargetMinLevel>70</TargetMinLevel>
+      <TargetMaxLevel>74</TargetMaxLevel>
+      <Factions>21 1990 2106 7 1953 14 16</Factions>
+      <MaxDistance>100</MaxDistance>
+      <Hotspots>
+        <Hotspot x="3706.663" y="2045.922" z="86.76445" />
+        <Hotspot x="3800.528" y="1913.546" z="97.73034" />
+        <Hotspot x="3732.122" y="1171.77" z="151.3322" />
+        <Hotspot x="3540.803" y="1183.585" z="139.7986" />
+        <Hotspot x="3325.256" y="1242.825" z="137.9592" />
+        <Hotspot x="3466.775" y="1498.693" z="81.40981" />
+        <Hotspot x="3452.984" y="1764.825" z="75.54541" />
+        <Hotspot x="3337.398" y="2072.927" z="74.98759" />
+      </Hotspots>
+    </GrindArea>
+    <Mailboxes>
+      <Mailbox x="3477.832" y="2002.47" z="64.90133" />
+    </Mailboxes>
+    <Vendors>
+      <Vendor id="27052" name="Naohain" type="Food" x="3477.54" y="2006.678" z="64.86237" />
+      <Vendor id="27055" name="Sentinel Amberline" type="Repair" x="3514.701" y="1999.156" z="64.88626" />
+    </Vendors>
+    <AvoidMobs>
+      <Mob id="25227" name="Crypt Crawler" />
+	  <Mob id="25715" name="Frozen Elemental" />
+      <Mob id="25753" name="Sentry-bot 57-K" />
+      <Mob id="25814" name="Fizzcrank Mechagnome" />
+    </AvoidMobs>
+    <BlackSpots>
+      <BlackSpot x="3826.035" y="1578.997" z="86.69895" radius="100" />
+	  <Blackspot X="4029.614" Y="4856.99" Z="-12.77488" Radius="75" />
+	  <Blackspot X="3771.086" Y="4774.113" Z="3.472893" Radius="75" />
+	  <Blackspot X="3591.669" Y="4596.473" Z="-13.0975" Radius="75" />
+	  <Blackspot X="3638.194" Y="1216.692" Z="132.9504" Radius="20" />
+    </BlackSpots>
+  </SubProfile>
+  
+    <SubProfile>
+    <Name>Emerald Dragon Shrine - Beast</Name>
+    <MinLevel>72</MinLevel>
+    <MaxLevel>73</MaxLevel>
+    <TargetElites>false</TargetElites>
+    <GrindArea>
+      <TargetMinLevel>70</TargetMinLevel>
+      <TargetMaxLevel>75</TargetMaxLevel>
+      <Factions>50 21 1990 2106 7 1953 14 16 90 1985</Factions>
+      <MaxDistance>100</MaxDistance>
+      <Hotspots>
+       <Hotspot X="2745.529" Y="119.6689" Z="4.896962" />
+       <Hotspot X="2928.628" Y="66.90913" Z="5.163106" />
+       <Hotspot X="2755.655" Y="-18.58456" Z="2.012514" />
+      </Hotspots>
+    </GrindArea>
+    <Mailboxes>
+      <Mailbox X="3637.721" Y="290.5353" Z="52.25762" />
+    </Mailboxes>
+    <Vendors>
+      <Vendor Name="Demestrasz" Entry="27950" Type="Food" X="3546.78" Y="273.0838" Z="45.5802" /> 
+      <Vendor Name="Dalormi" Entry="27943" Type="Repair" X="3520.083" Y="296.5578" Z="47.28815" />
+    </Vendors>
+    <AvoidMobs>
+      <Mob id="25227" name="Crypt Crawler" />
+	  <Mob id="25715" name="Frozen Elemental" />
+      <Mob id="25753" name="Sentry-bot 57-K" />
+      <Mob id="25814" name="Fizzcrank Mechagnome" />
+    </AvoidMobs>
+    <BlackSpots>
+      <BlackSpot x="3826.035" y="1578.997" z="86.69895" radius="100" />
+	  <Blackspot X="4029.614" Y="4856.99" Z="-12.77488" Radius="75" />
+	  <Blackspot X="3771.086" Y="4774.113" Z="3.472893" Radius="75" />
+	  <Blackspot X="3591.669" Y="4596.473" Z="-13.0975" Radius="75" />
+    </BlackSpots>
+  </SubProfile>
+  
+  <SubProfile>
+    <Name>Grizzly Hills - Beast</Name>
+    <MinLevel>73</MinLevel>
+    <MaxLevel>74</MaxLevel>
+    <TargetElites>false</TargetElites>
+    <GrindArea>
+      <TargetMinLevel>74</TargetMinLevel>
+      <TargetMaxLevel>77</TargetMaxLevel>
+      <Factions>2000 7 16 1953</Factions>
+      <MaxDistance>100</MaxDistance>
+      <Hotspots>
+       <Hotspot X="3296.037" Y="-2810.983" Z="169.8758" />
+       <Hotspot X="3204.703" Y="-2731.338" Z="130.5998" />
+       <Hotspot X="3017.499" Y="-2823.486" Z="98.2291" />
+       <Hotspot X="3239.625" Y="-2899.341" Z="151.3217" />
+       <Hotspot X="3436.476" Y="-3123.019" Z="214.312" />
+       <Hotspot X="3670.919" Y="-3095.127" Z="270.6942" />
+       <Hotspot X="3894.498" Y="-2990.956" Z="278.3549" />
+       <Hotspot X="3830.231" Y="-2762.487" Z="220.9848" />
+       <Hotspot X="3714.241" Y="-2689.424" Z="167.8081" />
+       <Hotspot X="3557.521" Y="-2639.141" Z="113.6043" />
+       <Hotspot X="3442.851" Y="-2907.278" Z="203.1319" />
+      </Hotspots>
+    </GrindArea>
+    <Mailboxes>
+      <Mailbox X="3400.743" Y="-2812.719" Z="200.4805" />
+    </Mailboxes>
+    <Vendors>
+      <Vendor Name="Jennifer Bell" Entry="27066" Type="Food" X="3406.959" Y="-2788.631" Z="201.5212" /> 
+      <Vendor Name="Brom Armstrong" Entry="27062" Type="Repair" X="3421.368" Y="-2757.578" Z="199.3006" />
+    </Vendors>
+    <AvoidMobs>
+      <Mob id="25227" name="Crypt Crawler" />
+	  <Mob id="25715" name="Frozen Elemental" />
+      <Mob id="25753" name="Sentry-bot 57-K" />
+      <Mob id="25814" name="Fizzcrank Mechagnome" />
+    </AvoidMobs>
+    <BlackSpots>
+      <BlackSpot x="3826.035" y="1578.997" z="86.69895" radius="100" />
+	  <Blackspot X="4029.614" Y="4856.99" Z="-12.77488" Radius="75" />
+	  <Blackspot X="3771.086" Y="4774.113" Z="3.472893" Radius="75" />
+	  <Blackspot X="3591.669" Y="4596.473" Z="-13.0975" Radius="75" />
+    </BlackSpots>
+  </SubProfile>
+  
+  <SubProfile>
+    <Name>The Argent Stand - Beast</Name>
+    <MinLevel>75</MinLevel>
+    <MaxLevel>76</MaxLevel>
+    <TargetElites>false</TargetElites>
+    <GrindArea>
+      <TargetMinLevel>70</TargetMinLevel>
+      <TargetMaxLevel>77</TargetMaxLevel>
+      <Factions>834 2069</Factions>
+      <MaxDistance>100</MaxDistance>
+      <Hotspots>
+       <Hotspot X="5295.069" Y="-2666.129" Z="289.4052" />
+       <Hotspot X="5150.954" Y="-2509.683" Z="289.3857" />
+       <Hotspot X="4884.279" Y="-2752.801" Z="289.6295" />
+       <Hotspot X="5025.424" Y="-2907.227" Z="289.6221" />
+      </Hotspots>
+    </GrindArea>
+    <Mailboxes>
+      <Mailbox X="5415.074" Y="-2620.781" Z="306.8572" />
+    </Mailboxes>
+    <Vendors>
+      <Vendor Name="Marissa Everwatch" Entry="28791" Type="Food" X="5462.965" Y="-2639.05" Z="306.5509" /> 
+      <Vendor Name="Haley Copperturn" Entry="28797" Type="Repair" X="5410.214" Y="-2665.951" Z="303.9539" />
+    </Vendors>
+    <AvoidMobs>
+      <Mob id="25227" name="Crypt Crawler" />
+	  <Mob id="25715" name="Frozen Elemental" />
+      <Mob id="25753" name="Sentry-bot 57-K" />
+      <Mob id="25814" name="Fizzcrank Mechagnome" />
+    </AvoidMobs>
+    <BlackSpots>
+      <BlackSpot x="3826.035" y="1578.997" z="86.69895" radius="100" />
+	  <Blackspot X="4029.614" Y="4856.99" Z="-12.77488" Radius="75" />
+	  <Blackspot X="3771.086" Y="4774.113" Z="3.472893" Radius="75" />
+	  <Blackspot X="3591.669" Y="4596.473" Z="-13.0975" Radius="75" />
+    </BlackSpots>
+  </SubProfile>
+  
+  <SubProfile>
+    <Name>K3 - Beast</Name>
+    <MinLevel>76</MinLevel>
+    <MaxLevel>78</MaxLevel>
+    <TargetElites>false</TargetElites>
+    <GrindArea>
+      <TargetMinLevel>70</TargetMinLevel>
+      <TargetMaxLevel>78</TargetMaxLevel>
+      <Factions>1693 1692 16 190</Factions>
+      <MaxDistance>100</MaxDistance>
+      <Hotspots>
+       <Hotspot X="6189.883" Y="-1015.593" Z="408.0414" />
+       <Hotspot X="6546.387" Y="-1052.646" Z="432.1325" />
+       <Hotspot X="6625.39" Y="-1040.64" Z="419.5353" />
+       <Hotspot X="6684.764" Y="-1104.578" Z="396.8674" />
+       <Hotspot X="6623.249" Y="-1277.269" Z="394.4749" />
+       <Hotspot X="6686.649" Y="-1455.514" Z="383.7018" />
+       <Hotspot X="6854.925" Y="-1550.208" Z="354.9521" />
+       <Hotspot X="6707.869" Y="-1451.95" Z="382.6504" />
+       <Hotspot X="6678.973" Y="-1167.244" Z="398.6263" />
+       <Hotspot X="6692.735" Y="-1000.806" Z="414.8423" />
+	   <Hotspot X="6386.548" Y="-975.6922" Z="421.1493" />
+       <Hotspot X="6325.129" Y="-841.7182" Z="407.8083" />
+	   <Hotspot X="6278.819" Y="-646.7836" Z="418.7756" />
+	   <Hotspot X="6253.83" Y="-624.5615" Z="418.5694" />
+	   <Hotspot X="6146.02" Y="-885.1151" Z="389.7271" />
+      </Hotspots>
+    </GrindArea>
+    <Mailboxes>
+      <Mailbox X="5415.074" Y="-2620.781" Z="306.8572" />
+    </Mailboxes>
+    <Vendors>
+      <Vendor Name="Plip Fatpurse" Entry="29908" Type="Food" X="6149.164" Y="-1055.295" Z="402.8569" /> 
+      <Vendor Name="Xark Bolthammer" Entry="29907" Type="Repair" X="6097.559" Y="-1071.257" Z="404.4122" />
+    </Vendors>
+    <AvoidMobs>
+      <Mob id="25227" name="Crypt Crawler" />
+	  <Mob id="25715" name="Frozen Elemental" />
+      <Mob id="25753" name="Sentry-bot 57-K" />
+      <Mob id="25814" name="Fizzcrank Mechagnome" />
+    </AvoidMobs>
+    <BlackSpots>
+      <BlackSpot x="3826.035" y="1578.997" z="86.69895" radius="100" />
+	  <Blackspot X="4029.614" Y="4856.99" Z="-12.77488" Radius="75" />
+	  <Blackspot X="3771.086" Y="4774.113" Z="3.472893" Radius="75" />
+	  <Blackspot X="3591.669" Y="4596.473" Z="-13.0975" Radius="75" />
+    </BlackSpots>
+  </SubProfile>
+  
+    <SubProfile>
+    <Name>Bouldercrags Retreat</Name>
+    <MinLevel>78</MinLevel>
+    <MaxLevel>86</MaxLevel>
+    <TargetElites>false</TargetElites>
+    <GrindArea>
+      <TargetMinLevel>70</TargetMinLevel>
+      <TargetMaxLevel>80</TargetMaxLevel>
+      <Factions>634 16 1711 2109 14 2068 1954 1693 1692 190 1885 21</Factions>
+      <MaxDistance>100</MaxDistance>
+      <Hotspots>
+       <Hotspot X="8194.026" Y="-92.23797" Z="847.8456" />
+       <Hotspot X="7988.158" Y="-137.4835" Z="865.1159" />
+       <Hotspot X="7809.972" Y="-195.9898" Z="879.4921" />
+       <Hotspot X="7848.746" Y="-358.9803" Z="892.7621" />
+	   <Hotspot X="8227.094" Y="-718.511" Z="924.7131" />
+       <Hotspot X="8263.95" Y="-852.4756" Z="923.8741" />
+       <Hotspot X="8170.181" Y="-1112.861" Z="923.875" />
+       <Hotspot X="8351.148" Y="-1162.133" Z="926.6653" />
+       <Hotspot X="7961.789" Y="-550.9845" Z="917.7497" />
+    </Hotspots>
+    </GrindArea>
+    <Mailboxes>
+      <Mailbox X="8443.361" Y="-327.2589" Z="906.6079" />
+    </Mailboxes>
+    <Vendors>
+      <Vendor Name="Magorn" Entry="29963" Type="Food" X="8426.41" Y="-355.5836" Z="906.4028" /> 
+      <Vendor Name="Dargum Hammerdeep" Entry="29964" Type="Repair" X="8383.45" Y="-390.166" Z="903.1187" />
+    </Vendors>
+    <AvoidMobs>
+      <Mob id="25227" name="Crypt Crawler" />
+	  <Mob id="25715" name="Frozen Elemental" />
+      <Mob id="25753" name="Sentry-bot 57-K" />
+      <Mob id="25814" name="Fizzcrank Mechagnome" />
+    </AvoidMobs>
+    <BlackSpots>
+     <Blackspot X="6053.406" Y="-663.0333" Z="375.2197" Radius="150" />
+	 <Blackspot X="7834.022" Y="-99.83672" Z="881.4936" Radius="15" />
+    </BlackSpots>
+  </SubProfile>
+  
+  <ProtectedItems>
+    <Item id="6948" />
+    <Item id="7005" />
+    <Item id="2901" />
+    <Item id="5956" />
+    <Item id="6256" />
+    <Item id="6365" />
+    <Item id="40772" />
+    <Item id="6218" />
+    <Item id="6339" />
+    <Item id="11130" />
+    <Item id="11145" />
+    <Item id="16207" />
+    <Item id="22461" />
+    <Item id="22462" />
+    <Item id="22463" />
+    <Item id="44452" />
+    <Item id="17032" />
+    <Item id="17031" />
+    <Item id="17056" />
+    <Item id="17020" />
+    <Item id="5350" />
+    <Item id="2288" />
+    <Item id="2136" />
+    <Item id="3772" />
+    <Item id="8077" />
+    <Item id="8078" />
+    <Item id="8079" />
+    <Item id="30703" />
+    <Item id="22018" />
+    <Item id="5349" />
+    <Item id="1113" />
+    <Item id="1114" />
+    <Item id="1487" />
+    <Item id="8075" />
+    <Item id="8076" />
+    <Item id="22895" />
+    <Item id="34062" />
+    <Item id="22019" />
+    <Item id="43518" />
+    <Item id="43523" />
+    <Item id="5514" />
+    <Item id="5513" />
+    <Item id="8007" />
+    <Item id="8008" />
+    <Item id="22044" />
+    <Item id="33312" />
+    <Item id="5175" />
+    <Item id="5176" />
+    <Item id="5177" />
+    <Item id="5178" />
+    <Item id="17058" />
+    <Item id="17057" />
+    <Item id="17030" />
+    <Item id="17028" />
+    <Item id="17029" />
+    <Item id="44615" />
+    <Item id="17033" />
+    <Item id="21177" />
+    <Item id="17030" />
+    <Item id="17030" />
+    <Item id="17030" />
+    <Item id="17034" />
+    <Item id="17035" />
+    <Item id="17036" />
+    <Item id="17037" />
+    <Item id="17038" />
+    <Item id="22147" />
+    <Item id="44614" />
+    <Item id="17026" />
+    <Item id="22148" />
+    <Item id="17021" />
+    <Item id="44605" />
+    <Item id="5060" />
+    <Item id="3775" />
+    <Item id="5237" />
+    <Item id="6947" />
+    <Item id="6949" />
+    <Item id="6950" />
+    <Item id="8926" />
+    <Item id="8927" />
+    <Item id="8928" />
+    <Item id="22054" />
+    <Item id="43230" />
+    <Item id="43231" />
+    <Item id="2892" />
+    <Item id="2893" />
+    <Item id="8984" />
+    <Item id="8985" />
+    <Item id="20844" />
+    <Item id="22053" />
+    <Item id="22054" />
+    <Item id="43232" />
+    <Item id="43233" />
+    <Item id="10918" />
+    <Item id="10920" />
+    <Item id="10921" />
+    <Item id="10922" />
+    <Item id="22055" />
+    <Item id="43234" />
+    <Item id="43235" />
+    <Item id="21835" />
+    <Item id="43237" />
+    <Item id="37201" />
+    <Item id="5565" />
+    <Item id="6265" />
+    <Item id="16583" />
+    <Item id="118" />
+    <Item id="858" />
+    <Item id="4596" />
+    <Item id="929" />
+    <Item id="1710" />
+    <Item id="3928" />
+    <Item id="13446" />
+    <Item id="17348" />
+    <Item id="28100" />
+    <Item id="33934" />
+    <Item id="22829" />
+    <Item id="17349" />
+    <Item id="32947" />
+    <Item id="33092" />
+    <Item id="18839" />
+    <Item id="31839" />
+    <Item id="31852" />
+    <Item id="31853" />
+    <Item id="31838" />
+    <Item id="39671" />
+    <Item id="33447" />
+    <Item id="41166" />
+    <Item id="43531" />
+    <Item id="2455" />
+    <Item id="3385" />
+    <Item id="3827" />
+    <Item id="6149" />
+    <Item id="13443" />
+    <Item id="13444" />
+    <Item id="22832" />
+    <Item id="28101" />
+    <Item id="31677" />
+    <Item id="43530" />
+    <Item id="33093" />
+    <Item id="42545" />
+    <Item id="33448" />
+    <Item id="40067" />
+    <Item id="18841" />
+    <Item id="31855" />
+    <Item id="31854" />
+    <Item id="31841" />
+    <Item id="31840" />
+    <Item id="17352" />
+    <Item id="17351" />
+    <Item id="20745" />
+    <Item id="20747" />
+    <Item id="20748" />
+    <Item id="22521" />
+    <Item id="36899" />
+    <Item id="1251" />
+    <Item id="2581" />
+    <Item id="3530" />
+    <Item id="3531" />
+    <Item id="6450" />
+    <Item id="6451" />
+    <Item id="8544" />
+    <Item id="8545" />
+    <Item id="14529" />
+    <Item id="14530" />
+    <Item id="21990" />
+    <Item id="21991" />
+    <Item id="34721" />
+    <Item id="34722" />
+    <Item id="159" />
+    <Item id="1179" />
+    <Item id="1205" />
+    <Item id="1708" />
+    <Item id="1645" />
+    <Item id="8766" />
+    <Item id="22324" />
+    <Item id="28399" />
+    <Item id="29454" />
+    <Item id="27860" />
+    <Item id="29395" />
+    <Item id="33444" />
+    <Item id="33445" />
+    <Item id="35954" />
+    <Item id="20857" />
+    <Item id="2070" />
+    <Item id="117" />
+    <Item id="4540" />
+    <Item id="4604" />
+    <Item id="4536" />
+    <Item id="787" />
+    <Item id="2287" />
+    <Item id="17406" />
+    <Item id="4537" />
+    <Item id="414" />
+    <Item id="4541" />
+    <Item id="4605" />
+    <Item id="4592" />
+    <Item id="3770" />
+    <Item id="422" />
+    <Item id="4538" />
+    <Item id="16170" />
+    <Item id="7228" />
+    <Item id="4542" />
+    <Item id="4606" />
+    <Item id="4593" />
+    <Item id="18632" />
+    <Item id="16169" />
+    <Item id="4607" />
+    <Item id="4539" />
+    <Item id="17407" />
+    <Item id="3771" />
+    <Item id="4544" />
+    <Item id="1707" />
+    <Item id="4594" />
+    <Item id="18635" />
+    <Item id="21030" />
+    <Item id="16168" />
+    <Item id="17408" />
+    <Item id="21552" />
+    <Item id="4599" />
+    <Item id="3927" />
+    <Item id="4602" />
+    <Item id="4608" />
+    <Item id="4601" />
+    <Item id="21031" />
+    <Item id="21033" />
+    <Item id="8957" />
+    <Item id="8932" />
+    <Item id="8953" />
+    <Item id="8948" />
+    <Item id="8950" />
+    <Item id="8952" />
+    <Item id="29393" />
+    <Item id="27857" />
+    <Item id="27855" />
+    <Item id="27856" />
+    <Item id="27854" />
+    <Item id="27858" />
+    <Item id="27859" />
+    <Item id="29449" />
+    <Item id="29451" />
+    <Item id="29394" />
+    <Item id="35949" />
+    <Item id="29452" />
+    <Item id="33449" />
+    <Item id="33451" />
+    <Item id="37252" />
+    <Item id="33452" />
+    <Item id="29448" />
+    <Item id="33454" />
+    <Item id="33443" />
+    <Item id="29453" />
+    <Item id="29450" />
+    <Item id="42429" />
+    <Item id="42431" />
+    <Item id="52185" />
+    <Item id="53038" />
+    <Item id="52183" />
+    <Item id="52985" />
+    <Item id="52988" />
+    <Item id="52983" />
+    <Item id="52984" />
+    <Item id="52986" />
+    <Item id="52327" />
+    <Item id="52329" />
+    <Item id="52325" />
+    <Item id="52326" />
+    <Item id="52328" />
+    <Item id="53010" />
+    <Item id="52977" />
+    <Item id="52976" />
+    <Item id="58275" />
+    <Item id="58274" />
+    <Item id="58269" />
+    <Item id="35953" />
+    <Item id="58268" />
+    <Item id="58280" />
+    <Item id="58257" />
+    <Item id="58256" />
+    <Item id="58261" />
+    <Item id="58260" />
+    <Item id="58263" />
+    <Item id="58277" />
+    <Item id="58262" />
+    <Item id="58265" />
+    <Item id="58264" />
+    <Item id="58278" />
+    <Item id="58276" />
+    <Item id="58259" />
+    <Item id="58258" />
+  </ProtectedItems>
+  <ForceMail>
+    <Item id="2589" />
+    <Item id="2592" />
+    <Item id="4306" />
+    <Item id="4338" />
+    <Item id="14047" />
+    <Item id="21877" />
+    <Item id="22470" />
+    <Item id="2934" />
+    <Item id="2318" />
+    <Item id="783" />
+    <Item id="4231" />
+    <Item id="2319" />
+    <Item id="4232" />
+    <Item id="4233" />
+    <Item id="4304" />
+    <Item id="4235" />
+    <Item id="4236" />
+    <Item id="4234" />
+    <Item id="8169" />
+    <Item id="8172" />
+    <Item id="8170" />
+    <Item id="8171" />
+    <Item id="15407" />
+    <Item id="25708" />
+    <Item id="25707" />
+    <Item id="38558" />
+    <Item id="21887" />
+    <Item id="25649" />
+    <Item id="23793" />
+    <Item id="33568" />
+    <Item id="33567" />
+    <Item id="38425" />
+    <Item id="38557" />
+    <Item id="44128" />
+    <Item id="2447" />
+    <Item id="765" />
+    <Item id="2449" />
+    <Item id="785" />
+    <Item id="2450" />
+    <Item id="2452" />
+    <Item id="2453" />
+    <Item id="3355" />
+    <Item id="3356" />
+    <Item id="3357" />
+    <Item id="3821" />
+    <Item id="3818" />
+    <Item id="3358" />
+    <Item id="3819" />
+    <Item id="8831" />
+    <Item id="8836" />
+    <Item id="8839" />
+    <Item id="4625" />
+    <Item id="8846" />
+    <Item id="8838" />
+    <Item id="13464" />
+    <Item id="13466" />
+    <Item id="13465" />
+    <Item id="13467" />
+    <Item id="13463" />
+    <Item id="13468" />
+    <Item id="22793" />
+    <Item id="22792" />
+    <Item id="22791" />
+    <Item id="22786" />
+    <Item id="22787" />
+    <Item id="22788" />
+    <Item id="22785" />
+    <Item id="22789" />
+    <Item id="22794" />
+    <Item id="36901" />
+    <Item id="191303" />
+    <Item id="37921" />
+    <Item id="36904" />
+    <Item id="36907" />
+    <Item id="36903" />
+    <Item id="36906" />
+    <Item id="36905" />
+    <Item id="36908" />
+    <Item id="2770" />
+    <Item id="2771" />
+    <Item id="2775" />
+    <Item id="2776" />
+    <Item id="2772" />
+    <Item id="3858" />
+    <Item id="7911" />
+    <Item id="10620" />
+    <Item id="23425" />
+    <Item id="23424" />
+    <Item id="23426" />
+    <Item id="23447" />
+    <Item id="36909" />
+    <Item id="36912" />
+    <Item id="36910" />
+    <Item id="17378" />
+    <Item id="17408" />
+    <Item id="24222" />
+    <Item id="32544" />
+    <Item id="22573" />
+    <Item id="22575" />
+    <Item id="22574" />
+    <Item id="37700" />
+    <Item id="37701" />
+    <Item id="37702" />
+    <Item id="37703" />
+    <Item id="37704" />
+    <Item id="37705" />
+    <Item id="52185" />
+    <Item id="53038" />
+    <Item id="52183" />
+    <Item id="52985" />
+    <Item id="52988" />
+    <Item id="52983" />
+    <Item id="52984" />
+    <Item id="52986" />
+    <Item id="52327" />
+    <Item id="52329" />
+    <Item id="52325" />
+    <Item id="52326" />
+    <Item id="52328" />
+    <Item id="53010" />
+    <Item id="52977" />
+    <Item id="52976" />
+    <Item id="17056" />
+  </ForceMail>
+</HBProfile>

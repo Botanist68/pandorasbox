@@ -1,0 +1,118 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][Flying][cave-farming][mining-herbing]_botanist_howlingwind-cavern</Name>
+   
+	<MinLevel>90</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>True</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions></Factions>
+	
+	<ProtectedItems>	
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" MountDistance="100" UseFlightPaths="False" HarvestHerbs="True" HarvestMinerals="True" PullDistance="3" KillBetweenHotspots="False" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="50" LogoutForInactivity="True" />
+		 
+		 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This profle will farm Howlingwind Caverns in Kun-Lai Summit for ores and herbs. The profile will set your hearthstone where needed. Includes mail, vendors and repair. Start the profile anywhere in Pandaria." Title="WARNING" />
+	
+        <While Condition="Me.Level &gt;= 90" >
+										  
+				<If Condition="Me.MapId == 870" >
+					<If Condition="Me.X &lt; 3020.527 || Me.X &gt; 3112.49 || Me.Y &lt; 1182.665 || Me.Y &gt; 1263.189" >	<!-- one keg -->
+						<If Condition="Me.X &lt; 3366.785 || Me.X &gt; 3663.877 || Me.Y &lt; 1115.655 || Me.Y &gt; 1383.062" >	<!-- howlingwind caverns -->
+							<CustomBehavior File="Message" Text="I am in Pandaria. Flying to One Keg In Kun-Lai Summit." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="3100.557" Y="1233.689" Z="653.9792" />
+							<CustomBehavior File="Message" Text="I've reached One Keg." LogColor="Lime" />
+							<CustomBehavior File="ForcedDismount" />
+								<RunTo X="3113.246" Y="1246.799" Z="656.0298" />
+							<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeep." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="SetHearthstone" MobId="59688" X="3113.589" Y="1249.401" Z="654.8159" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<RunTo X="3100.557" Y="1233.689" Z="653.9792" />
+							<CustomBehavior File="FlyTo" X="3390.292" Y="1143.413" Z="661.6331" />
+							<CustomBehavior File="ForcedDismount" />
+						</If>
+					</If>	
+				</If>
+				
+				
+				<If Condition="Me.X &gt; 3366.785 &amp;&amp; Me.X &lt; 3663.877 &amp;&amp; Me.Y &gt; 1115.655 &amp;&amp; Me.Y &lt; 1383.062" >
+					<CustomBehavior File="Message" Text="I've reached the farming area. I'll start farming until you stop me." LogColor="Lime" />	
+							<SetGrindArea><GrindArea>
+							<Factions></Factions>
+								<Hotspots>
+									<Hotspot X="3430.552" Y="1132.082" Z="659.4042" />
+									<Hotspot X="3474.454" Y="1149.02" Z="656.8306" />
+									<Hotspot X="3481.904" Y="1224.443" Z="647.3733" />
+									<Hotspot X="3526.813" Y="1247.167" Z="643.9578" />
+									<Hotspot X="3549.598" Y="1168.524" Z="643.8501" />
+									<Hotspot X="3618.964" Y="1224.638" Z="647.2078" />
+									<Hotspot X="3630.426" Y="1313.89" Z="651.2806" />
+									<Hotspot X="3586.409" Y="1333.379" Z="659.7248" />
+									<Hotspot X="3504.038" Y="1344.03" Z="636.4717" />
+								</Hotspots>
+							</GrindArea></SetGrindArea>												
+							<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= .3) || (Me.Level == 101)" GoalText="Farming" />
+				</If>
+							
+						<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt;= 0.3)" >
+							<CustomBehavior File="Message" Text="Checking my free bag slots and gear's durability." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="2000" />
+							<CustomBehavior File="Message" Text="I have determined that I have less than 4 empty bag slots left or my gear is below 30% durability. Moving to a safe place to hearth." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+							<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />
+							<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor, then mailing." LogColor="Lime" />
+							<SetVendor>
+								<Vendors>
+									<Vendor Name="Ironshaper Shou" Entry="59827" Type="Repair" X="3042.047" Y="1245.347" Z="654.3083" />
+								</Vendors>
+							</SetVendor>
+							<SetMailbox>
+								<Mailboxes>
+									<Mailbox X="3106.579" Y="1235.427" Z="654.0914" />
+								</Mailboxes>
+							</SetMailbox>
+					
+							<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						</If>
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

@@ -1,0 +1,46 @@
+<HBProfile>
+  <Name>botanist_skinning_(knothide-leather)_shadowmoon-valley</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>101</MaxLevel>
+  <Factions>14</Factions>
+  <AvoidMobs>
+  <Mob id="25227" name="Crypt Crawler" />
+  </AvoidMobs>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+	<Vendors>
+     <Vendor Name="Mari Stonehand" Entry="19373" Type="Repair" X="-3966.329" Y="2201.351" Z="101.8695" />
+	</Vendors>
+	
+	<Mailboxes>
+     <Mailbox X="-4054.667" Y="2179.916" Z="110.2843" />
+	</Mailboxes>
+
+  <Hotspots>
+   <Hotspot X="-3338.398" Y="2586.696" Z="60.21341" />
+   <Hotspot X="-3455.48" Y="2457.561" Z="58.14083" />
+   <Hotspot X="-3380.098" Y="2368.477" Z="64.71376" />
+   <Hotspot X="-3370.841" Y="2247.351" Z="68.36131" />
+   <Hotspot X="-3587.506" Y="2156.546" Z="77.4871" />
+   <Hotspot X="-3623.279" Y="2053.418" Z="66.49493" />
+   <Hotspot X="-3684.23" Y="2278.107" Z="78.9203" />
+   <Hotspot X="-3531.529" Y="2644.369" Z="69.84193" />
+  </Hotspots> 
+  
+  <Blackspots>
+  </Blackspots>
+</HBProfile>

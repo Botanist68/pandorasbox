@@ -1,0 +1,284 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N]_botanist_hyjal-summit</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+		<Item name="Book of Glyph Mastery" entry="45912" />
+		<Item name="Frostweave Cloth" entry="33470" />		
+	</ProtectedItems>
+
+	<Factions>9999</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+	<CustomBehavior File="UserSettings" UseMount="True" LootMobs="True" PullDistance="5" KillBetweenHotspots="True" FindVendorsAutomatically="False" LogoutForInactivity="False" />
+	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="20" ExpiryAction="InputEnabled_Continue" Text="This profile will farm the first 7 waves of trash in Hyjal Summit. Start the profile anywhere in Eastern Kingdoms/Kalimdor, except in Caverns of Time." Title="WARNING" />
+        
+		<While Condition="true" >
+
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.IsAlliance" >
+						<CustomBehavior File="FlyTo" X="-8231.121" Y="426.3492" Z="117.896" DestName="Portal to Uldum" />							
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="-8232.501" Y="420.0598" Z="117.6352" />
+						<CustomBehavior File="Message" Text="Taking the portal to Uldum." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="207695" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-9007.58" Y="871.8698" Z="129.692154" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+							<RunTo X="-9443.31" Y="-958.365" Z="111.012" />
+						<CustomBehavior File="UserSettings" StopBot="true" />
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.IsHorde" >
+						<CustomBehavior File="Message" Text="I am Horde in Eastern Kingdoms, flying the zeppelin near Undercity." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2062.958" Y="277.7719" Z="105.9054" />
+						<CustomBehavior File="FlyTo" X="2066.483" Y="283.9686" Z="97.03152" />						
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="2069.196" Y="290.1878" Z="97.03156" />
+						<CustomBehavior File="Message" Text="Waiting for the zeppelin." LogColor="Lime" />	
+						<CustomBehavior File="UseTransport"
+								TransportId="164871"
+								WaitAtX="2069.196" WaitAtY="290.1878" WaitAtZ="97.03156" 
+								TransportStartX="2062.376" TransportStartY="292.998047" TransportStartZ="114.670547"
+								TransportEndX="1833.509" TransportEndY="-4391.543" TransportEndZ="152.7679"
+								StandOnX="2067.631" StandOnY="293.5163" StandOnZ="97.19795" 
+								GetOffX="1841.82" GetOffY="-4393.583" GetOffZ="135.233" 
+								/>
+							<RunTo X="1841.82" Y="-4393.583" Z="135.233" />
+						<CustomBehavior File="FlyTo" X="2048.695" Y="-4376.715" Z="98.86051" />	
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="FlyTo" X="2040.921" Y="-4357.706" Z="98.05865" />							
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="2040.928" Y="-4359.31" Z="98.05411" />	
+						<CustomBehavior File="Message" Text="Taking the portal to Uldum." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="207687" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="2039.67017" Y="-4356.288" Z="98.00434" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+							<RunTo X="-9443.31" Y="-958.365" Z="111.012" />
+						<CustomBehavior File="UserSettings" StopBot="true" />	
+					</If>
+				</If>
+				
+				<If Condition="Me.IsHorde" >
+					<If Condition="Me.ZoneId == 1637" >
+						<CustomBehavior File="Message" Text="I am Horde Orgrimmar, flying to the Uldum portal." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2040.921" Y="-4357.706" Z="98.05865" />							
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="2040.928" Y="-4359.31" Z="98.05411" />	
+						<CustomBehavior File="Message" Text="Taking the portal to Uldum." LogColor="Lime" />
+						<CustomBehavior File="InteractWith" MobId="207687" ObjectType="Gameobject" Range="4.75" NumOfTimes="1" X="2039.67017" Y="-4356.288" Z="98.00434" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="TimeRemaining}" />
+							<RunTo X="-9443.31" Y="-958.365" Z="111.012" />
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 1" >
+					<If Condition="Me.Y &lt; -4209.888 || Me.Y &gt; -4174.861 || Me.X &lt; -8196.304 || Me.X &gt; -8164.905" > 
+						<If Condition="Me.Y &lt; -3987.018 || Me.Y &gt; -3668.375 || Me.X &lt; -7245.835 || Me.X &gt; -7004.796" >	
+							<If Condition="Me.ZoneId != 3606" >	
+								<CustomBehavior File="Message" Text="I'm not outside the Hyjal portal, not in Hyjal, nor in Gadgetzan, flying to Gadgetzan." LogColor="Lime" />
+								<CustomBehavior File="FlyTo" X="-7086.372" Y="-3854.344" Z="9.7018" />						
+								<CustomBehavior File="ForcedDismount" />
+									<RunTo X="-7071.192" Y="-3856.341" Z="9.808615" />	 
+								<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
+								<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<CustomBehavior File="SetHearthstone" MobId="7733" X="-7069.17" Y="-3854.53" Z="9.851628" />
+									<RunTo X="-7086.372" Y="-3854.344" Z="9.7018" />	
+								<CustomBehavior File="Message" Text="Fllying to Caverns of Time." LogColor="Lime" />
+								<CustomBehavior File="FlyTo" X="-8197.547" Y="-4621.955" Z="132.8845" DestName="Caverns of Time" />							
+								<CustomBehavior File="MyCTM" X="-8171.417" Y="-4749.396" Z="42.86401" />
+								<CustomBehavior File="MyCTM" X="-8160.902" Y="-4821.994" Z="44.74049" />
+								<CustomBehavior File="MyCTM" X="-8182.592" Y="-4884.76" Z="36.57454" />
+								<CustomBehavior File="MyCTM" X="-8084.403" Y="-4894.447" Z="38.12021" />
+								<CustomBehavior File="MyCTM" X="-8092.977" Y="-4838.561" Z="-7.501665" />
+								<CustomBehavior File="MyCTM" X="-8131.453" Y="-4854.739" Z="-15.64863" />
+								<CustomBehavior File="MyCTM" X="-8152.667" Y="-4885.432" Z="-26.58541" />
+								<CustomBehavior File="MyCTM" X="-8095.609" Y="-4914.301" Z="-39.30358" />
+								<CustomBehavior File="MyCTM" X="-8071.747" Y="-4850.98" Z="-57.46482" />
+								<CustomBehavior File="MyCTM" X="-8101.462" Y="-4703.593" Z="-90.80865" />
+								<CustomBehavior File="MyCTM" X="-8312.373" Y="-4587.889" Z="-155.5294" />
+								<CustomBehavior File="MyCTM" X="-8468.118" Y="-4665.411" Z="-182.7755" />
+								<CustomBehavior File="MyCTM" X="-8522.229" Y="-4591.46" Z="-191.99" />
+								<CustomBehavior File="MyCTM" X="-8490.751" Y="-4477.78" Z="-165.2133" />
+								<CustomBehavior File="MyCTM" X="-8381.888" Y="-4374.357" Z="-184.017" />
+								<CustomBehavior File="MyCTM" X="-8217.845" Y="-4331.86" Z="-169.5572" />
+								<CustomBehavior File="MyCTM" X="-8183.807" Y="-4230.813" Z="-165.28" />
+								<CustomBehavior File="FlyTo" X="-8183.153" Y="-4193.935" Z="-170.8712" />
+								<CustomBehavior File="ForcedDismount" />
+								<CustomBehavior File="Message" Text="I've reached the entrance to Mount Hyjal." LogColor="Lime" />
+									<RunTo X="-8176.99" Y="-4176.92" Z="-166.463" />
+							</If>		
+						</If>		
+					</If>
+				</If>
+				
+				<If Condition="Me.Y &gt; -3987.018 &amp;&amp; Me.Y &lt; -3668.375 &amp;&amp; Me.X &gt; -7245.835 &amp;&amp; Me.X &lt; -7004.796" >	
+					<CustomBehavior File="Message" Text="I am in Gadgetzan." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />	
+					<CustomBehavior File="Message" Text="Flying to Caverns of Time." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="-8197.547" Y="-4621.955" Z="132.8845" DestName="Caverns of Time" />							
+					<CustomBehavior File="MyCTM" X="-8171.417" Y="-4749.396" Z="42.86401" />
+					<CustomBehavior File="MyCTM" X="-8160.902" Y="-4821.994" Z="44.74049" />
+					<CustomBehavior File="MyCTM" X="-8182.592" Y="-4884.76" Z="36.57454" />
+					<CustomBehavior File="MyCTM" X="-8084.403" Y="-4894.447" Z="38.12021" />
+					<CustomBehavior File="MyCTM" X="-8092.977" Y="-4838.561" Z="-7.501665" />
+					<CustomBehavior File="MyCTM" X="-8131.453" Y="-4854.739" Z="-15.64863" />
+					<CustomBehavior File="MyCTM" X="-8152.667" Y="-4885.432" Z="-26.58541" />
+					<CustomBehavior File="MyCTM" X="-8095.609" Y="-4914.301" Z="-39.30358" />
+					<CustomBehavior File="MyCTM" X="-8071.747" Y="-4850.98" Z="-57.46482" />
+					<CustomBehavior File="MyCTM" X="-8101.462" Y="-4703.593" Z="-90.80865" />
+					<CustomBehavior File="MyCTM" X="-8312.373" Y="-4587.889" Z="-155.5294" />
+					<CustomBehavior File="MyCTM" X="-8468.118" Y="-4665.411" Z="-182.7755" />
+					<CustomBehavior File="MyCTM" X="-8522.229" Y="-4591.46" Z="-191.99" />
+					<CustomBehavior File="MyCTM" X="-8490.751" Y="-4477.78" Z="-165.2133" />
+					<CustomBehavior File="MyCTM" X="-8381.888" Y="-4374.357" Z="-184.017" />
+					<CustomBehavior File="MyCTM" X="-8217.845" Y="-4331.86" Z="-169.5572" />
+					<CustomBehavior File="MyCTM" X="-8183.807" Y="-4230.813" Z="-165.28" />
+					<CustomBehavior File="FlyTo" X="-8183.153" Y="-4193.935" Z="-170.8712" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="Message" Text="I've reached the entrance to Mount Hyjal." LogColor="Lime" />
+						<RunTo X="-8176.99" Y="-4176.92" Z="-166.463" />		
+				</If>		
+				
+				<If Condition="Me.ZoneId == 3606" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside Hyjal Summit. Hearthing out to reset the dungeon." LogColor="Lime" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+						<RunTo X="-7093.222" Y="-3854.028" Z="9.173008" />
+				</If>
+
+				<If Condition="Me.Y &gt; -4209.888 &amp;&amp; Me.Y &lt; -4174.861 &amp;&amp; Me.X &gt; -8196.304 &amp;&amp; Me.X &lt; -8164.905" >
+					<CustomBehavior File="Message" Text="I am resetting Hyjal Summit." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />				
+					<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />				
+					<CustomBehavior File="Message" Text="I have reset Hyjal Summit." LogColor="Lime" />
+					<CustomBehavior File="MyCTM" X="-8166.965" Y="-4164.475" Z="-164.6564" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" />
+					
+				</If>							
+			
+												   <!-- hyjal summit Dungeon Script -->
+				<If Condition="Me.ZoneId == 3606" >
+					<CustomBehavior File="Message" Text="I've entered Hyjal Summit." LogColor="Lime" />
+						<RunTo X="4219.645" Y="-4193.801" Z="868.8514" />															
+						<RunTo X="4173.404" Y="-4231.599" Z="869.1854" />
+					<CustomBehavior File="Message" Text="Going through the portal to the Alliance Base." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="MyCTM" X="4167.1" Y="-4228" Z="869.1863" /> 
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />
+				</If>
+				
+				<While Condition="(Me.FreeBagSlots &gt; 6) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >	
+					
+							<RunTo X="5081.414" Y="-1789.27" Z="1322.106" />
+						<CustomBehavior File="InteractWith" MobId="17772"  GossipOptions="1" NumOfTimes="1"  X="5084.066" Y="-1789.027" Z="1322.569" />
+							<RunTo X="4986.676" Y="-1716.731" Z="1336.303" />
+						<CustomBehavior File="WaitTimer" WaitTime="172000" />
+							<RunTo X="4986.676" Y="-1716.731" Z="1336.303" />
+						<CustomBehavior File="WaitTimer" WaitTime="172000" />
+					
+						<CustomBehavior File="UserSettings" UseMount="False" />
+						<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+							<Hotspot X="5023.148" Y="-1770.957" Z="1322.255" />
+							<Hotspot X="5072.963" Y="-1900.274" Z="1343.172" />
+							<Hotspot X="5090.519" Y="-1914.713" Z="1352.426" />
+							<Hotspot X="5072.884" Y="-1926.309" Z="1359.723" />
+							<Hotspot X="5070.461" Y="-1918.497" Z="1357.359" />
+						</CustomBehavior>
+							 <RunTo X="5070.461" Y="-1918.497" Z="1357.359" />
+							 
+						<CustomBehavior File="Message" Text="Waiting 7 minutes for Jaina to die and respawn." LogColor="Lime" />	 
+						<CustomBehavior File="RunMacro" Macro="/dance" />
+						<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						
+							<RunTo X="5070.461" Y="-1918.497" Z="1357.359" />
+						<CustomBehavior File="RunMacro" Macro="/s Wish I had a table top to dance on!!!" />	
+						<CustomBehavior File="RunMacro" Macro="/dance" />
+						<CustomBehavior File="WaitTimer" WaitTime="120000" />	 
+							 
+							 <RunTo X="5070.461" Y="-1918.497" Z="1357.359" />
+						<CustomBehavior File="RunMacro" Macro="/s This is lame and boring, lets kill stuff." />	
+						<CustomBehavior File="RunMacro" Macro="/dance" />
+						<CustomBehavior File="WaitTimer" WaitTime="120000" />
+						
+							<RunTo X="5070.461" Y="-1918.497" Z="1357.359" />
+						<CustomBehavior File="RunMacro" Macro="/s How do I look? Does my hair look ok?." />	
+						<CustomBehavior File="RunMacro" Macro="/dance" />
+						<CustomBehavior File="WaitTimer" WaitTime="60000" />
+						<CustomBehavior File="RunMacro" Macro="/s Woot, time to kill." />	 
+						<CustomBehavior File="UserSettings" UseMount="True" />
+						<CustomBehavior File="ForcedMount" MountType="Ground" />
+					
+				</While>		 
+						 
+	
+				
+						<If Condition="(Me.FreeBagSlots &lt;= 6) || (Me.LowestDurabilityPercent &lt;= 0.3)" > 
+							<CustomBehavior File="Message" Text="Checking my free bag space and my gear's durability." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. Going to hearth, repair and mail." LogColor="Lime" />
+								<RunTo X="5085.492" Y="-1913.377" Z="1350.704" /> 	
+							<If Condition="HasItem(6948)" >
+								<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+								<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />
+							</If>
+							<If Condition="HasItem(64488)" >
+								<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(64488)" WaitTime="1000" />
+								<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />
+							</If>
+								<RunTo X="-7093.222" Y="-3854.028" Z="9.173008" />
+															
+							<SetVendor>
+								<Vendors>
+									<Vendor Name="Krinkle Goodsteel" Entry="5411" Type="Repair" X="-7232.01" Y="-3751.71" Z="9.09389" />
+								</Vendors>
+							</SetVendor>
+							<SetMailbox>
+								<Mailboxes>
+									<Mailbox X="-7086.33" Y="-3851.048" Z="9.504718" />
+								</Mailboxes>
+							</SetMailbox>
+							<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						</If>
+					
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

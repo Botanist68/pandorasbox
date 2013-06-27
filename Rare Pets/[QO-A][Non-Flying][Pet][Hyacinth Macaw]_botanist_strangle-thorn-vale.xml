@@ -1,0 +1,127 @@
+<HBProfile creator="Botanist" version="1.3">
+
+<Name>[QO-A][Non-Flying][Pet][Hyacinth Macaw]_botanist_strangle-thorn-vale</Name>
+<MinLevel>25</MinLevel>
+<MaxLevel>101</MaxLevel>
+
+<MinDurability>-1</MinDurability>
+<MinFreeBagSlots>-1</MinFreeBagSlots>
+
+<MailGrey>False</MailGrey>
+<MailWhite>False</MailWhite>
+<MailGreen>True</MailGreen>
+<MailBlue>True</MailBlue>
+<MailPurple>True</MailPurple>
+
+<SellGrey>True</SellGrey>
+<SellWhite>False</SellWhite>
+<SellGreen>False</SellGreen>
+<SellBlue>False</SellBlue>
+<SellPurple>False</SellPurple>
+
+<TargetElites>False</TargetElites>	
+
+<AvoidMobs>
+	<Mob Name="Booty Bay Bruiser" Entry="4624"/>
+</AvoidMobs>
+
+<Blackspots>
+
+</Blackspots>
+
+<ContinentID>0</ContinentID>
+
+<Mailboxes>
+
+</Mailboxes>
+
+<Vendors>
+
+</Vendors>
+
+	<QuestOrder>
+		<CustomBehavior File="UserSettings" UseMount="True" MountDistance="60" UseFlightPaths="True" LootMobs="True" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="False" LootRadius="50" LogoutForInactivity="True" />
+		<While Condition="true" >
+		
+				<If Condition="Me.MapId == 0" >
+					<If Condition="Me.IsAlliance" >
+						<CustomBehavior File="Message" Text="I am in Eastern Kingdoms, moving to Darkshire to set my hearth." LogColor="Lime" />
+							<RunTo X="-10515.5" Y="-1261.65" Z="41.34" />
+							<RunTo X="-10546.92" Y="-1160.229" Z="27.92047" />
+							<RunTo X="-10536.63" Y="-1160.077" Z="28.08801" />
+							<RunTo X="-10534.48" Y="-1167.245" Z="28.10176" />
+							<RunTo X="-10528.77" Y="-1164.989" Z="28.06506" />
+							<RunTo X="-10523.36" Y="-1164.728" Z="27.4767" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone @ the innkeeper." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="SetHearthstone" MobId="6790" X="-10516" Y="-1161.213" Z="28.09958" />
+							<RunTo X="-10523.36" Y="-1164.728" Z="27.4767" />
+							<RunTo X="-10528.77" Y="-1164.989" Z="28.06506" />
+							<RunTo X="-10534.48" Y="-1167.245" Z="28.10176" />
+							<RunTo X="-10536.63" Y="-1160.077" Z="28.08801" />
+							<RunTo X="-10546.92" Y="-1160.229" Z="27.92047" />	
+						<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" >					
+							<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. I'm going to repair and vendor." LogColor="Lime" />
+								<RunTo X="-10593.16" Y="-1159.806" Z="30.05881" />									
+							<SetVendor>
+								<Vendors>
+									<Vendor Name="Gavin Gnarltree" Entry="225" Type="Repair" X="-10596.89" Y="-1154.147" Z="30.06103" />
+								</Vendors>
+							</SetVendor>
+							<SetMailbox>
+								<Mailboxes>
+									<Mailbox X="-10549.98" Y="-1157.266" Z="27.71751" />
+								</Mailboxes>
+							</SetMailbox>			
+							<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+								<RunTo X="-10515.5" Y="-1261.65" Z="41.34" />
+						</If>
+
+								<RunTo X="-11344" Y="-216.83" Z="75.22" />
+
+
+							<If	Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; .30)" GoalText="Farming" >
+							<CustomBehavior File="Message" Text="I have reached the farming location. I'll farm this location until you stop me." LogColor="Lime" />				
+								<SetGrindArea><GrindArea>
+									<Factions>119</Factions>
+										<Hotspots>
+											<Hotspot X="-13572.19" Y="131.7497" Z="41.35132" />
+											<Hotspot X="-13564.21" Y="149.3673" Z="40.32665" />
+											<Hotspot X="-13550.48" Y="178.0343" Z="42.91391" />
+											<Hotspot X="-13521.99" Y="181.6928" Z="45.00969" />
+											<Hotspot X="-13498.97" Y="182.2713" Z="43.08482" />
+											<Hotspot X="-13482.62" Y="182.6823" Z="42.66883" />
+											<Hotspot X="-13471.86" Y="194.0557" Z="39.97993" />
+											<Hotspot X="-13467.79" Y="205.5071" Z="36.33054" />
+											<Hotspot X="-13464.64" Y="217.3738" Z="33.4737" />
+											<Hotspot X="-13477.57" Y="176.279" Z="42.74688" />
+										</Hotspots>
+								</GrindArea></SetGrindArea>					
+							<GrindTo Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; .30) || (Me.Level == 60)" GoalText="Farming" />
+						</If>	
+			
+						<If Condition="(Me.FreeBagSlots &lt;= 4) || (Me.LowestDurabilityPercent &lt; 0.3)" >					
+							<CustomBehavior File="Message" Text="I have detected that my bags are full or my gear is about to break. I'm going to repair and vendor." LogColor="Lime" />
+							<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+							<CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for hearth*{TimeRemaining}" />
+								<RunTo X="-10593.16" Y="-1159.806" Z="30.05881" />									
+							<SetVendor>
+								<Vendors>
+									<Vendor Name="Gavin Gnarltree" Entry="225" Type="Repair" X="-10596.89" Y="-1154.147" Z="30.06103" />
+								</Vendors>
+							</SetVendor>
+							<SetMailbox>
+								<Mailboxes>
+									<Mailbox X="-10549.98" Y="-1157.266" Z="27.71751" />
+								</Mailboxes>
+							</SetMailbox>			
+							<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+								<RunTo X="-10515.5" Y="-1261.65" Z="41.34" />
+						</If>
+					</If>
+				</If>	
+						
+		</While>		
+	   
+	</QuestOrder>   
+</HBProfile>

@@ -1,0 +1,361 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-A][PRIVATE][Flying][Mount][Reins of the Vitreous Stone Drake]_botanist_stonecore</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+   
+	<MinDurability>0.-1</MinDurability>
+	<MinFreeBagSlots>0.-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>True</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions>14,16,2156</Factions>
+	
+	<ProtectedItems>
+	<Item Name="Elementium Lockbox" Entry="68729" />	
+	</ProtectedItems>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+		
+		 <CustomBehavior File="UserSettings" MountDistance="30"  UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="25" KillBetweenHotspots="True" RessAtSpiritHealers="True" FindVendorsAutomatically="True" LootRadius="50" LogoutForInactivity="True" />
+		 
+		 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" 
+						Text="This profle is oriented towards an ilvl 440+ Blood Death Knight. If you aren't a BLOOD DEATH KNIGHT, THIS PROFILE MAY OR MAY NOT WORK FOR YOUR CLASS.
+						Alliance set your hearthstone @ Thundermar in Twilight Highlands. This profile will farm Stonecore in Deepholme for Reins of the Vitreous Stone Drake. If it drops, it will hearth and stop the bot. Otherwise it will run the profile continuously until it does drop." Title="WARNING" />
+	
+         <While Condition="true" >
+
+				<If Condition="Me.MapId == 0" > 
+					<CustomBehavior File="Message" Text="I'm am somewhere in Eastern Kingdoms. I am flying to the Deepholm portal in Stormwind" LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="-8219.944" Y="448.447" Z="117.6114" DestName="Portal to Deepholme" />							
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="Message" Text="Taking the portal to Deepholme." LogColor="Lime" />
+                    <CustomBehavior File="InteractWith" MobId="207693" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  X="-8223.319" Y="451.182281" Z="117.4883" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="TimeRemaining}" />
+						<If Condition="Me.ZoneId == 5042" >
+							<CustomBehavior File="Message" Text="I have ported to Deepholm." LogColor="Lime" />
+						</If>	
+					<CustomBehavior File="ForcedMount" MountType="Ground" />
+						
+				</If>	
+				
+				<If Condition="Me.MapId == 725">
+					<CustomBehavior File="Message" Text="You started the bot with me inside Stonecore. hearthing out to reset the dungeon, if my hearth isn't on CD." LogColor="Lime" />									
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="20000" />
+						<If Condition="Me.MapId == 5042">
+							<CustomBehavior File="Message" Text="Succesfully hearthed." LogColor="Lime" />
+						</If>
+							<If Condition="Me.MapId == 725">
+								<CustomBehavior File="Message" Text="My hearthstone is on CD, running out." LogColor="Lime" />
+									<RunTo X="851.3138" Y="986.474" Z="317.2632" />
+								<CustomBehavior File="MyCTM"  X="822.8583" Y="987.2787" Z="318.7843" />
+								<CustomBehavior File="WaitTimer" WaitTime="12000" />
+									<RunTo X="1023.72" Y="644.747" Z="156.672" />
+							</If>
+				</If>			
+				
+				<If Condition="Me.ZoneId == 5042" >
+					<If Condition="Me.MapId != 725">
+						<If Condition="Me.Y &lt; 408.4768 || Me.Y &gt; 649.2817 || Me.X &lt; 964.1465 || Me.X &gt; 1112.985 || (Me.Z &gt; 0 &amp;&amp; Me.Z &lt; 150) || Me.Z &gt; 160" >
+							<CustomBehavior File="Message" Text="I'm in Deepholm. flying to the Temple of the Earth." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="FlyTo" X="755.3137" Y="492.3489" Z="20.18176" />
+							<CustomBehavior File="FlyTo" X="909.1337" Y="499.807" Z="-24.37137" />
+							<CustomBehavior File="FlyTo" X="1007.287" Y="540.8065" Z="-40.11217" />
+							<CustomBehavior File="MyCTM"  X="1028.581" Y="542.8755" Z="-49.33376" />
+							<CustomBehavior File="ForcedDismount" />
+						</If>
+					</If>
+				</If>
+				
+				<If Condition="Me.ZoneId == 5042" >
+					<If Condition="Me.Y &gt; 408.4768 &amp;&amp; Me.Y &lt; 649.2817 &amp;&amp; Me.X &gt; 964.1465 &amp;&amp; Me.X &lt; 1112.985 &amp;&amp; Me.Z &lt; 0" >
+						<CustomBehavior File="Message" Text="I'm in Temple of the Earth in Deepholm." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+						<CustomBehavior File="Message" Text="I am locating the innkeep." LogColor="Lime" />
+							<RunTo  X="1029.474" Y="539.7973" Z="-49.33416" />
+						<CustomBehavior File="Message" Text="I have reached the innkeeper." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="Setting my Heartstone." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="SetHearthstone" MobId="45300"  X="1032.42" Y="542.142" Z="-49.32676" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<RunTo X="923.5775" Y="505.1456" Z="-49.31767" />
+						<CustomBehavior File="ForcedMount" MountType="Flying" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="FlyTo" X="872.3555" Y="494.2339" Z="-31.27823" />
+						<CustomBehavior File="FlyTo" X="872.3555" Y="494.2339" Z="-31.27823" />
+						<CustomBehavior File="FlyTo" X="813.2897" Y="536.7404" Z="-6.15714" />
+						<CustomBehavior File="FlyTo" X="837.8666" Y="644.6685" Z="44.11998" />
+						<CustomBehavior File="FlyTo" X="907.5031" Y="710.6047" Z="126.3578" />
+						<CustomBehavior File="FlyTo" X="993.5372" Y="699.1506" Z="179.4987" />
+						<CustomBehavior File="FlyTo" X="1027.48" Y="675.8057" Z="184.045" />
+						<CustomBehavior File="MyCTM" X="1023.72" Y="644.747" Z="156.672" />
+						<CustomBehavior File="ForcedDismount" />
+					</If>
+				</If>
+															  
+				<If Condition="Me.ZoneId == 5042" >														 
+					<If Condition="Me.Y &gt; 620.9702 &amp;&amp; Me.Y &lt; 678.2952 &amp;&amp; Me.X &gt; 987.7558 &amp;&amp; Me.X &lt; 1062.086 &amp;&amp; (Me.Z &gt; 150 &amp;&amp; Me.Z &lt; 160)" >									
+						<CustomBehavior File="Message" Text="I am resetting the instance." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />				
+				    	<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />  
+						<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> 
+						<CustomBehavior File="Message" Text="I have reset Stonecore." LogColor="Lime" />
+						<CustomBehavior File="MyCTM"  X="1029.235" Y="616.3538" Z="153.9216" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" />	
+							<If Condition="Me.MapId == 725">
+								<CustomBehavior File="Message" Text="I have entered Stonecore." LogColor="Lime" />
+								<CustomBehavior File="Message" Text="Sorting my bags....!!!" LogColor="Lime" />
+								<CustomBehavior File="RunMacro" Macro="/sort bags" />
+							</If>
+					</If>				
+				</If>
+
+                               <!-- stonecore dungeon script -->
+				
+				<If Condition="Me.MapId == 725">				
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="872.8488" Y="1010.81" Z="318.8829" />
+						<Hotspot X="907.147" Y="1025.195" Z="319.9616" />
+						<Hotspot X="937.3547" Y="999.3784" Z="319.1463" />
+					</CustomBehavior>
+					
+						<RunTo X="937.3547" Y="999.3784" Z="319.1463" />
+						<RunTo X="937.6165" Y="997.8139" Z="319.1879" />
+						<RunTo X="942.7979" Y="978.9225" Z="317.4612" />
+						<RunTo X="957.9892" Y="961.4423" Z="317.3765" />
+						<RunTo X="947.8556" Y="912.8763" Z="314.1939" />
+						
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="967.2742" Y="877.9244" Z="306.5639" />
+						<Hotspot X="1013.325" Y="852.3335" Z="299.7797" />
+						<Hotspot X="1032.434" Y="847.825" Z="297.6558" />
+					</CustomBehavior>
+						<RunTo X="1032.434" Y="847.825" Z="297.6558" />
+						
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1107.46" Y="856.2166" Z="290.2119" />
+						<Hotspot X="1145.527" Y="854.0233" Z="287.616" />
+					</CustomBehavior>
+						<RunTo X="1145.527" Y="854.0233" Z="287.616" />
+						
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1151.492" Y="879.2839" Z="284.963" />
+						<Hotspot X="1053.228" Y="866.5661" Z="294.3433" />
+					</CustomBehavior>
+						<RunTo X="1053.228" Y="866.5661" Z="294.3433" />
+						
+					<CustomBehavior File="RunLikeHell" UseCTM="true" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="984.7635" Y="890.2344" Z="304.5281" />
+					</CustomBehavior>
+						<RunTo X="984.7635" Y="890.2344" Z="304.5281" />
+					
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="2" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+					<CustomBehavior File="Message" Text="Pulling the first boss, Corborus." LogColor="Lime" />
+					
+						<RunTo X="1143.813" Y="885.3608" Z="285.023" />
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1152.935" Y="914.3513" Z="285.1386" />
+						<Hotspot X="1161.996" Y="974.4977" Z="279.418" />
+						<Hotspot X="1147.539" Y="1029.85" Z="267.021" />
+					</CustomBehavior>
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1184.238" Y="1091.621" Z="263.9376" />
+					</CustomBehavior>
+					
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+						<RunTo X="1220.131" Y="1129.252" Z="262.2329" />
+						<RunTo X="1219.515" Y="1168.964" Z="253.3186" />
+						<RunTo X="1243.543" Y="1198.121" Z="247.4927" />
+					<CustomBehavior File="WaitTimer" WaitTime="22000" />
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="Message" Text="Casting Army of the Dead." LogColor="Yellow" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+                    <CustomBehavior File="RunMacro" Macro="/cast Army of the Dead" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />
+					<CustomBehavior File="Message" Text="Pulling the second boss, Slabhide. Good luck on the mount dropping." LogColor="Lime" />
+						<RunTo X="1289.092" Y="1230.409" Z="247.437" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+				<!--	<If Condition="HasItem(63043)" >
+						<CustomBehavior File="Message" Text="I have looted Reins of the Vitreous Stone Drake." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="3000" />
+						<CustomBehavior File="Message" Text="Equipping Reins of the Vitreous Stone Drake." LogColor="Lime" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63043)" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="Congrats on your mount." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I am hearthing to Temple of the Earth in Deepholm." LogColor="Lime" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="15000" />
+						<CustomBehavior File="Message" Text="Stopping the bot." LogColor="Lime" />
+						<CustomBehavior File="UserSettings" StopBot="true" />
+					</If>	-->
+					
+					<If Condition="Me.MapId == 725" >
+						<CustomBehavior File="Message" Text="Reins of the Vitreous Stone Drake didn't drop. Continuing the profile," LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					</If>
+
+						<RunTo X="1313.755" Y="1216.135" Z="246.8003" />
+						<RunTo X="1359.095" Y="1195.763" Z="238.9053" />
+						<RunTo X="1412.226" Y="1171.854" Z="231.4043" />
+						<RunTo X="1439.642" Y="1188.04" Z="230.9908" />
+						<RunTo X="1446.219" Y="1222.667" Z="231.4671" />
+						<RunTo X="1474.083" Y="1197.194" Z="229.7174" />
+						<RunTo X="1507.065" Y="1198.044" Z="224.8344" />
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">												
+						<Hotspot X="1533.667" Y="1218.178" Z="223.8928" />
+					</CustomBehavior>
+						<RunTo X="1533.667" Y="1218.178" Z="223.8928" />
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">												
+						<Hotspot X="1578.578" Y="1193.326" Z="220.4433" />
+						<Hotspot X="1590.051" Y="1201.239" Z="220.633" />
+					</CustomBehavior>
+						<RunTo X="1590.051" Y="1201.239" Z="220.633" />
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">												
+						<Hotspot X="1598.87" Y="1190.656" Z="219.7302" />
+						<Hotspot X="1601.295" Y="1181.746" Z="218.9799" />
+					</CustomBehavior>
+						<RunTo X="1601.295" Y="1181.746" Z="218.9799" />
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1594.466" Y="1156.934" Z="217.1353" />
+					</CustomBehavior>
+						<RunTo X="1594.466" Y="1156.934" Z="217.1353" /> 
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1602.473" Y="1138.614" Z="216.486" />
+						<Hotspot X="1612.714" Y="1123.612" Z="217.0732" />
+						<Hotspot X="1610.648" Y="1109.344" Z="217.0051" />
+					</CustomBehavior>
+						<RunTo X="1610.648" Y="1109.344" Z="217.0051" />
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1577.362" Y="1075.797" Z="217.8411" />
+						<Hotspot X="1570.157" Y="1063.88" Z="218.3671" />
+						<Hotspot X="1559.216" Y="1058.132" Z="218.6436" />
+					</CustomBehavior>
+						<RunTo X="1559.216" Y="1058.132" Z="218.6436" />
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1578.149" Y="1075.802" Z="217.8781" />
+						<Hotspot X="1592.556" Y="1121.433" Z="216.2085" />
+						<Hotspot X="1576.529" Y="1172.521" Z="218.2653" />
+						<Hotspot X="1560.883" Y="1189.623" Z="220.3242" />
+						<Hotspot X="1540.906" Y="1186.107" Z="219.2028" />
+					</CustomBehavior>
+						<RunTo X="1540.906" Y="1186.107" Z="219.2028" />
+						
+					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+						<Hotspot X="1558.484" Y="1164.609" Z="216.0246" />
+					</CustomBehavior>
+						<RunTo X="1558.484" Y="1164.609" Z="216.0246" />
+						
+						<RunTo X="1567.421" Y="1134.836" Z="215.7183" />
+						
+						<RunTo X="1533.235" Y="1105.166" Z="216.392" />
+						
+						<RunTo X="1561.17" Y="1105.759" Z="215.733" />
+						<RunTo X="1534.222" Y="1084.254" Z="216.0181" />
+						
+					<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="Pulling the third boss, Ozruk." LogColor="Lime" />	
+						<RunTo X="1511.755" Y="1074.65" Z="216.993" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />	
+						<RunTo  X="1469.568" Y="1063.222" Z="216.4202" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+					<CustomBehavior File="Message" Text="I'm not pulling the last boss. Hearthing out to reset the instance." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+					<CustomBehavior File="WaitTimer" WaitTime="20000" GoalText="Waiting for hearth*{TimeRemaining}" />
+				</If>	
+					
+				<If Condition="Me.ZoneId == 5042" >
+					<If Condition="Me.Y &gt; 408.4768 &amp;&amp; Me.Y &lt; 649.2817 &amp;&amp; Me.X &gt; 964.1465 &amp;&amp; Me.X &lt; 1112.985 &amp;&amp; Me.Z &lt; 0" >	
+						<If Condition="(Me.FreeBagSlots &lt; 15) || (Me.LowestDurabilityPercent &lt; 0.3)" >					
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="Message" Text="I have detected that I have less than 25 empty bag slots or that my gear is about to break. I'm going to repair and mail." LogColor="Lime" />																		
+								<SetVendor>
+									<Vendors>
+										<Vendor Name="Dugsley Deepdelver" Entry="45294" Type="Repair" X="1052.99" Y="636.936" Z="-45.87086" />
+									</Vendors>
+								</SetVendor>						
+								<SetMailbox>
+									<Mailboxes>
+										<Mailbox  X="1049.386" Y="635.8681" Z="-45.89774" />
+									</Mailboxes>
+								</SetMailbox>			
+							<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						</If>	
+							<CustomBehavior File="Message" Text="I have more than 15 empty slots in my bags and my gear is above 30 percent durability." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<RunTo X="923.5775" Y="505.1456" Z="-49.31767" />
+							<CustomBehavior File="ForcedMount" MountType="Flying" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="FlyTo" X="872.3555" Y="494.2339" Z="-31.27823" />
+							<CustomBehavior File="FlyTo" X="872.3555" Y="494.2339" Z="-31.27823" />
+							<CustomBehavior File="FlyTo" X="813.2897" Y="536.7404" Z="-6.15714" />
+							<CustomBehavior File="FlyTo" X="837.8666" Y="644.6685" Z="44.11998" />
+							<CustomBehavior File="FlyTo" X="907.5031" Y="710.6047" Z="126.3578" />
+							<CustomBehavior File="FlyTo" X="993.5372" Y="699.1506" Z="179.4987" />
+							<CustomBehavior File="FlyTo" X="1027.48" Y="675.8057" Z="184.045" />
+							<CustomBehavior File="MyCTM" X="1023.72" Y="644.747" Z="156.672" />
+							<CustomBehavior File="ForcedDismount" />	
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 725">
+					<CustomBehavior File="Message" Text="My hearthstone is on CD, running out." LogColor="Lime" />
+						<RunTo X="851.3138" Y="986.474" Z="317.2632" />
+					<CustomBehavior File="MyCTM"  X="822.8583" Y="987.2787" Z="318.7843" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+						<RunTo X="1023.72" Y="644.747" Z="156.672" />
+				</If>
+
+				
+		</While>
+	
+	</QuestOrder>
+
+
+</HBProfile>
+

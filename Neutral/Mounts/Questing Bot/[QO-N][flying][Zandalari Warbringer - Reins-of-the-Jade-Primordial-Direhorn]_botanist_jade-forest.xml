@@ -1,0 +1,214 @@
+<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-N][flying][Zandalari Warbringer - Reins-of-the-Jade-Primordial-Direhorn]_botanist_jade-forest</Name>
+   
+	<MinLevel>90</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.0</MinDurability>
+	<MinFreeBagSlots>0</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites></TargetElites>
+	
+	<AvoidMobs>
+			
+	</AvoidMobs>
+	
+	<Blackspots>
+		<Blackspot X="-10630.92" Y="1118.568" Z="33.69128" Radius="3" />
+	</Blackspots>
+
+	<Mailboxes>
+	
+	</Mailboxes>
+ 
+	<Vendors>
+	
+	</Vendors>
+	
+	<ProtectedItems>
+	
+	</ProtectedItems>
+		
+	<QuestOrder>
+	
+					
+	
+				<If Condition="Me.MapId == 870" >
+					<If Condition="Me.X &gt; 1701.374 || Me.X &lt; 1567.62 || Me.Y &gt; -1701.924 || Me.Y &lt; -1989.28" >
+						<If Condition="Me.X &gt; 2981 || Me.X &lt; 2581 || Me.Y &lt; -2451 || Me.Y &gt; 2051" >
+							<CustomBehavior File="Message" Text="Flying to Dawns Blossom to set my Hearthstone." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="1595.112" Y="-1792.846" Z="259.9725" />
+							<CustomBehavior File="ForcedDismount" />
+								<RunTo X="1619.983" Y="-1743.301" Z="264.4512" />
+							<CustomBehavior File="Message" Text="Setting my Heartstone with the innkeep." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="SetHearthstone" MobId="55809" X="1620.29" Y="-1740.795" Z="263.3519" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+							<CustomBehavior File="Message" Text="I have set my Heartstone." LogColor="Lime" />
+							<CustomBehavior File="WaitTimer" WaitTime="1000" />
+								<RunTo X="1595.112" Y="-1792.846" Z="259.9725" />
+						</If>	
+					</If>	
+				</If>
+				
+		<While Condition="(Me.FreeBagSlots &gt; 4) &amp;&amp; (Me.LowestDurabilityPercent &gt; 0.3)" >		
+			<CustomBehavior File="UserSettings" MountDistance="30" UseFlightPaths="True" LootMobs="True" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LootRadius="30" LogoutForInactivity="True" />		
+				<If Condition="Me.MapId == 870" >
+					<If Condition="Me.X &gt; 2981 || Me.X &lt; 2581 || Me.Y &lt; -2451 || Me.Y &gt; 2051" >
+						<CustomBehavior File="Message" Text="Flying to the farming location." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2781.203" Y="-2251.904" Z="227.2732" />
+					</If>	
+					<If Condition="Me.X &lt; 2981 &amp;&amp; Me.X &gt; 2581 &amp;&amp; Me.Y &gt; -2451 &amp;&amp; Me.Y &lt; 2051" >
+						<CustomBehavior File="FlyTo" X="2781.203" Y="-2251.904" Z="227.2732" />
+						<CustomBehavior File="Message" Text="Farming......." LogColor="Lime" />
+						<CustomBehavior File="RunMacro" Macro="/cleartarget" NumOfTimes="1" WaitTime="0"/>
+						<CustomBehavior File="RunMacro" Macro="/target Zandalari Warbringer" NumOfTimes="1" WaitTime="0"/>
+					</If>
+					
+					<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 69769">
+						<CustomBehavior File="FlyTo" X="2733.23" Y="-2271.507" Z="165.6752" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="GetOutOfGroundEffectAndAuras" EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="69769" AvoidMobMinRange="25"
+							 EventX="2775.674" EventY="-2215.74" EventZ="177.3946"
+							 MoveOutOfGroundEffectAuraId1="138044"
+							 MoveOutOfGroundEffectAuraId2="138042"
+							 MoveOutOfGroundEffectAuraId3="138043"
+							 MoveAwayFromMobCastingSpellId1="138044"
+							 MoveAwayFromMobCastingSpellId2="138042"
+							 MoveAwayFromMobCastingSpellId3="138043"
+							 MoveAwayFromMobWithAuraId1="138044"
+							 MoveAwayFromMobWithAuraId2="138042"
+							 MoveAwayFromMobWithAuraId3="138043">
+								<Safespots>
+									<Hotspot X="2730.32" Y="-2268.07" Z="166.1415" />
+									<Hotspot X="2689.127" Y="-2242.612" Z="165.1417" />
+									<Hotspot X="2679.023" Y="-2173.042" Z="174.8835" />
+									<Hotspot X="2715.222" Y="-2152.179" Z="179.6163" />
+									<Hotspot X="2729.943" Y="-2094.398" Z="186.8513" />
+									<Hotspot X="2697.34" Y="-2060.049" Z="188.7659" />
+								</Safespots>
+						</CustomBehavior>
+						<CustomBehavior File="UserSettings" LootMobs="True"  />
+						<CustomBehavior File="FlyTo" X="2781.203" Y="-2251.904" Z="227.2732" />
+					</If>
+					
+					<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 69842">
+						<CustomBehavior File="FlyTo" X="2733.23" Y="-2271.507" Z="165.6752" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="GetOutOfGroundEffectAndAuras" EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="69842" AvoidMobMinRange="25"
+							 EventX="2775.674" EventY="-2215.74" EventZ="177.3946"
+							 MoveOutOfGroundEffectAuraId1="138044"
+							 MoveOutOfGroundEffectAuraId2="138042"
+							 MoveOutOfGroundEffectAuraId3="138043"
+							 MoveAwayFromMobCastingSpellId1="138044"
+							 MoveAwayFromMobCastingSpellId2="138042"
+							 MoveAwayFromMobCastingSpellId3="138043"
+							 MoveAwayFromMobWithAuraId1="138044"
+							 MoveAwayFromMobWithAuraId2="138042"
+							 MoveAwayFromMobWithAuraId3="138043">
+								<Safespots>
+									<Hotspot X="2730.32" Y="-2268.07" Z="166.1415" />
+									<Hotspot X="2689.127" Y="-2242.612" Z="165.1417" />
+									<Hotspot X="2679.023" Y="-2173.042" Z="174.8835" />
+									<Hotspot X="2715.222" Y="-2152.179" Z="179.6163" />
+									<Hotspot X="2729.943" Y="-2094.398" Z="186.8513" />
+									<Hotspot X="2697.34" Y="-2060.049" Z="188.7659" />
+								</Safespots>
+						</CustomBehavior>
+						<CustomBehavior File="UserSettings" LootMobs="True"  />
+						<CustomBehavior File="FlyTo" X="2781.203" Y="-2251.904" Z="227.2732" />
+					</If>
+					
+					<If Condition="Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.Entry == 69841">																			
+						<CustomBehavior File="FlyTo" X="2733.23" Y="-2271.507" Z="165.6752" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="GetOutOfGroundEffectAndAuras" EventCompleteWhen="SpecificMobsDead" EventCompleteDeadMobId="69841" AvoidMobMinRange="25"
+							 EventX="2775.674" EventY="-2215.74" EventZ="177.3946"
+							 MoveOutOfGroundEffectAuraId1="138044"
+							 MoveOutOfGroundEffectAuraId2="138042"
+							 MoveOutOfGroundEffectAuraId3="138043"
+							 MoveAwayFromMobCastingSpellId1="138044"
+							 MoveAwayFromMobCastingSpellId2="138042"
+							 MoveAwayFromMobCastingSpellId3="138043"
+							 MoveAwayFromMobWithAuraId1="138044"
+							 MoveAwayFromMobWithAuraId2="138042"
+							 MoveAwayFromMobWithAuraId3="138043">
+								<Safespots>
+									<Hotspot X="2730.32" Y="-2268.07" Z="166.1415" />
+									<Hotspot X="2689.127" Y="-2242.612" Z="165.1417" />
+									<Hotspot X="2679.023" Y="-2173.042" Z="174.8835" />
+									<Hotspot X="2715.222" Y="-2152.179" Z="179.6163" />
+									<Hotspot X="2729.943" Y="-2094.398" Z="186.8513" />
+									<Hotspot X="2697.34" Y="-2060.049" Z="188.7659" />
+								</Safespots>
+						</CustomBehavior>
+						<CustomBehavior File="UserSettings" LootMobs="True"  />
+						<CustomBehavior File="FlyTo" X="2781.203" Y="-2251.904" Z="227.2732" />
+					</If>
+				</If>
+					<CustomBehavior File="WaitTimer" WaitTime="5000" />
+						
+		</While>
+		
+					<If Condition="(Me.FreeBagSlots &lt; 4) || (Me.LowestDurabilityPercent &lt; 0.3)" >
+						<CustomBehavior File="Message" Text="Checking my gears durability and free bag slots." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="I have detected that my gear is about to break or my bags are nearly full. I'm going to hearth, and repair. Then I'll return to the farming location" LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="2534.07" Y="-2125.867" Z="363.9816" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for hearth*{TimeRemaining}" />
+						<If Condition="Me.X &gt; 2981 || Me.X &lt; 2581 || Me.Y &lt; -2451 || Me.Y &gt; 2051" >
+							<CustomBehavior File="Message" Text="Succesfully hearthed, moving to the repair vendor." LogColor="Lime" />	
+							<SetVendor>
+								<Vendors>
+									<Vendor Name="Singegruff" Entry="56705" Type="Repair" X="1528.802" Y="-1806.385" Z="246.2003" />
+								</Vendors>
+							</SetVendor>						
+							<SetMailbox>
+								<Mailboxes>
+									<Mailbox X="1604.64" Y="-1793.303" Z="260.033" />
+								</Mailboxes>
+							</SetMailbox>			
+							<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						</If>
+						
+						<If Condition="Me.X &lt; 2981 &amp;&amp; Me.X &gt; 2581 &amp;&amp; Me.Y &gt; -2451 &amp;&amp; Me.Y &lt; 2051" >
+							<CustomBehavior File="Message" Text="I did not succesfully hearth, flying to the repair vendor." LogColor="Lime" />
+							<CustomBehavior File="FlyTo" X="1525.134" Y="-1802.064" Z="246.1923" />
+							<CustomBehavior File="ForcedDismount" />
+							<SetVendor>
+								<Vendors>
+									<Vendor Name="Singegruff" Entry="56705" Type="Repair" X="1528.802" Y="-1806.385" Z="246.2001" />
+								</Vendors>
+							</SetVendor>						
+							<SetMailbox>
+								<Mailboxes>
+									<Mailbox X="1604.64" Y="-1793.303" Z="260.033" />
+								</Mailboxes>
+							</SetMailbox>			
+							<CustomBehavior File="ForceSetVendor" DoMail="True" DoRepair="True" DoSell="True" DoTrain="False" />
+						</If>
+					</If>
+				
+				<If Condition="(HasItem(90717))" >
+					<CustomBehavior File="FlyTo" X="-817.47" Y="-177.7943" Z="173.1323" />
+					<CustomBehavior File="Message" Text="Stopping the bot." LogColor="Lime" />
+					<CustomBehavior File="UserSettings" StopBot="true" />
+				</If>
+			
+	</QuestOrder >			
+  
+ </HBProfile>

@@ -1,0 +1,248 @@
+﻿<HBProfile creator="Botanist" version="1.0">
+	<Name>[QO-H-RAF-Power_Leveling][68-71][RAF-Character]_botanist_utgarde-keep</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>91</MaxLevel>
+   
+	<MinDurability>-1</MinDurability>
+	<MinFreeBagSlots>-1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>False</MailBlue>
+	<MailPurple>False</MailPurple>
+   
+	<SellGrey>False</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+	
+	<ProtectedItems>
+		<Item name="Book of Glyph Mastery" entry="45912" />
+		<Item name="Frostweave Cloth" entry="33470" />		
+	</ProtectedItems>
+
+	<Factions>9999</Factions>
+	
+	<QuestOrder>
+		<ClearVendor />
+		<ClearMailbox />
+
+	<CustomBehavior File="UserSettings" UseMount="True" MountDistance="100" LootRadius="1" UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="30" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LogoutForInactivity="True" />
+
+         		<If Condition="Me.MapId == 530" >
+					<CustomBehavior File="Message" Text="I am in Outlands. I need to be in Northrend. Taking the portal to Orgrimmar." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="-207.0576" Y="1061.266" Z="131.8319" />
+						<CustomBehavior File="MyCTM" X="-161.6812" Y="969.8339" Z="54.28342" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="InteractWith" MobId="195140" ObjectType="Gameobject" Range="4.75" NumOfTimes="1"  WaitTime="1" X="-161.317764" Y="965.409851" Z="54.29044" />
+						<CustomBehavior File="WaitTimer" WaitTime="12000" />
+							<RunTo X="1867.542" Y="-4247.844" Z="37.15219" />
+				</If>			
+				
+				<If Condition="Me.MapId == 1" >
+					<If Condition="(!HasSpell(54197)) || (!HasSpell(90267))" >				
+						<CustomBehavior File="Message" Text=" I need to purchase Cold Weather Flying and/or a Flight Master's License." LogColor="Lime" />
+						<CustomBehavior File="WaitTimer" WaitTime="1000" />
+						<CustomBehavior File="Message" Text="Moving to the riding trainer." LogColor="Orange" />
+							<RunTo X="1798.248" Y="-4359.849" Z="102.4577" />
+						<CustomBehavior File="Message" Text="I have reached the riding trainer." LogColor="Orange" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="RAF Character - You need to purchase a Flight Master's License and Cold Weather Flying. You are missing one or the other or both. Press continue after you have purchased both" Title="WARNING" />							
+					</If>
+				</If>
+
+				<If Condition="Me.MapId == 1" >
+					<If Condition="(HasSpell(54197)) &amp;&amp; (HasSpell(90267))" >
+						<CustomBehavior File="Message" Text="Taking the zeppelin to Tristfall Glades." LogColor="Lime" />
+						<CustomBehavior File="FlyTo" X="1853.676" Y="-4405.566" Z="163.4607" />
+						<CustomBehavior File="MyCTM" X="1839.576" Y="-4386.935" Z="135.2322" />
+						<CustomBehavior File="ForcedDismount" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="RAF Character - Honorbuddy has big issues using this zeppelin. Use this zeppelin to Tirisfal Glades. Once you are in Tirisfal Glades get off the zeppelin, then press continue." Title="WARNING" />
+					<!--	<CustomBehavior File="UseTransport"
+									TransportId="164871"
+									WaitAtX="1838.7" WaitAtY="-4386.035" WaitAtZ="135.2322" 
+									TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+									TransportEndX="2062.376" TransportEndY="292.998047" TransportEndZ="114.670547"
+									StandOnX="1835.301" StandOnY="-4390" StandOnZ="135.8167" 
+									GetOffX="2068.327" GetOffY="286.5359" GetOffZ="97.0316" />
+							<RunTo X="2066.644" Y="284.8394" Z="97.03147" />
+						<CustomBehavior File="WaitTimer" WaitTime="3000" />	-->
+					</If>
+				</If>
+				
+				<If Condition="Me.MapId == 0" >
+					<CustomBehavior File="Message" Text="I am in Eastern Kingdoms, taking the zeppelin to Howling Fjord." LogColor="Lime" />
+					<CustomBehavior File="FlyTo" X="2130.206" Y="358.567" Z="139.7405" />
+					<CustomBehavior File="MyCTM" X="2061.187" Y="365.3284" Z="82.52013" />
+					<CustomBehavior File="ForcedDismount" />
+					<CustomBehavior File="UseTransport"
+								TransportId="181689"
+								WaitAtX="2061.187" WaitAtY="365.3284" WaitAtZ="82.52013" 
+								TransportStartX="2056.4926" TransportStartY="381.6347" TransportStartZ="100.3620"
+								TransportEndX="1989.352" TransportEndY="-6082.7763" TransportEndZ="85.59"
+								StandOnX="2060.598" StandOnY="370.0439" StandOnZ="82.48199" 
+								GetOffX="1973.536" GetOffY="-6099.92" GetOffZ="67.15816" />
+						<RunTo X="1973.536" Y="-6099.92" Z="67.15816" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000" />	
+				</If>
+						
+				<If Condition="Me.MapId == 571" >
+					<If Condition="Me.X &gt; 1223 || Me.X &lt;  1219 || Me.Y &gt; -4850 || Me.Y &lt; -4876" >
+						<CustomBehavior File="FlyTo" X="665.764" Y="-4972.792" Z="73.5981" />
+						<CustomBehavior File="MyCTM" X="919.2586" Y="-4942.466" Z="230.1919" />
+						<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+							Text="RAF Characters - Press continue after the Main Character has entered the instance." Title="WARNING" />
+						<CustomBehavior File="MyCTM" X="1105.925" Y="-4901.187" Z="41.24887" />
+						<CustomBehavior File="ForcedDismount" />
+							<RunTo X="1221.63" Y="-4864.75" Z="41.2481" />
+					</If>
+				</If>
+						
+				<If Condition="Me.ZoneId == 206" >
+					<CustomBehavior File="Message" Text="You started the bot with me inside the Utgarde Keep. Running out to reset the dungeon." LogColor="Lime" />
+					<RunTo X="155.1128" Y="-86.14938" Z="12.55292" />
+					<CustomBehavior File="GoThruPortal" X="144.7174" Y="-88.65063" Z="12.55168" />
+					<CustomBehavior File="WaitTimer" WaitTime="10000"  />
+					<CustomBehavior File="Message" Text="I'm outside Utgarde Keep's portal." LogColor="Lime" />
+					<RunTo X="1221.63" Y="-4864.75" Z="41.2481" />	
+				</If>
+			
+		<While Condition="true" >
+		
+				<If Condition="Me.ZoneId == 495" >	
+					<If Condition="Me.X &lt; 1223 &amp;&amp; Me.X &gt;  1219 &amp;&amp; Me.Y &lt; -4850 &amp;&amp; Me.Y &gt; -4876" >
+						<If Condition="Me.Level &gt;= 71" >
+							<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+								Text="**********RAF Character - This character has reached the appropriate level to run Drak' Tharon Keep. If all of your RAF characters received this pop up window, please stop the bot, select the next profile for the Main Character and the RAF Character, then restart all the bots when everyone is ready to proceed. If all of your RAF characters did not receive this popup, press continue on this window and allow them to run the instance again.**********" Title="WARNING" />
+						</If>
+						<CustomBehavior File="WaitTimer" WaitTime="10000"  />
+						<CustomBehavior File="GoThruPortal" X="1236.77" Y="-4860.844" Z="41.24859" /> 
+						<CustomBehavior File="Message" Text="Waiting for the dungeon to load.." LogColor="Lime" />
+					</If>
+				</If>					
+				                                       <!-- utgarde keep script -->
+				<If Condition="Me.ZoneId == 206" >
+					<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryAction="InputEnabled_Continue" 
+						Text="RAF Characters - Press continue on the Main Character first, then press continue on this window." Title="WARNING" />
+					<CustomBehavior File="UserSettings" UseMount="False" MountDistance="100"  UseFlightPaths="True" LootMobs="False" SkinMobs="False" NinjaSkin="False" HarvestHerbs="False" HarvestMinerals="False" PullDistance="45" KillBetweenHotspots="True" RessAtSpiritHealers="False" FindVendorsAutomatically="True" LogoutForInactivity="True" />
+				</If>
+
+				<If Condition="Me.ZoneId == 206" >
+						<RunTo X="175.0668" Y="-79.22336" Z="12.55175" />
+					<CustomBehavior File="Message" Text="Waiting 60 seconds, entrance." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="60000" />
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="18" AllowCombat="false">	
+						<Hotspot X="194.3203" Y="-78.8417" Z="18.61516" />
+						<Hotspot X="190.4419" Y="-67.77535" Z="18.61516" />	<!-- first pull entrance-->
+					</CustomBehavior>	
+										
+						<RunTo X="375.465" Y="52.95836" Z="24.67697" />
+					<CustomBehavior File="Message" Text="Waiting 90 seconds, 1st boss." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="90000" />
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="22" AllowCombat="false">	
+						<Hotspot X="364.6002" Y="47.72507" Z="24.67742" />
+						<Hotspot X="382.3837" Y="43.96711" Z="24.67742" />	<!-- holding pens -->
+					</CustomBehavior>
+
+						<!-- run into the first boss room -->
+						<RunTo X="193.9359" Y="234.0252" Z="40.81524" />
+						
+					<CustomBehavior File="Message" Text="Waiting 115 seconds, trash pull." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="115000" />
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="18" AllowCombat="false">	
+						<Hotspot X="179.1512" Y="227.1047" Z="40.81645" />
+						<Hotspot X="191.1759" Y="240.4618" Z="40.81645" />	<!-- exit of 1st boss -->
+					</CustomBehavior>
+					
+						<RunTo X="102.7919" Y="102.4629" Z="65.44128" />
+						
+					<CustomBehavior File="Message" Text="Waiting 20 seconds for the booster to aggro the first mobs in the pull." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="20000" />	<!-- bottom of the stairs -->
+					
+						<RunTo X="112.8219" Y="119.5147" Z="87.29726" />	<!-- stairs -->
+						
+					<CustomBehavior File="Message" Text="Waiting 50 seconds, trash pull." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="60000" />
+					
+						<RunTo X="49.92257" Y="-24.35106" Z="118.7753" />	<!-- 2nd boss -->
+						
+					<CustomBehavior File="Message" Text="Waiting 50 seconds, 2nd boss." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="50000" />
+
+						<RunTo X="165.5589" Y="-3.590013" Z="135.0026" />	<!-- left cubicle after 2nd boss -->
+						
+					<CustomBehavior File="Message" Text="Waiting 105 seconds, trash pull." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="105000" />
+					
+					<CustomBehavior File="RunLikeHell" UseCTM="false" NumOfTimes="20" AllowCombat="false">	
+						<Hotspot X="168.981" Y="2.993599" Z="135.1255" />
+						<Hotspot X="172.2151" Y="-6.65027" Z="134.9038" />
+					</CustomBehavior>
+
+						<RunTo X="200.1592" Y="-6.564821" Z="135.0571" />
+						<RunTo X="219.4429" Y="3.51626" Z="135.2001" />
+						<RunTo X="227.7422" Y="-7.443827" Z="135.2001" />
+						<RunTo X="183.9118" Y="-24.71114" Z="156.8799" />
+						<RunTo X="175.6857" Y="-10.21906" Z="156.8193" />
+						<RunTo X="215.0596" Y="8.687095" Z="178.5074" />
+						<RunTo X="231.9193" Y="9.101593" Z="178.5074" />
+						<RunTo X="243.8058" Y="-26.60386" Z="178.5031" />
+						<RunTo X="260.3194" Y="-75.29594" Z="190.448" />
+						<RunTo X="275.6629" Y="-143.3564" Z="190.3055" />
+						<RunTo X="233.9177" Y="-161.5636" Z="190.2775" />
+						<RunTo X="196.9321" Y="-157.2891" Z="189.9957" />
+						<RunTo X="168.4676" Y="-170.1549" Z="180.5022" />
+						<RunTo X="169.3422" Y="-202.3585" Z="180.4936" />
+						<RunTo X="210.28" Y="-273.1629" Z="180.4717" />	<!-- last -->
+						
+					<CustomBehavior File="Message" Text="Waiting 2 seconds, last boss." LogColor="Lime" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" />
+					
+
+					<CustomBehavior File="Message" Text="Leaving the instance so I can reset it." LogColor="Lime" />	
+						<Runto X="142.596" Y="-127.7582" Z="169.8036" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+                    <CustomBehavior File="Message" Text="I'm jumping off" LogColor="Lime" />					
+					<CustomBehavior File="MyCTM" X="134.2079" Y="-110.6276" Z="86.49059" />
+					<CustomBehavior File="MyCTM" X="133.6719" Y="-134.6064" Z="88.38535" />
+					<CustomBehavior File="MyCTM" X="134.357" Y="-138.7504" Z="90.10663" />
+					<CustomBehavior File="MyCTM" X="147.9691" Y="-150.0082" Z="94.20315" />
+					<CustomBehavior File="MyCTM" X="163.1097" Y="-166.5825" Z="6.92928" />
+					<CustomBehavior File="WaitTimer" WaitTime="1000" />
+                    <CustomBehavior File="MyCTM" X="149.6457" Y="-170.1505" Z="6.410619" />					
+					<CustomBehavior File="MyCTM" X="182.3466" Y="-158.4426" Z="10.8668" />
+					<CustomBehavior File="MyCTM" X="209.9772" Y="-138.8611" Z="8.918727" />
+						<Runto X="195.6414" Y="-119.478" Z="8.71515" />
+					<CustomBehavior File="Message" Text="Waiting 15 seconds." LogColor="Lime" />	
+					<CustomBehavior File="WaitTimer" WaitTime="15000" />	
+					<CustomBehavior File="MyCTM" X="147.53" Y="-88.8372" Z="12.55168" />
+					<CustomBehavior File="WaitTimer" WaitTime="12000" />
+					<CustomBehavior File="Message" Text="I'm outside Utgarde Keep's portal." LogColor="Lime" />
+						<RunTo X="1221.63" Y="-4864.75" Z="41.2481" />
+				</If>
+				
+		</While>	
+	</QuestOrder>
+
+
+</HBProfile>
+
