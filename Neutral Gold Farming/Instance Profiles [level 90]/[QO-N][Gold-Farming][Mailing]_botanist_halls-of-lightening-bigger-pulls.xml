@@ -131,9 +131,12 @@
 					<!-- Runic Healing Potion = 33447 -->
 					<!-- Scroll of Protection VII = 43467 -->
 					<!-- Scroll of Intellect VII = 37091 -->
-					<!-- Scroll of Protection VII = 43465 -->
+					<!-- Scroll of Strength VII = 43465 -->
+					<!-- Scroll of Agility VII = 43463 -->
+					<!-- Scroll of Spirit VII = 37097 -->
+					<!-- Scroll of Stamina VII = 37093 -->
 					<!-- Honeymint Tea = 33445 -->
-					<CustomBehavior File="DeleteItems" Ids="33454, 33448, 33447, 43467, 37091, 43465, 33445" />
+					<CustomBehavior File="DeleteItems" Ids="33454, 33448, 33447, 43467, 37091, 43465, 43463, 37097, 37093, 33445 " />
 				
 				
 					<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
